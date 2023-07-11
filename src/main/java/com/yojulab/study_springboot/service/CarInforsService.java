@@ -15,8 +15,7 @@ import com.yojulab.study_springboot.dao.SharedDao;
 public class CarInforsService {
     @Autowired
     SharedDao sharedDao;
-    
-    // foreach HashMap.put("CAR_INFOR_ID_LIST", CAR_INFOR_ID_LIST)
+
     public Object selectInUID(Map dataMap) {
         String sqlMapId = "CarInfors.selectInUID";
 
@@ -24,15 +23,6 @@ public class CarInforsService {
         return result;
     }
 
-    // 검색(조건-search : YEAR, CAR_NAME)
-    // public List selectSearch(Map dataMap) {
-    //     // Object getOne(String sqlMapId, Object dataMap)
-    //     String sqlMapId = "CarInfors.selectSearch";
-
-    //     Object result = sharedDao.getList(sqlMapId, dataMap);
-    //     return (List) result;
-    // }
-    
     // 검색(조건-search : YEAR, CAR_NAME)
     public Map selectSearch(Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
@@ -113,6 +103,14 @@ public class CarInforsService {
         result.put("deleteCount", this.delete(dataMap));
 
         result.putAll(this.selectSearch(dataMap));
+        return result;
+    }
+
+    public Object commonList(Map dataMap) {
+        String sqlMapId = "CarInfors.common_list";
+        
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 

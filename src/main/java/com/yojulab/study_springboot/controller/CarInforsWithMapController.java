@@ -1,5 +1,6 @@
 package com.yojulab.study_springboot.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,15 @@ public class CarInforsWithMapController {
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_common.jsp");
+        return modelAndView;
+    }
+
+    @PostMapping("/commonList")
+    public ModelAndView commonList(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = carInforsService.commonList(params);
+        modelAndView.addObject("result", result);
+        modelAndView.addObject("params", params);
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
         return modelAndView;
     }
