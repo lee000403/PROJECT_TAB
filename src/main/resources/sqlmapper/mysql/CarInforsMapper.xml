@@ -67,4 +67,11 @@
         delete from car_infors
         where CAR_INFOR_ID = #{CAR_INFOR_ID}
     </delete>
+
+    <select id="common_list" parameterType="Map" resultType="Map">
+        select a.name
+        from (select PARENT_COMMON_CODE_ID, COMMON_CODE_ID, NAME
+        from COMMONS_CODE
+        where PARENT_COMMON_CODE_ID = 'CarInforSearch' or PARENT_COMMON_CODE_ID = 'Use_YN' or PARENT_COMMON_CODE_ID = 'System_Code_YN') as a
+    </select>
 </mapper>
