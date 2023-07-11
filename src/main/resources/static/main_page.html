@@ -8,13 +8,9 @@
   <title>치매 One-click System</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
   <style>
-    body {
-      background-color: rgb(255, 223, 225);
-    }
 
-    .container-fluid.text-white {
-      background-color: rgba(255, 225, 93, 0.849);
-      padding: 20px;
+    body {
+      background-color: #fef0ea;
     }
 
     .navbar {
@@ -22,6 +18,7 @@
     }
 
     .navbar-nav {
+      
       display: flex;
       align-items: center;
     }
@@ -34,18 +31,27 @@
       display: flex;
     }
 
-    .image-container img {
+
+  .image-container img {
       flex: 1;
       margin-right: 10px;
+  }
 
+    .main-title {
+      font-size: 30px;
+      font-weight: bold;
 
     }
+    
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid justify-content-end">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./main_page.html">
+        <img src="./images/mainlogo.png" alt="Logo" width="auto" height="80">
+      </a>
       <ul class="navbar-nav flex-row">
         <li class="nav-item">
           <a class="nav-link" href="./login_page.html">로그인</a>
@@ -59,9 +65,9 @@
       </ul>
     </div>
   </nav>
-  <div class="container-fluid text-white">
-    <div class="py-5">
-      <h1 class="text-center">치매 One-click System</h1>
+  <div class="container-fluid">
+    <div class="py-4">
+      <div class="text-center main-title">치매 One-click Matching</div>
       <p class="text-center">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
     </div>
   </div>
@@ -93,13 +99,23 @@
 
 
         <div class="col">
-          <a href="./self_test.html" target="_blank">
+          <a href="./self_test.html">
             <img class="img-fluid" src="./images/img2_self_test.jpg" alt="치매 자가 진단">
           </a>
         </div>
         <div class="col">
-          <a href="./login_page.html" target="_blank">
+          <a href="./login_page.html">
             <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
+          </a>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4 mb-4">
+          <a href="./login_page.html">
+            <div class="image-container">
+              <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
+            </div>
           </a>
         </div>
       </div>
