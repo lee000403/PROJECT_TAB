@@ -28,42 +28,63 @@ public class CarInforsWithMapController {
     // /selectSearch?search=YEAR&words=2020
     // /selectSearch/CAR_NAME/소
     @GetMapping("/selectSearch")
-    public ModelAndView selectSearch(@RequestParam Map params
-                            , ModelAndView modelAndView) {
+    public ModelAndView selectSearch(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = carInforsService.selectSearch(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        
+
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
         return modelAndView;
     }
 
-    @GetMapping("/commonList")
-    public ModelAndView commonList(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = carInforsService.commonList(params);
-        modelAndView.addObject("result", result);
+    @GetMapping("/commonSearch")
+    public ModelAndView commonSearch(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = carInforsService.common(params);
         modelAndView.addObject("params", params);
-        modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
+        return modelAndView;
+    }
+
+    @PostMapping("/deleteAndSelectSearch_Com/{UNIQUE_ID}")
+    public ModelAndView deleteAndSelectSearch_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.deleteAndSelectSearch(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
+        return modelAndView;
+    }
+
+    @PutMapping("/updateAndSelectsearch_Com/{UNIQUE_ID}")
+    public ModelAndView updateAndSelectsearch_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.update_Com(UNIQUE_ID);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
         return modelAndView;
     }
 
     // delete with MVC
     @PostMapping("/deleteAndSelectSearch/{UNIQUE_ID}")
-    public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID
-                        , @RequestParam Map params, ModelAndView modelAndView) {
-        Object result = carInforsService.deleteAndSelectSearch(UNIQUE_ID, params);
+    public ModelAndView deleteAndSelectSearch(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.deleteAndSelectSearch_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
         return modelAndView;
     }
-    
 
     // /selectDetail/CI002
     @GetMapping("/selectDetail/{UNIQUE_ID}")
-    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID
-                        , @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = carInforsService.selectDetail(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
 
@@ -71,5 +92,3 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 }
-
-

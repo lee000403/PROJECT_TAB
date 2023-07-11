@@ -40,7 +40,6 @@
             <% HashMap params=(HashMap)request.getAttribute("params"); String
                 searchStr=(String)params.getOrDefault("search", "" ); HashMap
                 result=(HashMap)request.getAttribute("result"); %>
-                <!-- Main Content -->
                 <form action="" method="">
                     <div class="container mt-4">
                         <div class="row">
@@ -49,48 +48,52 @@
                                 <div class="input-group mb-3">
                                     <select class="form-select" name="search">
                                         <option>Select an option...</option>
-                                        <option value="YEAR" <%=(searchStr.equals("YEAR")) ? "selected" : "" %>>YEAR
+                                        <option value="COMMON_CODE_ID" <%=(searchStr.equals("COMMON_CODE_ID")) ? "selected" : "" %>>COMMON_CODE_ID
                                         </option>
-                                        <option value="CAR_NAME" <%=(searchStr.equals("CAR_NAME")) ? "selected" : "" %>
-                                            >CAR_NAME</option>
+                                        <option value="NAME" <%=(searchStr.equals("NAME")) ? "selected" : "" %>
+                                            >NAME</option>
+                                        <option value="DESCRIPTION" <%=(searchStr.equals("DESCRIPTION")) ? "selected" : "" %>>DESCRIPTION
+                                        </option>
+                                        <option value="PARENT_COMMON_CODE_ID" <%=(searchStr.equals("PARENT_COMMON_CODE_ID")) ? "selected" : "" %>>PARENT_COMMON_CODE_ID
+                                        </option>
                                     </select>
                                     <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                         class="form-control" placeholder="Search..." id="keydownEnter">
                                     <button class="btn btn-primary" type="submit"
-                                        formaction="/carInfor/map/selectSearch" formmethod="get">Go</button>
+                                        formaction="/carInfor/map/commonSearch" formmethod="get">Go</button>
                                 </div>
                                 <h2>Table</h2>
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Year</th>
-                                            <th>Car Name</th>
-                                            <th>ID</th>
-                                            <th>Manufacturer ID</th>
+                                            <th>COMMON_CODE_ID</th>
+                                            <th>NAME</th>
+                                            <th>DESCRIPTION</th>
+                                            <th>PARENT_COMMON_CODE_ID</th>
                                             <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody id="carTableBody">
-                                        <% ArrayList resultList=(ArrayList)result.get("resultList"); 
-                                        for(int i=0; i < resultList.size(); i=i+1){
-                                             HashMap record=(HashMap)resultList.get(i); %>
+                                        <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
+                                            resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
                                             <tr>
                                                 <td>
-                                                    <%= record.get("CAR_NAME") %>
+                                                    <%= record.get("COMMON_CODE_ID") %>
                                                 </td>
                                                 <td>
-                                                    <%= record.get("YEAR") %>
+                                                    <%= record.get("NAME") %>
                                                 </td>
                                                 <td>
-                                                    <%= record.get("CAR_INFOR_ID") %>
+                                                    <%= record.get("DESCRIPTION") %>
                                                 </td>
                                                 <td>
-                                                    <%= record.get("COMPANY_ID") %>
+                                                    <%= record.get("PARENT_COMMON_CODE_ID") %>
                                                 </td>
                                                 <td>
                                                     <button
-                                                        formaction='/carInfor/map/deleteAndSelectSearch/<%= record.get("CAR_INFOR_ID") %>'
+                                                        formaction='/carInfor/map/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>'
                                                         formmethod="post">Del</button>
+                                                    <button formaction='/carInfor/map/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">update</button>
                                                 </td>
                                             </tr>
                                             <% } %>
