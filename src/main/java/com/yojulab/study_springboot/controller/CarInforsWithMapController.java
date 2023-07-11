@@ -38,7 +38,7 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
-    @PostMapping("/commonList")
+    @GetMapping("/commonList")
     public ModelAndView commonList(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = carInforsService.commonList(params);
         modelAndView.addObject("result", result);
@@ -58,6 +58,7 @@ public class CarInforsWithMapController {
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
         return modelAndView;
     }
+    
 
     // /selectDetail/CI002
     @GetMapping("/selectDetail/{UNIQUE_ID}")
