@@ -36,8 +36,9 @@
         </div>
     </nav>
 
-    <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
-        ); HashMap result=(HashMap)request.getAttribute("result"); %>
+    <% HashMap params=(HashMap)request.getAttribute("params"); 
+    String searchStr=(String)params.getOrDefault("search", "");
+    HashMap result=(HashMap)request.getAttribute("result"); %>
         <!-- Main Content -->
         <form action="" method="">
             <div class="container mt-4">
