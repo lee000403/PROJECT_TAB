@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CarInfors">
+    <!-- 검색 -->
+	<select id="selectSearch" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM db_cars.car_infors
+        where 1 = 1 
+        <choose>
+            <when test="search == 'YEAR'">
+            <![CDATA[
+            and YEAR > #{words}
+            ]]>
+            </when>
+            <when test="search == 'CAR_NAME'">
+            and CAR_NAME like CONCAT(#{words}, '%')
+            </when>
+        </choose>        
+        ;
+	</select>
+
+    <!-- mybatis foreach HashMap.put("CAR_INFOR_ID_LIST", CAR_INFOR_ID_LIST)-->
+	<select id="selectInUID" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM db_cars.car_infors
+        where 1 = 1
+        and CAR_INFOR_ID in 
+        <foreach item="CAR_INFOR_ID" index="index" collection="CAR_INFOR_ID_LIST"
+            open="(" separator="," close=")" nullable="true">
+            #{CAR_INFOR_ID}
+        </foreach>
+        ; 
+	</select>
+
+    <!-- 전체 -->
+	<select id="selectAll" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM db_cars.car_infors
+        where 1 = 1 ;
+	</select>
+
+    <!-- 상세 -->
+	<select id="selectByUID" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM db_cars.car_infors
+        where CAR_INFOR_ID = #{CAR_INFOR_ID}
+	</select>
+
+    <!-- 입력 -->
+	<insert id="insert" parameterType="Map">
+        insert into car_infors
+        (CAR_NAME, YEAR, CAR_INFOR_ID, COMPANY_ID)
+        values
+        (#{CAR_NAME}, #{YEAR}, #{CAR_INFOR_ID}, #{COMPANY_ID})
+        ;
+    </insert>
+
+    <!-- 수정 -->
+	<update id="update" parameterType="Map">
+        update car_infors
+        set CAR_NAME = #{CAR_NAME}
+        where CAR_INFOR_ID = #{CAR_INFOR_ID}
+    </update>
+
+    <!-- 삭제 -->
+	<delete id="delete" parameterType="Map">
+        delete from car_infors
+        where CAR_INFOR_ID = #{CAR_INFOR_ID}
+    </delete>
+</mapper>
