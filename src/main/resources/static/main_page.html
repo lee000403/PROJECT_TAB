@@ -29,17 +29,18 @@
 
     .image-container {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
     }
 
-
-  .image-container img {
-      flex: 1;
-      margin-right: 10px;
+    .image-container img {
+      max-height: 100%; /* Set the maximum height of the image */
+    }
 
     .main-title {
       font-size: 30px;
       font-weight: bold;
-
     }
     
   </style>
@@ -88,51 +89,43 @@
       </div>
     </div>
 
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col">
-          <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+    
+    <div class="row justify-content-center">
+      <div class="col">
+        <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img1_video_banner.jpg" alt="치매 인식 개선 영상">
-          </a>
-        </div>
-
-
-        <div class="col">
-          <a href="./self_test.html">
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="./self_test.html">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img2_self_test.jpg" alt="치매 자가 진단">
-          </a>
-        </div>
-        <div class="col">
-          <a href="./login_page.html">
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="./login_page.html">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
 
-        <div class="col-md-4 mb-4">
-          <a href="./login_page.html">
-            <div class="image-container">
-              <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer mt-auto py-3" style="background-color: rgb(235, 225, 235);">
-
-      <div class="row">
-        <div class="text-center">
-          치매에 대해 궁금하세요?
-        </div>
-        <div class="text-center">
-          ☎ 치매상담콜센터 : 1899-9988
-        </div>
-      </div>
   </div>
-  </footer>
 
+  <footer class="footer py-3 mt-5" style="background-color: rgb(235, 225, 235);">
+    <div class="row">
+      <div class="text-center">
+        치매에 대해 궁금하세요?
+      </div>
+      <div class="text-center">
+        ☎ 치매상담콜센터 : 1899-9988
+      </div>
+    </div>
+  </footer>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
