@@ -34,7 +34,7 @@ public class CarInforsWithMapController {
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         
-        modelAndView.setViewName("/WEB-INF/views/carinfor/list_common.jsp");
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
         return modelAndView;
     }
 
@@ -43,7 +43,7 @@ public class CarInforsWithMapController {
         Object result = carInforsService.commonList(params);
         modelAndView.addObject("result", result);
         modelAndView.addObject("params", params);
-        modelAndView.setViewName("/WEB-INF/views/carinfor/list_map.jsp");
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_common.jsp");
         return modelAndView;
     }
 

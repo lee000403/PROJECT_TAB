@@ -109,8 +109,7 @@ public class CarInforsService {
     public Object commonList(Map dataMap) {
         String sqlMapId = "CarInfors.common_list";
         
-        HashMap result = new HashMap<>();
-        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
 
