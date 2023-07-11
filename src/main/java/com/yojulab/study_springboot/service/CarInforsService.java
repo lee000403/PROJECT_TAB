@@ -27,7 +27,7 @@ public class CarInforsService {
     public Map selectSearch(Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CarInfors.selectSearch";
-        
+
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
@@ -86,10 +86,16 @@ public class CarInforsService {
         return result;
     }
 
-
     // MVC view
     public Object delete(Map dataMap) {
         String sqlMapId = "CarInfors.delete";
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object delete_Com(Map dataMap) {
+        String sqlMapId = "CarInfors.delete_com";
 
         Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
@@ -106,10 +112,30 @@ public class CarInforsService {
         return result;
     }
 
-    public Object commonList(Map dataMap) {
+    public Map common(Map dataMap) {
         String sqlMapId = "CarInfors.common_list";
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+    public Object deleteAndSelectSearch_Com(String UNIQUE_ID, Map dataMap) {
+        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("deleteCount", this.delete_Com(dataMap));
+
+        result.putAll(this.common(dataMap));
+        return result;
+    }
+
+    public Object update_Com(String COMMON_CODE_ID) {
+        String sqlMapId = "CarInfors.update_com";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
         
-        Object result = sharedDao.getList(sqlMapId, dataMap);
+        Object result = sharedDao.update(sqlMapId, dataMap);
         return result;
     }
 
