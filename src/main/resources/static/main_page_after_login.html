@@ -29,26 +29,26 @@
 
     .image-container {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
+
     }
-
-
-  .image-container img {
-      flex: 1;
-      margin-right: 10px;
-  }
 
     .main-title {
       font-size: 30px;
       font-weight: bold;
-
     }
     
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid justify-content-end">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./main_page.html">
+        <img src="./images/mainlogo.png" alt="Logo" width="auto" height="80">
+      </a>
       <ul class="navbar-nav flex-row">
         <li class="nav-item">
           <a class="nav-link" href="#">username님, 환영합니다💞</a>
@@ -57,7 +57,7 @@
           <a class="nav-link" href="#">로그아웃</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">커뮤니티</a>
+          <a class="nav-link" href="./self_test.html">커뮤니티</a>
         </li>
       </ul>
     </div>
@@ -68,7 +68,6 @@
       <p class="text-center">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
     </div>
   </div>
-
 
   <div class="container mt-4 text-center">
     <div>
@@ -87,53 +86,43 @@
       </div>
     </div>
 
-
-
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col">
-          <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+    
+    <div class="row justify-content-center">
+      <div class="col">
+        <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img1_video_banner.jpg" alt="치매 인식 개선 영상">
-          </a>
-        </div>
-
-
-        <div class="col">
-          <a href="./self_test.html" target="_blank">
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="./self_test.html">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img2_self_test.jpg" alt="치매 자가 진단">
-          </a>
-        </div>
-        <div class="col">
-          <a href="./survey.html" target="_blank">
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="./survey_a.html">
+          <div class="image-container">
             <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
 
-        <div class="col-md-4 mb-4">
-          <a href="./login_page.html">
-            <div class="image-container">
-              <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer mt-auto py-3" style="background-color: rgb(235, 225, 235);">
-
-      <div class="row">
-        <div class="text-center">
-          치매에 대해 궁금하세요?
-        </div>
-        <div class="text-center">
-          ☎ 치매상담콜센터 : 1899-9988
-        </div>
-      </div>
   </div>
-  </footer>
 
+  <footer class="footer py-3 mt-5" style="background-color: rgb(235, 225, 235);">
+    <div class="row">
+      <div class="text-center">
+        치매에 대해 궁금하세요?
+      </div>
+      <div class="text-center">
+        ☎ 치매상담콜센터 : 1899-9988
+      </div>
+    </div>
+  </footer>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
