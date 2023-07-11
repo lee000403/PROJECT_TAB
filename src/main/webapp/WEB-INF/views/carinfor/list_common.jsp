@@ -48,10 +48,9 @@
                         <div class="input-group mb-3">
                             <select class="form-select" name="search">
                                 <option>Select an option...</option>
-                                <% for (HashMap dataMap : result) {
-                                    
-                                }
-                                <option value="<%= %>"></option>
+                                <% for (int i; i < result.size(); i++) { %>
+                                    <option><%= data.get("name") %></option>
+                                <%}%>
                             </select>
                             <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                 class="form-control" placeholder="Search..." id="keydownEnter">
