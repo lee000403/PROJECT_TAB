@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.top_gnb {
+    background-color: #333;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.top_gnb p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top_gnb .login_gnb {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.top_gnb .login_gnb li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top_gnb .login_gnb li a {
+    color: #fff;
+}
+
+.top_gnb .login_gnb li a:hover {
+    text-decoration: underline;
+}
+
+.header_wrap {
+    background-color: #fff;
+    height: 74px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 20;
+}
+
+.header_wrap nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header_wrap h1 {
+    margin: 0;
+}
+
+.header_wrap h1 a {
+    display: block;
+    height: 100%;
+}
+
+.header_wrap h1 img {
+    height: 40px;
+    margin-top: 17px;
+}
+
+.header_wrap .mainavbox {
+    position: relative;
+}
+
+.header_wrap .mainavbox h2 {
+    display: none;
+}
+
+.header_wrap .mainav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header_wrap .mainav li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.header_wrap .mainav li:first-child {
+    margin-left: 0;
+}
+
+.header_wrap .mainav li a {
+    color: #666;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.header_wrap .mainav li a:hover {
+    color: #000;
+}
+
+.header_wrap .mainav li.on a {
+    color: #000;
+    font-weight: bold;
+}
+
+.header_wrap .mainav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_wrap .mainav li:hover ul {
+    display: block;
+}
+
+.header_wrap .mainav li ul li {
+    position: relative;
+}
+
+.header_wrap .mainav li ul li a {
+    color: #666;
+    font-size: 14px;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.header_wrap .mainav li ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+.header_wrap .site_wrap {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px 20px;
+}
+
+.header_wrap .site_nav {
+    margin-bottom: 20px;
+}
+
+.header_wrap .site_nav:last-child {
+    margin-bottom: 0;
+}
+
+.header_wrap .site_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.header_wrap .site_nav li {
+    width: 33.333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header_wrap .site_nav li a {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.header_wrap .site_nav li a:hover {
+    text-decoration: underline;
+}
+
+.header_wrap .hd_mypage_area {
+    display: flex;
+    align-items: center;
+}
+
+.header_wrap .myinfo_icon {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.header_wrap .myinfo_icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.header_wrap .myinfo_icon .hide-text {
+    display: none;
+}
+
+
+</style>
+<header>
+  <div class="top_gnb">
+      <div class="body_wrap">
+          <p>1:1 소개팅 하나만을 전문적으로 합니다.</p>
+          <ul class="login_gnb">
+              <li><a href="https://jikso.co.kr/bbs/login.php">로그인</a></li>
+              <li class="on"><a href="https://jikso.co.kr/bbs/register.php">회원가입</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="header_wrap">
+      <nav class="body_wrap">
+          <h1><a href="https://jikso.co.kr"><img src="https://jikso.co.kr/img/logo_c.png" alt="직장인소개팅" title=""></a></h1>
+          <div class="mainavbox">
+              <h2>메인메뉴</h2>
+              <ul class="mainav">
+                  <li><a href="/page/company.php" target="_self">회사소개</a></li><!--class="on"-->
+                  <li><a href="/page/guide.php" target="_self">이용안내</a></li><!--class="on"-->
+                  <li><a href="/bbs/board.php?bo_table=word" target="_self">만남후기</a></li><!--class="on"-->
+                  <li><a href="/page/jointest.php" target="_self">연애테스트</a></li><!--class="on"-->
+                  <li><a href="/page/event.php" target="_self">EVENT</a></li><!--class="on"-->
+                  <li><a href="/bbs/faq.php" target="_self">고객센터</a></li><!--class="on"-->
+                  <li><a href="/bbs/board.php?bo_table=booking" target="_self">신청하기</a></li><!--class="on"-->
+              </ul>
+              <div class="site_wrap">
+                  <div class="subnav body_wrap">
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/page/company.php" target="_self">직장인소개팅은?</a></li>
+                              <li><a href="/page/intro.php" target="_self">인사말</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/page/guide.php" target="_self">이용방법</a></li>
+                              <li><a href="/page/price.php" target="_self">이용금액</a></li>
+                              <li><a href="/page/refund.php" target="_self">환불규정</a></li>
+                              <li><a href="/page/rule.php" target="_self">세부규정</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/bbs/board.php?bo_table=word" target="_self">포토후기</a></li>
+                              <li><a href="/bbs/review.php" target="_self">생생리뷰</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/page/jointest.php" target="_self">가입테스트</a></li>
+                              <li><a href="/page/lovetest.php" target="_self">심리테스트</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/page/event.php" target="_self">만남후기 이벤트</a></li>
+                              <li><a href="/page/event2.php" target="_self">친구추천 이벤트</a></li>
+                              <li><a href="/page/event3.php" target="_self">커플/결혼후기 이벤트</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                              <li><a href="/bbs/faq.php" target="_self">자주하시는 질문</a></li>
+                              <li><a href="/bbs/board.php?bo_table=qa" target="_self">문의사항</a></li>
+                              <li><a href="/bbs/board.php?bo_table=notice2" target="_self">공지사항</a></li>
+                          </ul>
+                      </div>
+                      <div class="site_nav">
+                          <ul>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="hd_mypage_area">
+              <div class="myinfo_icon" id="info_btn">
+                  <a href="javascript:void(0);">
+                      <img src="https://jikso.co.kr/img/no_profile.gif?1689125852" alt="profile_image">
+                      <span class="hide-text">나의정보메뉴열기</span>
+                  </a>
+              </div>
+          </div>
+      </nav>
+  </div>
+</header>
+
+
+
+<body>
+  
+</body>
+</html>
