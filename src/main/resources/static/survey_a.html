@@ -8,7 +8,7 @@
     <title>설문 조사</title>
 
     <style>
-        .centered-title {
+        .centered-text {
             text-align: center;
         }
 
@@ -24,68 +24,54 @@
 </head>
 
 <body>
-    <div class="container mt-5 py-3 px-5">
-        <h2 class="centered-title">설문 조사</h2>
+    <div class="container my-5 py-3 px-5">
+        <div class="centered-text" style=" font-size: 30px; font-weight: bold;">치매 동행 파트너를 찾고 계시나요?</div>
+        <div class="centered-text">원하시는 파트너의 조건을 검색해보세요</div>
+        </div>
+        <div>
         <form>
             <div class="form-group">
-                <label for="gender">성별:</label>
+                <label for="gender">선호하는 파트너의 성별이 있나요?</label>
                 <select class="form-control" id="gender">
-                    <option>남성</option>
-                    <option>여성</option>
+                    <option>무관</option>
+                    <option>남</option>
+                    <option>여</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="age">나이:</label>
-                <input type="text" class="form-control" id="age" placeholder="나이를 입력하세요">
-            </div>
-
-            <div class="form-group">
-                <label for="residence">거주 지역:</label>
-                <select class="form-control" id="residence">
-                    <option>도시</option>
-                    <option>교외</option>
-                    <option>시골</option>
-                    <option>기타</option>
+                <label for=" work-type">어떤 근무 형태를 원하시나요?</label>
+                <select class="form-control" id="work-type">
+                    <option>출퇴근형 (오전만)</option>
+                    <option>출퇴근형 (오후만)</option>
+                    <option>출퇴근형 (종일)</option>
+                    <option>입주형</option>
+                    <option>파트너와 상담 후 결정할게요.</option>
                 </select>
             </div>
+        
 
             <div class="form-group">
-                <label for="working-hours">하루 근무 시간:</label>
-                <select class="form-control" id="working-hours">
-                    <option>오전 (오전 6시 - 오후 12시)</option>
-                    <option>오후 (오후 12시 - 오후 6시)</option>
-                    <option>밤 (오후 6시 - 오전 12시)</option>
-                    <option>하루 종일</option>
-                </select>
+                <label for="requestAddress">서비스를 받고 싶은 지역을 선택해주세요</label>
+                <select data-v-4604670f="" name="requestAddress" class="select custom-select margin-bottom disabled" data-testid="request-address" aria-invalid="false" id="requestAddressProvince"><option disabled="disabled" value="">시/도</option><option value="서울">서울</option><option value="세종">세종</option><option value="강원">강원</option><option value="인천">인천</option><option value="경기">경기</option><option value="충북">충북</option><option value="충남">충남</option><option value="경북">경북</option><option value="대전">대전</option><option value="대구">대구</option><option value="전북">전북</option><option value="경남">경남</option><option value="울산">울산</option><option value="광주">광주</option><option value="부산">부산</option><option value="전남">전남</option><option value="제주">제주</option></select>
+
+                <select data-v-4604670f="" name="requestAddress" disabled="disabled" class="select custom-select disabled" data-testid="request-address" aria-invalid="false" id="requestAddressCity"><option disabled="disabled" value="">시/군/구</option></select>
             </div>
 
             <div class="form-group">
-                <label for="day-of-week">주중 요일:</label>
-                <select class="form-control" id="day-of-week">
-                    <option>월요일</option>
-                    <option>화요일</option>
-                    <option>수요일</option>
-                    <option>목요일</option>
-                    <option>금요일</option>
-                    <option>토요일</option>
-                    <option>일요일</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="vehicle-ownership">차량 소유 여부:</label>
+                <label for="vehicle-ownership">차량 또는 면허가 필요할까요?</label>
                 <select class="form-control" id="vehicle-ownership">
-                    <option>예</option>
-                    <option>아니요</option>
+                    <option>차량 필요</option>
+                    <option>운전 필요</option>
+                    <option>무관</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="license">면허 소지 여부:</label>
+                <label for="license">자격증이 필요한가요?</label>
                 <select class="form-control" id="license">
-                    <option>예</option>
-                    <option>아니요</option>
+                    <option>간병 도우미 자격증 필요</option>
+                    <option></option>
                 </select>
             </div>
 
