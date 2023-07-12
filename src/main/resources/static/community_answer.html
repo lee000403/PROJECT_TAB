@@ -31,21 +31,25 @@
                     <div class="card-body">
                         <div class="media">
                             <div class="media-body">
-                                <h5 class="mt-0">John Doe</h5>
-                                <p class="mb-0">피곤하다니 너무 힘드시네요. 좀 더 휴식을 취해보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mt-0">John Doe</h5>
+                                    <button class="btn btn-sm btn-primary"
+                                        onclick="showReplyForm('comment1')">Reply</button>
+                                </div>
+                                <p class="mb-0">It's too hard to be tired. Get some more rest!</p>
                                 <small class="text-muted">2023-07-06</small>
-                                <button class="btn btn-sm btn-primary"
-                                    onclick="showReplyForm('comment1')">Reply</button>
                             </div>
                         </div>
 
                         <div class="media mt-3 comment-reply">
                             <div class="media-body">
-                                <h5 class="mt-0">Jane Smith</h5>
-                                <p class="mb-0">조금만 힘내세요. 긍정적인 생각으로 힘을 내보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mt-0">Jane Smith</h5>
+                                    <button class="btn btn-sm btn-primary"
+                                        onclick="showReplyForm('comment2')">Reply</button>
+                                </div>
+                                <p class="mb-0">Cheer up a little. Cheer up with positive thoughts!</p>
                                 <small class="text-muted">2023-07-07</small>
-                                <button class="btn btn-sm btn-primary"
-                                    onclick="showReplyForm('comment2')">Reply</button>
                             </div>
                         </div>
 
@@ -70,12 +74,13 @@
                         <label for="comment-text">Comment:</label>
                         <textarea class="form-control" id="comment-text" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
