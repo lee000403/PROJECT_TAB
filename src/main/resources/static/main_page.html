@@ -43,6 +43,32 @@
       font-weight: bold;
     }
     
+    .image-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #241a15;
+      padding: 10px;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .image-text-second {
+      position: absolute;
+      top: calc(20% + 15px); /* Adjust the top value to control the spacing */
+      left: 50%;
+      transform: translateX(-50%);
+      color: #555742;
+      padding: 10px;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .round-image {
+  border-radius: 10%;
+}
+
   </style>
 </head>
 
@@ -59,30 +85,30 @@
         <li class="nav-item">
           <a class="nav-link" href="./signin_select_page.html">회원가입</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./self_test.html">커뮤니티</a>
-        </li>
       </ul>
     </div>
   </nav>
   <div class="container-fluid">
-    <div class="py-4">
-      <div class="text-center main-title">치매 One-click Matching</div>
-      <p class="text-center">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
+    <div class="mb-4">
+      <div class="image-container">
+        <img src="./images/img5_main_cover.jpg" alt="치매 one-click 메인 커버" height="500em" width="100%">
+        <div class="text-center main-title image-text">치매 One-click Matching</div>
+        <p class="text-center image-text-second">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
+      </div>
     </div>
   </div>
 
-  <div class="container mt-4 text-center">
-    <div>
+  <div>
+    <div class="container mb-2 text-center">
       🏥 치매 전문 센터 및 병원 찾기
     </div>
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="input-group mb-4">
+        <div class="input-group mb-5">
           <input type="text" class="form-control" placeholder="Search">
           <div class="input-group-append">
             <a href="search_page.html">
-              <button class="btn" style="background-color: rgba(221, 43, 43, 0.897);" type="button">Search</button>
+              <button class="btn" style="background-color: #ff7f95;" type="button">Search</button>
             </a>
           </div>
         </div>
@@ -93,25 +119,34 @@
     <div class="row justify-content-center">
       <div class="col">
         <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
-          <div class="image-container">
-            <img class="img-fluid" src="./images/img1_video_banner.jpg" alt="치매 인식 개선 영상">
+          <div class="image-container round-image">
+            <img class="img-fluid" src="./images/img1_video_banner.png" alt="치매 인식 개선 영상">
           </div>
         </a>
       </div>
       <div class="col">
         <a href="./self_test.html">
           <div class="image-container">
-            <img class="img-fluid" src="./images/img2_self_test.jpg" alt="치매 자가 진단">
+            <img class="img-fluid round-image" src="./images/img2_self_test.png" alt="치매 자가 진단">
           </div>
         </a>
       </div>
       <div class="col">
         <a href="./login_page.html">
           <div class="image-container">
-            <img class="img-fluid" src="./images/img3_partner_matching.jpg" alt="맞춤 파트너 매칭 서비스">
+            <img class="img-fluid round-image" src="./images/img3_partner_matching.png" alt="맞춤 파트너 매칭 서비스">
           </div>
         </a>
       </div>
+
+      <div class="col">
+        <a href="#">
+          <div class="image-container">
+            <img class="img-fluid round-image" src="./images/img4_community.png" alt="커뮤니티">
+          </div>
+        </a>
+      </div>
+
     </div>
 
   </div>
