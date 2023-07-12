@@ -4,6 +4,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.yojulab.study_springboot.commons.CommonUUID;
+
 @Component
 public class SharedDao {
     @Autowired

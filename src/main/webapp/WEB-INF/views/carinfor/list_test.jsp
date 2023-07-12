@@ -70,7 +70,7 @@
                                             <th>NAME</th>
                                             <th>DESCRIPTION</th>
                                             <th>PARENT_COMMON_CODE_ID</th>
-                                            <th>Delete</th>
+                                            <th>클릭 버튼</th>
                                         </tr>
                                     </thead>
                                     <tbody id="carTableBody">

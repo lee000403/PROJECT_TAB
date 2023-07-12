@@ -20,8 +20,6 @@
               <div><input name="SYSTEM_CODE_YN" type="text"></div>
               <div>MODIFIER_SEQ</div>
               <div><input name="MODIFIER_SEQ" type="text"></div>
-              <div>MODIFY_DATE</div>
-              <div><input name="MODIFY_DATE" type="text"></div>
               <button type="submit" formaction='/carInfor/map/updateAndSelectsearch_Com/${UNIQUE_ID}' formmethod="post">전송</button>
             </form>
         </body>
