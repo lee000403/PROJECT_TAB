@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.yojulab.study_springboot.commons.CommonUUID;
 import com.yojulab.study_springboot.dao.SharedDao;
 
 @Service
@@ -15,6 +17,9 @@ import com.yojulab.study_springboot.dao.SharedDao;
 public class CarInforsService {
     @Autowired
     SharedDao sharedDao;
+
+    @Autowired
+    CommonUUID commonUUID;
 
     public Object selectInUID(Map dataMap) {
         String sqlMapId = "CarInfors.selectInUID";
@@ -131,16 +136,22 @@ public class CarInforsService {
     }
 
     public Object insert_Com(Map dataMap) {
+        Object result = null;
         String sqlMapId = "CarInfors.insert_com";
-
-        Object result = sharedDao.insert(sqlMapId, dataMap);
+        if (!dataMap.get("COMMON_CODE_ID").equals("")) {
+            result = sharedDao.insert(sqlMapId, dataMap);
+        } else if (dataMap.get("COMMON_CODE_ID").equals("")){
+            String uuid = commonUUID.Commons();
+            dataMap.put("COMMON_CODE_ID", uuid);
+            result = sharedDao.insert(sqlMapId, dataMap);
+        }
         return result;
     }
 
     public Object insertAndSelectSearch_Com(Map dataMap) {
 
         HashMap result = new HashMap<>();
-        result.put("deleteCount", this.insert_Com(dataMap));
+        result.put("insertCount", this.insert_Com(dataMap));
 
         result.putAll(this.common(dataMap));
         return result;
@@ -157,7 +168,7 @@ public class CarInforsService {
         dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
 
         HashMap result = new HashMap<>();
-        result.put("deleteCount", this.update_Com(dataMap));
+        result.put("updateCount", this.update_Com(dataMap));
 
         result.putAll(this.common(dataMap));
         return result;
