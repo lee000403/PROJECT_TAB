@@ -137,11 +137,10 @@ public class CarInforsService {
         return result;
     }
 
-    public Object insertAndSelectSearch_Com(String UNIQUE_ID, Map dataMap) {
-        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+    public Object insertAndSelectSearch_Com(Map dataMap) {
 
         HashMap result = new HashMap<>();
-        result.put("deleteCount", this.update_Com(dataMap));
+        result.put("deleteCount", this.insert_Com(dataMap));
 
         result.putAll(this.common(dataMap));
         return result;
