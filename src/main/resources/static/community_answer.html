@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Post Detail</title>
+    <style>
+        .comment-reply {
+            margin-left: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,35 +30,45 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="media">
-                            <img src="user-avatar.jpg" class="mr-3" alt="User Avatar">
                             <div class="media-body">
                                 <h5 class="mt-0">John Doe</h5>
                                 <p class="mb-0">피곤하다니 너무 힘드시네요. 좀 더 휴식을 취해보세요!</p>
                                 <small class="text-muted">2023-07-06</small>
+                                <button class="btn btn-sm btn-primary"
+                                    onclick="showReplyForm('comment1')">Reply</button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="card mt-3">
-                    <div class="card-body">
-                        <div class="media">
-                            <img src="user-avatar.jpg" class="mr-3" alt="User Avatar">
+                        <div class="media mt-3 comment-reply">
                             <div class="media-body">
                                 <h5 class="mt-0">Jane Smith</h5>
                                 <p class="mb-0">조금만 힘내세요. 긍정적인 생각으로 힘을 내보세요!</p>
                                 <small class="text-muted">2023-07-07</small>
+                                <button class="btn btn-sm btn-primary"
+                                    onclick="showReplyForm('comment2')">Reply</button>
                             </div>
                         </div>
+
+                        <form class="mt-3" id="commentForm" style="display: none;">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Write your comment"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
 
-                <!-- Add more comment cards as needed -->
+                <!-- Add more comment threads as needed -->
+            </div>
+        </div>
 
-                <form class="mt-3">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Write a Comment</h2>
+                <form>
                     <div class="form-group">
-                        <label for="comment-input">Leave a comment</label>
-                        <textarea class="form-control" id="comment-input" rows="3"></textarea>
+                        <label for="comment-text">Comment:</label>
+                        <textarea class="form-control" id="comment-text" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -61,7 +76,6 @@
         </div>
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
