@@ -95,37 +95,15 @@
 
     <update id="update_com" parameterType="Map">
         update commons_code
-        <choose>
-        <when test="search == 'NAME'">
-        set NAME = #{NAME}
+        set NAME = #{NAME}, SYSTEM_CODE_YN = #{SYSTEM_CODE_YN}, MODIFIER_SEQ = #{MODIFIER_SEQ}, MODIFY_DATE = #{MODIFY_DATE}
         where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'SYSTEM_CODE_YN'">
-        set SYSTEM_CODE_YN = #{SYSTEM_CODE_YN}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'USE_YN'">
-        set USE_YN = #{USE_YN}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'REGISTER_SEQ'">
-        set REGISTER_SEQ = #{REGISTER_SEQ}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'REGISTRY_DATE'">
-        set REGISTRY_DATE = #{REGISTRY_DATE}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'MODIFIER_SEQ'">
-        set MODIFIER_SEQ = #{MODIFIER_SEQ}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        <when test="search == 'MODIFY_DATE'">
-        set MODIFY_DATE = #{MODIFY_DATE}
-        where COMMON_CODE_ID = #{COMMON_CODE_ID}
-        </when>
-        </choose>
-
     </update>
+
+    <insert id="insert_com" parameterType="Map">
+        insert into car_infors
+        (COMMON_CODE_ID,NAME,ORDER_NUMBER,ATTRIBUTION_1,ATTRIBUTION_2,DESCRIPTION,SYSTEM_CODE_YN,USE_YN,PARENT_COMMON_CODE_ID,REGISTER_SEQ,REGISTRY_DATE,MODIFIER_SEQ,MODIFY_DATE) 
+        values
+        (#{COMMON_CODE_ID}, #{NAME}, #{ORDER_NUMBER}, #{ATTRIBUTION_1}, #{ATTRIBUTION_2}, #{DESCRIPTION}, #{SYSTEM_CODE_YN}, #{USE_YN}, #{PARENT_COMMON_CODE_ID}. #{REGISTER_SEQ}. #{REGISTRY_DATE}, #{MODIFIER_SEQ}, #{MODIFY_DATE})
+    </insert>
 
 </mapper>

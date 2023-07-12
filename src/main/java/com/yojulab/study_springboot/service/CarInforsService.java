@@ -130,12 +130,37 @@ public class CarInforsService {
         return result;
     }
 
-    public Object update_Com(String COMMON_CODE_ID) {
+    public Object insert_Com(Map dataMap) {
+        String sqlMapId = "CarInfors.insert_com";
+
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object insertAndSelectSearch_Com(String UNIQUE_ID, Map dataMap) {
+        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("deleteCount", this.update_Com(dataMap));
+
+        result.putAll(this.common(dataMap));
+        return result;
+    }
+
+    public Object update_Com(Map dataMap) {
         String sqlMapId = "CarInfors.update_com";
-        HashMap dataMap = new HashMap<>();
-        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
-        
+
         Object result = sharedDao.update(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object updateAndSelectSearch_Com(String UNIQUE_ID, Map dataMap) {
+        dataMap.put("COMMON_CODE_ID", UNIQUE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("deleteCount", this.update_Com(dataMap));
+
+        result.putAll(this.common(dataMap));
         return result;
     }
 

@@ -91,9 +91,12 @@
                                                 </td>
                                                 <td>
                                                     <button
-                                                        formaction='/carInfor/map/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>'
+                                                        formaction='/carInfor/map/deleteAndSelectSearch_Com/<%= record.get("COMMON_CODE_ID") %>'
                                                         formmethod="post">Del</button>
-                                                    <button formaction='/carInfor/map/deleteAndSelectSearch/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">update</button>
+                                                    </form>
+                                                    <form action="">
+                                                    <button formaction='/carInfor/map/update_Com/<%= record.get("COMMON_CODE_ID") %>'>update</button>
+                                                </form>
                                                 </td>
                                             </tr>
                                             <% } %>
@@ -112,7 +115,6 @@
                             </div>
                         </div>
                     </div>
-                </form>
 
 
                 <!-- Footer -->

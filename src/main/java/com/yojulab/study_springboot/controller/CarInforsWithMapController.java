@@ -50,7 +50,7 @@ public class CarInforsWithMapController {
     @PostMapping("/deleteAndSelectSearch_Com/{UNIQUE_ID}")
     public ModelAndView deleteAndSelectSearch_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = carInforsService.deleteAndSelectSearch(UNIQUE_ID, params);
+        Object result = carInforsService.deleteAndSelectSearch_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -58,10 +58,21 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
-    @PutMapping("/updateAndSelectsearch_Com/{UNIQUE_ID}")
+    @GetMapping("/update_Com/{UNIQUE_ID}")
+    public ModelAndView update_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.update_Com(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_update.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/updateAndSelectsearch_Com/{UNIQUE_ID}")
     public ModelAndView updateAndSelectsearch_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = carInforsService.update_Com(UNIQUE_ID);
+        Object result = carInforsService.updateAndSelectSearch_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
