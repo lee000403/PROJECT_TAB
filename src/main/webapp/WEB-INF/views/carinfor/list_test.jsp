@@ -40,7 +40,7 @@
             <% HashMap params=(HashMap)request.getAttribute("params"); String
                 searchStr=(String)params.getOrDefault("search", "" ); HashMap
                 result=(HashMap)request.getAttribute("result"); %>
-                <form action="" method="">
+                <form action="" method="post">
                     <div class="container mt-4">
                         <div class="row">
                             <div class="col-md-8">
@@ -60,7 +60,7 @@
                                     <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                         class="form-control" placeholder="Search..." id="keydownEnter">
                                     <button class="btn btn-primary" type="submit"
-                                        formaction="/carInfor/map/commonSearch" formmethod="get">Go</button>
+                                        formaction="/carInfor/map/commonSearch" formmethod="post">Go</button>
                                 </div>
                                 <h2>Table</h2>
                                 <table class="table">
@@ -95,7 +95,7 @@
                                                         formmethod="post">Del</button>
                                                     </form>
                                                     <form action="">
-                                                    <button formaction='/carInfor/map/update_Com/<%= record.get("COMMON_CODE_ID") %>'>update</button>
+                                                    <button formaction='/carInfor/map/update_Com/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">update</button>
                                                 </form>
                                                 </td>
                                             </tr>
@@ -103,6 +103,9 @@
                                                 <!-- Empty -->
                                     </tbody>
                                 </table>
+                                <form action="">
+                                    <button formaction="/carInfor/map/insert_Com" formmethod="post">insert</button>
+                                </form>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
                                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
