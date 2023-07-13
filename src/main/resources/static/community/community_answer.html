@@ -82,6 +82,7 @@
             padding-bottom: 10px;
 
         }
+
         .post-subtitle {
             font-size: 12px;
             border-bottom: 1px solid #0000004d;
@@ -104,7 +105,7 @@
         .btn-group {
             float: right;
             margin-right: auto;
-            
+
         }
 
         .btn-group .text-right {
@@ -182,22 +183,21 @@
     <div class="container mt-4">
         <h1 class="text-center">커뮤니티</h1>
         <form action="">
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <article style="border: 1px solid #ccc; padding: 20px;">
-                    <div class="post-title">피곤피곤</div>
-                    <div class="post-subtitle">작성자 : Alice 작성일 : 2023-07-06</div>
-                    <p>피곤한 하루였어요.</p>
-                </article>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <article style="border: 1px solid #ccc; padding: 20px;">
+                        <div class="post-title">피곤피곤</div>
+                        <div class="post-subtitle">작성자 : Alice 작성일 : 2023-07-06</div>
+                        <p>피곤한 하루였어요.</p>
+                    </article>
+                </div>
+
+                <div class="row mt-4 btn-group">
+                    <button type="submit" class="btn btn-edit">수정</button>
+                    <button type="submit" class="btn btn-delete">삭제</button>
+                    <button type="submit" class="btn btn-list">목록</button>
+                </div>
             </div>
-
-            <div class="row mt-4 btn-group">
-                        <button type="submit" class="btn btn-edit">수정</button>
-                <button type="submit" class="btn btn-delete">삭제</button>
-                <button type="submit" class="btn btn-list">목록</button>
-        </div>
-
-        </div>
         </form>
 
         <div class="row mt-4">
@@ -209,9 +209,10 @@
                             <div class="media-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">John Doe</h5>
-                                    
+
                                     <div>
-                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment1')">Reply</button>
+                                        <button class="btn btn-sm btn-reply"
+                                            onclick="showReplyForm('comment1')">Reply</button>
                                         <button class="btn btn-sm btn-edit">Edit</button>
                                         <button class="btn btn-sm btn-delete">Delete</button>
                                     </div>
@@ -226,7 +227,8 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">↳ Jane Smith</h5>
                                     <div>
-                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">Reply</button>
+                                        <button class="btn btn-sm btn-reply"
+                                            onclick="showReplyForm('comment2')">Reply</button>
                                         <button class="btn btn-sm btn-edit">Edit</button>
                                         <button class="btn btn-sm btn-delete">Delete</button>
                                     </div>
