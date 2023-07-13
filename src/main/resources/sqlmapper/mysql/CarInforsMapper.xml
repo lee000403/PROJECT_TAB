@@ -106,4 +106,10 @@
         (#{COMMON_CODE_ID}, #{NAME}, #{ORDER_NUMBER}, #{ATTRIBUTION_1}, #{ATTRIBUTION_2}, #{DESCRIPTION}, #{SYSTEM_CODE_YN}, #{USE_YN}, #{PARENT_COMMON_CODE_ID}, #{REGISTER_SEQ}, now(), #{MODIFIER_SEQ}, now())
     </insert>
 
+    <select id="selectAll_Com" parameterType="Map" resultType="Map">
+        select name
+        from COMMONS_CODE
+        where PARENT_COMMON_CODE_ID = 'CarInforSearch' or PARENT_COMMON_CODE_ID = 'Use_YN' or PARENT_COMMON_CODE_ID = 'System_Code_YN'
+	</select>
+
 </mapper>

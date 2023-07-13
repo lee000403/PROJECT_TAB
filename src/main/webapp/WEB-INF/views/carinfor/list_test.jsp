@@ -46,16 +46,7 @@
                             <div class="col-md-8">
                                 <h2>Search</h2>
                                 <div class="input-group mb-3">
-                                    <select class="form-select" name="search">
-                                        <option>Select an option...</option>
-                                        <option value="COMMON_CODE_ID" <%=(searchStr.equals("COMMON_CODE_ID")) ? "selected" : "" %>>COMMON_CODE_ID
-                                        </option>
-                                        <option value="NAME" <%=(searchStr.equals("NAME")) ? "selected" : "" %>
-                                            >NAME</option>
-                                        <option value="DESCRIPTION" <%=(searchStr.equals("DESCRIPTION")) ? "selected" : "" %>>DESCRIPTION
-                                        </option>
-                                        <option value="PARENT_COMMON_CODE_ID" <%=(searchStr.equals("PARENT_COMMON_CODE_ID")) ? "selected" : "" %>>PARENT_COMMON_CODE_ID
-                                        </option>
+                                    <select class="form-select" name="search" id="com_option">
                                     </select>
                                     <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                         class="form-control" placeholder="Search..." id="keydownEnter">
@@ -96,7 +87,7 @@
                                                     </form>
                                                     <form action="">
                                                     <button formaction='/carInfor/map/update_Com/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">update</button>
-                                                </form>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             <% } %>
@@ -126,8 +117,7 @@
                         <p>&copy; 2023 Your Website. All Rights Reserved.</p>
                     </div>
                 </footer>
-
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         </body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/list_fetch.js"></script>
         </html>
