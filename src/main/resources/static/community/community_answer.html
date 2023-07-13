@@ -46,7 +46,6 @@
             list-style: none;
         }
 
-
         .navbar .nav-link {
             padding: 0;
             margin: 0;
@@ -77,8 +76,18 @@
         }
 
         .post-title {
-            font-weight: bold; font-size: 22px; border-bottom: 1px solid #0000004d;margin-bottom:10px;
+            font-weight: bold;
+            font-size: 22px;
+            border-bottom: 1px solid #0000004d;
+            padding-bottom: 10px;
+
         }
+        .post-subtitle {
+            font-size: 12px;
+            border-bottom: 1px solid #0000004d;
+            margin-bottom: 10px;
+        }
+
         header {
             position: fixed;
             background-color: #fef0ea;
@@ -87,8 +96,35 @@
             width: 100%;
             z-index: 100;
         }
-        .btn-reply{
+
+        .btn-reply {
             background-color: #ff7f95;
+        }
+
+        .btn-group {
+            float: right;
+            margin-right: auto;
+        }
+
+        .btn-edit {
+            background-color: yellow;
+            margin-right: 10px;
+        }
+
+        .btn-delete {
+            background-color: yellow;
+            margin-right: 10px;
+        }
+
+        .btn-list {
+            background-color: yellow;
+            margin-right: 10px;
+        }
+
+        /* Adjust comment section height */
+        .comment-section {
+            height: 250px;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -138,28 +174,40 @@
     </header>
 
     <div class="container mt-4">
-        <h1 class="text-center">Post Detail</h1>
-
+        <h1 class="text-center">Community</h1>
+        <form action="">
         <div class="row mt-4">
             <div class="col-md-12">
                 <article style="border: 1px solid #ccc; padding: 20px;">
                     <div class="post-title">피곤피곤</div>
+                    <div class="post-subtitle">작성자 : Alice 작성일 : 2023-07-06</div>
                     <p>피곤한 하루였어요.</p>
                 </article>
             </div>
+            <div class="row mt-4 btn-group">
+            <div>
+                <button type="submit" class="btn btn-edit">수정</button>
+                <button type="submit" class="btn btn-delete">삭제</button>
+                <button type="submit" class="btn btn-list">목록</button>
+            </div>
         </div>
+        </div>
+        </form>
 
         <div class="row mt-4">
             <div class="col-md-12">
-                <h2>Comments</h2>
-                <div class="card">
+                <h4>전체 댓글</h4>
+                <div class="card comment-section"> <!-- Added comment-section class -->
                     <div class="card-body">
                         <div class="media">
                             <div class="media-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">John Doe</h5>
-                                    <button class="btn btn-sm btn-reply"
-                                        onclick="showReplyForm('comment1')">Reply</button>
+                                    <div>
+                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment1')">Reply</button>
+                                        <button class="btn btn-sm btn-edit">Edit</button>
+                                        <button class="btn btn-sm btn-delete">Delete</button>
+                                    </div>
                                 </div>
                                 <p class="mb-0">It's too hard to be tired. Get some more rest!</p>
                                 <small class="text-muted">2023-07-06</small>
@@ -170,8 +218,11 @@
                             <div class="media-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">Jane Smith</h5>
-                                    <button class="btn btn-sm btn-reply"
-                                        onclick="showReplyForm('comment2')">Reply</button>
+                                    <div>
+                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">Reply</button>
+                                        <button class="btn btn-sm btn-edit">Edit</button>
+                                        <button class="btn btn-sm btn-delete">Delete</button>
+                                    </div>
                                 </div>
                                 <p class="mb-0">Cheer up a little. Cheer up with positive thoughts!</p>
                                 <small class="text-muted">2023-07-07</small>
