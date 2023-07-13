@@ -142,7 +142,9 @@
       width: 100%;
       z-index: 100;
     }
-
+    .form-box{
+      margin-bottom: 10rem;
+    }
 
   </style>
 </head>
@@ -202,9 +204,10 @@
     </ul>
   </div>
 
+  <div class="text-center mt-3">Your privacy is important to us. All results are completely anonymous.</div>
+  <div class="form-box">
   <form name="frmChkDepressive" method="post">
     <div class="table_responsive">
-
       <table class="table_st taC">
         <caption>치매자가진단을 항목과 문항당 선택 답변(아니다(0점), 가끔(1점), 자주(2점))을 선택하는 표입니다.</caption>
         <colgroup>
@@ -336,9 +339,11 @@
 </table>
 </div>
 <div class="btnboxC">
-  <a class="btn_red_normal" href="#n" onclick="javascript:chkDepressive();">결과보기</a>
-    <a class="btn_blue_normal" href="#n" onclick="javascript:document.frmChkDepressive.reset();">다시하기</a>
+  <a class="btn_red_normal" href="./self_test_result_a.html
+  " onclick="javascript:chkDepressive();">결과보기</a>
+    <a class="btn_blue_normal" href="./self_test.html" onclick="javascript:document.frmChkDepressive.reset();">다시하기</a>
 </div>
 </form>
+</div>
 </body>
 </html>
