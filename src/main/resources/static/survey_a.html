@@ -17,19 +17,143 @@
             justify-content: center;
         }
 
-        .vivid-color {
-            background-color: #fbff0e;
+        .btn-style {
+            background-color: #ff7f95;
         }
-    </style>
+
+        .form-style {
+            width: 60%;
+            padding: 10%;
+            background-color: #ff7f9471;
+            border-radius: 10%;
+        }
+        .form-group {
+            width: 100%;
+        }
+        body {
+    
+      background-color: #fff;
+    }
+
+    .navbar {
+      justify-content: flex-end;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 10px;
+    }
+
+    .h-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+
+    .h-navbar .h-nav-item:first-child {
+      margin-right: auto;
+      font-size: 16px;
+      line-height: 8px;
+      list-style: none;
+    }
+
+
+    .navbar .nav-link {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      line-height: 8px;
+      color: #000000ab;
+      background-color: ;
+    }
+
+    .navbar .nav-link:hover {
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 8px;
+    }
+
+    .navbar-brand img {
+      height: 80px;
+    }
+
+    .nav-button {
+      display: inline-block;
+      padding: 20px 20px;
+      background-color: transparent;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #00000098;
+    }
+    header {
+      position: fixed;
+      background-color: #fef0ea;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+  </style>
+
+  
 </head>
 
 <body>
-    <div class="container my-5 py-3 px-5">
+<header>
+  <nav>
+    <div style="background-color: rgb(255, 255, 255);">
+      <ul class="h-navbar flex-row">
+        <li class="h-nav-item">
+          치매파트너와의 연결 그리고 동행
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./signin_select_page.html">회원가입</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login_page.html">로그인</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./main_page.html">
+        <img src="./images/mainlogo.png" alt="Logo">
+      </a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./survey_a.html">One-click</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./search_page.html">센터검색</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./self_test.html">자가진단</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./community.html">커뮤니티</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="container my-5 py-1 px-5">
         <div class="centered-text" style=" font-size: 30px; font-weight: bold;">치매 동행 파트너를 찾고 계시나요?</div>
         <div class="centered-text">원하시는 파트너의 조건을 검색해보세요</div>
         </div>
         <div>
-        <form>
+        <form class="container-fluid form-style"  action="./survey_result_a.html">
             <div class="form-group">
                 <label for="gender">선호하는 파트너의 성별이 있나요?</label>
                 <select class="form-control" id="gender">
@@ -38,6 +162,21 @@
                     <option>여</option>
                 </select>
             </div>
+                <div class="form-group">
+                    <label for="age">선호하는 파트너의 연령이 있나요?</label>
+                    <select class="form-control" id="age">
+                        <option>초등학생 이상</option>
+                        <option>중학생 이상</option>
+                        <option>고등학생 이상</option>
+                        <option>20대</option>
+                        <option>30대</option>
+                        <option>40대</option>
+                        <option>50대</option>
+                        <option>60대</option>
+                        <option>무관</option>
+                    </select>
+                </div>
+
 
             <div class="form-group">
                 <label for=" work-type">어떤 근무 형태를 원하시나요?</label>
@@ -50,6 +189,15 @@
                 </select>
             </div>
         
+            <div class="form-group">
+                <label for="partner-type">원하시는 고용형태는요?</label>
+                <select class="form-control" id="partner-type">
+                    <option>장기 요양보호사</option>
+                    <option>단기 케어</option>
+                    <option>자원봉사자</option>
+                </select>
+            </div>
+
 
             <div class="form-group">
                 <label for="requestAddress">서비스를 받고 싶은 지역을 선택해주세요</label>
@@ -70,13 +218,15 @@
             <div class="form-group">
                 <label for="license">자격증이 필요한가요?</label>
                 <select class="form-control" id="license">
-                    <option>간병 도우미 자격증 필요</option>
-                    <option></option>
+                    <option>요양 보호사 자격증</option>
+                    <option>치매 파트너 교육 이수</option>
+                    <option>무관</option>
                 </select>
             </div>
 
+
             <div class="centered-button mt-5">
-                <button type="submit" class="btn vivid-color">🙌</button>
+                <button type="submit" class="btn btn-style"> 파트너 찾기 </button>
             </div>
         </form>
     </div>

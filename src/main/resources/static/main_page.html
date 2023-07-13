@@ -8,7 +8,6 @@
   <title>치매 One-click System</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
   <style>
-
     body {
       background-color: #fef0ea;
     }
@@ -18,7 +17,6 @@
     }
 
     .navbar-nav {
-      
       display: flex;
       align-items: center;
     }
@@ -27,25 +25,40 @@
       margin-right: 10px;
     }
 
+    .h-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+
+    .h-navbar .h-nav-item:first-child {
+      margin-right: auto;
+      font-size: 16px;
+      line-height: 8px;
+      list-style: none;
+    }
+
     .image-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden; 
+      overflow: hidden;
     }
 
     .image-container img {
-      max-height: 100%; /* Set the maximum height of the image */
+      max-height: 80%;
+      /* Set the maximum height of the image */
     }
 
     .main-title {
       font-size: 30px;
       font-weight: bold;
     }
-    
+
     .image-text {
       position: absolute;
-      top: 15%;
+      top: 22%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #2e1a27;
@@ -56,7 +69,8 @@
 
     .image-text-second {
       position: absolute;
-      top: calc(15% + 15px); /* Adjust the top value to control the spacing */
+      top: calc(22% + 15px);
+      /* Adjust the top value to control the spacing */
       left: 50%;
       transform: translateX(-50%);
       color: #555742;
@@ -66,28 +80,85 @@
     }
 
     .round-image {
-  border-radius: 10%;
-}
+      border-radius: 10%;
+    }
 
+    .navbar .nav-link {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      line-height: 8px;
+      color: #000000ab;
+    }
+
+    .navbar .nav-link:hover {
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 8px;
+    }
+
+    .navbar-brand img {
+      height: 80px;
+    }
+
+
+    .nav-button {
+      display: inline-block;
+      padding: 20px 20px;
+      background-color: transparent;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #00000098;
+    }
   </style>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./main_page.html">
-        <img src="./images/mainlogo.png" alt="Logo" width="auto" height="80">
-      </a>
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link" href="./login_page.html">로그인</a>
+
+<header>
+  <nav>
+    <div style="background-color: rgb(255, 255, 255);">
+      <ul class="h-navbar flex-row">
+        <li class="h-nav-item">
+          치매파트너와의 연결 그리고 동행
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./signin_select_page.html">회원가입</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login_page.html">로그인</a>
+        </li>
       </ul>
     </div>
   </nav>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./main_page.html">
+        <img src="./images/mainlogo.png" alt="Logo">
+      </a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./survey_a.html">One-click</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./search_page.html">센터검색</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./self_test.html">자가진단</a>
+          </li>
+          <li class="nav-item nav-button">
+            <a class="nav-link" href="./community.html">커뮤니티</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
   <div class="container-fluid">
     <div class="mb-4">
       <div class="image-container">
@@ -115,7 +186,6 @@
       </div>
     </div>
 
-    
     <div class="row justify-content-center">
       <div class="col">
         <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
@@ -132,13 +202,12 @@
         </a>
       </div>
       <div class="col">
-        <a href="./survey_a.html">
+        <a href="./login_page.html">
           <div class="image-container">
             <img class="img-fluid round-image" src="./images/img3_partner_matching.png" alt="one-click 파트너 연결">
           </div>
         </a>
       </div>
-
       <div class="col">
         <a href="./community.html">
           <div class="image-container">
@@ -146,9 +215,7 @@
           </div>
         </a>
       </div>
-
     </div>
-
   </div>
 
   <footer class="footer py-3 mt-5" style="background-color: rgb(235, 225, 235);">
