@@ -99,6 +99,16 @@ public class CarInforsService {
         return result;
     }
 
+    public Object selectAll_Com(String COMMON_CODE_ID) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectAll_Com";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
     public Object delete_Com(Map dataMap) {
         String sqlMapId = "CarInfors.delete_com";
 
@@ -140,7 +150,7 @@ public class CarInforsService {
         String sqlMapId = "CarInfors.insert_com";
         if (!dataMap.get("COMMON_CODE_ID").equals("")) {
             result = sharedDao.insert(sqlMapId, dataMap);
-        } else if (dataMap.get("COMMON_CODE_ID").equals("")){
+        } else if (dataMap.get("COMMON_CODE_ID").equals("")) {
             String uuid = commonUUID.Commons();
             dataMap.put("COMMON_CODE_ID", uuid);
             result = sharedDao.insert(sqlMapId, dataMap);
