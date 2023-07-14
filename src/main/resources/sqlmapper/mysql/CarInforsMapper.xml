@@ -107,9 +107,39 @@
     </insert>
 
     <select id="selectAll_Com" parameterType="Map" resultType="Map">
-        select name
-        from COMMONS_CODE
-        where PARENT_COMMON_CODE_ID = 'CarInforSearch' or PARENT_COMMON_CODE_ID = 'Use_YN' or PARENT_COMMON_CODE_ID = 'System_Code_YN'
+        SELECT COLUMN_NAME
+        FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE COLUMN_NAME = 'NAME'
+            AND TABLE_NAME='commons_code'
 	</select>
 
+    <select id="selectSearch_Com" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM commons_code
+        where 1 = 1 
+        <choose>
+            <when test="search == 'NAME'">
+                AND NAME LIKE CONCAT('%',#{words},'%')
+            </when>
+        </choose>        
+	</select>
+
+    <select id="selectInUID_Com" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM commons_code
+        where 1 = 1
+        and COMMON_CODE_ID in 
+        <foreach item="CAR_INFOR_ID" index="index" collection="COMMON_CODE_ID_LIST"
+            open="(" separator="," close=")" nullable="true">
+            #{COMMON_CODE_ID}
+        </foreach>
+        ; 
+	</select>
+
+    <select id="selectByInUID_Com" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM commons_code
+        where 1 = 1
+        and COMMON_CODE_ID = #{COMMON_CODE_ID}
+	</select>
 </mapper>

@@ -50,6 +50,26 @@ public class CarInforsService {
         return result;
     }
 
+    public Map selectSearch_Com(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectSearch_Com";
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getOne(sqlMapId, dataMap));
+        return result;
+    }
+
+    public Object selectSearch_Com(String search, String words) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectSearch_Com";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("search", search);
+        dataMap.put("words", words);
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
     public Object selectAll(String CAR_INFOR_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CarInfors.selectAll";
@@ -102,9 +122,8 @@ public class CarInforsService {
     public Object selectAll_Com(String COMMON_CODE_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CarInfors.selectAll_Com";
-        HashMap dataMap = new HashMap<>();
+        HashMap<String, String> dataMap = new HashMap<String, String>();
         dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
-
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
@@ -184,6 +203,16 @@ public class CarInforsService {
         return result;
     }
 
+    public Object selectDetail_Com(String COMMON_CODE_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectByInUID_Com";
+        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+    
     // rest api
     public Object delete(String CAR_INFOR_ID) {
         String sqlMapId = "CarInfors.delete";

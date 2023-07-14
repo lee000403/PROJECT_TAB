@@ -12,7 +12,7 @@
         </head>
 
         <body>
-
+            <%@ include file="header.jsp" %>
             <!-- Menu -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
@@ -46,12 +46,12 @@
                             <div class="col-md-8">
                                 <h2>Search</h2>
                                 <div class="input-group mb-3">
-                                    <select class="form-select" name="search" id="com_option">
+                                    <select class="form-select" name="search" id="comoption">
                                     </select>
                                     <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                                         class="form-control" placeholder="Search..." id="keydownEnter">
                                     <button class="btn btn-primary" type="submit"
-                                        formaction="/carInfor/map/commonSearch" formmethod="post">Go</button>
+                                        formaction="/carInfor/map/selectSearch_Com" formmethod="post">Go</button>
                                 </div>
                                 <h2>Table</h2>
                                 <table class="table">
@@ -65,8 +65,9 @@
                                         </tr>
                                     </thead>
                                     <tbody id="carTableBody">
-                                        <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
-                                            resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
+                                        <% ArrayList resultList=(ArrayList)result.get("resultList"); 
+                                        for(int i=0; i < resultList.size(); i=i+1)
+                                            { HashMap record=(HashMap)resultList.get(i); %>
                                             <tr>
                                                 <td>
                                                     <%= record.get("COMMON_CODE_ID") %>
@@ -87,6 +88,7 @@
                                                     </form>
                                                     <form action="">
                                                     <button formaction='/carInfor/map/update_Com/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">update</button>
+                                                    <button formaction='/carInfor/map/selectDetail_Com/<%= record.get("COMMON_CODE_ID") %>' formmethod="post">detail</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -112,12 +114,11 @@
 
 
                 <!-- Footer -->
-                <footer class="bg-dark text-white text-center py-4 mt-4">
-                    <div class="container">
-                        <p>&copy; 2023 Your Website. All Rights Reserved.</p>
-                    </div>
+                <footer>
+                    <%@ include file="footer.jsp" %>
                 </footer>
         </body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/js/list_fetch.js"></script>
+        <script>comOption();</script>
         </html>
