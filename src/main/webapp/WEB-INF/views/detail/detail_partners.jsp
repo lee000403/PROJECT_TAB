@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파트너 상세정보</title>
+</head>
+<body>
+      <%@ include file="../mainbar/header.jsp" %>
+  <div>000 상세정보</div>
+  <div>사진</div>
+  <div>성별 : </div>
+  <div>주소 : </div>
+  <div>희망 근무 형태 : </div>
+  <div>희망 고용 형태 : </div>
+  <div>동행 가능한 환자의 치매 단계 : </div>
+  <div>선호하는 지역</div>
+  <div>1순위 : </div>
+  <div>2순위 : </div>
+  <div>차량 또는 면허 : </div>
+  <div>자격증 : </div>
+  <div>자기 소개 : </div>
+  <div>연락하기 버튼</div>
+  
+</body>
+    <%@ include file="../mainbar/footer.jsp" %>
+</html>

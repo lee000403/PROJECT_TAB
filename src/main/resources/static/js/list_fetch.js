@@ -6,7 +6,7 @@ keydownObject.addEventListener('keydown', (event) => { // keydown은 내가 하�
   }
 });
 
-function comOption() {
+function comOption(search) {
     // url 입력
     let url = `http://192.168.0.35:8080/selectAll_Com/1`; // 입력값을 url에 넣는 방법
     // fetch 사용
@@ -18,7 +18,7 @@ function comOption() {
         // data에 hashmap 파일 저장이 되있으므로 data 사용
         let outHtml = `<option>Select an option...</option>`;
         for (let testMap of data) {
-          outHtml += `<option value="${testMap.COLUMN_NAME}">${testMap.COLUMN_NAME} </option>`;
+          outHtml += `<option value="${testMap.COLUMN_NAME}" ${search == testMap.COLUMN_NAME ? "selected" : ""}>${testMap.COLUMN_NAME} </option>`;
         }
         let comOptionElment = document.querySelector('#comoption');
         comOptionElment.innerHTML = outHtml;
