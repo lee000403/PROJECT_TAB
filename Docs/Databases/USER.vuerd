@@ -166,7 +166,7 @@
           "active": false,
           "left": 40.9725,
           "top": 392.3609,
-          "zIndex": 261,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -177,6 +177,29 @@
         "name": "POST",
         "comment": "게시글",
         "columns": [
+          {
+            "name": "TITLE",
+            "comment": "제목",
+            "dataType": "VARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "6282c7d1-0dcc-48a8-b4c5-3d389b74c167"
+          },
           {
             "name": "POST_ID",
             "comment": "게시글 _ID",
@@ -222,29 +245,6 @@
               "widthDefault": 60
             },
             "id": "b40c47ad-d2ef-485b-96f1-e35d9381ecd7"
-          },
-          {
-            "name": "TITLE",
-            "comment": "제목",
-            "dataType": "VARCHAR(200)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            },
-            "id": "6282c7d1-0dcc-48a8-b4c5-3d389b74c167"
           },
           {
             "name": "CONTENT",
@@ -320,7 +320,7 @@
           "active": false,
           "left": 31.9435,
           "top": 63.8897,
-          "zIndex": 249,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -474,7 +474,7 @@
           "active": false,
           "left": 540.2767,
           "top": 184.0276,
-          "zIndex": 248,
+          "zIndex": 1,
           "widthName": 69.158203125,
           "widthComment": 60
         },
