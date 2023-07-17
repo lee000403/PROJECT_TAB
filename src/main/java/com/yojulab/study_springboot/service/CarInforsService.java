@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.yojulab.study_springboot.commons.CommonUUID;
 import com.yojulab.study_springboot.dao.SharedDao;
+import com.yojulab.study_springboot.utills.Paginations;
 
 @Service
 @Transactional
@@ -55,7 +56,7 @@ public class CarInforsService {
         String sqlMapId = "CarInfors.selectSearch_Com";
 
         HashMap result = new HashMap<>();
-        result.put("resultList", sharedDao.getOne(sqlMapId, dataMap));
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 
@@ -160,7 +161,7 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.delete_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
         return result;
     }
 
@@ -182,7 +183,7 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("insertCount", this.insert_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
         return result;
     }
 
@@ -199,7 +200,7 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("updateCount", this.update_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
         return result;
     }
 
@@ -212,7 +213,34 @@ public class CarInforsService {
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
-    
+
+    public Object selectSearchWithPagination_Com(String page, Map dataMap) {
+        int totalCount = (int) this.selectTotal_Com(dataMap);
+
+        int currentPage = 1;
+        if (page != null) {
+            currentPage = Integer.parseInt((String) page); // from client in param
+        }
+
+        Paginations paginations = new Paginations(totalCount, currentPage);
+        HashMap result = new HashMap<>();
+        result.put("paginations", paginations); // 페이지에 대한 정보
+        String sqlMapId = "CarInfors.selectSearchWithPagination_Com";
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
+
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보
+        return result;
+    }
+
+    public Object selectTotal_Com(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectTotal_Com";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
     // rest api
     public Object delete(String CAR_INFOR_ID) {
         String sqlMapId = "CarInfors.delete";

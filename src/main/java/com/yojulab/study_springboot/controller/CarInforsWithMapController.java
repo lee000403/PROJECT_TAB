@@ -38,9 +38,9 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/commonSearch", method = { RequestMethod.GET, RequestMethod.POST })
-    public ModelAndView commonSearch(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = carInforsService.common(params);
+    @RequestMapping(value = {"/commonSearch/{currentPage}", "/commonSearch/"}, method = { RequestMethod.GET, RequestMethod.POST })
+    public ModelAndView commonSearch(@PathVariable(required = false) String currentPage, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = carInforsService.selectSearchWithPagination_Com(currentPage, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -127,7 +127,7 @@ public class CarInforsWithMapController {
         Object result = carInforsService.selectDetail_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-
+        
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
         return modelAndView;
     }
