@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -56,
-    "scrollLeft": -641,
+    "scrollTop": -491,
+    "scrollLeft": -386,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -504,7 +504,7 @@
           {
             "name": "LEVEL",
             "comment": "치매진행단계",
-            "dataType": "INTEGER(50)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -519,7 +519,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 80,
-              "widthDataType": 82.90087890625,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "93d69ee6-ee57-4fa9-bb6d-75cc2c9770cd"
@@ -552,7 +552,7 @@
           "active": false,
           "left": 985,
           "top": 753,
-          "zIndex": 3,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 80
         },
