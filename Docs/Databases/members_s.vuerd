@@ -550,8 +550,13 @@
         ],
         "ui": {
           "active": false,
+<<<<<<< HEAD
           "left": 987,
           "top": 752,
+=======
+          "left": 985,
+          "top": 753,
+>>>>>>> c98c9f0fb296fdf7eab58f8ca4c3350a93d7b220
           "zIndex": 5,
           "widthName": 60,
           "widthComment": 80
