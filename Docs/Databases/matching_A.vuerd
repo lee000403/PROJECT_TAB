@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -119,
-    "scrollLeft": -266,
+    "scrollTop": -139,
+    "scrollLeft": -259,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -70,7 +70,7 @@
             "id": "d01704d9-006d-4ff0-ae7f-d66dad5459c4"
           },
           {
-            "name": "PARTNERGENDER_ID",
+            "name": "GENDER_PREF_ID",
             "comment": "파트너성별ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -85,7 +85,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 138.7666015625,
+              "widthName": 119.7490234375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -93,7 +93,7 @@
             "id": "52a71c7b-475b-42a4-b1a8-7856a2a69c64"
           },
           {
-            "name": "PARTNERAGE_ID",
+            "name": "AGE_PREF_ID",
             "comment": "파트너 연령ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -108,7 +108,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 110.60205078125,
+              "widthName": 91.58447265625,
               "widthComment": 83.61181640625,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -116,7 +116,7 @@
             "id": "7d72bf63-5bd5-46e7-8266-d88fdf55b50a"
           },
           {
-            "name": "WORKTYPE_ID",
+            "name": "WORKTYPE_PREF_ID",
             "comment": "근무형태ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -131,7 +131,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 96.62451171875,
+              "widthName": 138.525390625,
               "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -139,7 +139,7 @@
             "id": "70853fe4-4d29-4dbe-9b88-d6428b4daac0"
           },
           {
-            "name": "JOBTYPE_ID",
+            "name": "JOBTYPE_PREF_ID",
             "comment": "고용형태_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -154,7 +154,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 81.46630859375,
+              "widthName": 123.3671875,
               "widthComment": 74.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -162,8 +162,8 @@
             "id": "741113ba-ee40-4387-931a-a514f5a21d0c"
           },
           {
-            "name": "SERVICEAREA_ID",
-            "comment": "서비스지역ID",
+            "name": "PAT_AREA_ID",
+            "comment": "환자지역ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -177,15 +177,15 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 114.4677734375,
-              "widthComment": 80,
+              "widthName": 88.2138671875,
+              "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "2c9ef6ce-aa81-4027-8aca-83a33bb63b55"
           },
           {
-            "name": "CAR&LICENCE_ID",
+            "name": "CAR_LIC_PREF_ID",
             "comment": "차량/면허 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -200,7 +200,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 114.6962890625,
+              "widthName": 119.0380859375,
               "widthComment": 103.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -208,7 +208,7 @@
             "id": "3156ee9f-0327-47f7-b6d9-d7fa35569a64"
           },
           {
-            "name": "CERTIFICATION_ID",
+            "name": "CERT_PREF_ID",
             "comment": "자격증 소유 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -223,7 +223,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 120.69482421875,
+              "widthName": 99.2841796875,
               "widthComment": 116.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -304,7 +304,7 @@
           "active": false,
           "left": 630.7778,
           "top": 38.0278,
-          "zIndex": 236,
+          "zIndex": 498,
           "widthName": 86.26513671875,
           "widthComment": 66.28271484375
         },
@@ -312,8 +312,8 @@
         "id": "e710d800-9240-4084-8b64-f1dfb64358b7"
       },
       {
-        "name": "USER INFOR",
-        "comment": "기존 회원 DB",
+        "name": "PAT USER INFOR",
+        "comment": "환자 회원 DB",
         "columns": [
           {
             "name": "MEMBERID",
@@ -410,21 +410,21 @@
         ],
         "ui": {
           "active": false,
-          "left": 12.25,
-          "top": 371,
-          "zIndex": 230,
-          "widthName": 82.1708984375,
+          "left": 561,
+          "top": 498.5003,
+          "zIndex": 506,
+          "widthName": 109.1357421875,
           "widthComment": 79.28271484375
         },
         "visible": true,
         "id": "8fa607f4-f910-42a6-9704-855acff3612b"
       },
       {
-        "name": "PARTNERGENDER",
-        "comment": "파트너 성별",
+        "name": "GENDER_PREFER",
+        "comment": "파트너 성별 선호",
         "columns": [
           {
-            "name": "PARTNERGENDER",
+            "name": "GENDER_PREF",
             "comment": "파트너성별",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -439,7 +439,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 118.53662109375,
+              "widthName": 99.51904296875,
               "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -447,7 +447,7 @@
             "id": "bcd78a4d-0383-4693-bb95-64fbeace72be"
           },
           {
-            "name": "PARTNERGENDER_ID",
+            "name": "GENDER_PREF_ID",
             "comment": "파트너성별ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -462,7 +462,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 138.7666015625,
+              "widthName": 119.7490234375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -474,19 +474,19 @@
           "active": false,
           "left": 10,
           "top": 44.75,
-          "zIndex": 10,
-          "widthName": 118.53662109375,
-          "widthComment": 70.61181640625
+          "zIndex": 463,
+          "widthName": 117.578125,
+          "widthComment": 100.2236328125
         },
         "visible": true,
         "id": "6f96d66a-b15f-4074-a9bd-40d0b49860a5"
       },
       {
-        "name": "PARTNERAGE",
-        "comment": "파트너 연령",
+        "name": "AGE_PREFER",
+        "comment": "파트너 연령 선호",
         "columns": [
           {
-            "name": "PARTNERAGE",
+            "name": "AGE_PREF",
             "comment": "파트너 연령",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -501,7 +501,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 90.3720703125,
+              "widthName": 71.3544921875,
               "widthComment": 70.61181640625,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -509,7 +509,7 @@
             "id": "d5bbeaef-83d2-463d-b2e6-c272a409d974"
           },
           {
-            "name": "PARTNERAGE_ID",
+            "name": "AGE_PREF_ID",
             "comment": "파트너 연령ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -524,7 +524,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 110.60205078125,
+              "widthName": 91.58447265625,
               "widthComment": 83.61181640625,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -534,21 +534,21 @@
         ],
         "ui": {
           "active": false,
-          "left": 6.75,
-          "top": 199,
-          "zIndex": 11,
-          "widthName": 90.3720703125,
-          "widthComment": 70.61181640625
+          "left": 11.1945,
+          "top": 183.4443,
+          "zIndex": 494,
+          "widthName": 89.41357421875,
+          "widthComment": 100.2236328125
         },
         "visible": true,
         "id": "5b717dea-62b7-4953-a267-9fa882b4eb05"
       },
       {
-        "name": "WORKTYPE",
-        "comment": "근무형태",
+        "name": "WORKTYPE_PREFER",
+        "comment": "근무형태 선호",
         "columns": [
           {
-            "name": "WORKTYPE",
+            "name": "WORKTYPE_PREF",
             "comment": "근무형태",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -563,7 +563,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 76.39453125,
+              "widthName": 118.29541015625,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -571,7 +571,7 @@
             "id": "0124bcee-3716-4a98-b00c-1e64dd984fee"
           },
           {
-            "name": "WORKTYPE_ID",
+            "name": "WORKTYPE_PREF_ID",
             "comment": "근무형태ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -586,7 +586,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 96.62451171875,
+              "widthName": 138.525390625,
               "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -598,19 +598,19 @@
           "active": false,
           "left": 1255.75,
           "top": 34,
-          "zIndex": 238,
-          "widthName": 76.39453125,
-          "widthComment": 60
+          "zIndex": 404,
+          "widthName": 136.3544921875,
+          "widthComment": 83.61181640625
         },
         "visible": true,
         "id": "56ca4960-57c9-493a-b178-139bdda8c8fa"
       },
       {
-        "name": "JOBTYPE",
-        "comment": "고용형태",
+        "name": "JOBTYPE_PREFER",
+        "comment": "고용형태 선호",
         "columns": [
           {
-            "name": "JOBTYPE",
+            "name": "JOBTYPE_PREF",
             "comment": "고용형태",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -625,7 +625,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 61.236328125,
+              "widthName": 103.13720703125,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -633,7 +633,7 @@
             "id": "ab257bd0-470c-44a3-8de9-d1862db46e4c"
           },
           {
-            "name": "JOBTYPE_ID",
+            "name": "JOBTYPE_PREF_ID",
             "comment": "고용형태_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -648,7 +648,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 81.46630859375,
+              "widthName": 123.3671875,
               "widthComment": 74.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -658,22 +658,22 @@
         ],
         "ui": {
           "active": false,
-          "left": 1291.5,
+          "left": 1292.6111,
           "top": 151,
-          "zIndex": 239,
-          "widthName": 61.236328125,
-          "widthComment": 60
+          "zIndex": 407,
+          "widthName": 121.1962890625,
+          "widthComment": 83.61181640625
         },
         "visible": true,
         "id": "9b25080a-54af-4c1c-b7cb-86efe0b0ce7a"
       },
       {
-        "name": "SERVICEAREA",
-        "comment": "서비스 지역",
+        "name": "PAT_AREA",
+        "comment": "환자 지역",
         "columns": [
           {
-            "name": "SERVICEAREA",
-            "comment": "서비스지역",
+            "name": "PAT_AREA",
+            "comment": "지역",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -687,16 +687,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 94.23779296875,
-              "widthComment": 67,
+              "widthName": 67.98388671875,
+              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "388aa1a6-967f-4ae0-9649-cfabf98b2cfe"
           },
           {
-            "name": "SERVICEAREA_ID",
-            "comment": "서비스지역ID",
+            "name": "PAT_AREA_ID",
+            "comment": "지역ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -710,8 +710,8 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 114.4677734375,
-              "widthComment": 80,
+              "widthName": 88.2138671875,
+              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
@@ -722,19 +722,19 @@
           "active": false,
           "left": 1309.75,
           "top": 274.25,
-          "zIndex": 240,
-          "widthName": 94.23779296875,
-          "widthComment": 70.61181640625
+          "zIndex": 446,
+          "widthName": 67.98388671875,
+          "widthComment": 60
         },
         "visible": true,
         "id": "af93728b-02bc-4953-9035-f3a44774dffe"
       },
       {
-        "name": "CAR_LICENCE",
-        "comment": "차량/면허 여부",
+        "name": "CAR_LICENCE_PREFER",
+        "comment": "차량/면허 여부 필요",
         "columns": [
           {
-            "name": "CAR_LICENCE",
+            "name": "CAR_LIC_PREF",
             "comment": "차량/면허 여부",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -749,7 +749,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 93.025390625,
+              "widthName": 98.80810546875,
               "widthComment": 87.2236328125,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -757,7 +757,7 @@
             "id": "3a139668-3b4b-4aa5-b1b9-5c2755ca3022"
           },
           {
-            "name": "CAR_LICENCE_ID",
+            "name": "CAR_LIC_PREF_ID",
             "comment": "차량/면허 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -772,7 +772,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 113.25537109375,
+              "widthName": 119.0380859375,
               "widthComment": 103.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -784,19 +784,19 @@
           "active": false,
           "left": 1339.2501,
           "top": 391.25,
-          "zIndex": 241,
-          "widthName": 93.025390625,
-          "widthComment": 87.2236328125
+          "zIndex": 380,
+          "widthName": 152.9853515625,
+          "widthComment": 116.83544921875
         },
         "visible": true,
         "id": "c2258cd5-3fe5-422d-a92d-bdf3a8a06736"
       },
       {
-        "name": "CERTIFICATION",
-        "comment": "자격증 소유 여부",
+        "name": "CERTIFICATION_PREFER",
+        "comment": "자격증 소유 선호",
         "columns": [
           {
-            "name": "CERTIFICATION",
+            "name": "CERT_PREF",
             "comment": "자격증 소유 여부",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -811,7 +811,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 100.46484375,
+              "widthName": 79.05419921875,
               "widthComment": 100.2236328125,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -819,7 +819,7 @@
             "id": "770b343f-5891-4456-8ab5-90982b5fc7a1"
           },
           {
-            "name": "CERTIFICATION_ID",
+            "name": "CERT_PREF_ID",
             "comment": "자격증 소유 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -834,7 +834,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 120.69482421875,
+              "widthName": 99.2841796875,
               "widthComment": 116.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -843,11 +843,11 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 639.6949,
-          "top": 433.2223,
-          "zIndex": 237,
-          "widthName": 100.46484375,
+          "active": true,
+          "left": 20.1116,
+          "top": 314.7501,
+          "zIndex": 507,
+          "widthName": 160.4248046875,
           "widthComment": 100.2236328125
         },
         "visible": true,
@@ -932,7 +932,7 @@
           "columnIds": [
             "2ad00c3b-ad04-4390-bddf-38f00a14b471"
           ],
-          "x": 483.4853515625,
+          "x": 464.4677734375,
           "y": 99.75,
           "direction": "right"
         },
@@ -958,8 +958,8 @@
           "columnIds": [
             "c73ad78c-4335-49c2-80cf-4a8724094691"
           ],
-          "x": 455.6826171875,
-          "y": 254,
+          "x": 441.1095390625,
+          "y": 238.4443,
           "direction": "right"
         },
         "end": {
@@ -993,7 +993,7 @@
           "columnIds": [
             "70853fe4-4d29-4dbe-9b88-d6428b4daac0"
           ],
-          "x": 1141.0986007812498,
+          "x": 1140.8573898437498,
           "y": 74.8403,
           "direction": "right"
         },
@@ -1010,7 +1010,7 @@
           "columnIds": [
             "8b2d2829-34b5-4190-a7f7-5df0603854d9"
           ],
-          "x": 1291.5,
+          "x": 1292.6111,
           "y": 206,
           "direction": "left"
         },
@@ -1019,7 +1019,7 @@
           "columnIds": [
             "741113ba-ee40-4387-931a-a514f5a21d0c"
           ],
-          "x": 1141.0986007812498,
+          "x": 1140.8573898437498,
           "y": 148.4653,
           "direction": "right"
         },
@@ -1045,7 +1045,7 @@
           "columnIds": [
             "2c9ef6ce-aa81-4027-8aca-83a33bb63b55"
           ],
-          "x": 1141.0986007812498,
+          "x": 1140.8573898437498,
           "y": 222.0903,
           "direction": "right"
         },
@@ -1071,7 +1071,7 @@
           "columnIds": [
             "3156ee9f-0327-47f7-b6d9-d7fa35569a64"
           ],
-          "x": 1141.0986007812498,
+          "x": 1140.8573898437498,
           "y": 295.7153,
           "direction": "right"
         },
@@ -1088,18 +1088,18 @@
           "columnIds": [
             "6e1afb82-0a39-4f23-bf0a-dd5431a40006"
           ],
-          "x": 885.81941171875,
-          "y": 433.2223,
-          "direction": "top"
+          "x": 490.94997890625,
+          "y": 369.7501,
+          "direction": "right"
         },
         "end": {
           "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
           "columnIds": [
             "a402ccc9-8ae5-479a-a21c-e3c8ce3b9f70"
           ],
-          "x": 885.938200390625,
-          "y": 332.5278,
-          "direction": "bottom"
+          "x": 630.7778,
+          "y": 283.4444666666667,
+          "direction": "left"
         },
         "constraintName": "fk_certification_to_matching_s&f",
         "visible": true,
@@ -1117,9 +1117,9 @@
             "e34da97b-449f-4f08-bf06-a875cda95b3f",
             "ea6eadaa-70b8-4320-92b9-ab08d8101991"
           ],
-          "x": 490.78173828125,
-          "y": 446.5,
-          "direction": "right"
+          "x": 800.265869140625,
+          "y": 498.5003,
+          "direction": "top"
         },
         "end": {
           "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
@@ -1129,9 +1129,9 @@
             "f5b4ecd3-f8d4-43f3-8728-321bf4c1e6dd",
             "45b93d06-ff5c-47f6-a95e-9038c7ea148a"
           ],
-          "x": 630.7778,
-          "y": 283.4444666666667,
-          "direction": "left"
+          "x": 885.817594921875,
+          "y": 332.5278,
+          "direction": "bottom"
         },
         "constraintName": "fk_user infor_to_matching_a",
         "visible": true,
