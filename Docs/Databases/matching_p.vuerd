@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -514,
-    "scrollLeft": -211,
-    "zoomLevel": 0.8,
+    "scrollTop": -447,
+    "scrollLeft": -128,
+    "zoomLevel": 0.6,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -183,13 +183,59 @@
               "widthDefault": 60
             },
             "id": "34549f27-124e-48a3-a917-416a376eddf4"
+          },
+          {
+            "name": "CAR&LICENCE_ID",
+            "comment": "차량&면허 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 114.6962890625,
+              "widthComment": 108.89453125,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "fe67ab18-6cac-43b4-ba97-4b81fcd1c98e"
+          },
+          {
+            "name": "CERTIFICATION_ID",
+            "comment": "자격증 소유 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 120.69482421875,
+              "widthComment": 116.83544921875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "c4c999bd-c708-48f0-aa0c-b060d466a616"
           }
         ],
         "ui": {
           "active": false,
           "left": 1037,
           "top": 587,
-          "zIndex": 10,
+          "zIndex": 42,
           "widthName": 86.26513671875,
           "widthComment": 116.841796875
         },
@@ -791,14 +837,138 @@
         ],
         "ui": {
           "active": false,
-          "left": 1542,
-          "top": 1032,
-          "zIndex": 9,
+          "left": 1547.20166015625,
+          "top": 1245.75,
+          "zIndex": 30,
           "widthName": 94.23779296875,
           "widthComment": 67
         },
         "visible": true,
         "id": "67a911cf-db00-4011-b032-4ee448dbd175"
+      },
+      {
+        "name": "CAR&LICENSE",
+        "comment": "차량&면허 여부",
+        "columns": [
+          {
+            "name": "CAR&LICENSE",
+            "comment": "차량&면허 여부",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.7490234375,
+              "widthComment": 92.28271484375,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "3ba34e12-bd64-4ec5-8579-34e72e8c93c2"
+          },
+          {
+            "name": "CAR&LICENCE_ID",
+            "comment": "차량&면허 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 114.6962890625,
+              "widthComment": 108.89453125,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "0ecb420f-e698-4a90-9421-5c8e44f6a6ab"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1521.6904296875,
+          "top": 806,
+          "zIndex": 26,
+          "widthName": 93.7490234375,
+          "widthComment": 92.28271484375
+        },
+        "visible": true,
+        "id": "fed726ac-9563-40e6-99cd-dc33723c5281"
+      },
+      {
+        "name": "CERTIFICATION",
+        "comment": "자격증 소유 여부",
+        "columns": [
+          {
+            "name": "CERTIFICATION",
+            "comment": "자격증 소유 여부",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 100.46484375,
+              "widthComment": 100.2236328125,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "a1e7ac10-f769-4786-9f04-7df931f8c15b"
+          },
+          {
+            "name": "CERTIFICATION_ID",
+            "comment": "자격증 소유 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 120.69482421875,
+              "widthComment": 116.83544921875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "ff39cb32-815d-49a6-9fb9-be003c26d393"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1358.75,
+          "top": 368.25,
+          "zIndex": 41,
+          "widthName": 100.46484375,
+          "widthComment": 100.2236328125
+        },
+        "visible": true,
+        "id": "b7fb2aa8-abaf-4ae6-a4e4-aa6bc21998ae"
       }
     ],
     "indexes": []
@@ -827,7 +997,7 @@
             "e4d16cc6-1c03-4c67-b120-7a00dade325f"
           ],
           "x": 1037,
-          "y": 619,
+          "y": 625.8333333333333,
           "direction": "left"
         },
         "constraintName": "fk_memberid_to_matching_p",
@@ -931,7 +1101,7 @@
             "e9341c0b-139d-4c76-b248-a164bcd1dd0e"
           ],
           "x": 1037,
-          "y": 683,
+          "y": 703.4999999999999,
           "direction": "left"
         },
         "constraintName": "fk_patientgender_to_matching_p",
@@ -957,7 +1127,7 @@
             "398fc895-e173-4c90-96a4-c35ec81dc6e6"
           ],
           "x": 1037,
-          "y": 747,
+          "y": 781.1666666666665,
           "direction": "left"
         },
         "constraintName": "fk_worktype_to_matching_p",
@@ -982,8 +1152,8 @@
           "columnIds": [
             "d040d497-693c-4b6e-ba57-8f6a73cbe866"
           ],
-          "x": 1157.535888671875,
-          "y": 779,
+          "x": 1120.7278645833333,
+          "y": 820,
           "direction": "bottom"
         },
         "constraintName": "fk_jobtype_to_matching_p",
@@ -1008,8 +1178,8 @@
           "columnIds": [
             "bb3d718c-95cd-4be8-95d8-a117b41709ce"
           ],
-          "x": 1398.607666015625,
-          "y": 779,
+          "x": 1288.18359375,
+          "y": 820,
           "direction": "bottom"
         },
         "constraintName": "fk_level_to_matching_p",
@@ -1025,8 +1195,8 @@
           "columnIds": [
             "148eb6f1-45a0-4e82-bb5b-70d5ca7a9184"
           ],
-          "x": 1542,
-          "y": 1087,
+          "x": 1547.20166015625,
+          "y": 1300.75,
           "direction": "left"
         },
         "end": {
@@ -1034,13 +1204,65 @@
           "columnIds": [
             "34549f27-124e-48a3-a917-416a376eddf4"
           ],
-          "x": 1519.1435546875,
-          "y": 683,
-          "direction": "right"
+          "x": 1455.6393229166667,
+          "y": 820,
+          "direction": "bottom"
         },
         "constraintName": "fk_servicearea_to_matching_p",
         "visible": true,
         "id": "ed9ef9fb-9bee-4507-ba24-b95802da650f"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "fed726ac-9563-40e6-99cd-dc33723c5281",
+          "columnIds": [
+            "0ecb420f-e698-4a90-9421-5c8e44f6a6ab"
+          ],
+          "x": 1521.6904296875,
+          "y": 861,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
+          "columnIds": [
+            "fe67ab18-6cac-43b4-ba97-4b81fcd1c98e"
+          ],
+          "x": 1539.3671875,
+          "y": 703.5,
+          "direction": "right"
+        },
+        "constraintName": "fk_car&license_to_matching_p",
+        "visible": true,
+        "id": "764ec517-d6cb-4aa4-8f6c-9283071a0e60"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "b7fb2aa8-abaf-4ae6-a4e4-aa6bc21998ae",
+          "columnIds": [
+            "ff39cb32-815d-49a6-9fb9-be003c26d393"
+          ],
+          "x": 1358.75,
+          "y": 423.25,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
+          "columnIds": [
+            "c4c999bd-c708-48f0-aa0c-b060d466a616"
+          ],
+          "x": 1288.18359375,
+          "y": 587,
+          "direction": "top"
+        },
+        "constraintName": "fk_certification_to_matching_p",
+        "visible": true,
+        "id": "3568ba8a-3828-41ea-bae4-bbea49c2d490"
       }
     ]
   }
