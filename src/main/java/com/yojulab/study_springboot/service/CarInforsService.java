@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.yojulab.study_springboot.commons.CommonUUID;
 import com.yojulab.study_springboot.dao.SharedDao;
+import com.yojulab.study_springboot.utills.Paginations;
 
 @Service
 @Transactional
@@ -42,6 +43,26 @@ public class CarInforsService {
     public Object selectSearch(String search, String words) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CarInfors.selectSearch";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("search", search);
+        dataMap.put("words", words);
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Map selectSearch_Com(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectSearch_Com";
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+    public Object selectSearch_Com(String search, String words) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectSearch_Com";
         HashMap dataMap = new HashMap<>();
         dataMap.put("search", search);
         dataMap.put("words", words);
@@ -102,9 +123,8 @@ public class CarInforsService {
     public Object selectAll_Com(String COMMON_CODE_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CarInfors.selectAll_Com";
-        HashMap dataMap = new HashMap<>();
+        HashMap<String, String> dataMap = new HashMap<String, String>();
         dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
-
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
@@ -141,7 +161,7 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.delete_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
         return result;
     }
 
@@ -163,7 +183,7 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("insertCount", this.insert_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
         return result;
     }
 
@@ -180,7 +200,44 @@ public class CarInforsService {
         HashMap result = new HashMap<>();
         result.put("updateCount", this.update_Com(dataMap));
 
-        result.putAll(this.common(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Com(null, dataMap));
+        return result;
+    }
+
+    public Object selectDetail_Com(String COMMON_CODE_ID, Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectByInUID_Com";
+        dataMap.put("COMMON_CODE_ID", COMMON_CODE_ID);
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+    public Object selectSearchWithPagination_Com(String page, Map dataMap) {
+        int totalCount = (int) this.selectTotal_Com(dataMap);
+
+        int currentPage = 1;
+        if (page != null) {
+            currentPage = Integer.parseInt((String) page); // from client in param
+        }
+
+        Paginations paginations = new Paginations(totalCount, currentPage);
+        HashMap result = new HashMap<>();
+        result.put("paginations", paginations); // 페이지에 대한 정보
+        String sqlMapId = "CarInfors.selectSearchWithPagination_Com";
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
+
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보
+        return result;
+    }
+
+    public Object selectTotal_Com(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.selectTotal_Com";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 

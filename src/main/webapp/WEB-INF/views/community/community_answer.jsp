@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,7 +136,7 @@
         }
     </style>
 </head>
-
+<%@ include file="../mainbar/header.jsp" %>
 <body>
     <%@ include file="../mainbar/header.jsp" %>
     <div class="container mt-4">
@@ -185,8 +186,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">↳ Jane Smith</h5>
                                     <div>
-                                        <button class="btn btn-sm btn-reply"
-                                            onclick="showReplyForm('comment2')">Reply</button>
+                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">Reply</button>
                                         <button class="btn btn-sm btn-edit">Edit</button>
                                         <button class="btn btn-sm btn-delete">Delete</button>
                                     </div>
@@ -200,7 +200,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" rows="3" placeholder="Write your comment"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-reply">Submit</button>
+                            <button type="submit" class="btn btn-reply" formaction="community_answer" formmethod="">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -225,5 +225,5 @@
         </div>
     </div>
 </body>
-
+<%@ include file="../mainbar/footer.jsp" %>
 </html>

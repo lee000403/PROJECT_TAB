@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -148,50 +149,7 @@
 
   </style>
 </head>
-
-
-<header>
-  <nav>
-    <div style="background-color: rgb(255, 255, 255);">
-      <ul class="h-navbar flex-row">
-        <li class="h-nav-item">
-          치매파트너와의 연결 그리고 동행
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../signin/signin_select_page.html">회원가입</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../login/login_page.html">로그인</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../main_page/main_page.html">
-        <img src="../images/mainlogo.png" alt="Logo">
-      </a>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item nav-button">
-            <a class="nav-link" href="../survey/survey_a.html">One-click</a>
-          </li>
-          <li class="nav-item nav-button">
-            <a class="nav-link" href="../search_page/search_page.html">센터검색</a>
-          </li>
-          <li class="nav-item nav-button">
-            <a class="nav-link" href="../self_test/self_test.html">자가진단</a>
-          </li>
-          <li class="nav-item nav-button">
-            <a class="nav-link" href="../community/community.html">커뮤니티</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-
+<%@ include file="../mainbar/header.jsp" %>
 <body>
   <div class="board_head">
     
@@ -332,17 +290,17 @@
             <td><label for="ra15_2" class="hidden"></label><input type="radio" id="ra15_2" name="rad15" value="1"></td>
             <td><label for="ra15_3" class="hidden"></label><input type="radio" id="ra15_3" name="rad15" value="2"><input type="hidden" name="rad"></td>
           </tr>
-
-
 </tbody>
 </table>
 </div>
 <div class="btnboxC">
-  <a class="btn_red_normal" href="./self_test_result_a.html
-  " onclick="javascript:chkDepressive();">결과보기</a>
-    <a class="btn_blue_normal" href="./self_test.html" onclick="javascript:document.frmChkDepressive.reset();">다시하기</a>
+  <form action="" method="">
+  <button class="btn_red_normal" formaction="/TAB_PAGE/self_test_result_a" formmethod="" onclick="javascript:chkDepressive();">결과보기</button>
+  <button class="btn_blue_normal" formaction="/TAB_PAGE/self_test" formmethod="" onclick="javascript:document.frmChkDepressive.reset();">다시하기</button>
+  </form>
 </div>
 </form>
 </div>
 </body>
+<%@ include file="../mainbar/footer.jsp" %>
 </html>

@@ -38,9 +38,9 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
-    @RequestMapping(value="/commonSearch",  method={RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView commonSearch(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = carInforsService.common(params);
+    @RequestMapping(value = {"/commonSearch/{currentPage}", "/commonSearch/"}, method = { RequestMethod.GET, RequestMethod.POST })
+    public ModelAndView commonSearch(@PathVariable(required = false) String currentPage, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = carInforsService.selectSearchWithPagination_Com(currentPage, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -61,7 +61,7 @@ public class CarInforsWithMapController {
 
     @PostMapping("/insert_Com")
     public ModelAndView insert_Com(@RequestParam Map params, ModelAndView modelAndView) {
-        
+
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_insert.jsp");
         return modelAndView;
     }
@@ -111,11 +111,32 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
+    @PostMapping("/selectSearch_Com")
+    public ModelAndView selectSearch_Com(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = carInforsService.selectSearch_Com(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
+        return modelAndView;
+    }
+
+    @PostMapping("/selectDetail_Com/{UNIQUE_ID}")
+    public ModelAndView selectDetail_Com(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.selectDetail_Com(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
+        return modelAndView;
+    }
+
     // /selectDetail/CI002
     @PostMapping("/selectDetail/{UNIQUE_ID}")
     public ModelAndView selectDetail(@PathVariable String UNIQUE_ID, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = carInforsService.selectDetail(UNIQUE_ID, params);
+        Object result = carInforsService.selectDetail_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 

@@ -17,6 +17,7 @@ body {
     padding-top: 10rem;
     background-color: #fff;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -91,32 +92,15 @@ header {
 .btn-reply{
     background-color: #ff7f95;
 }
-
-.community-table{
-    justify-content: center;
-    margin:auto;
-}
-
 </style>
 </head>
-<%@ include file="../mainbar/header.jsp" %>
-<body>
 
+<body>
+    <%@ include file="../mainbar/header.jsp" %>
     <div class="container mt-4">
         <h1 class="text-center">선생님, 질문 있어여 !</h1>
 
-<body>
-    <div class="text-center mt-4">
-    <a href="./community.html">
-        <img src="../images/community_logo.png" alt="CommunityLogo" height="100" >
-    </a>
-    </div>
-    
-    <div class="container mt-4" >
-        <h1 class="text-center">커뮤니티</h1>
-    </div>
-
-        <div class="row mt-4" >
+        <div class="row mt-4">
             <div class="col-md-12">
                 <table class="table table-striped">
                     <thead>
@@ -130,7 +114,7 @@ header {
                     <tbody>
                         <tr>
                             <th scope="row">5</th>
-                            <td><a href="../community/community_answer.html">피곤피곤</a></td>
+                            <td><a href="/TAB_PAGE/community_answer">피곤피곤</a></td>
                             <td>Alice</td>
                             <td>2023-07-06</td>
                         </tr>
@@ -165,10 +149,10 @@ header {
 
         <div class="row mt-4">
             <div class="col-md-12 text-center">
-                <a class="btn btn-reply" href="../community/community_write.html">글쓰기 ></a>
+                <a class="btn btn-reply" href="/TAB_PAGE/community_write">글쓰기 ></a>
             </div>
         </div>
-
+    </div>
 </body>
 <%@ include file="../mainbar/footer.jsp" %>
 </html>
