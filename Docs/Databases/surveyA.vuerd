@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -168,
-    "scrollLeft": -598,
+    "scrollTop": -433,
+    "scrollLeft": -211,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -44,7 +44,7 @@
     "tables": [
       {
         "name": "A_Questions_Code",
-        "comment": "환자/가족 설문 코드",
+        "comment": "환자/가족 질문 코드",
         "columns": [
           {
             "name": "A_QUESTIONS",
@@ -95,9 +95,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1222.75,
-          "top": 57.25,
-          "zIndex": 714,
+          "left": 1359.4167,
+          "top": 73.9167,
+          "zIndex": 15,
           "widthName": 114.74072265625,
           "widthComment": 116.83544921875
         },
@@ -159,7 +159,7 @@
           "active": false,
           "left": 114,
           "top": 49,
-          "zIndex": 818,
+          "zIndex": 33,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -221,7 +221,7 @@
           "active": false,
           "left": 115,
           "top": 165,
-          "zIndex": 846,
+          "zIndex": 10,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 124,
           "top": 283,
-          "zIndex": 848,
+          "zIndex": 11,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 124,
           "top": 401,
-          "zIndex": 850,
+          "zIndex": 12,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -405,9 +405,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 124.0001,
-          "top": 522.4444,
-          "zIndex": 852,
+          "left": 124.0002,
+          "top": 518.0004,
+          "zIndex": 35,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 124.1387,
           "top": 650.9722,
-          "zIndex": 854,
+          "zIndex": 14,
           "widthName": 151.55078125,
           "widthComment": 120
         },
@@ -531,7 +531,7 @@
           "active": false,
           "left": 110.6711,
           "top": 774.5083,
-          "zIndex": 842,
+          "zIndex": 9,
           "widthName": 151.55078125,
           "widthComment": 114.67724609375
         },
@@ -593,7 +593,7 @@
           "active": false,
           "left": 647,
           "top": 51,
-          "zIndex": 752,
+          "zIndex": 1,
           "widthName": 77.87353515625,
           "widthComment": 94.46630859375
         },
@@ -655,7 +655,7 @@
           "active": false,
           "left": 651.8613,
           "top": 166.1114,
-          "zIndex": 762,
+          "zIndex": 2,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -717,7 +717,7 @@
           "active": false,
           "left": 654.3333,
           "top": 279.9728,
-          "zIndex": 771,
+          "zIndex": 3,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -779,7 +779,7 @@
           "active": false,
           "left": 657.8057,
           "top": 392.6114,
-          "zIndex": 779,
+          "zIndex": 4,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -841,7 +841,7 @@
           "active": false,
           "left": 658.6388,
           "top": 516.7779,
-          "zIndex": 802,
+          "zIndex": 5,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -903,7 +903,7 @@
           "active": false,
           "left": 656.5001,
           "top": 642.6112,
-          "zIndex": 806,
+          "zIndex": 6,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -965,7 +965,7 @@
           "active": false,
           "left": 657.897,
           "top": 771.3609,
-          "zIndex": 808,
+          "zIndex": 7,
           "widthName": 77.87353515625,
           "widthComment": 60
         },
@@ -989,8 +989,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 65.10714285714286,
+          "x": 1359.4167,
+          "y": 81.77384285714285,
           "direction": "left"
         },
         "end": {
@@ -1041,8 +1041,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 80.82142857142857,
+          "x": 1359.4167,
+          "y": 97.48812857142856,
           "direction": "left"
         },
         "end": {
@@ -1093,8 +1093,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 96.53571428571428,
+          "x": 1359.4167,
+          "y": 113.20241428571427,
           "direction": "left"
         },
         "end": {
@@ -1145,8 +1145,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 112.24999999999999,
+          "x": 1359.4167,
+          "y": 128.9167,
           "direction": "left"
         },
         "end": {
@@ -1197,8 +1197,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 127.9642857142857,
+          "x": 1359.4167,
+          "y": 144.6309857142857,
           "direction": "left"
         },
         "end": {
@@ -1223,8 +1223,8 @@
           "columnIds": [
             "a707d512-0482-45d5-92e6-cf05ce234d89"
           ],
-          "x": 599.44687734375,
-          "y": 577.4444,
+          "x": 599.44697734375,
+          "y": 573.0004,
           "direction": "right"
         },
         "end": {
@@ -1249,8 +1249,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 143.67857142857142,
+          "x": 1359.4167,
+          "y": 160.34527142857144,
           "direction": "left"
         },
         "end": {
@@ -1301,8 +1301,8 @@
           "columnIds": [
             "91e7675f-906a-40ac-9f8d-7ed290817d86"
           ],
-          "x": 1222.75,
-          "y": 159.39285714285714,
+          "x": 1359.4167,
+          "y": 176.05955714285716,
           "direction": "left"
         },
         "end": {
