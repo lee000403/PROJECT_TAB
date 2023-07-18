@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -411,
-    "scrollLeft": -271,
-    "zoomLevel": 0.5,
+    "scrollTop": -139,
+    "scrollLeft": -259,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -18,7 +18,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
+    "databaseName": "MATCHING_A",
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
@@ -43,8 +43,8 @@
   "table": {
     "tables": [
       {
-        "name": "MATCHING_P",
-        "comment": "파트너 매칭_파트너",
+        "name": "MATCHING_A",
+        "comment": "설문A 결과",
         "columns": [
           {
             "name": "MEMBERID",
@@ -67,233 +67,10 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "e4d16cc6-1c03-4c67-b120-7a00dade325f"
+            "id": "d01704d9-006d-4ff0-ae7f-d66dad5459c4"
           },
           {
-            "name": "PATIENTGENDER_ID",
-            "comment": "환자 성별 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 130.81298828125,
-              "widthComment": 74.2236328125,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "e9341c0b-139d-4c76-b248-a164bcd1dd0e"
-          },
-          {
-            "name": "WORKTYPE_ID",
-            "comment": "근무형태 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 96.62451171875,
-              "widthComment": 70.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "398fc895-e173-4c90-96a4-c35ec81dc6e6"
-          },
-          {
-            "name": "JOBTYPE_ID",
-            "comment": "고용형태 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 81.46630859375,
-              "widthComment": 70.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "d040d497-693c-4b6e-ba57-8f6a73cbe866"
-          },
-          {
-            "name": "LEVEL_ID",
-            "comment": "치매진행단계 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 62.70263671875,
-              "widthComment": 96.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "bb3d718c-95cd-4be8-95d8-a117b41709ce"
-          },
-          {
-            "name": "SERVICEAREA_ID",
-            "comment": "서비스지역 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 114.4677734375,
-              "widthComment": 83.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "34549f27-124e-48a3-a917-416a376eddf4"
-          },
-          {
-            "name": "CAR&LICENCE_ID",
-            "comment": "차량&면허 여부 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 114.6962890625,
-              "widthComment": 108.89453125,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "fe67ab18-6cac-43b4-ba97-4b81fcd1c98e"
-          },
-          {
-            "name": "CERTIFICATION_ID",
-            "comment": "자격증 소유 여부 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 120.69482421875,
-              "widthComment": 116.83544921875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "c4c999bd-c708-48f0-aa0c-b060d466a616"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1037,
-          "top": 587,
-          "zIndex": 42,
-          "widthName": 86.26513671875,
-          "widthComment": 116.841796875
-        },
-        "visible": true,
-        "id": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237"
-      },
-      {
-        "name": "MEMBERID",
-        "comment": "회원아이디",
-        "columns": [
-          {
-            "name": "MEMBERID",
-            "comment": "회원아이디",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 72.05908203125,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "6311cb4d-78cf-43bc-ba62-8da4eeb36d65"
-          },
-          {
-            "name": "TYPE_ID",
-            "comment": "회원유형ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "afa2700f-0df0-402b-9f61-3294a55966f8"
-          },
-          {
-            "name": "PARTNERGENDER_ID",
+            "name": "GENDER_PREF_ID",
             "comment": "파트너성별ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -308,17 +85,17 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 138.7666015625,
+              "widthName": 119.7490234375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "e7f70766-7c6a-45f9-b9c7-3ec889f2b558"
+            "id": "52a71c7b-475b-42a4-b1a8-7856a2a69c64"
           },
           {
-            "name": "PARTNERAGE_ID",
-            "comment": "파트너 연령 ID",
-            "dataType": "INTEGER(50)",
+            "name": "AGE_PREF_ID",
+            "comment": "파트너 연령ID",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -331,32 +108,16 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 110.60205078125,
-              "widthComment": 87.2236328125,
-              "widthDataType": 82.90087890625,
+              "widthName": 91.58447265625,
+              "widthComment": 83.61181640625,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "80d8ae0f-91b9-4020-9717-db1018f1a0c0"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 313,
-          "top": 386,
-          "zIndex": 2,
-          "widthName": 72.05908203125,
-          "widthComment": 67
-        },
-        "visible": true,
-        "id": "0e07034e-55a8-4a0c-97fc-4b2d1e14a274"
-      },
-      {
-        "name": "TYPE",
-        "comment": "회원유형",
-        "columns": [
+            "id": "7d72bf63-5bd5-46e7-8266-d88fdf55b50a"
+          },
           {
-            "name": "TYPE",
-            "comment": "회원유형",
+            "name": "WORKTYPE_PREF_ID",
+            "comment": "근무형태ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -368,18 +129,195 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": false,
+              "fk": true,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
+              "widthName": 138.525390625,
+              "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "7dfeea18-c883-48eb-86a6-8d553b8ab5df"
+            "id": "70853fe4-4d29-4dbe-9b88-d6428b4daac0"
           },
           {
-            "name": "TYPE_ID",
-            "comment": "회원유형ID",
+            "name": "JOBTYPE_PREF_ID",
+            "comment": "고용형태_ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 123.3671875,
+              "widthComment": 74.22998046875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "741113ba-ee40-4387-931a-a514f5a21d0c"
+          },
+          {
+            "name": "PAT_AREA_ID",
+            "comment": "환자지역ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 88.2138671875,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "2c9ef6ce-aa81-4027-8aca-83a33bb63b55"
+          },
+          {
+            "name": "CAR_LIC_PREF_ID",
+            "comment": "차량/면허 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 119.0380859375,
+              "widthComment": 103.83544921875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "3156ee9f-0327-47f7-b6d9-d7fa35569a64"
+          },
+          {
+            "name": "CERT_PREF_ID",
+            "comment": "자격증 소유 여부 ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 99.2841796875,
+              "widthComment": 116.83544921875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "a402ccc9-8ae5-479a-a21c-e3c8ce3b9f70"
+          },
+          {
+            "name": "LEVEL_ID",
+            "comment": "치매진행단계ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 62.70263671875,
+              "widthComment": 93,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "78ccf5e9-8f3a-43df-95e3-730121064bfc"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "본인성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "f5b4ecd3-f8d4-43f3-8728-321bf4c1e6dd"
+          },
+          {
+            "name": "PATIENTGENDER_ID",
+            "comment": "환자성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 130.81298828125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "45b93d06-ff5c-47f6-a95e-9038c7ea148a"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 630.7778,
+          "top": 38.0278,
+          "zIndex": 498,
+          "widthName": 86.26513671875,
+          "widthComment": 66.28271484375
+        },
+        "visible": true,
+        "id": "e710d800-9240-4084-8b64-f1dfb64358b7"
+      },
+      {
+        "name": "PAT USER INFOR",
+        "comment": "환자 회원 DB",
+        "columns": [
+          {
+            "name": "MEMBERID",
+            "comment": "회원아이디",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -393,31 +331,100 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 72.05908203125,
               "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "39ff9416-3c23-41fa-b0d7-1e9224cd538a"
+            "id": "f8725408-feed-48cf-aac2-e42803e2cf4e"
+          },
+          {
+            "name": "LEVEL_ID",
+            "comment": "치매진행단계ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.70263671875,
+              "widthComment": 93,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "69d3aba5-092c-47e0-9c4c-429e96282583"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "본인성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "e34da97b-449f-4f08-bf06-a875cda95b3f"
+          },
+          {
+            "name": "PATIENTGENDER_ID",
+            "comment": "환자성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 130.81298828125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "ea6eadaa-70b8-4320-92b9-ab08d8101991"
           }
         ],
         "ui": {
           "active": false,
-          "left": 137,
-          "top": 8,
-          "zIndex": 4,
-          "widthName": 60,
-          "widthComment": 60
+          "left": 561,
+          "top": 498.5003,
+          "zIndex": 506,
+          "widthName": 109.1357421875,
+          "widthComment": 79.28271484375
         },
         "visible": true,
-        "id": "277c8854-f70c-4a1d-8689-8cd3d9d7f133"
+        "id": "8fa607f4-f910-42a6-9704-855acff3612b"
       },
       {
-        "name": "PARTNERGENDER",
-        "comment": "파트너성별",
+        "name": "GENDER_PREFER",
+        "comment": "파트너 성별 선호",
         "columns": [
           {
-            "name": "PARTNERGENDER",
+            "name": "GENDER_PREF",
             "comment": "파트너성별",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -432,15 +439,15 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 118.53662109375,
+              "widthName": 99.51904296875,
               "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "9b346250-b56c-4ac2-b03b-81080a606665"
+            "id": "bcd78a4d-0383-4693-bb95-64fbeace72be"
           },
           {
-            "name": "PARTNERGENDER_ID",
+            "name": "GENDER_PREF_ID",
             "comment": "파트너성별ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -455,33 +462,33 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 138.7666015625,
+              "widthName": 119.7490234375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "73f1b1c1-3b76-476e-aaff-2a295ff7a8ad"
+            "id": "2ad00c3b-ad04-4390-bddf-38f00a14b471"
           }
         ],
         "ui": {
           "active": false,
-          "left": 0,
-          "top": 138,
-          "zIndex": 3,
-          "widthName": 118.53662109375,
-          "widthComment": 67
+          "left": 10,
+          "top": 44.75,
+          "zIndex": 463,
+          "widthName": 117.578125,
+          "widthComment": 100.2236328125
         },
         "visible": true,
-        "id": "6e4f7db9-713a-4f74-8d52-f0d19c7ccf32"
+        "id": "6f96d66a-b15f-4074-a9bd-40d0b49860a5"
       },
       {
-        "name": "PARTNERAGE",
-        "comment": "파트너 연령",
+        "name": "AGE_PREFER",
+        "comment": "파트너 연령 선호",
         "columns": [
           {
-            "name": "PARTNERAGE",
+            "name": "AGE_PREF",
             "comment": "파트너 연령",
-            "dataType": "INTEGER(50)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -494,78 +501,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 90.3720703125,
+              "widthName": 71.3544921875,
               "widthComment": 70.61181640625,
-              "widthDataType": 82.90087890625,
-              "widthDefault": 60
-            },
-            "id": "2da5c246-8bac-4768-8075-2409dc1e0205"
-          },
-          {
-            "name": "PARTNERAGE_ID",
-            "comment": "파트너 연령 ID",
-            "dataType": "INTEGER(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 110.60205078125,
-              "widthComment": 87.2236328125,
-              "widthDataType": 82.90087890625,
-              "widthDefault": 60
-            },
-            "id": "034a3e3d-ecea-4f06-9e1e-76d2a0d67c0c"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 703,
-          "top": 7,
-          "zIndex": 1,
-          "widthName": 90.3720703125,
-          "widthComment": 70.61181640625
-        },
-        "visible": true,
-        "id": "62081931-a5c7-4da6-9fad-39fb5bd0938f"
-      },
-      {
-        "name": "PATIENTGENDER",
-        "comment": "환자 성별",
-        "columns": [
-          {
-            "name": "PATIENTGENDER",
-            "comment": "환자 성별",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 110.5830078125,
-              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "001ab7fa-c5e7-4794-8fba-8c809b63dc4d"
+            "id": "d5bbeaef-83d2-463d-b2e6-c272a409d974"
           },
           {
-            "name": "PATIENTGENDER_ID",
-            "comment": "환자 성별 ID",
+            "name": "AGE_PREF_ID",
+            "comment": "파트너 연령ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -579,31 +524,31 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 130.81298828125,
-              "widthComment": 74.2236328125,
+              "widthName": 91.58447265625,
+              "widthComment": 83.61181640625,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "5f25205a-87d3-41b5-ade4-4dd912319a41"
+            "id": "c73ad78c-4335-49c2-80cf-4a8724094691"
           }
         ],
         "ui": {
           "active": false,
-          "left": 252,
-          "top": 788,
-          "zIndex": 5,
-          "widthName": 110.5830078125,
-          "widthComment": 60
+          "left": 11.1945,
+          "top": 183.4443,
+          "zIndex": 494,
+          "widthName": 89.41357421875,
+          "widthComment": 100.2236328125
         },
         "visible": true,
-        "id": "0277e6f4-5aeb-4a2e-9979-edccc3f5533d"
+        "id": "5b717dea-62b7-4953-a267-9fa882b4eb05"
       },
       {
-        "name": "WORKTYPE",
-        "comment": "근무형태",
+        "name": "WORKTYPE_PREFER",
+        "comment": "근무형태 선호",
         "columns": [
           {
-            "name": "WORKTYPE",
+            "name": "WORKTYPE_PREF",
             "comment": "근무형태",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -618,16 +563,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 76.39453125,
+              "widthName": 118.29541015625,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "eabd8cea-082b-480d-9ec3-6b8c443c7d87"
+            "id": "0124bcee-3716-4a98-b00c-1e64dd984fee"
           },
           {
-            "name": "WORKTYPE_ID",
-            "comment": "근무형태 ID",
+            "name": "WORKTYPE_PREF_ID",
+            "comment": "근무형태ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -641,31 +586,31 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 96.62451171875,
-              "widthComment": 70.61181640625,
+              "widthName": 138.525390625,
+              "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "0db19c38-bf8b-4dee-93d3-f87b904bb481"
+            "id": "8d12f718-bf8c-4624-a39b-120fa06cce04"
           }
         ],
         "ui": {
           "active": false,
-          "left": 451,
-          "top": 1019,
-          "zIndex": 6,
-          "widthName": 76.39453125,
-          "widthComment": 60
+          "left": 1255.75,
+          "top": 34,
+          "zIndex": 404,
+          "widthName": 136.3544921875,
+          "widthComment": 83.61181640625
         },
         "visible": true,
-        "id": "63ec202c-bf0f-47eb-9b97-f4b2d52cee16"
+        "id": "56ca4960-57c9-493a-b178-139bdda8c8fa"
       },
       {
-        "name": "JOBTYPE",
-        "comment": "고용형태",
+        "name": "JOBTYPE_PREFER",
+        "comment": "고용형태 선호",
         "columns": [
           {
-            "name": "JOBTYPE",
+            "name": "JOBTYPE_PREF",
             "comment": "고용형태",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -680,16 +625,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 61.236328125,
+              "widthName": 103.13720703125,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "7304932c-894b-46bb-ad76-d0139d9b1c32"
+            "id": "ab257bd0-470c-44a3-8de9-d1862db46e4c"
           },
           {
-            "name": "JOBTYPE_ID",
-            "comment": "고용형태 ID",
+            "name": "JOBTYPE_PREF_ID",
+            "comment": "고용형태_ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -703,32 +648,94 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 81.46630859375,
-              "widthComment": 70.61181640625,
+              "widthName": 123.3671875,
+              "widthComment": 74.22998046875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "15b51a27-127a-460a-bc30-328817c6021b"
+            "id": "8b2d2829-34b5-4190-a7f7-5df0603854d9"
           }
         ],
         "ui": {
           "active": false,
-          "left": 677,
-          "top": 1148,
-          "zIndex": 7,
-          "widthName": 61.236328125,
+          "left": 1292.6111,
+          "top": 151,
+          "zIndex": 407,
+          "widthName": 121.1962890625,
+          "widthComment": 83.61181640625
+        },
+        "visible": true,
+        "id": "9b25080a-54af-4c1c-b7cb-86efe0b0ce7a"
+      },
+      {
+        "name": "PAT_AREA",
+        "comment": "환자 지역",
+        "columns": [
+          {
+            "name": "PAT_AREA",
+            "comment": "지역",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.98388671875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "388aa1a6-967f-4ae0-9649-cfabf98b2cfe"
+          },
+          {
+            "name": "PAT_AREA_ID",
+            "comment": "지역ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 88.2138671875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "2ea3b9ea-34a7-4723-9be4-90f6161ae5f7"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1309.75,
+          "top": 274.25,
+          "zIndex": 446,
+          "widthName": 67.98388671875,
           "widthComment": 60
         },
         "visible": true,
-        "id": "c274de28-6a7e-43d2-96e1-f9f82fc2daa4"
+        "id": "af93728b-02bc-4953-9035-f3a44774dffe"
       },
       {
-        "name": "LEVEL",
-        "comment": "치매진행단계",
+        "name": "CAR_LICENCE_PREFER",
+        "comment": "차량/면허 여부 필요",
         "columns": [
           {
-            "name": "LEVEL",
-            "comment": "치매진행단계",
+            "name": "CAR_LIC_PREF",
+            "comment": "차량/면허 여부",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -742,16 +749,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 80,
+              "widthName": 98.80810546875,
+              "widthComment": 87.2236328125,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "9dc4fa0d-4c34-4733-a7a6-9def4de59790"
+            "id": "3a139668-3b4b-4aa5-b1b9-5c2755ca3022"
           },
           {
-            "name": "LEVEL_ID",
-            "comment": "치매진행단계 ID",
+            "name": "CAR_LIC_PREF_ID",
+            "comment": "차량/면허 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -765,155 +772,31 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 62.70263671875,
-              "widthComment": 96.61181640625,
+              "widthName": 119.0380859375,
+              "widthComment": 103.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "e8bb26f6-f03d-43cf-96a8-0d8b441bc1f7"
+            "id": "570f45c2-0364-4c12-92b3-437743dcddfc"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1016,
-          "top": 1339,
-          "zIndex": 8,
-          "widthName": 60,
-          "widthComment": 80
+          "left": 1339.2501,
+          "top": 391.25,
+          "zIndex": 380,
+          "widthName": 152.9853515625,
+          "widthComment": 116.83544921875
         },
         "visible": true,
-        "id": "b23d8c71-7042-419c-8b4c-3bd6b0082b8a"
+        "id": "c2258cd5-3fe5-422d-a92d-bdf3a8a06736"
       },
       {
-        "name": "SERVICEAREA",
-        "comment": "서비스지역",
+        "name": "CERTIFICATION_PREFER",
+        "comment": "자격증 소유 선호",
         "columns": [
           {
-            "name": "SERVICEAREA",
-            "comment": "서비스지역",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 94.23779296875,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "d0409100-6f9f-48b7-b8fd-8e9133a947cb"
-          },
-          {
-            "name": "SERVICEAREA_ID",
-            "comment": "서비스지역 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 114.4677734375,
-              "widthComment": 83.61181640625,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "148eb6f1-45a0-4e82-bb5b-70d5ca7a9184"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1547.20166015625,
-          "top": 1245.75,
-          "zIndex": 30,
-          "widthName": 94.23779296875,
-          "widthComment": 67
-        },
-        "visible": true,
-        "id": "67a911cf-db00-4011-b032-4ee448dbd175"
-      },
-      {
-        "name": "CAR&LICENSE",
-        "comment": "차량&면허 여부",
-        "columns": [
-          {
-            "name": "CAR&LICENSE",
-            "comment": "차량&면허 여부",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 93.7490234375,
-              "widthComment": 92.28271484375,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "3ba34e12-bd64-4ec5-8579-34e72e8c93c2"
-          },
-          {
-            "name": "CAR&LICENCE_ID",
-            "comment": "차량&면허 여부 ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 114.6962890625,
-              "widthComment": 108.89453125,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "0ecb420f-e698-4a90-9421-5c8e44f6a6ab"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1521.6904296875,
-          "top": 806,
-          "zIndex": 26,
-          "widthName": 93.7490234375,
-          "widthComment": 92.28271484375
-        },
-        "visible": true,
-        "id": "fed726ac-9563-40e6-99cd-dc33723c5281"
-      },
-      {
-        "name": "CERTIFICATION",
-        "comment": "자격증 소유 여부",
-        "columns": [
-          {
-            "name": "CERTIFICATION",
+            "name": "CERT_PREF",
             "comment": "자격증 소유 여부",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -928,15 +811,15 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 100.46484375,
+              "widthName": 79.05419921875,
               "widthComment": 100.2236328125,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "a1e7ac10-f769-4786-9f04-7df931f8c15b"
+            "id": "770b343f-5891-4456-8ab5-90982b5fc7a1"
           },
           {
-            "name": "CERTIFICATION_ID",
+            "name": "CERT_PREF_ID",
             "comment": "자격증 소유 여부 ID",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -951,24 +834,86 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 120.69482421875,
+              "widthName": 99.2841796875,
               "widthComment": 116.83544921875,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "ff39cb32-815d-49a6-9fb9-be003c26d393"
+            "id": "6e1afb82-0a39-4f23-bf0a-dd5431a40006"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 20.1116,
+          "top": 314.7501,
+          "zIndex": 507,
+          "widthName": 160.4248046875,
+          "widthComment": 100.2236328125
+        },
+        "visible": true,
+        "id": "472e6087-07d9-4420-b770-60f46a55990d"
+      },
+      {
+        "name": "GENDER",
+        "comment": "성별",
+        "columns": [
+          {
+            "name": "GENDER",
+            "comment": "성별",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "24fed516-a5e8-4863-abcf-87783050c8c6"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "d8bb43a6-57bb-4dc4-b2d7-1c7a27433e2f"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1358.75,
-          "top": 368.25,
-          "zIndex": 41,
-          "widthName": 100.46484375,
-          "widthComment": 100.2236328125
+          "left": 29.25,
+          "top": 802.75,
+          "zIndex": 87,
+          "widthName": 60,
+          "widthComment": 60
         },
         "visible": true,
-        "id": "b7fb2aa8-abaf-4ae6-a4e4-aa6bc21998ae"
+        "id": "94f15091-1cc5-4f1e-9f20-217e44d334d5"
       }
     ],
     "indexes": []
@@ -980,289 +925,217 @@
     "relationships": [
       {
         "identification": false,
-        "relationshipType": "OneOnly",
+        "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "0e07034e-55a8-4a0c-97fc-4b2d1e14a274",
+          "tableId": "6f96d66a-b15f-4074-a9bd-40d0b49860a5",
           "columnIds": [
-            "6311cb4d-78cf-43bc-ba62-8da4eeb36d65"
+            "2ad00c3b-ad04-4390-bddf-38f00a14b471"
           ],
-          "x": 793.708984375,
-          "y": 461.5,
+          "x": 464.4677734375,
+          "y": 99.75,
           "direction": "right"
         },
         "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
           "columnIds": [
-            "e4d16cc6-1c03-4c67-b120-7a00dade325f"
+            "52a71c7b-475b-42a4-b1a8-7856a2a69c64"
           ],
-          "x": 1037,
-          "y": 625.8333333333333,
+          "x": 630.7778,
+          "y": 87.11113333333333,
           "direction": "left"
         },
-        "constraintName": "fk_memberid_to_matching_p",
+        "constraintName": "fk_partnergender_to_matching_s&f",
         "visible": true,
-        "id": "31f12b23-4b2e-4deb-982b-10251a5753f0"
+        "id": "0b0819fc-431f-45f3-bc7a-2d9f2e726855"
       },
       {
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "277c8854-f70c-4a1d-8689-8cd3d9d7f133",
+          "tableId": "5b717dea-62b7-4953-a267-9fa882b4eb05",
           "columnIds": [
-            "39ff9416-3c23-41fa-b0d7-1e9224cd538a"
+            "c73ad78c-4335-49c2-80cf-4a8724094691"
           ],
-          "x": 518.71875,
-          "y": 63,
+          "x": 441.1095390625,
+          "y": 238.4443,
           "direction": "right"
         },
         "end": {
-          "tableId": "0e07034e-55a8-4a0c-97fc-4b2d1e14a274",
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
           "columnIds": [
-            "afa2700f-0df0-402b-9f61-3294a55966f8"
+            "7d72bf63-5bd5-46e7-8266-d88fdf55b50a"
           ],
-          "x": 553.3544921875,
-          "y": 386,
+          "x": 630.7778,
+          "y": 185.2778,
+          "direction": "left"
+        },
+        "constraintName": "fk_partnerage_to_matching_s&f",
+        "visible": true,
+        "id": "5b3d3476-f2d0-4338-b487-f02dcb07ee2c"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "56ca4960-57c9-493a-b178-139bdda8c8fa",
+          "columnIds": [
+            "8d12f718-bf8c-4624-a39b-120fa06cce04"
+          ],
+          "x": 1255.75,
+          "y": 89,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
+          "columnIds": [
+            "70853fe4-4d29-4dbe-9b88-d6428b4daac0"
+          ],
+          "x": 1140.8573898437498,
+          "y": 74.8403,
+          "direction": "right"
+        },
+        "constraintName": "fk_worktype_to_matching_s&f",
+        "visible": true,
+        "id": "36265f1d-64cc-442e-9667-96a8cbf701bc"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "9b25080a-54af-4c1c-b7cb-86efe0b0ce7a",
+          "columnIds": [
+            "8b2d2829-34b5-4190-a7f7-5df0603854d9"
+          ],
+          "x": 1292.6111,
+          "y": 206,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
+          "columnIds": [
+            "741113ba-ee40-4387-931a-a514f5a21d0c"
+          ],
+          "x": 1140.8573898437498,
+          "y": 148.4653,
+          "direction": "right"
+        },
+        "constraintName": "fk_jobtype_to_matching_s&f",
+        "visible": true,
+        "id": "e799d7de-3835-4958-9197-7e5939e44da2"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "af93728b-02bc-4953-9035-f3a44774dffe",
+          "columnIds": [
+            "2ea3b9ea-34a7-4723-9be4-90f6161ae5f7"
+          ],
+          "x": 1309.75,
+          "y": 329.25,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
+          "columnIds": [
+            "2c9ef6ce-aa81-4027-8aca-83a33bb63b55"
+          ],
+          "x": 1140.8573898437498,
+          "y": 222.0903,
+          "direction": "right"
+        },
+        "constraintName": "fk_servicearea_to_matching_s&f",
+        "visible": true,
+        "id": "7bf306eb-96be-4b2d-bded-923455595a07"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c2258cd5-3fe5-422d-a92d-bdf3a8a06736",
+          "columnIds": [
+            "570f45c2-0364-4c12-92b3-437743dcddfc"
+          ],
+          "x": 1339.2501,
+          "y": 446.25,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
+          "columnIds": [
+            "3156ee9f-0327-47f7-b6d9-d7fa35569a64"
+          ],
+          "x": 1140.8573898437498,
+          "y": 295.7153,
+          "direction": "right"
+        },
+        "constraintName": "fk_car&license_to_matching_s&f",
+        "visible": true,
+        "id": "bb77d00c-47a1-45da-a250-e8c5c67d5fae"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "472e6087-07d9-4420-b770-60f46a55990d",
+          "columnIds": [
+            "6e1afb82-0a39-4f23-bf0a-dd5431a40006"
+          ],
+          "x": 490.94997890625,
+          "y": 369.7501,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
+          "columnIds": [
+            "a402ccc9-8ae5-479a-a21c-e3c8ce3b9f70"
+          ],
+          "x": 630.7778,
+          "y": 283.4444666666667,
+          "direction": "left"
+        },
+        "constraintName": "fk_certification_to_matching_s&f",
+        "visible": true,
+        "id": "9fc126f0-c64a-4a05-b2fb-df9ba86885bf"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "8fa607f4-f910-42a6-9704-855acff3612b",
+          "columnIds": [
+            "f8725408-feed-48cf-aac2-e42803e2cf4e",
+            "69d3aba5-092c-47e0-9c4c-429e96282583",
+            "e34da97b-449f-4f08-bf06-a875cda95b3f",
+            "ea6eadaa-70b8-4320-92b9-ab08d8101991"
+          ],
+          "x": 800.265869140625,
+          "y": 498.5003,
           "direction": "top"
         },
-        "constraintName": "fk_type_to_memberid",
-        "visible": true,
-        "id": "22a261e7-adfa-4118-85df-51741693b82f"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "6e4f7db9-713a-4f74-8d52-f0d19c7ccf32",
-          "columnIds": [
-            "73f1b1c1-3b76-476e-aaff-2a295ff7a8ad"
-          ],
-          "x": 473.4853515625,
-          "y": 193,
-          "direction": "right"
-        },
         "end": {
-          "tableId": "0e07034e-55a8-4a0c-97fc-4b2d1e14a274",
+          "tableId": "e710d800-9240-4084-8b64-f1dfb64358b7",
           "columnIds": [
-            "e7f70766-7c6a-45f9-b9c7-3ec889f2b558"
+            "d01704d9-006d-4ff0-ae7f-d66dad5459c4",
+            "78ccf5e9-8f3a-43df-95e3-730121064bfc",
+            "f5b4ecd3-f8d4-43f3-8728-321bf4c1e6dd",
+            "45b93d06-ff5c-47f6-a95e-9038c7ea148a"
           ],
-          "x": 393.1181640625,
-          "y": 386,
-          "direction": "top"
-        },
-        "constraintName": "fk_partnergender_to_memberid",
-        "visible": true,
-        "id": "0f29dc64-a566-4ef1-b9b9-3129a5b562b0"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "62081931-a5c7-4da6-9fad-39fb5bd0938f",
-          "columnIds": [
-            "034a3e3d-ecea-4f06-9e1e-76d2a0d67c0c"
-          ],
-          "x": 703,
-          "y": 62,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "0e07034e-55a8-4a0c-97fc-4b2d1e14a274",
-          "columnIds": [
-            "80d8ae0f-91b9-4020-9717-db1018f1a0c0"
-          ],
-          "x": 713.5908203125,
-          "y": 386,
-          "direction": "top"
-        },
-        "constraintName": "fk_partnerage_to_memberid",
-        "visible": true,
-        "id": "f8da7163-658a-4ac8-8ab6-54b2fd4474f4"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "0277e6f4-5aeb-4a2e-9979-edccc3f5533d",
-          "columnIds": [
-            "5f25205a-87d3-41b5-ade4-4dd912319a41"
-          ],
-          "x": 711.75537109375,
-          "y": 843,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "e9341c0b-139d-4c76-b248-a164bcd1dd0e"
-          ],
-          "x": 1037,
-          "y": 703.4999999999999,
-          "direction": "left"
-        },
-        "constraintName": "fk_patientgender_to_matching_p",
-        "visible": true,
-        "id": "3500a491-c8fd-497c-9547-fc346ec3066e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "63ec202c-bf0f-47eb-9b97-f4b2d52cee16",
-          "columnIds": [
-            "0db19c38-bf8b-4dee-93d3-f87b904bb481"
-          ],
-          "x": 872.955078125,
-          "y": 1074,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "398fc895-e173-4c90-96a4-c35ec81dc6e6"
-          ],
-          "x": 1037,
-          "y": 781.1666666666665,
-          "direction": "left"
-        },
-        "constraintName": "fk_worktype_to_matching_p",
-        "visible": true,
-        "id": "b5b1ad3f-7b57-463a-b94f-5da6f002e9e9"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "c274de28-6a7e-43d2-96e1-f9f82fc2daa4",
-          "columnIds": [
-            "15b51a27-127a-460a-bc30-328817c6021b"
-          ],
-          "x": 1083.796875,
-          "y": 1203,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "d040d497-693c-4b6e-ba57-8f6a73cbe866"
-          ],
-          "x": 1120.7278645833333,
-          "y": 820,
+          "x": 885.817594921875,
+          "y": 332.5278,
           "direction": "bottom"
         },
-        "constraintName": "fk_jobtype_to_matching_p",
+        "constraintName": "fk_user infor_to_matching_a",
         "visible": true,
-        "id": "20b32748-d259-42c7-b232-d639f5b01822"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "b23d8c71-7042-419c-8b4c-3bd6b0082b8a",
-          "columnIds": [
-            "e8bb26f6-f03d-43cf-96a8-0d8b441bc1f7"
-          ],
-          "x": 1223.0166015625,
-          "y": 1339,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "bb3d718c-95cd-4be8-95d8-a117b41709ce"
-          ],
-          "x": 1288.18359375,
-          "y": 820,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_level_to_matching_p",
-        "visible": true,
-        "id": "a34fd414-088a-4bbf-8bec-01f8ec1be28e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "67a911cf-db00-4011-b032-4ee448dbd175",
-          "columnIds": [
-            "148eb6f1-45a0-4e82-bb5b-70d5ca7a9184"
-          ],
-          "x": 1547.20166015625,
-          "y": 1300.75,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "34549f27-124e-48a3-a917-416a376eddf4"
-          ],
-          "x": 1455.6393229166667,
-          "y": 820,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_servicearea_to_matching_p",
-        "visible": true,
-        "id": "ed9ef9fb-9bee-4507-ba24-b95802da650f"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "fed726ac-9563-40e6-99cd-dc33723c5281",
-          "columnIds": [
-            "0ecb420f-e698-4a90-9421-5c8e44f6a6ab"
-          ],
-          "x": 1521.6904296875,
-          "y": 861,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "fe67ab18-6cac-43b4-ba97-4b81fcd1c98e"
-          ],
-          "x": 1539.3671875,
-          "y": 703.5,
-          "direction": "right"
-        },
-        "constraintName": "fk_car&license_to_matching_p",
-        "visible": true,
-        "id": "764ec517-d6cb-4aa4-8f6c-9283071a0e60"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "b7fb2aa8-abaf-4ae6-a4e4-aa6bc21998ae",
-          "columnIds": [
-            "ff39cb32-815d-49a6-9fb9-be003c26d393"
-          ],
-          "x": 1358.75,
-          "y": 423.25,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "3cd44e86-bf53-45d6-adfe-82b0cb1a0237",
-          "columnIds": [
-            "c4c999bd-c708-48f0-aa0c-b060d466a616"
-          ],
-          "x": 1288.18359375,
-          "y": 587,
-          "direction": "top"
-        },
-        "constraintName": "fk_certification_to_matching_p",
-        "visible": true,
-        "id": "3568ba8a-3828-41ea-bae4-bbea49c2d490"
+        "id": "a22628b3-9c88-4c71-ae17-3638271721e1"
       }
     ]
   }
