@@ -16,7 +16,6 @@ body {
     padding-top: 10rem;
     background-color: #fff;
     justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
@@ -91,10 +90,16 @@ header {
 .btn-reply{
     background-color: #ff7f95;
 }
+
+.community-table{
+    justify-content: center;
+    margin:auto;
+}
+
 </style>
 </head>
 
-<body>
+
 
 <header>
 <nav>
@@ -137,10 +142,19 @@ header {
     </div>
 </nav>
 </header>
-    <div class="container mt-4">
-        <h1 class="text-center">선생님, 질문 있어여 !</h1>
 
-        <div class="row mt-4">
+<body>
+    <div class="text-center mt-4">
+    <a href="./community.html">
+        <img src="../images/community_logo.png" alt="CommunityLogo" height="100" >
+    </a>
+    </div>
+    
+    <div class="container mt-4" >
+        <h1 class="text-center">커뮤니티</h1>
+    </div>
+
+        <div class="row mt-4" >
             <div class="col-md-12">
                 <table class="table table-striped">
                     <thead>
@@ -192,7 +206,7 @@ header {
                 <a class="btn btn-reply" href="../community/community_write.html">글쓰기 ></a>
             </div>
         </div>
-    </div>
+
 </body>
 
 </html>
