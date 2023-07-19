@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 6500,
     "height": 6500,
-    "scrollTop": -1784.7474388811324,
-    "scrollLeft": -3567,
+    "scrollTop": -2028.7474388811324,
+    "scrollLeft": -4664,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -416,12 +416,12 @@
       },
       {
         "name": "SELFTEST_MEMBER",
-        "comment": "",
+        "comment": "자가진단 결과",
         "columns": [
           {
             "id": "90ed1bb7-bab8-487e-bfce-777026fd2e3d",
             "name": "ST_QNA_CODE",
-            "comment": "",
+            "comment": "질답 코드",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -469,9 +469,9 @@
           "active": false,
           "left": 4518.9064,
           "top": 2853.7788,
-          "zIndex": 14,
+          "zIndex": 38,
           "widthName": 132.025390625,
-          "widthComment": 60
+          "widthComment": 83.61181640625
         },
         "visible": true,
         "id": "d9efde07-7e39-4ba5-bdef-f77e0ae24384"
@@ -504,29 +504,6 @@
             }
           },
           {
-            "id": "550910ad-c01f-4e94-ac48-0d4bf197b0d2",
-            "name": "SURVEY_Q_ID",
-            "comment": "질문아이디",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 92.796875,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
             "name": "SURVEY_TYPE_ID",
             "comment": "설문타입코드",
             "dataType": "VARCHAR(50)",
@@ -548,13 +525,36 @@
               "widthDefault": 60
             },
             "id": "96e628cc-f36d-4706-9e18-859558c2862d"
+          },
+          {
+            "id": "550910ad-c01f-4e94-ac48-0d4bf197b0d2",
+            "name": "SURVEY_Q_ID",
+            "comment": "질문아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 92.796875,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
           }
         ],
         "ui": {
           "active": false,
           "left": 3904.9719,
           "top": 2048.2802,
-          "zIndex": 3,
+          "zIndex": 72,
           "widthName": 139.0205078125,
           "widthComment": 116.83544921875
         },
@@ -639,7 +639,7 @@
           "active": false,
           "left": 3925.0995,
           "top": 2284.2428,
-          "zIndex": 31,
+          "zIndex": 70,
           "widthName": 90.6259765625,
           "widthComment": 60
         },
@@ -955,7 +955,7 @@
             "id": "b9f26332-aa31-4714-b5aa-993dde8fb102",
             "name": "COMMENT_DATE",
             "comment": "작성일자",
-            "dataType": "VARCHAR(50)",
+            "dataType": "TIMESTAMP",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -970,7 +970,7 @@
               "pfk": false,
               "widthName": 110.09423828125,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 76.87060546875,
               "widthDefault": 60
             }
           },
@@ -1046,9 +1046,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 5323.1198,
-          "top": 3051.5326,
-          "zIndex": 21,
+          "left": 5325.1198,
+          "top": 3027.5326,
+          "zIndex": 64,
           "widthName": 60,
           "widthComment": 117.20361328125
         },
@@ -1086,7 +1086,7 @@
             "id": "edb236ac-7b00-4d1d-9c3e-85fc58510c8b",
             "name": "POST_DATE",
             "comment": "작성일자",
-            "dataType": "VARCHAR(50)",
+            "dataType": "TIMESTAMP",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1101,7 +1101,7 @@
               "pfk": false,
               "widthName": 78.33056640625,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 76.87060546875,
               "widthDefault": 60
             }
           },
@@ -1179,7 +1179,7 @@
           "active": false,
           "left": 5657.8194,
           "top": 2699.6226,
-          "zIndex": 16,
+          "zIndex": 42,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1332,7 +1332,7 @@
             "id": "7432f4cb-b42f-4007-9a3d-2cf5c024b621",
             "name": "BIRTHDATE",
             "comment": "생년월일",
-            "dataType": "INTEGER(50)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1347,7 +1347,7 @@
               "pfk": false,
               "widthName": 74.47119140625,
               "widthComment": 60,
-              "widthDataType": 82.90087890625,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
@@ -1355,7 +1355,7 @@
             "id": "c17f198b-93dc-437a-a6b0-00be1a3a8c53",
             "name": "PHONENUMBER",
             "comment": "전화번호",
-            "dataType": "INTEGER(50)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1370,7 +1370,7 @@
               "pfk": false,
               "widthName": 104.5654296875,
               "widthComment": 60,
-              "widthDataType": 82.90087890625,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
@@ -1445,10 +1445,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 5091.477,
           "top": 2263.6599,
-          "zIndex": 18,
+          "zIndex": 75,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
@@ -1823,9 +1823,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 3707.7906,
-          "top": 2652.5691,
-          "zIndex": 23,
+          "left": 3788.7906,
+          "top": 2531.5691,
+          "zIndex": 71,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1907,7 +1907,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 4473.6542,
           "top": 2315.3562,
           "zIndex": 34,
@@ -2057,8 +2057,8 @@
           "columnIds": [
             "a67489fb-d482-4097-ad74-10861666a6f1"
           ],
-          "x": 5553.7028078125,
-          "y": 3051.5326,
+          "x": 5555.7028078125,
+          "y": 3027.5326,
           "direction": "top"
         },
         "constraintName": "",
@@ -2083,8 +2083,8 @@
           "columnIds": [
             "b53b22b9-8869-4033-9bd4-8e04d20fde40"
           ],
-          "x": 5784.285815625,
-          "y": 3137.2826,
+          "x": 5786.285815625,
+          "y": 3113.2826,
           "direction": "right"
         },
         "constraintName": "",
@@ -2178,8 +2178,8 @@
           "columnIds": [
             "2b1ca85a-1af6-4b72-a643-9ef51320fe05"
           ],
-          "x": 4244.3892328125,
-          "y": 2652.5691,
+          "x": 4325.3892328125,
+          "y": 2531.5691,
           "direction": "top"
         },
         "end": {
@@ -2187,8 +2187,8 @@
           "columnIds": [
             "9a18dfd1-ac61-4de9-b0db-31dc3344e6a5"
           ],
-          "x": 4264.3892328125,
-          "y": 2672.5691,
+          "x": 4345.3892328125,
+          "y": 2551.5691,
           "direction": "right"
         },
         "constraintName": "",
