@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -139,
-    "scrollLeft": -259,
+    "scrollTop": -130,
+    "scrollLeft": -195,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -304,7 +304,7 @@
           "active": false,
           "left": 630.7778,
           "top": 38.0278,
-          "zIndex": 498,
+          "zIndex": 7,
           "widthName": 86.26513671875,
           "widthComment": 66.28271484375
         },
@@ -409,10 +409,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 561,
-          "top": 498.5003,
-          "zIndex": 506,
+          "active": true,
+          "left": 633.5,
+          "top": 447.2503,
+          "zIndex": 9,
           "widthName": 109.1357421875,
           "widthComment": 79.28271484375
         },
@@ -474,7 +474,7 @@
           "active": false,
           "left": 10,
           "top": 44.75,
-          "zIndex": 463,
+          "zIndex": 5,
           "widthName": 117.578125,
           "widthComment": 100.2236328125
         },
@@ -536,7 +536,7 @@
           "active": false,
           "left": 11.1945,
           "top": 183.4443,
-          "zIndex": 494,
+          "zIndex": 6,
           "widthName": 89.41357421875,
           "widthComment": 100.2236328125
         },
@@ -598,7 +598,7 @@
           "active": false,
           "left": 1255.75,
           "top": 34,
-          "zIndex": 404,
+          "zIndex": 2,
           "widthName": 136.3544921875,
           "widthComment": 83.61181640625
         },
@@ -660,7 +660,7 @@
           "active": false,
           "left": 1292.6111,
           "top": 151,
-          "zIndex": 407,
+          "zIndex": 3,
           "widthName": 121.1962890625,
           "widthComment": 83.61181640625
         },
@@ -722,7 +722,7 @@
           "active": false,
           "left": 1309.75,
           "top": 274.25,
-          "zIndex": 446,
+          "zIndex": 4,
           "widthName": 67.98388671875,
           "widthComment": 60
         },
@@ -784,7 +784,7 @@
           "active": false,
           "left": 1339.2501,
           "top": 391.25,
-          "zIndex": 380,
+          "zIndex": 1,
           "widthName": 152.9853515625,
           "widthComment": 116.83544921875
         },
@@ -843,77 +843,15 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 20.1116,
           "top": 314.7501,
-          "zIndex": 507,
+          "zIndex": 8,
           "widthName": 160.4248046875,
           "widthComment": 100.2236328125
         },
         "visible": true,
         "id": "472e6087-07d9-4420-b770-60f46a55990d"
-      },
-      {
-        "name": "GENDER",
-        "comment": "성별",
-        "columns": [
-          {
-            "name": "GENDER",
-            "comment": "성별",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "24fed516-a5e8-4863-abcf-87783050c8c6"
-          },
-          {
-            "name": "GENDER_ID",
-            "comment": "성별ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 77.84814453125,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "d8bb43a6-57bb-4dc4-b2d7-1c7a27433e2f"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 29.25,
-          "top": 802.75,
-          "zIndex": 87,
-          "widthName": 60,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "94f15091-1cc5-4f1e-9f20-217e44d334d5"
       }
     ],
     "indexes": []
@@ -1117,8 +1055,8 @@
             "e34da97b-449f-4f08-bf06-a875cda95b3f",
             "ea6eadaa-70b8-4320-92b9-ab08d8101991"
           ],
-          "x": 800.265869140625,
-          "y": 498.5003,
+          "x": 872.765869140625,
+          "y": 447.2503,
           "direction": "top"
         },
         "end": {
