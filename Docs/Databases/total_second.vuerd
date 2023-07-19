@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 6500,
     "height": 6500,
-    "scrollTop": -1955.7474388811324,
-    "scrollLeft": -4322.189215221887,
+    "scrollTop": -2125.7474388811324,
+    "scrollLeft": -3817.189215221887,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 5650.1174,
           "top": 2016.0882,
-          "zIndex": 252,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -159,7 +159,7 @@
           "active": false,
           "left": 5646.9873,
           "top": 1841.3485,
-          "zIndex": 253,
+          "zIndex": 10,
           "widthName": 119.50146484375,
           "widthComment": 80
         },
@@ -221,7 +221,7 @@
           "active": false,
           "left": 5659.4969,
           "top": 2523.6936,
-          "zIndex": 267,
+          "zIndex": 16,
           "widthName": 148.1484375,
           "widthComment": 60
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 4438.2019,
           "top": 1864.1282,
-          "zIndex": 240,
+          "zIndex": 3,
           "widthName": 92.77783203125,
           "widthComment": 60
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 4270.5136,
           "top": 3303.3804,
-          "zIndex": 258,
+          "zIndex": 11,
           "widthName": 146.4853515625,
           "widthComment": 60
         },
@@ -407,7 +407,7 @@
           "active": false,
           "left": 4840.6267,
           "top": 3295.3241,
-          "zIndex": 262,
+          "zIndex": 14,
           "widthName": 112.525390625,
           "widthComment": 60
         },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 4518.9064,
           "top": 2853.7788,
-          "zIndex": 260,
+          "zIndex": 12,
           "widthName": 132.025390625,
           "widthComment": 60
         },
@@ -554,7 +554,7 @@
           "active": false,
           "left": 3904.9719,
           "top": 2048.2802,
-          "zIndex": 249,
+          "zIndex": 7,
           "widthName": 139.0205078125,
           "widthComment": 116.83544921875
         },
@@ -639,7 +639,7 @@
           "active": false,
           "left": 3925.0995,
           "top": 2284.2428,
-          "zIndex": 248,
+          "zIndex": 34,
           "widthName": 90.6259765625,
           "widthComment": 69.89453125
         },
@@ -747,7 +747,7 @@
           "active": false,
           "left": 4978.9538,
           "top": 1854.6779,
-          "zIndex": 229,
+          "zIndex": 2,
           "widthName": 74.22998046875,
           "widthComment": 60
         },
@@ -832,7 +832,7 @@
           "active": false,
           "left": 5647.2759,
           "top": 2277.7584,
-          "zIndex": 265,
+          "zIndex": 15,
           "widthName": 75.67724609375,
           "widthComment": 60
         },
@@ -917,7 +917,7 @@
           "active": false,
           "left": 4523.7475,
           "top": 3070.463,
-          "zIndex": 261,
+          "zIndex": 27,
           "widthName": 103.13720703125,
           "widthComment": 113.2236328125
         },
@@ -1048,7 +1048,7 @@
           "active": false,
           "left": 5662.847,
           "top": 2984.39,
-          "zIndex": 269,
+          "zIndex": 24,
           "widthName": 60,
           "widthComment": 117.20361328125
         },
@@ -1179,7 +1179,7 @@
           "active": false,
           "left": 5657.8194,
           "top": 2699.6226,
-          "zIndex": 268,
+          "zIndex": 23,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1448,7 +1448,7 @@
           "active": false,
           "left": 5091.477,
           "top": 2263.6599,
-          "zIndex": 287,
+          "zIndex": 26,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
@@ -1510,7 +1510,7 @@
           "active": false,
           "left": 4464.8229,
           "top": 2560.9991,
-          "zIndex": 247,
+          "zIndex": 5,
           "widthName": 86.26513671875,
           "widthComment": 79.28271484375
         },
@@ -1823,9 +1823,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2331.7906,
-          "top": 2926.5691,
-          "zIndex": 1,
+          "left": 3707.7906,
+          "top": 2652.5691,
+          "zIndex": 21,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1883,7 +1883,7 @@
             "id": "6da51eb7-5e9f-42af-861c-a8617d5c24eb"
           },
           {
-            "name": "A_RESULT_ID",
+            "name": "SURVEY_RESULT_ID",
             "comment": "회원답변코드",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -1898,7 +1898,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 88.455078125,
+              "widthName": 133.00927734375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -1907,10 +1907,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 4473.6542,
           "top": 2315.3562,
-          "zIndex": 246,
+          "zIndex": 41,
           "widthName": 112.779296875,
           "widthComment": 116.83544921875
         },
@@ -1972,7 +1972,7 @@
           "active": false,
           "left": 3912.6655,
           "top": 1866.1611,
-          "zIndex": 250,
+          "zIndex": 8,
           "widthName": 96.40869140625,
           "widthComment": 82.17724609375
         },
@@ -2178,8 +2178,8 @@
           "columnIds": [
             "2b1ca85a-1af6-4b72-a643-9ef51320fe05"
           ],
-          "x": 2868.3892328125,
-          "y": 2926.5691,
+          "x": 4244.3892328125,
+          "y": 2652.5691,
           "direction": "top"
         },
         "end": {
@@ -2187,8 +2187,8 @@
           "columnIds": [
             "9a18dfd1-ac61-4de9-b0db-31dc3344e6a5"
           ],
-          "x": 2888.3892328125,
-          "y": 2946.5691,
+          "x": 4264.3892328125,
+          "y": 2672.5691,
           "direction": "right"
         },
         "constraintName": "",
@@ -2395,7 +2395,7 @@
           "columnIds": [
             "c3f31e09-ab65-455f-ae1c-c4ab2ac02470"
           ],
-          "x": 4917.7879890625,
+          "x": 4941.38222734375,
           "y": 2380.6062,
           "direction": "right"
         },
@@ -2438,7 +2438,7 @@
           "columnIds": [
             "3f89b860-2c27-4ff6-abf3-6fb9c0530829"
           ],
-          "x": 4695.72109453125,
+          "x": 4707.518213671875,
           "y": 2445.8562,
           "direction": "bottom"
         },
