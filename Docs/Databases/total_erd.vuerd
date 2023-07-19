@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 6500,
     "height": 6500,
-    "scrollTop": -2643.7474388811324,
-    "scrollLeft": -4975,
+    "scrollTop": -1784.7474388811324,
+    "scrollLeft": -3567,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -563,7 +563,7 @@
       },
       {
         "name": "SURVEY_QNA",
-        "comment": "A 질문과 답",
+        "comment": "질문과 답",
         "columns": [
           {
             "id": "cd7e6b28-e5fc-47bd-9a61-93287ecb34a4",
@@ -639,9 +639,9 @@
           "active": false,
           "left": 3925.0995,
           "top": 2284.2428,
-          "zIndex": 13,
+          "zIndex": 31,
           "widthName": 90.6259765625,
-          "widthComment": 69.89453125
+          "widthComment": 60
         },
         "visible": true,
         "id": "971a63b0-864c-4787-8369-96c26c33b743"
@@ -1046,9 +1046,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 5662.847,
-          "top": 2984.39,
-          "zIndex": 17,
+          "left": 5323.1198,
+          "top": 3051.5326,
+          "zIndex": 21,
           "widthName": 60,
           "widthComment": 117.20361328125
         },
@@ -1456,8 +1456,8 @@
         "id": "7d956672-e0c0-4a10-9706-35e780fe4b69"
       },
       {
-        "name": "MATCHING_A",
-        "comment": "설문A 매칭용",
+        "name": "MATCHING",
+        "comment": "설문 매칭용",
         "columns": [
           {
             "id": "75170dfa-e31d-4e3e-b282-61b510532d2d",
@@ -1510,9 +1510,9 @@
           "active": false,
           "left": 4464.8229,
           "top": 2560.9991,
-          "zIndex": 12,
+          "zIndex": 28,
           "widthName": 70.3642578125,
-          "widthComment": 60
+          "widthComment": 70.61181640625
         },
         "visible": true,
         "id": "e8f9ef1a-b2b6-4311-a461-fee06d47ec03"
@@ -1664,7 +1664,7 @@
             "name": "SYSTEM_CODE_YN",
             "comment": "초기 시스템 코드 여부",
             "dataType": "varchar(40)",
-            "default": "N",
+            "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -1825,7 +1825,7 @@
           "active": false,
           "left": 3707.7906,
           "top": 2652.5691,
-          "zIndex": 19,
+          "zIndex": 23,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1883,7 +1883,7 @@
             "id": "6da51eb7-5e9f-42af-861c-a8617d5c24eb"
           },
           {
-            "name": "A_RESULT_ID",
+            "name": "SURVEY_RESULT_ID",
             "comment": "회원답변코드",
             "dataType": "VARCHAR(50)",
             "default": "",
@@ -1898,7 +1898,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 88.455078125,
+              "widthName": 133.00927734375,
               "widthComment": 80,
               "widthDataType": 87.71875,
               "widthDefault": 60
@@ -1907,10 +1907,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 4473.6542,
           "top": 2315.3562,
-          "zIndex": 11,
+          "zIndex": 34,
           "widthName": 112.779296875,
           "widthComment": 116.83544921875
         },
@@ -2057,9 +2057,9 @@
           "columnIds": [
             "a67489fb-d482-4097-ad74-10861666a6f1"
           ],
-          "x": 5662.847,
-          "y": 3070.14,
-          "direction": "left"
+          "x": 5553.7028078125,
+          "y": 3051.5326,
+          "direction": "top"
         },
         "constraintName": "",
         "visible": true,
@@ -2083,9 +2083,9 @@
           "columnIds": [
             "b53b22b9-8869-4033-9bd4-8e04d20fde40"
           ],
-          "x": 5893.4300078125,
-          "y": 2984.39,
-          "direction": "top"
+          "x": 5784.285815625,
+          "y": 3137.2826,
+          "direction": "right"
         },
         "constraintName": "",
         "visible": true,
@@ -2178,8 +2178,8 @@
           "columnIds": [
             "2b1ca85a-1af6-4b72-a643-9ef51320fe05"
           ],
-          "x": 2868.3892328125,
-          "y": 2926.5691,
+          "x": 4244.3892328125,
+          "y": 2652.5691,
           "direction": "top"
         },
         "end": {
@@ -2187,8 +2187,8 @@
           "columnIds": [
             "9a18dfd1-ac61-4de9-b0db-31dc3344e6a5"
           ],
-          "x": 2888.3892328125,
-          "y": 2946.5691,
+          "x": 4264.3892328125,
+          "y": 2672.5691,
           "direction": "right"
         },
         "constraintName": "",
@@ -2395,7 +2395,7 @@
           "columnIds": [
             "c3f31e09-ab65-455f-ae1c-c4ab2ac02470"
           ],
-          "x": 4917.7879890625,
+          "x": 4941.38222734375,
           "y": 2380.6062,
           "direction": "right"
         },
@@ -2438,7 +2438,7 @@
           "columnIds": [
             "3f89b860-2c27-4ff6-abf3-6fb9c0530829"
           ],
-          "x": 4695.72109453125,
+          "x": 4707.518213671875,
           "y": 2445.8562,
           "direction": "bottom"
         },
