@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 6500,
     "height": 6500,
-    "scrollTop": -2059.7474388811324,
-    "scrollLeft": -4003,
-    "zoomLevel": 1,
+    "scrollTop": -2915.0807722144655,
+    "scrollLeft": -4166.666666666667,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -219,9 +219,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 5659.4969,
-          "top": 2523.6936,
-          "zIndex": 8,
+          "left": 5649.4969,
+          "top": 2508.6936,
+          "zIndex": 50,
           "widthName": 148.1484375,
           "widthComment": 60
         },
@@ -283,7 +283,7 @@
           "active": false,
           "left": 4438.2019,
           "top": 1864.1282,
-          "zIndex": 2,
+          "zIndex": 41,
           "widthName": 92.77783203125,
           "widthComment": 60
         },
@@ -292,7 +292,7 @@
       },
       {
         "name": "SELFTEST_ANS_CODE",
-        "comment": "답변 코드",
+        "comment": "자가진단 답변 코드",
         "columns": [
           {
             "id": "0a621b67-5516-48a1-b39a-80b50d2ea3fd",
@@ -345,16 +345,16 @@
           "active": false,
           "left": 4270.5136,
           "top": 3303.3804,
-          "zIndex": 10,
+          "zIndex": 70,
           "widthName": 146.4853515625,
-          "widthComment": 60
+          "widthComment": 113.2236328125
         },
         "visible": true,
         "id": "3948163c-31f1-42a0-8160-88488ed63a99"
       },
       {
         "name": "SELFTEST_CODE",
-        "comment": "질문 코드",
+        "comment": "자가진단 질문 코드",
         "columns": [
           {
             "id": "028baf93-5072-4bd3-b113-7da12363dfdd",
@@ -407,9 +407,9 @@
           "active": false,
           "left": 4840.6267,
           "top": 3295.3241,
-          "zIndex": 6,
+          "zIndex": 67,
           "widthName": 112.525390625,
-          "widthComment": 60
+          "widthComment": 113.2236328125
         },
         "visible": true,
         "id": "3e1a7897-d345-4f89-b21d-6b39301ded44"
@@ -647,55 +647,9 @@
         "id": "971a63b0-864c-4787-8369-96c26c33b743"
       },
       {
-        "name": "MEMBER_F",
-        "comment": "가족",
+        "name": "MEMBER_S_F",
+        "comment": "본인 및 가족",
         "columns": [
-          {
-            "id": "91a270ca-946e-439c-a394-97047ac506a4",
-            "name": "STAGE_ID",
-            "comment": "치매진행단계ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 65.33056640625,
-              "widthComment": 93,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
-            "name": "PATIENTGENDER_ID",
-            "comment": "환자성별ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 130.81298828125,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "cd86bcc3-dffc-4823-8759-9a3a9572e53a"
-          },
           {
             "name": "MEMBERID",
             "comment": "회원아이디",
@@ -741,27 +695,11 @@
               "widthDefault": 60
             },
             "id": "dfe48697-2424-4e9e-8a96-dd979feba0da"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 4978.9538,
-          "top": 1854.6779,
-          "zIndex": 1,
-          "widthName": 74.22998046875,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "192e4705-723c-4d6a-9c77-76fcc04db118"
-      },
-      {
-        "name": "MEMBER_D",
-        "comment": "전문의",
-        "columns": [
+          },
           {
-            "id": "d2faf949-0713-4cdf-93ca-b767226e7acc",
-            "name": "CLINICNAME",
-            "comment": "병원이름",
+            "id": "91a270ca-946e-439c-a394-97047ac506a4",
+            "name": "STAGE_ID",
+            "comment": "치매진행단계ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -773,14 +711,53 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": false,
+              "fk": true,
               "pfk": false,
-              "widthName": 82.17724609375,
-              "widthComment": 60,
+              "widthName": 65.33056640625,
+              "widthComment": 93,
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
+          {
+            "name": "PATIENTGENDER_ID",
+            "comment": "환자성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 130.81298828125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "cd86bcc3-dffc-4823-8759-9a3a9572e53a"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 4978.9538,
+          "top": 1854.6779,
+          "zIndex": 49,
+          "widthName": 90.130859375,
+          "widthComment": 74.2236328125
+        },
+        "visible": true,
+        "id": "192e4705-723c-4d6a-9c77-76fcc04db118"
+      },
+      {
+        "name": "MEMBER_D",
+        "comment": "전문의",
+        "columns": [
           {
             "id": "35df2e98-e8a8-4ae6-b261-9c5a263fae09",
             "name": "MEMBERID",
@@ -826,13 +803,36 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
+          },
+          {
+            "id": "d2faf949-0713-4cdf-93ca-b767226e7acc",
+            "name": "CLINICNAME",
+            "comment": "병원이름",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 82.17724609375,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
           }
         ],
         "ui": {
           "active": false,
           "left": 5647.2759,
           "top": 2277.7584,
-          "zIndex": 7,
+          "zIndex": 60,
           "widthName": 75.67724609375,
           "widthComment": 60
         },
@@ -917,7 +917,7 @@
           "active": false,
           "left": 4523.7475,
           "top": 3070.463,
-          "zIndex": 9,
+          "zIndex": 82,
           "widthName": 103.13720703125,
           "widthComment": 113.2236328125
         },
@@ -1448,7 +1448,7 @@
           "active": false,
           "left": 5091.477,
           "top": 2263.6599,
-          "zIndex": 19,
+          "zIndex": 42,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
@@ -1834,7 +1834,7 @@
       },
       {
         "name": "SURVEY_RESULT",
-        "comment": "환자/가족 설문 결과",
+        "comment": "설문 결과",
         "columns": [
           {
             "name": "MEMBERID",
@@ -1910,9 +1910,9 @@
           "active": false,
           "left": 4473.6542,
           "top": 2315.3562,
-          "zIndex": 12,
+          "zIndex": 64,
           "widthName": 112.779296875,
-          "widthComment": 116.83544921875
+          "widthComment": 60
         },
         "visible": true,
         "id": "8f749d9e-9e45-49eb-8401-c302ee14775b"
@@ -2230,8 +2230,8 @@
           "columnIds": [
             "33ee9dec-be4f-4227-885e-83c061f24402"
           ],
-          "x": 5901.045483984375,
-          "y": 2523.6936,
+          "x": 5891.045483984375,
+          "y": 2508.6936,
           "direction": "top"
         },
         "end": {
