@@ -111,7 +111,7 @@
         <div class="centered-text">지원하시고픈 환자의 조건을 검색해보세요</div>
         </div>
         <div>
-        <form class="container-fluid form-style" action="../survey/survey_result_b.html">
+        <form class="container-fluid form-style" action="/TAB_PAGE/survey_result_b">
             <div class="form-group">
                 <label for="gender">선호하는 환자의 성별이 있나요?</label>
                 <select class="form-control" id="gender">
