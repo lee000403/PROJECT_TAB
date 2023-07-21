@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -212,
-    "scrollLeft": -3,
+    "scrollTop": -14,
+    "scrollLeft": -135,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -43,13 +43,13 @@
   "table": {
     "tables": [
       {
-        "name": "GENDER",
-        "comment": "성별",
+        "name": "ANS_CODE",
+        "comment": "답변 코드",
         "columns": [
           {
-            "id": "1235bb43-a7d3-4f54-b4a9-80280dbdee6e",
-            "name": "GENDER",
-            "comment": "성별",
+            "id": "57087ce8-2db2-4783-b297-c1f94e6a0549",
+            "name": "ANSWERS",
+            "comment": "답변 종류",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -63,17 +63,17 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 67.72998046875,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
           {
-            "id": "974c11a3-3278-41d4-9676-6e8fa395251e",
-            "name": "GENDER_ID",
-            "comment": "성별ID",
-            "dataType": "VARCHAR(50)",
+            "id": "3cedd853-e6fc-4001-90eb-25d6b7a9f1d7",
+            "name": "ANS_SCORE",
+            "comment": "답변 점수",
+            "dataType": "INTEGER",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -86,94 +86,32 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 77.84814453125,
+              "widthName": 82.18994140625,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 60,
               "widthDefault": 60
             }
           }
         ],
         "ui": {
           "active": false,
-          "left": 94,
-          "top": 275,
-          "zIndex": 1,
-          "widthName": 60,
+          "left": 89,
+          "top": 576,
+          "zIndex": 31,
+          "widthName": 73.51904296875,
           "widthComment": 60
         },
         "visible": true,
-        "id": "98219a72-6a49-4e31-b211-156454172f96"
+        "id": "1dcfdaa3-245e-47cb-9184-fda4478931ac"
       },
       {
-        "name": "TYPE",
-        "comment": "회원유형",
+        "name": "Q_CODE",
+        "comment": "질문 코드",
         "columns": [
           {
-            "id": "b8e0bd0f-13a3-4f5a-8e25-a64b4ff7eac3",
-            "name": "TYPE",
-            "comment": "회원유형",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
-            "id": "6958b9d7-f9ac-42bf-ae18-ad091b5f7814",
-            "name": "TYPE_ID",
-            "comment": "회원유형ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 59,
-          "top": 688,
-          "zIndex": 2,
-          "widthName": 60,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "cf42691e-285c-44b8-8337-d9d88fea897e"
-      },
-      {
-        "name": "MEMBER_D",
-        "comment": "전문의회원DB",
-        "columns": [
-          {
-            "id": "c6336468-a58d-4f54-9742-d7c1a419dce7",
-            "name": "PHOTO",
-            "comment": "회원 사진",
+            "id": "c53d8e7f-7025-42e6-9897-48d42a2d13e5",
+            "name": "QUESTIONS",
+            "comment": "자가진단 질문",
             "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
@@ -187,16 +125,55 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
+              "widthName": 78.5654296875,
+              "widthComment": 83.61181640625,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
           {
-            "id": "ecac2076-4d9f-4ca8-b944-eff34b0b728c",
-            "name": "TYPE_ID",
-            "comment": "회원유형ID",
+            "id": "51fc2cc3-2cd5-4515-981f-a38f34017095",
+            "name": "Q_CODE",
+            "comment": "질문 코드",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 76,
+          "top": 137,
+          "zIndex": 30,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "e45b4026-61de-49cf-97db-20cb2dc45bd3"
+      },
+      {
+        "name": "답변한내역",
+        "comment": "",
+        "columns": [
+          {
+            "id": "6f7354ac-f7dd-47a0-8ab7-36f8b3fa6694",
+            "name": "QNA_CODE",
+            "comment": "",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -210,8 +187,8 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 67,
+              "widthName": 74.9599609375,
+              "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
@@ -237,10 +214,180 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "02bd18c3-f940-427a-b508-02648c797358"
+            "id": "389d1705-ff7b-4c99-b833-abb3c9b8117e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 577,
+          "top": 356,
+          "zIndex": 28,
+          "widthName": 67,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "fdc80348-39f7-4bea-8298-121d9ae8b844"
+      },
+      {
+        "name": "QNA",
+        "comment": "자가진단 메인 화면",
+        "columns": [
+          {
+            "id": "80744f6c-bdf3-4996-b496-58aa4ef82176",
+            "name": "Q_CODE",
+            "comment": "질문 코드",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
           },
           {
-            "id": "b7c19dcf-3675-4f6f-b3e5-429191350b5a",
+            "id": "a4c07236-5797-41b3-9f29-38a3f3c0481d",
+            "name": "ANS_SCORE",
+            "comment": "답변 점수",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 82.18994140625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "f4bec7f9-7e20-4dd4-bd92-be3bf99c7e5b",
+            "name": "QNA_CODE",
+            "comment": "질답 코드",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74.9599609375,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 83,
+          "top": 345,
+          "zIndex": 19,
+          "widthName": 60,
+          "widthComment": 113.2236328125
+        },
+        "visible": true,
+        "id": "cb0bb90b-20a7-4c52-a661-51f79c7b4e57"
+      },
+      {
+        "name": "MEMBERS",
+        "comment": "회원DB",
+        "columns": [
+          {
+            "id": "e1280ca5-3f0f-44ad-b161-6cd7206e4419",
+            "name": "PHOTO",
+            "comment": "회원 사진",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "bc14497d-e21a-44cb-b849-edccc7b1e44a",
+            "name": "TYPE_ID",
+            "comment": "회원유형ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "cbbd2c8a-8a93-4d7c-970e-e4c430883b97",
+            "name": "MEMBERID",
+            "comment": "회원아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72.05908203125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "978342cb-1285-48be-9321-306210d19798",
             "name": "PASSWORD",
             "comment": "비밀번호",
             "dataType": "VARCHAR(50)",
@@ -263,7 +410,7 @@
             }
           },
           {
-            "id": "15000e5f-ce38-4a56-b97b-c9c49714ab04",
+            "id": "574a1c62-2661-4b20-bd77-80895d4225e0",
             "name": "NAME",
             "comment": "이름",
             "dataType": "VARCHAR(50)",
@@ -286,7 +433,7 @@
             }
           },
           {
-            "id": "85cf2836-03da-4108-a5fb-cc19cf1f685f",
+            "id": "6e6f9bfb-1d0e-4187-9214-6d07b4d18622",
             "name": "GENDER_ID",
             "comment": "성별ID",
             "dataType": "VARCHAR(50)",
@@ -300,7 +447,7 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
               "widthName": 77.84814453125,
               "widthComment": 60,
@@ -309,7 +456,7 @@
             }
           },
           {
-            "id": "8c55781a-a76a-45e4-8db9-d2fa8fed8d60",
+            "id": "ab7d0587-0cb8-45c5-8a10-bc04500bf75a",
             "name": "BIRTHDATE",
             "comment": "생년월일",
             "dataType": "INTEGER(50)",
@@ -332,7 +479,7 @@
             }
           },
           {
-            "id": "ff25c4ff-d4da-4056-9f83-134071ad2c91",
+            "id": "3b8aa331-4838-480d-972b-b47b8aaee749",
             "name": "PHONENUMBER",
             "comment": "전화번호",
             "dataType": "INTEGER(50)",
@@ -355,7 +502,7 @@
             }
           },
           {
-            "id": "d8b1f3a5-3dc4-448d-a70b-05760e7f1787",
+            "id": "9fdf6ed1-6b63-46a0-be97-2300188db2ba",
             "name": "ADDRESS",
             "comment": "주소",
             "dataType": "VARCHAR(500)",
@@ -378,7 +525,7 @@
             }
           },
           {
-            "id": "688b3fb6-93ed-4740-9be3-5fecf6f37e66",
+            "id": "57c9409f-53b8-4137-a97f-228e5caa9efb",
             "name": "EMAIL",
             "comment": "이메일",
             "dataType": "VARCHAR(50)",
@@ -401,7 +548,7 @@
             }
           },
           {
-            "id": "f8105475-59a7-4f55-bdd5-5f4567a1cbc6",
+            "id": "83f4aee5-12c3-460e-882d-2d4116dfd4c8",
             "name": "INTRODUCTION",
             "comment": "자기소개",
             "dataType": "VARCHAR(500)",
@@ -426,22 +573,23 @@
         ],
         "ui": {
           "active": false,
-          "left": 658,
-          "top": 372,
-          "zIndex": 3,
-          "widthName": 75.67724609375,
-          "widthComment": 85.05908203125
+<<<<<<< HEAD:Docs/Databases/members_s.vuerd
+          "left": 690,
+          "top": 66,
+          "zIndex": 4,
+          "widthName": 74.9599609375,
+          "widthComment": 72.05908203125
         },
         "visible": true,
-        "id": "8bdee03b-f108-47fe-8714-e659b4b4ef11"
+        "id": "80c7ee48-dcdd-46e4-9749-53f7572ca8a0"
       },
       {
-        "name": "MEDICALDEPARTMENT",
-        "comment": "진료과",
+        "name": "TYPE",
+        "comment": "회원유형",
         "columns": [
           {
-            "name": "MEDICALDEPARTMENT",
-            "comment": "진료과",
+            "name": "TYPE",
+            "comment": "회원유형",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -455,16 +603,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 148.1484375,
+              "widthName": 60,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "3502dccc-6b26-471f-9068-078608a9c805"
+            "id": "da9e3ffc-0113-42b3-9cca-b09ed991b3a5"
           },
           {
-            "name": "MEDICALDEPARTMENT_ID",
-            "comment": "진료과ID",
+            "name": "TYPE_ID",
+            "comment": "회원유형ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -478,16 +626,32 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 168.37841796875,
-              "widthComment": 60,
+              "widthName": 60,
+              "widthComment": 67,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "d003aa75-4604-4639-b4d0-e8fa8e43c965"
-          },
+            "id": "6728d5f5-a5d4-4575-8945-d2226b5c44aa"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 116,
+          "top": 300,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "77312adc-585f-47f3-bfa7-e6248d9c2ffb"
+      },
+      {
+        "name": "GENDER",
+        "comment": "성별",
+        "columns": [
           {
-            "name": "CLINICNAME",
-            "comment": "병원이름",
+            "name": "GENDER",
+            "comment": "성별",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -499,26 +663,49 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
-              "widthName": 82.17724609375,
+              "widthName": 60,
               "widthComment": 60,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "b5b802ee-098d-4761-b7fc-46a2cc537490"
+            "id": "c4e86df0-d31e-4b93-a430-ebec021e9633"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "3a239ef8-9d66-4462-b2d0-45dc15041b01"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1219,
-          "top": 591,
-          "zIndex": 6,
-          "widthName": 148.1484375,
+          "left": 147,
+          "top": 536,
+          "zIndex": 1,
+          "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "02e68204-f2d6-49f6-bd3b-76afb175e349"
+        "id": "cced7de2-10ae-46c9-b294-bfd8a7679299"
       },
       {
         "name": "MEMBERID",
@@ -545,11 +732,11 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "86647feb-0bbf-4d70-a76e-e3e0221d16fa"
+            "id": "58cb27a6-da73-42cf-aec1-7da0c463ccb3"
           },
           {
-            "name": "MEDICALDEPARTMENT_ID",
-            "comment": "진료과ID",
+            "name": "LEVEL_ID",
+            "comment": "치매진행단계ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -563,32 +750,55 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 168.37841796875,
-              "widthComment": 60,
+              "widthName": 62.70263671875,
+              "widthComment": 93,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "e3df7817-1482-46f1-9d84-108fcfa4a3f8"
+            "id": "f379a64b-eaea-4071-a749-32a8c05f126b"
           }
         ],
         "ui": {
           "active": false,
-          "left": 741,
-          "top": 787,
-          "zIndex": 4,
+          "left": 998,
+          "top": 474,
+          "zIndex": 3,
           "widthName": 72.05908203125,
           "widthComment": 67
         },
         "visible": true,
-        "id": "23868237-dd41-4325-9c35-b4c40191092c"
+        "id": "5f430c9f-7991-481f-b3f9-2a0164b7d6f3"
       },
       {
-        "name": "CLINICNAME",
-        "comment": "병원이름",
+        "name": "LEVEL",
+        "comment": "치매진행단계",
         "columns": [
           {
-            "name": "CLINICNAME",
-            "comment": "병원이름",
+            "name": "LEVEL",
+            "comment": "치매진행단계",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "93d69ee6-ee57-4fa9-bb6d-75cc2c9770cd"
+          },
+          {
+            "name": "LEVEL_ID",
+            "comment": "치매진행단계ID",
             "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
@@ -602,24 +812,34 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 82.17724609375,
-              "widthComment": 60,
+              "widthName": 62.70263671875,
+              "widthComment": 93,
               "widthDataType": 87.71875,
               "widthDefault": 60
             },
-            "id": "15261646-3d8b-449f-aa0b-b620e4d70f40"
+            "id": "678c6602-c6b0-4121-8e9d-458cff5cd69b"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1259,
-          "top": 333,
+          "left": 985,
+          "top": 753,
           "zIndex": 5,
-          "widthName": 82.17724609375,
+          "widthName": 60,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "7636bdb8-da68-4e1f-88a9-06486f4643ce"
+=======
+          "left": 1089,
+          "top": 256,
+          "zIndex": 29,
+          "widthName": 67.72998046875,
           "widthComment": 60
         },
         "visible": true,
-        "id": "2b14811e-36cd-4f92-8c85-245cae31d5cc"
+        "id": "b3cb8495-63d3-4c7d-9472-846335ac2447"
+>>>>>>> ce567208b3644a42e32ee5ca976ff57a9e95d4c0:Docs/Databases/ERDBIN/selftest.vuerd
       }
     ],
     "indexes": []
@@ -634,130 +854,104 @@
         "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "cf42691e-285c-44b8-8337-d9d88fea897e",
+          "tableId": "e45b4026-61de-49cf-97db-20cb2dc45bd3",
           "columnIds": [
-            "6958b9d7-f9ac-42bf-ae18-ad091b5f7814"
+            "51fc2cc3-2cd5-4515-981f-a38f34017095"
           ],
-          "x": 440.71875,
-          "y": 743,
-          "direction": "right"
+          "x": 288.06298828125,
+          "y": 247,
+          "direction": "bottom"
         },
         "end": {
-          "tableId": "8bdee03b-f108-47fe-8714-e659b4b4ef11",
+          "tableId": "cb0bb90b-20a7-4c52-a661-51f79c7b4e57",
           "columnIds": [
-            "ecac2076-4d9f-4ca8-b944-eff34b0b728c"
+            "80744f6c-bdf3-4996-b496-58aa4ef82176"
           ],
-          "x": 658,
-          "y": 592.875,
-          "direction": "left"
+          "x": 281.454345703125,
+          "y": 345,
+          "direction": "top"
         },
         "constraintName": "",
         "visible": true,
-        "id": "3872dcc4-6ced-442a-aeb9-910bcb629413"
+        "id": "15f9f468-952a-4e9a-bf62-75a8e63a32ee"
       },
       {
         "identification": false,
         "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "98219a72-6a49-4e31-b211-156454172f96",
+          "tableId": "1dcfdaa3-245e-47cb-9184-fda4478931ac",
           "columnIds": [
-            "974c11a3-3278-41d4-9676-6e8fa395251e"
+            "3cedd853-e6fc-4001-90eb-25d6b7a9f1d7"
           ],
-          "x": 486.56689453125,
-          "y": 330,
+          "x": 287.454345703125,
+          "y": 576,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "cb0bb90b-20a7-4c52-a661-51f79c7b4e57",
+          "columnIds": [
+            "a4c07236-5797-41b3-9f29-38a3f3c0481d"
+          ],
+          "x": 281.454345703125,
+          "y": 475.5,
+          "direction": "bottom"
+        },
+        "constraintName": "",
+        "visible": true,
+        "id": "2cce941e-3a3e-43f1-906d-eec52af574f1"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "cb0bb90b-20a7-4c52-a661-51f79c7b4e57",
+          "columnIds": [
+            "f4bec7f9-7e20-4dd4-bd92-be3bf99c7e5b"
+          ],
+          "x": 479.90869140625,
+          "y": 410.25,
           "direction": "right"
         },
         "end": {
-          "tableId": "8bdee03b-f108-47fe-8714-e659b4b4ef11",
+          "tableId": "fdc80348-39f7-4bea-8298-121d9ae8b844",
           "columnIds": [
-            "85cf2836-03da-4108-a5fb-cc19cf1f685f"
+            "6f7354ac-f7dd-47a0-8ab7-36f8b3fa6694"
           ],
-          "x": 658,
-          "y": 445.625,
+          "x": 577,
+          "y": 411,
           "direction": "left"
         },
         "constraintName": "",
         "visible": true,
-        "id": "61a8d373-85e4-4156-bab6-55fd9b0e9d8e"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneOnly",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "23868237-dd41-4325-9c35-b4c40191092c",
-          "columnIds": [
-            "86647feb-0bbf-4d70-a76e-e3e0221d16fa"
-          ],
-          "x": 986.048583984375,
-          "y": 787,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "8bdee03b-f108-47fe-8714-e659b4b4ef11",
-          "columnIds": [
-            "02bd18c3-f940-427a-b508-02648c797358"
-          ],
-          "x": 874.757080078125,
-          "y": 666.5,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_memberid_to_member_d",
-        "visible": true,
-        "id": "11173e8d-a471-4c0c-88cf-5e8d7294ad79"
+        "id": "efb8872d-6155-447d-a5de-f79031c4bd10"
       },
       {
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "02e68204-f2d6-49f6-bd3b-76afb175e349",
+          "tableId": "b3cb8495-63d3-4c7d-9472-846335ac2447",
           "columnIds": [
-            "d003aa75-4604-4639-b4d0-e8fa8e43c965"
+            "cbbd2c8a-8a93-4d7c-970e-e4c430883b97"
           ],
-          "x": 1219,
-          "y": 656.25,
+          "x": 1089,
+          "y": 403.25,
           "direction": "left"
         },
         "end": {
-          "tableId": "23868237-dd41-4325-9c35-b4c40191092c",
+          "tableId": "fdc80348-39f7-4bea-8298-121d9ae8b844",
           "columnIds": [
-            "e3df7817-1482-46f1-9d84-108fcfa4a3f8"
+            "389d1705-ff7b-4c99-b833-abb3c9b8117e"
           ],
-          "x": 1231.09716796875,
-          "y": 842,
+          "x": 973.6787109375,
+          "y": 411,
           "direction": "right"
         },
-        "constraintName": "fk_medicaldepartment_to_memberid",
+        "constraintName": "fk_members_to_답변한내역",
         "visible": true,
-        "id": "21cec074-2480-4736-ad8e-a2f55cde2abe"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneOnly",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "2b14811e-36cd-4f92-8c85-245cae31d5cc",
-          "columnIds": [
-            "15261646-3d8b-449f-aa0b-b620e4d70f40"
-          ],
-          "x": 1457.447998046875,
-          "y": 422.5,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "02e68204-f2d6-49f6-bd3b-76afb175e349",
-          "columnIds": [
-            "b5b802ee-098d-4761-b7fc-46a2cc537490"
-          ],
-          "x": 1460.548583984375,
-          "y": 591,
-          "direction": "top"
-        },
-        "constraintName": "fk_clinicname_to_medicaldepartment",
-        "visible": true,
-        "id": "37a9e148-8481-4f04-93d3-a9377111f9d6"
+        "id": "097e6151-daea-4222-9eae-474c6cdd2879"
       }
     ]
   }
