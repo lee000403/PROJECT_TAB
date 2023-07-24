@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 6500,
     "height": 6500,
-    "scrollTop": -2619.0807722144655,
-    "scrollLeft": -4864,
+    "scrollTop": -2816.0807722144655,
+    "scrollLeft": -4847,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -97,74 +97,12 @@
           "active": false,
           "left": 5650.1174,
           "top": 2016.0882,
-          "zIndex": 4,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "bd764a51-915f-49c9-9fb9-2d3ae945beb3"
-      },
-      {
-        "name": "DEMENTIA_STAGE",
-        "comment": "치매진행단계",
-        "columns": [
-          {
-            "id": "d831767b-3378-421e-9a67-b739636259ff",
-            "name": "STAGE",
-            "comment": "치매진행단계",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 80,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
-            "id": "a8918da7-d5bd-49ad-946a-3a3511df27a8",
-            "name": "STAGE_ID",
-            "comment": "치매진행단계ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 65.33056640625,
-              "widthComment": 93,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 5646.9873,
-          "top": 1841.3485,
-          "zIndex": 5,
-          "widthName": 119.50146484375,
-          "widthComment": 80
-        },
-        "visible": true,
-        "id": "9dacd80c-7612-4b8a-97d4-0525fb0dbe0b"
       },
       {
         "name": "MEDICALDEPARTMENT",
@@ -221,7 +159,7 @@
           "active": false,
           "left": 5649.4969,
           "top": 2508.6936,
-          "zIndex": 50,
+          "zIndex": 8,
           "widthName": 148.1484375,
           "widthComment": 60
         },
@@ -283,7 +221,7 @@
           "active": false,
           "left": 4438.2019,
           "top": 1864.1282,
-          "zIndex": 41,
+          "zIndex": 7,
           "widthName": 92.77783203125,
           "widthComment": 60
         },
@@ -345,7 +283,7 @@
           "active": false,
           "left": 4270.5136,
           "top": 3303.3804,
-          "zIndex": 70,
+          "zIndex": 12,
           "widthName": 146.4853515625,
           "widthComment": 113.2236328125
         },
@@ -407,7 +345,7 @@
           "active": false,
           "left": 4840.6267,
           "top": 3295.3241,
-          "zIndex": 67,
+          "zIndex": 11,
           "widthName": 112.525390625,
           "widthComment": 113.2236328125
         },
@@ -492,7 +430,7 @@
           "active": false,
           "left": 4534.9064,
           "top": 2871.7788,
-          "zIndex": 169,
+          "zIndex": 15,
           "widthName": 125.29052734375,
           "widthComment": 83.61181640625
         },
@@ -501,7 +439,7 @@
       },
       {
         "name": "SURVEY_QUESTIONS",
-        "comment": "환자/가족 질문 코드",
+        "comment": "질문 코드",
         "columns": [
           {
             "id": "b68b9120-b2a7-4b9d-aba7-5e7ed60c9435",
@@ -577,9 +515,9 @@
           "active": false,
           "left": 3904.9719,
           "top": 2048.2802,
-          "zIndex": 18,
+          "zIndex": 27,
           "widthName": 139.0205078125,
-          "widthComment": 116.83544921875
+          "widthComment": 60
         },
         "visible": true,
         "id": "31c41ecd-6d3f-4d99-bd45-2562aff0a77f"
@@ -662,120 +600,12 @@
           "active": false,
           "left": 3925.0995,
           "top": 2284.2428,
-          "zIndex": 16,
+          "zIndex": 4,
           "widthName": 90.6259765625,
           "widthComment": 60
         },
         "visible": true,
         "id": "971a63b0-864c-4787-8369-96c26c33b743"
-      },
-      {
-        "name": "MEMBER_S_F",
-        "comment": "본인 및 가족",
-        "columns": [
-          {
-            "name": "MEMBERID",
-            "comment": "회원아이디",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 72.05908203125,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "d35e558c-e228-45df-a37b-1558e9322c44"
-          },
-          {
-            "name": "MEMBERTYPE_ID",
-            "comment": "회원유형ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 113.0078125,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "dfe48697-2424-4e9e-8a96-dd979feba0da"
-          },
-          {
-            "id": "91a270ca-946e-439c-a394-97047ac506a4",
-            "name": "STAGE_ID",
-            "comment": "치매진행단계ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 65.33056640625,
-              "widthComment": 93,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
-            "name": "PATIENTGENDER_ID",
-            "comment": "환자성별ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 130.81298828125,
-              "widthComment": 67,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "cd86bcc3-dffc-4823-8759-9a3a9572e53a"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 4978.9538,
-          "top": 1854.6779,
-          "zIndex": 49,
-          "widthName": 90.130859375,
-          "widthComment": 74.2236328125
-        },
-        "visible": true,
-        "id": "192e4705-723c-4d6a-9c77-76fcc04db118"
       },
       {
         "name": "MEMBER_D",
@@ -855,7 +685,7 @@
           "active": false,
           "left": 5647.2759,
           "top": 2277.7584,
-          "zIndex": 60,
+          "zIndex": 9,
           "widthName": 75.67724609375,
           "widthComment": 60
         },
@@ -940,7 +770,7 @@
           "active": false,
           "left": 4523.7475,
           "top": 3070.463,
-          "zIndex": 82,
+          "zIndex": 13,
           "widthName": 103.13720703125,
           "widthComment": 113.2236328125
         },
@@ -1069,9 +899,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 5325.1198,
-          "top": 3027.5326,
-          "zIndex": 214,
+          "left": 5796.3698,
+          "top": 2973.7826,
+          "zIndex": 22,
           "widthName": 124.5478515625,
           "widthComment": 117.20361328125
         },
@@ -1202,7 +1032,7 @@
           "active": false,
           "left": 5657.8194,
           "top": 2699.6226,
-          "zIndex": 216,
+          "zIndex": 21,
           "widthName": 124.78271484375,
           "widthComment": 60
         },
@@ -1471,7 +1301,7 @@
           "active": false,
           "left": 5091.477,
           "top": 2263.6599,
-          "zIndex": 209,
+          "zIndex": 23,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
@@ -1533,7 +1363,7 @@
           "active": false,
           "left": 4464.8229,
           "top": 2560.9991,
-          "zIndex": 11,
+          "zIndex": 3,
           "widthName": 70.3642578125,
           "widthComment": 70.61181640625
         },
@@ -1848,7 +1678,7 @@
           "active": false,
           "left": 3788.7906,
           "top": 2531.5691,
-          "zIndex": 17,
+          "zIndex": 5,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -1933,7 +1763,7 @@
           "active": false,
           "left": 4473.6542,
           "top": 2315.3562,
-          "zIndex": 64,
+          "zIndex": 10,
           "widthName": 112.779296875,
           "widthComment": 60
         },
@@ -1995,7 +1825,7 @@
           "active": false,
           "left": 3912.6655,
           "top": 1866.1611,
-          "zIndex": 3,
+          "zIndex": 1,
           "widthName": 96.40869140625,
           "widthComment": 82.17724609375
         },
@@ -2057,12 +1887,352 @@
           "active": false,
           "left": 4505.6667,
           "top": 2687.0808,
-          "zIndex": 153,
+          "zIndex": 14,
           "widthName": 170.07958984375,
           "widthComment": 113.2236328125
         },
         "visible": true,
         "id": "0a88a2d0-67fd-4cc5-bbf6-be0fdf25bd7c"
+      },
+      {
+        "name": "DEMENTIA_STAGE",
+        "comment": "치매진행단계",
+        "columns": [
+          {
+            "id": "d831767b-3378-421e-9a67-b739636259ff",
+            "name": "STAGE",
+            "comment": "치매진행단계",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "a8918da7-d5bd-49ad-946a-3a3511df27a8",
+            "name": "STAGE_ID",
+            "comment": "치매진행단계ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.33056640625,
+              "widthComment": 93,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 5646.9873,
+          "top": 1841.3485,
+          "zIndex": 17,
+          "widthName": 119.50146484375,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "9dacd80c-7612-4b8a-97d4-0525fb0dbe0b"
+      },
+      {
+        "name": "MEMBER_S_F",
+        "comment": "본인 및 가족",
+        "columns": [
+          {
+            "name": "MEMBERID",
+            "comment": "회원아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 72.05908203125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "d35e558c-e228-45df-a37b-1558e9322c44"
+          },
+          {
+            "name": "MEMBERTYPE_ID",
+            "comment": "회원유형ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 113.0078125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "dfe48697-2424-4e9e-8a96-dd979feba0da"
+          },
+          {
+            "id": "91a270ca-946e-439c-a394-97047ac506a4",
+            "name": "STAGE_ID",
+            "comment": "치매진행단계ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 65.33056640625,
+              "widthComment": 93,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "PATIENTGENDER_ID",
+            "comment": "환자성별ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 130.81298828125,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "cd86bcc3-dffc-4823-8759-9a3a9572e53a"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 4978.9538,
+          "top": 1854.6779,
+          "zIndex": 18,
+          "widthName": 90.130859375,
+          "widthComment": 74.2236328125
+        },
+        "visible": true,
+        "id": "192e4705-723c-4d6a-9c77-76fcc04db118"
+      },
+      {
+        "name": "CENTERS",
+        "comment": "치매센터검색",
+        "columns": [
+          {
+            "name": "CENTER_NAME",
+            "comment": "시설명",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 100.236328125,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "0024c4aa-9444-4d76-b8f9-54bf9b823e1d"
+          },
+          {
+            "name": "CENTER_ADD",
+            "comment": "주소",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 90.12451171875,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "abe3aedb-4d01-4083-9fae-e20c80e5cc01"
+          },
+          {
+            "name": "CENTER_NUM",
+            "comment": "전화번호",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 92.28271484375,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "905c4350-45ec-49e4-b3c8-c23bd78971e1"
+          },
+          {
+            "name": "CENTER_TYPE_ID",
+            "comment": "치매센터코드",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 116.86083984375,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "f90f2b7b-4d42-4645-89a7-0dee044f389c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 5123.25,
+          "top": 2847.5808,
+          "zIndex": 20,
+          "widthName": 64.1181640625,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "3e89f521-8427-41b8-a9f6-d72e4c4688bd"
+      },
+      {
+        "name": "CENTER_TYPE",
+        "comment": "치매센터종류",
+        "columns": [
+          {
+            "name": "CENTER_TYPE",
+            "comment": "치매센터종류",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 96.630859375,
+              "widthComment": 80,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "155b8cfd-eee0-4a38-9fb7-0e95a04314e1"
+          },
+          {
+            "name": "CENTER_TYPE_ID",
+            "comment": "치매센터코드",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 116.86083984375,
+              "widthComment": 80,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "0c29982d-95ce-460e-b62b-1c412b4e2ea6"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 5120.25,
+          "top": 3118.8308,
+          "zIndex": 19,
+          "widthName": 96.630859375,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "ccdaacc9-5353-47f9-b642-19c1b57caf1c"
       }
     ],
     "indexes": []
@@ -2142,9 +2312,9 @@
           "columnIds": [
             "a67489fb-d482-4097-ad74-10861666a6f1"
           ],
-          "x": 5559.317798046875,
-          "y": 3027.5326,
-          "direction": "top"
+          "x": 5796.3698,
+          "y": 3059.5326,
+          "direction": "left"
         },
         "constraintName": "",
         "visible": true,
@@ -2168,9 +2338,9 @@
           "columnIds": [
             "b53b22b9-8869-4033-9bd4-8e04d20fde40"
           ],
-          "x": 5793.51579609375,
-          "y": 3113.2826,
-          "direction": "right"
+          "x": 6030.567798046875,
+          "y": 2973.7826,
+          "direction": "top"
         },
         "constraintName": "",
         "visible": true,
@@ -2227,32 +2397,6 @@
         "constraintName": "",
         "visible": true,
         "id": "df4bc69d-d7a5-4858-87dc-45d92bd689d7"
-      },
-      {
-        "identification": false,
-        "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "9dacd80c-7612-4b8a-97d4-0525fb0dbe0b",
-          "columnIds": [
-            "a8918da7-d5bd-49ad-946a-3a3511df27a8"
-          ],
-          "x": 5646.9873,
-          "y": 1896.3485,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "192e4705-723c-4d6a-9c77-76fcc04db118",
-          "columnIds": [
-            "91a270ca-946e-439c-a394-97047ac506a4"
-          ],
-          "x": 5457.48553828125,
-          "y": 1892.4279,
-          "direction": "right"
-        },
-        "constraintName": "",
-        "visible": true,
-        "id": "efeef451-c82b-4a14-9377-b04f511cb526"
       },
       {
         "identification": false,
@@ -2545,6 +2689,84 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
+          "tableId": "66587f54-4f5b-409d-9845-5b617085bee5",
+          "columnIds": [
+            "60ebd6dc-b990-44bd-8b26-a72a395436aa"
+          ],
+          "x": 4138.3442109375,
+          "y": 1976.1611,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "31c41ecd-6d3f-4d99-bd45-2562aff0a77f",
+          "columnIds": [
+            "96e628cc-f36d-4706-9e18-859558c2862d"
+          ],
+          "x": 4134.2656011718755,
+          "y": 2048.2802,
+          "direction": "top"
+        },
+        "constraintName": "fk_survey_type_to_survey_questions",
+        "visible": true,
+        "id": "2f8ad2ed-47fb-4405-ace1-a258da4e2fc2"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "0a88a2d0-67fd-4cc5-bbf6-be0fdf25bd7c",
+          "columnIds": [
+            "d7e3c29c-e390-4bb5-8b41-9d4e428f1b00"
+          ],
+          "x": 4723.5036140625,
+          "y": 2797.0808,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "d9efde07-7e39-4ba5-bdef-f77e0ae24384",
+          "columnIds": [
+            "c7415cf4-9102-40c1-9e53-6ba25504b26d"
+          ],
+          "x": 4756.2433140625,
+          "y": 2871.7788,
+          "direction": "top"
+        },
+        "constraintName": "fk_selftest_result_code_to_selftest_result",
+        "visible": true,
+        "id": "5a36b771-7e0d-458f-aed7-55bc35d55103"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "9dacd80c-7612-4b8a-97d4-0525fb0dbe0b",
+          "columnIds": [
+            "a8918da7-d5bd-49ad-946a-3a3511df27a8"
+          ],
+          "x": 5646.9873,
+          "y": 1896.3485,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "192e4705-723c-4d6a-9c77-76fcc04db118",
+          "columnIds": [
+            "91a270ca-946e-439c-a394-97047ac506a4"
+          ],
+          "x": 5457.48553828125,
+          "y": 1892.4279,
+          "direction": "right"
+        },
+        "constraintName": "",
+        "visible": true,
+        "id": "efeef451-c82b-4a14-9377-b04f511cb526"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
           "tableId": "bd764a51-915f-49c9-9fb9-2d3ae945beb3",
           "columnIds": [
             "1fd4dd1d-d8c0-4cbd-a8b3-7723a9ae2337"
@@ -2597,32 +2819,6 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "66587f54-4f5b-409d-9845-5b617085bee5",
-          "columnIds": [
-            "60ebd6dc-b990-44bd-8b26-a72a395436aa"
-          ],
-          "x": 4138.3442109375,
-          "y": 1976.1611,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "31c41ecd-6d3f-4d99-bd45-2562aff0a77f",
-          "columnIds": [
-            "96e628cc-f36d-4706-9e18-859558c2862d"
-          ],
-          "x": 4134.2656011718755,
-          "y": 2048.2802,
-          "direction": "top"
-        },
-        "constraintName": "fk_survey_type_to_survey_questions",
-        "visible": true,
-        "id": "2f8ad2ed-47fb-4405-ace1-a258da4e2fc2"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "6d4f3e69-5a51-4193-be3f-f2b150fc5dd2",
           "columnIds": [
             "b3fc6b0c-d92e-4fe3-995a-f36fc384efa4"
@@ -2649,26 +2845,26 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "0a88a2d0-67fd-4cc5-bbf6-be0fdf25bd7c",
+          "tableId": "ccdaacc9-5353-47f9-b642-19c1b57caf1c",
           "columnIds": [
-            "d7e3c29c-e390-4bb5-8b41-9d4e428f1b00"
+            "0c29982d-95ce-460e-b62b-1c412b4e2ea6"
           ],
-          "x": 4723.5036140625,
-          "y": 2797.0808,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "d9efde07-7e39-4ba5-bdef-f77e0ae24384",
-          "columnIds": [
-            "c7415cf4-9102-40c1-9e53-6ba25504b26d"
-          ],
-          "x": 4756.2433140625,
-          "y": 2871.7788,
+          "x": 5349.65478515625,
+          "y": 3118.8308,
           "direction": "top"
         },
-        "constraintName": "fk_selftest_result_code_to_selftest_result",
+        "end": {
+          "tableId": "3e89f521-8427-41b8-a9f6-d72e4c4688bd",
+          "columnIds": [
+            "f90f2b7b-4d42-4645-89a7-0dee044f389c"
+          ],
+          "x": 5352.65478515625,
+          "y": 2998.5808,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_center_type_to_center_search",
         "visible": true,
-        "id": "5a36b771-7e0d-458f-aed7-55bc35d55103"
+        "id": "077aaffc-5b43-4a8f-bb8c-efe08f6d2035"
       }
     ]
   }
