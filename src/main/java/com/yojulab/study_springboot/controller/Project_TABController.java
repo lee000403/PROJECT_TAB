@@ -21,9 +21,9 @@ public class Project_TABController {
     Project_TABService project_TABService;
 
     // 메인화면 URL(페이징 구현) (경로 설정 완료)
-    @RequestMapping(value = { "/home/{currentPage}", "/home/" }, method = { RequestMethod.GET,
+    @RequestMapping(value = { "/home", "/home/" }, method = { RequestMethod.GET,
             RequestMethod.POST })
-    public ModelAndView commonSearch(@PathVariable(required = false) String currentPage, @RequestParam Map params,
+    public ModelAndView mainPage(@PathVariable(required = false) String currentPage, @RequestParam Map params,
             ModelAndView modelAndView) {
         // Object result = project_TABService.selectSearchWithPagination(currentPage,
         // params);
@@ -31,6 +31,30 @@ public class Project_TABController {
         // modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/main_page/main_page.jsp");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = { "/search_page/{currentPage}", "/search_page/" }, method = { RequestMethod.GET,
+            RequestMethod.POST })
+    public ModelAndView search_page(@PathVariable(required = false) String currentPage, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.selectSearchWithPagination(currentPage,
+                params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/search_page/search_page.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/hospital_selectDetail/{UNIQUE_ID}")
+    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.hospital_selectDetail(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/detail/detail_hospital.jsp");
         return modelAndView;
     }
 
@@ -90,36 +114,13 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    // 상세
-    @PostMapping("/Search_pageDetail/{UNIQUE_ID}")
-    public ModelAndView Search_pageDetail(@PathVariable String UNIQUE_ID, @RequestParam Map params,
-            ModelAndView modelAndView) {
-        Object result = project_TABService.selectDetail(UNIQUE_ID, params);
+    @GetMapping("/self_test_delete")
+    public ModelAndView self_test_delete(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.self_test_delete(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/carinfor/상세 페이지.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/self_test_result_a")
-    public ModelAndView self_test_result_a(@RequestParam Map params, ModelAndView modelAndView) {
-
-        modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_a.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/self_test_result_b")
-    public ModelAndView self_test_result_b(@RequestParam Map params, ModelAndView modelAndView) {
-
-        modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_b.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/self_test_result_c")
-    public ModelAndView self_test_result_c(@RequestParam Map params, ModelAndView modelAndView) {
-
-        modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_c.jsp");
+        modelAndView.setViewName("/WEB-INF/views/self_test/self_test.jsp");
         return modelAndView;
     }
 
@@ -131,9 +132,31 @@ public class Project_TABController {
         return modelAndView;
     }
 
+    // self_test (경로 설정)
+    @GetMapping("/self_test_road")
+    public ModelAndView self_test_road(@RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.self_testInsert(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        Map map = (Map) result;
+        Double a = (Double) map.get("sum");
+        if (a < 7.0) {
+            modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_a.jsp");
+        } else if (7.0 <= a & a <= 9.0) {
+            modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_b.jsp");
+        } else {
+            modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_c.jsp");
+        }
+        return modelAndView;
+    }
+
     @GetMapping("/community")
     public ModelAndView community(@RequestParam Map params, ModelAndView modelAndView) {
-
+        Object result = project_TABService.select_community(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
         modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
         return modelAndView;
     }
@@ -145,8 +168,11 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/community_answer")
-    public ModelAndView community_answer(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/community_answer/{UNIQUE_ID}")
+    public ModelAndView community_answer(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.community_answer(UNIQUE_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/community/community_answer.jsp");
         return modelAndView;
@@ -194,15 +220,17 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/signin_page_a")
-    public ModelAndView signin_page_a(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/signin_page_a/{MEMBER_ID}")
+    public ModelAndView signin_page_a(@PathVariable String member_id, @RequestParam Map params,
+            ModelAndView modelAndView) {
 
         modelAndView.setViewName("/WEB-INF/views/signin/signin_page_a.jsp");
         return modelAndView;
     }
 
-    @GetMapping("/signin_page_b")
-    public ModelAndView signin_page_b(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/signin_page_b/{MEMBER_ID}")
+    public ModelAndView signin_page_b(@PathVariable String member_id, @RequestParam Map params,
+            ModelAndView modelAndView) {
 
         modelAndView.setViewName("/WEB-INF/views/signin/signin_page_b.jsp");
         return modelAndView;
@@ -212,13 +240,6 @@ public class Project_TABController {
     public ModelAndView signin_select_page(@RequestParam Map params, ModelAndView modelAndView) {
 
         modelAndView.setViewName("/WEB-INF/views/signin/signin_select_page.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/search_page")
-    public ModelAndView selectSearch(@RequestParam Map params, ModelAndView modelAndView) {
-
-        modelAndView.setViewName("/WEB-INF/views/search_page/search_page.jsp");
         return modelAndView;
     }
 

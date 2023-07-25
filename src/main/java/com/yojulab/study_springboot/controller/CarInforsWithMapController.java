@@ -38,8 +38,10 @@ public class CarInforsWithMapController {
         return modelAndView;
     }
 
-    @RequestMapping(value = {"/commonSearch/{currentPage}", "/commonSearch/"}, method = { RequestMethod.GET, RequestMethod.POST })
-    public ModelAndView commonSearch(@PathVariable(required = false) String currentPage, @RequestParam Map params, ModelAndView modelAndView) {
+    @RequestMapping(value = { "/commonSearch/{currentPage}", "/commonSearch/" }, method = { RequestMethod.GET,
+            RequestMethod.POST })
+    public ModelAndView commonSearch(@PathVariable(required = false) String currentPage, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = carInforsService.selectSearchWithPagination_Com(currentPage, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -127,7 +129,7 @@ public class CarInforsWithMapController {
         Object result = carInforsService.selectDetail_Com(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        
+
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
         return modelAndView;
     }
@@ -141,6 +143,17 @@ public class CarInforsWithMapController {
         modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/carinfor/list_test.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/select_name")
+    public ModelAndView select_name(@RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = carInforsService.select_Name(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/carinfor/list_name.jsp");
         return modelAndView;
     }
 }

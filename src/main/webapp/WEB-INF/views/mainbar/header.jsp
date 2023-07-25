@@ -121,7 +121,7 @@
             </form>
             <form action="/TAB_PAGE/search_page" method="">
               <li class="nav-item nav-button">
-                <a class="nav-link" href="/TAB_PAGE/search_page">센터검색</a>
+                <a class="nav-link" href="/TAB_PAGE/search_page/">센터검색</a>
               </li>
             </form>
             <form action="/TAB_PAGE/self_test" method="">

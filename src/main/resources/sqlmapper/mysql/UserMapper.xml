@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Users">
+	<select id="selectByUID" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM members
+        where UNIQUE_ID = #{MEMBERID}
+	</select>
+
+    <!-- 입력 -->
+        <insert id="insert" parameterType="Map">
+        INSERT INTO members 
+        (PHOTO, MEMBERTYPE_ID, MEMBERID, MEMBERPW, MEMBERNAME, GENDER_ID, BIRTHDATE, PHONENUMBER, MEMBERADDRESS, EMAIL, INTRODUCTION)
+        VALUES
+        (#{PHOTO}, "M_01", #{MEMBERID}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, #{INTRODUCTION});
+        ;
+        </insert>
+
+</mapper>

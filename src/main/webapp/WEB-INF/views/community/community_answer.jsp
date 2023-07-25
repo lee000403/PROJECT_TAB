@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,15 +140,17 @@
 <%@ include file="../mainbar/header.jsp" %>
 <body>
     <%@ include file="../mainbar/header.jsp" %>
+    <% HashMap params=(HashMap)request.getAttribute("params");
+    HashMap result=(HashMap)request.getAttribute("result"); %>
     <div class="container mt-4">
         <h1 class="text-center">커뮤니티</h1>
         <form action="">
             <div class="row mt-4">
                 <div class="col-md-12">
                     <article style="border: 1px solid #ccc; padding: 20px;">
-                        <div class="post-title">피곤피곤</div>
-                        <div class="post-subtitle">작성자 : Alice 작성일 : 2023-07-06</div>
-                        <p>피곤한 하루였어요.</p>
+                        <div class="post-title"><%= result.get("POST_TITLE") %></div>
+                        <div class="post-subtitle">작성자 : <%=result.get("MEMBERID")%> 작성일 : <%=result.get("POST_DATE")%></div>
+                        <p><%= result.get("POST_CONTENT") %></p>
                     </article>
                 </div>
 

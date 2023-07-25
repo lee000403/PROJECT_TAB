@@ -194,7 +194,6 @@
                 <tr>
                   <th>시설명/주소</th>
                   <th>전화번호</th>
-                  <th>상세보기</th>
                 </tr>
               </thead>
 
@@ -213,39 +212,10 @@
                     <td>
                       <%= record.get("CENTER_NUM") %>
                     </td>
-                    <td>
-                      <form action="">
-                        <button type="submit"
-                          formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID") %>'
-                          formmethod="">상세</button>
-                      </form>
-                    </td>
-                    </td>
                   </tr>
                 </tbody>
                 <% } %>
             </table>
-            <% Paginations paginations=(Paginations)result.get("paginations"); %>
-              <% if (params.get("words")==null) { %>
-                <nav aria-label="Page navigation">
-                  <ul class="pagination">
-                    <li class="page-item"><a class="page-link"
-                        href="/TAB_PAGE/search_page/<%= paginations.getPreviousPage() %>">Previous</a></li>
-
-                    <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
-                      <li class="page-item">
-                        <a class="page-link" href="/TAB_PAGE/search_page/<%= i %>">
-                          <%= i %>
-                        </a>
-                      </li>
-                      <% } %>
-                        <li class="page-item">
-                          <a class="page-link" href="/TAB_PAGE/search_page/<%= paginations.getNextPage() %>">Next</a>
-                        </li>
-                  </ul>
-                </nav>
-                <% } %>
-                  </div>
         </body>
 
         <%@ include file="../mainbar/footer.jsp" %>

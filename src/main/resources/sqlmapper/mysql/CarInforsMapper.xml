@@ -19,6 +19,10 @@
         ;
 	</select>
 
+    <select id="select_name" parameterType="Map" resultType="Map">
+        select name from commons_code;
+    </select>
+
     <!-- mybatis foreach HashMap.put("CAR_INFOR_ID_LIST", CAR_INFOR_ID_LIST)-->
 	<select id="selectInUID" parameterType="Map" resultType="Map">    
         SELECT * 

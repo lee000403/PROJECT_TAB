@@ -129,8 +129,8 @@
       </div>
       <div class="button-group">
         <form action="" method="post">
-          <button formaction="/TAB_PAGE/self_test" formmethod="post">재검사 &gt;</button>
-          <button formaction="/TAB_PAGE/community" formmethod="post">궁금한점 물어보기 &gt;</button>
+          <button formaction="/TAB_PAGE/self_test_delete" formmethod="">재검사 &gt;</button>
+          <button formaction="/TAB_PAGE/community" formmethod="">궁금한점 물어보기 &gt;</button>
         </form>
       </div>
     </div>
