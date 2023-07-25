@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+  <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,6 +98,8 @@ header {
 
 <body>
     <%@ include file="../mainbar/header.jsp" %>
+    <% HashMap params=(HashMap)request.getAttribute("params");
+    HashMap result=(HashMap)request.getAttribute("result"); %>
     <div class="container mt-4">
         <h1 class="text-center">선생님, 질문 있어여 !</h1>
 
@@ -111,38 +114,17 @@ header {
                             <th scope="col">작성일</th>
                         </tr>
                     </thead>
+                    <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
+                        HashMap record=(HashMap)resultList.get(i); %>
                     <tbody>
                         <tr>
-                            <th scope="row">5</th>
-                            <td><a href="/TAB_PAGE/community_answer">피곤피곤</a></td>
-                            <td>Alice</td>
-                            <td>2023-07-06</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>집에 어느 세월에 가나</td>
-                            <td>Bob</td>
-                            <td>2023-07-05</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>맛있는 거 먹고 싶어여</td>
-                            <td>Chris</td>
-                            <td>2023-07-04</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>집 가고 싶어여</td>
-                            <td>Daniel</td>
-                            <td>2023-07-03</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>스트레스 받아여</td>
-                            <td>Emily</td>
-                            <td>2023-07-02</td>
+                            <th scope="row"><%=i+1%></th>
+                            <td><a href="/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>"><%= record.get("POST_TITLE") %></a></td>
+                            <td><%= record.get("MEMBERID") %></td>
+                            <td><%= record.get("POST_DATE") %></td>
                         </tr>
                     </tbody>
+                    <%}%>
                 </table>
             </div>
         </div>

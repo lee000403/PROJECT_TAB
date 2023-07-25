@@ -46,15 +46,10 @@
             AND TABLE_NAME='commons_code'
 	</select>
 
-    <select id="selectSearch" parameterType="Map" resultType="Map">
+    <select id="hospital_selectSearch" parameterType="Map" resultType="Map">
         SELECT * 
-        FROM commons_code
-        where 1 = 1 
-        <choose>
-            <when test="search == 'NAME'">
-                AND NAME LIKE CONCAT('%',#{words},'%')
-            </when>
-        </choose>        
+        FROM centers
+        where 1 = 1        
 	</select>
 
     <select id="selectInUID" parameterType="Map" resultType="Map">    
@@ -71,18 +66,21 @@
 
     <select id="selectByInUID" parameterType="Map" resultType="Map">    
         SELECT * 
-        FROM commons_code
+        FROM centers
         where 1 = 1
-        and COMMON_CODE_ID = #{COMMON_CODE_ID}
+        and CENTER_TYPE_ID = #{CENTER_TYPE_ID}
 	</select>
 
     <select id="selectSearchWithPagination" parameterType="Map" resultType="Map">
         SELECT *
-        FROM commons_code
+        FROM centers
         where 1 = 1 
         <choose>
-            <when test="search == 'NAME'">
-            and NAME like CONCAT(#{words}, '%')
+            <when test="search == 'CENTER_NAME'">
+            and CENTER_NAME like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'CENTER_ADD'">
+            and CENTER_ADD like CONCAT('%', #{words}, '%')
             </when>
         </choose>
         LIMIT #{pageBegin}, #{pageScale}
@@ -91,7 +89,63 @@
 
     <select id="selectTotal" parameterType="Map" resultType="int">
         SELECT count(*) as cnt
-        FROM commons_code
+        FROM centers
         ;
 	</select>
+
+    <insert id="insert_selfTest" parameterType="Map">
+        insert into selftest_result
+        (MEMBERID, ST_QNA_CODE, ST_RESULT_CODE)
+        values
+        ('jung96', #{ST_QNA_CODE}, 'SR_03' )
+    </insert>
+
+    <select id="select_selfTest" parameterType="Map" resultType="Map">
+        SELECT ST_QNA_CODE
+        FROM selftest_qna
+        where ST_Q_CODE=#{ST_Q_CODE} and ST_ANS_SCORE=#{ST_ANS_SCORE}
+	</select>
+
+    <select id="select_selfTest_sum" parameterType="Map" resultType="Map">
+        SELECT sum(qna.ST_ANS_SCORE) as sum
+        FROM selftest_qna as qna
+        join selftest_result as res
+        on qna.ST_QNA_CODE = res.ST_QNA_CODE
+        where res.MEMBERID = 'jung96'
+    </select>
+
+    <delete id="self_test_delete" parameterType="Map">
+        delete from selftest_result
+        where MEMBERID='jung96'
+    </delete>
+
+    <select id="select_community" parameterType="Map" resultType="Map">
+        SELECT * FROM project_dementia.community_post
+        order by POST_DATE DESC
+	</select>
+
+    <select id="community_answer" parameterType="Map" resultType="Map">
+        SELECT * FROM project_dementia.community_post
+        where 1 = 1
+        and POST_ID = #{POST_ID}
+	</select>
+
+    <update id="self_testUpdateA" parameterType="Map">
+        update selftest_result
+        set ST_RESULT_CODE = 'SR_01'
+        where MEMBERID = 'jung96'
+    </update>
+
+    <update id="self_testUpdateB" parameterType="Map">
+        update selftest_result
+        set ST_RESULT_CODE = 'SR_02'
+        where MEMBERID = 'jung96'
+    </update>
+
+    <update id="self_testUpdateC" parameterType="Map">
+        update selftest_result
+        set ST_RESULT_CODE = 'SR_03'
+        where MEMBERID = 'jung96'
+    </update>
+
 </mapper>

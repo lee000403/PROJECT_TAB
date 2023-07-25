@@ -134,7 +134,7 @@
     </div>
 
     <div class="button-group">
-      <a class="retest-button" href="/TAB_PAGE/self_test">재검사 &gt;</a>
+      <a class="retest-button" href="/TAB_PAGE/self_test_delete">재검사 &gt;</a>
       <a class="ask-question-button" href="/TAB_PAGE/community">궁금한점 물어보기 &gt;</a>
     </div>
 

@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.yojulab.study_springboot.commons.CommonUUID;
 import com.yojulab.study_springboot.dao.SharedDao;
+import com.yojulab.study_springboot.utills.CommonUUID;
 import com.yojulab.study_springboot.utills.Paginations;
 
 @Service
@@ -238,6 +238,15 @@ public class CarInforsService {
         String sqlMapId = "CarInfors.selectTotal_Com";
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object select_Name(Map dataMap) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CarInfors.select_name";
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 

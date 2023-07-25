@@ -87,52 +87,52 @@
   <div class="container">
     <h1 class="mt-5 mb-4 text-center">회원가입(환자/가족/파트너)</h1>
 
-    <form action="/TAB_PAGE/login_page">
+    <form>
       <div class="form-group">
         <label for="username">아이디:</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+        <input type="text" class="form-control" id="MEMBERID" name="MEMBERID" required>
       </div>
 
       <div class="form-group">
         <label for="password">비밀번호:</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        <input type="password" class="form-control" id="MEMBERPW" name="MEMBERPW" required>
       </div>
 
       <div class="form-group">
         <label for="name">이름:</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+        <input type="text" class="form-control" id="MEMBERNAME" name="MEMBERNAME" required>
       </div>
 
       <div class="form-group">
         <label for="gender">성별:</label>
-        <select class="form-control" id="gender" name="gender" required>
+        <select class="form-control" id="GENDER_ID" name="GENDER_ID" required>
           <option value="">성별 선택</option>
-          <option value="male">남성</option>
-          <option value="female">여성</option>
+          <option value="G_01">남성</option>
+          <option value="G_02">여성</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="birthdate">생년월일:</label>
-        <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+        <input type="date" class="form-control" id="BIRTHDATE" name="BIRTHDATE" required>
       </div>
 
       <div class="form-group">
         <label for="phone">전화번호:</label>
-        <input type="tel" class="form-control" id="phone" name="phone" required>
+        <input type="tel" class="form-control" id="PHONENUMBER" name="PHONENUMBER" required>
       </div>
 
       <div class="form-group">
         <label for="address">주소:</label>
-        <input type="text" class="form-control" id="address" name="address" required>
+        <input type="text" class="form-control" id="MEMBERADDRESS" name="MEMBERADDRESS" required>
       </div>
 
       <div class="form-group">
         <label for="email">이메일 주소:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <input type="email" class="form-control" id="EMAIL" name="EMAIL" required>
       </div>
 <div class="float-right">
-      <button type="submit" class="btn btn-danger ">회원가입</button>
+      <button type="submit" class="btn btn-danger " formaction="/TAB_PAGE/loginenter" formmethod="post">회원가입</button>
     </div>
     </form>
   </div>
