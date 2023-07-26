@@ -23,11 +23,12 @@ public class AuthsService {
 
     public Object insert(Map dataMap) {
         List authList = new ArrayList<>();
-        if (dataMap.get("auth").equals("ROLE_DOCTOR")) {
+        String auth = (String) dataMap.get("auth");
+        if (auth.equals("ROLE_DOCTOR")) {
             authList.add("ROLE_GUEST");
             authList.add("ROLE_PARTNER");
             authList.add("ROLE_USER");
-        } else if (dataMap.get("auth").equals("ROLE_GUEST")) {
+        } else if (auth.equals("ROLE_GUEST")) {
             authList.add("ROLE_USER");
         }
         authList.add(dataMap.get("auth"));  // choosed auth

@@ -119,12 +119,12 @@
         FROM selftest_qna as qna
         join selftest_result as res
         on qna.ST_QNA_CODE = res.ST_QNA_CODE
-        where res.MEMBERID = 'jung96'
+        where res.MEMBERID = #{MEMBERID}
     </select>
 
     <delete id="self_test_delete" parameterType="Map">
         delete from selftest_result
-        where MEMBERID='jung96'
+        where MEMBERID = #{MEMBERID}
     </delete>
 
     <select id="select_community" parameterType="Map" resultType="Map">
@@ -165,7 +165,7 @@
 
     <update id="mypage_update" parameterType="Map">
         update members
-        set MEMBERNAME=#{name}, BIRTHDATE=#{birthdate} , PHONENUMBER=#{phone} , MEMBERADDRESS=#{address} , EMAIL=#{email} , INTRODUCTION=#{introduction}
+        set MEMBERNAME = #{name}, BIRTHDATE = #{birthdate} , PHONENUMBER = #{phone} , MEMBERADDRESS = #{address} , EMAIL=#{email} , INTRODUCTION=#{introduction}
         where MEMBERID = #{MEMBERID}
     </update>
 

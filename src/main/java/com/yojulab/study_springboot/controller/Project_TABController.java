@@ -127,9 +127,9 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/self_test_delete")
-    public ModelAndView self_test_delete(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = project_TABService.self_test_delete(params);
+    @GetMapping("/self_test_delete/{username}")
+    public ModelAndView self_test_delete(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.self_test_delete(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -138,8 +138,11 @@ public class Project_TABController {
     }
 
     // self_test (경로 설정)
-    @GetMapping("/self_test")
-    public ModelAndView self_test(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/self_test/{username}")
+    public ModelAndView self_test(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.self_test_delete(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/self_test/self_test.jsp");
         return modelAndView;

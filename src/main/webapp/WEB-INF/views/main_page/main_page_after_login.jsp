@@ -185,7 +185,6 @@
         </form>
         <div>
           <form action="/TAB_PAGE/survey_b">
-          <a href="/TAB_PAGE/survey_b">파트너 회원일 경우</a>
          </div>
          </form>
 

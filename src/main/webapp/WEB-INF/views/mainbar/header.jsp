@@ -151,9 +151,16 @@
               </li>
             </form>
             <form action="/TAB_PAGE/self_test" method="">
+              <sec:authorize access="isAnonymous()">
+                <li class="nav-item nav-button">
+                  <a class="nav-link" href="/loginForm">자가진단</a>
+                </li>
+              </sec:authorize>
+              <sec:authorize access="isAuthenticated()">
               <li class="nav-item nav-button">
-                <a class="nav-link" href="/TAB_PAGE/self_test">자가진단</a>
+                <a class="nav-link" href="/TAB_PAGE/self_test/${userDetailsBean.username}">자가진단</a>
               </li>
+            </sec:authorize>
             </form>
             <form action="/TAB_PAGE/community" method="">
               <li class="nav-item nav-button">

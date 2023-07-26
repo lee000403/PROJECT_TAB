@@ -129,14 +129,18 @@
         <label for="name">이름:</label>
         <input type="text" class="form-control" id="name" name="name" value="<%=result.get("MEMBERNAME") %>">
       </div>
-        <% String auth = (String) result.get("MEMBERTYPE_ID");%>
       <div class="form-group">
-        <label for="user-type">회원 타입:</label>
-        <br>
-        <label><input type="radio" name="user-type" value="type1" <%= auth.equals("ROLE_USER") ? "checked=\"checked\"" : "" %>> 환자</label>
-        <label><input type="radio" name="user-type" value="type2" <%= auth.equals("ROLE_GUEST") ? "checked=\"checked\"" : "" %>> 가족</label>
-        <label><input type="radio" name="user-type" value="type3" <%= auth.equals("ROLE_PARTNER") ? "checked=\"checked\"" : "" %>> 파트너</label>
-        <label><input type="radio" name="user-type" value="type4" <%= auth.equals("ROLE_DOCTOR") ? "checked=\"checked\"" : "" %>> 전문의</label>
+        <label for="auth">회원 타입:</label>
+        <% String auth = (String) result.get("MEMBERTYPE_ID");%>
+        <% if (auth.equals("ROLE_DOCTOR")) { %>
+          <input type="text" class="form-control" id="auth" name="auth" value="전문의">
+        <%} else if (auth.equals("ROLE_DOCTOR")) { %>
+          <input type="text" class="form-control" id="auth" name="auth" value="파트너">
+        <% }else if (auth.equals("ROLE_GUEST")) { %>
+          <input type="text" class="form-control" id="auth" name="auth" value="가족">
+        <% }else if (auth.equals("ROLE_USER")) { %>
+          <input type="text" class="form-control" id="auth" name="auth" value="본인">
+        <% } %>
       </div>
       <div class="form-group">
         <label for="gender">성별:</label>
