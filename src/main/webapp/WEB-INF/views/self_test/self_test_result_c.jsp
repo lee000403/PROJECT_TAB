@@ -135,10 +135,13 @@
       </div>
     </div>
 
-    <div class="button-group">
-      <a class="retest-button" href="/TAB_PAGE/self_test_delete/${userDetailsBean.username}">재검사 &gt;</a>
-      <a class="ask-question-button" href="/TAB_PAGE/community">궁금한점 물어보기 &gt;</a>
-    </div>
+    <form>
+      <div class="button-group">
+        <button class="retest-button" formaction="/TAB_PAGE/self_test_delete/${userDetailsBean.username}">재검사 &gt;</button>
+        <button class="ask-question-button" formaction="/TAB_PAGE/community">궁금한 점 물어보기 &gt;</button>
+      </div>
+    </form>
+    
 
 
   </div>
