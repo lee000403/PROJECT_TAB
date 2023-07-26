@@ -184,6 +184,17 @@ public class  Project_TABService {
         return result;
     }
 
+    public Object community_end(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.community_end";
+        dataMap.put("MEMBERID", username);
+        String UUID = commonUUID.Commons();
+        dataMap.put("POST_ID", UUID);
+
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
     public Object mypage_detail(String username, Map dataMap) {
         String sqlMapId = "Project_TAB.mypage_detail";
         dataMap.put("username", username);

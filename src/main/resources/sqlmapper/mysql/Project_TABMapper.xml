@@ -169,4 +169,11 @@
         where MEMBERID = #{MEMBERID}
     </update>
 
+    <insert id="community_end" parameterType="Map">
+        insert into community_post
+        (POST_TITLE, POST_DATE, POST_CONTENT, MEMBERID, POST_ID)
+        values
+        (#{POST_TITLE}, now(), #{POST_CONTENT}, #{MEMBERID}, #{POST_ID})
+    </insert>
+
 </mapper>

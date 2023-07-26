@@ -194,8 +194,12 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/community_end")
-    public ModelAndView community_end(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/community_end/{username}")
+    public ModelAndView community_end(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.community_end(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
 
         modelAndView.setViewName("/WEB-INF/views/community/community_end.jsp");
         return modelAndView;
