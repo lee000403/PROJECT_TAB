@@ -197,51 +197,54 @@
                 </tr>
               </thead>
               <% Paginations paginations=(Paginations)result.get("paginations"); %>
-              <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
-                HashMap record=(HashMap)resultList.get(i); %>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div>
-                        <%= record.get("CENTER_NAME") %>
-                      </div>
-                      <div>
-                        <%= record.get("CENTER_ADD") %>
-                      </div>
-                    </td>
-                    <td>
-                      <%= record.get("CENTER_NUM") %>
-                    </td>
-                    <td>
-                      <form action="">
-                        <button type="submit"
-                          formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID")%>/<%=paginations.getCurrentPage()%>'
-                          formmethod="">상세</button>
-                      </form>
-                    </td>
-                    </td>
-                  </tr>
-                </tbody>
-                <% } %>
+                <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
+                  HashMap record=(HashMap)resultList.get(i); %>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div>
+                          <%= record.get("CENTER_NAME") %>
+                        </div>
+                        <div>
+                          <%= record.get("CENTER_ADD") %>
+                        </div>
+                      </td>
+                      <td>
+                        <%= record.get("CENTER_NUM") %>
+                      </td>
+                      <td>
+                        <form action="">
+                          <button type="submit"
+                            formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID")%>/<%=paginations.getCurrentPage()%>'
+                            formmethod="">상세</button>
+                        </form>
+                      </td>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <% } %>
             </table>
-            
-              <nav aria-label="Page navigation">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link"
-                      href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a></li>
-                  <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link"
+                    href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a>
+                </li>
+                <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+                  <li class="page-item">
+                    <a class="page-link"
+                      href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                      <%= i %>
+                    </a>
+                  </li>
+                  <% } %>
                     <li class="page-item">
-                      <a class="page-link" href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                        <%= i %>
-                      </a>
+                      <a class="page-link"
+                        href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
                     </li>
-                    <% } %>
-                      <li class="page-item">
-                        <a class="page-link" href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
-                      </li>
-                </ul>
-              </nav>
-                  </div>
+              </ul>
+            </nav>
+            </div>
         </body>
 
         <%@ include file="../mainbar/footer.jsp" %>
