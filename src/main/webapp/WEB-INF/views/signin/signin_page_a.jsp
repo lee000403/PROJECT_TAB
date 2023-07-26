@@ -133,12 +133,12 @@
       </div>
       <label for="auth" class="sr-only">Auth</label>
       <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="SYSTEM_MANAGER" value="ROLE_MANAGER">
-          <label class="form-check-label" for="SYSTEM_MANAGER">파트너</label>
+          <input class="form-check-input" type="radio" name="auth" id="PATNER" value="ROLE_PATNER">
+          <label class="form-check-label" for="PATNER">파트너</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="ROLE_ADMIN" value="ROLE_ADMIN">
-          <label class="form-check-label" for="ADMIN">전문의</label>
+          <input class="form-check-input" type="radio" name="auth" id="DOCTOR" value="ROLE_DOCTOR">
+          <label class="form-check-label" for="DOCTOR">전문의</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="auth" id="USER" value="ROLE_USER">

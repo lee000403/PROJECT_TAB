@@ -105,7 +105,7 @@
         insert into selftest_result
         (MEMBERID, ST_QNA_CODE, ST_RESULT_CODE)
         values
-        ('jung96', #{ST_QNA_CODE}, 'SR_03' )
+        (#{MEMBERID}, #{ST_QNA_CODE}, 'SR_03' )
     </insert>
 
     <select id="select_selfTest" parameterType="Map" resultType="Map">
@@ -141,31 +141,31 @@
     <update id="self_testUpdateA" parameterType="Map">
         update selftest_result
         set ST_RESULT_CODE = 'SR_01'
-        where MEMBERID = 'jung96'
+        where MEMBERID = #{MEMBERID}
     </update>
 
     <update id="self_testUpdateB" parameterType="Map">
         update selftest_result
         set ST_RESULT_CODE = 'SR_02'
-        where MEMBERID = 'jung96'
+        where MEMBERID = #{MEMBERID}
     </update>
 
     <update id="self_testUpdateC" parameterType="Map">
         update selftest_result
         set ST_RESULT_CODE = 'SR_03'
-        where MEMBERID = 'jung96'
+        where MEMBERID = #{MEMBERID}
     </update>
 
     <select id="mypage_detail" parameterType="Map" resultType="Map">    
         SELECT * 
         FROM members
         where 1 = 1
-        and MEMBERID = #{MEMBERID}
+        and MEMBERID = #{username}
 	</select>
 
     <update id="mypage_update" parameterType="Map">
         update members
-        set ST_RESULT_CODE = 'SR_02'
+        set MEMBERNAME=#{name}, BIRTHDATE=#{birthdate} , PHONENUMBER=#{phone} , MEMBERADDRESS=#{address} , EMAIL=#{email} , INTRODUCTION=#{introduction}
         where MEMBERID = #{MEMBERID}
     </update>
 

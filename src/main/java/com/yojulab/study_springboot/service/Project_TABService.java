@@ -74,8 +74,9 @@ public class  Project_TABService {
     }
 
     // self_test insert 부분
-    public Object self_testInsert(Map dataMap) {
+    public Object self_testInsert(String useraname, Map dataMap) {
         String sqlMapId = "Project_TAB.insert_selfTest";
+        dataMap.put("MEMBERID", useraname);
         ArrayList arr = new ArrayList<>();
         arr = (ArrayList) this.select_selfTest(dataMap);
         Object result = null;
@@ -183,7 +184,7 @@ public class  Project_TABService {
 
     public Object mypage_detail(String username, Map dataMap) {
         String sqlMapId = "Project_TAB.mypage_detail";
-        dataMap.put("MEMBERID", username);
+        dataMap.put("username", username);
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
@@ -200,7 +201,7 @@ public class  Project_TABService {
         dataMap.put("MEMBERID", username);
 
         HashMap result = new HashMap<>();
-        result.put("updateCount", this.update(dataMap));
+        result.put("updateCount", this.mypage_update(dataMap));
 
         result.putAll((Map) this.mypage_detail(username, dataMap));
         return result;

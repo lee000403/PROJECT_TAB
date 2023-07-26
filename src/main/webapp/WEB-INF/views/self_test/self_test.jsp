@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,6 +151,7 @@
   </style>
 </head>
 <%@ include file="../mainbar/header.jsp" %>
+<sec:authentication property="principal" var="userDetailsBean" />
 <body>
   <div class="board_head">
     
@@ -295,7 +297,7 @@
 </div>
 <div class="btnboxC">
   <form action="" method="">
-  <button class="btn_red_normal" formaction="/TAB_PAGE/self_test_road" formmethod="" onclick="javascript:chkDepressive();">결과보기</button>
+  <button class="btn_red_normal" formaction="/TAB_PAGE/self_test_road/${userDetailsBean.username}" formmethod="" onclick="javascript:chkDepressive();">결과보기</button>
   <button class="btn_blue_normal" formaction="/TAB_PAGE/self_test" formmethod="" onclick="javascript:document.frmChkDepressive.reset();">다시하기</button>
   </form>
 </div>

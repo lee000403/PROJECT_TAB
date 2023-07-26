@@ -133,7 +133,7 @@
       </sec:authorize>
       <sec:authorize access="isAuthenticated()">
         <form>
-          <a href="/TAB_PAGE/main_page_after_login">
+          <a href="/TAB_PAGE/home_after">
             <img src="/images/mainlogo.png" alt="Logo">
           </a>
         </form>

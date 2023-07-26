@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,6 +108,7 @@
   </style>
 </head>
 <%@ include file="../mainbar/header.jsp" %>
+<sec:authentication property="principal" var="userDetailsBean" />
   <body>
     <div class="container">
       <div class="row">
@@ -128,8 +130,8 @@
         </div>
       </div>
       <div class="button-group">
-        <form action="" method="post">
-          <button formaction="/TAB_PAGE/self_test_delete" formmethod="">재검사 &gt;</button>
+        <form action="" method="">
+          <button formaction="/TAB_PAGE/self_test_delete/${userDetailsBean.username}" formmethod="">재검사 &gt;</button>
           <button formaction="/TAB_PAGE/community" formmethod="">궁금한점 물어보기 &gt;</button>
         </form>
       </div>

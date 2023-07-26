@@ -23,7 +23,13 @@ public class AuthsService {
 
     public Object insert(Map dataMap) {
         List authList = new ArrayList<>();
-        authList.add("ROLE_GUEST");  // default auth
+        if (dataMap.get("auth").equals("ROLE_DOCTOR")) {
+            authList.add("ROLE_GUEST");
+            authList.add("ROLE_PARTNER");
+            authList.add("ROLE_USER");
+        } else if (dataMap.get("auth").equals("ROLE_GUEST")) {
+            authList.add("ROLE_USER");
+        }
         authList.add(dataMap.get("auth"));  // choosed auth
         dataMap.put("authList", authList);
 

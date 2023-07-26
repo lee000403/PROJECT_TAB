@@ -26,7 +26,7 @@ public class SecurityConfiguration {
         httpSecurity.formLogin(login -> login.loginPage("/loginForm") // 로그인 페이지로 이동 시키는 것
                 .failureUrl("/loginForm?fail=true") // 로그인 실패하고 난 후 보내는 페이지랑 파라미터 설정
                 .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/TAB_PAGE/main_page_after_login")); // 그전에 실행했던 url을 기억해서 로그인을 하고나면 그 화면을 보내준다.
+                .defaultSuccessUrl("/TAB_PAGE/home_after/")); // 그전에 실행했던 url을 기억해서 로그인을 하고나면 그 화면을 보내준다.
         httpSecurity.logout(logout -> logout
                 .logoutSuccessUrl("/TAB_PAGE/home/")
                 .invalidateHttpSession(true)

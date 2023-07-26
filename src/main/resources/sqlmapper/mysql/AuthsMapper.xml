@@ -5,15 +5,15 @@
         SELECT auth_names.AUTH_NAME, auth_names.MEMBERID
         FROM auths
                 inner JOIN auth_names
-        ON auths.MEMBERID_USERS = auth_names.MEMBERID
-        AND auths.MEMBERID_USERS = #{USERNAME}
+        ON auths.MEMBER_ID_USERS = auth_names.MEMBERID
+        AND auths.MEMBER_ID_USERS = #{USERNAME}
         ;
         </select>
 
         <!-- 입력 -->
         <insert id="insert" parameterType="Map">
         insert into AUTHS 
-        (MEMBERID_USERS,MEMBERID_AUTH_NAMES)
+        (MEMBER_ID_USERS,MEMBER_ID_AUTH_NAMES)
         values
         <foreach item="auth" collection="authList"
             separator="," nullable="true">

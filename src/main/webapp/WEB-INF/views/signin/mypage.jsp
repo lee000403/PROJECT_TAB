@@ -127,14 +127,23 @@
       </div>
       <div class="form-group">
         <label for="name">이름:</label>
-        <input type="text" class="form-control" id="name" value="<%=result.get("MEMBERNAME") %>">
+        <input type="text" class="form-control" id="name" name="name" value="<%=result.get("MEMBERNAME") %>">
+      </div>
+        <% String auth = (String) result.get("MEMBERTYPE_ID");%>
+      <div class="form-group">
+        <label for="user-type">회원 타입:</label>
+        <br>
+        <label><input type="radio" name="user-type" value="type1" <%= auth.equals("ROLE_USER") ? "checked=\"checked\"" : "" %>> 환자</label>
+        <label><input type="radio" name="user-type" value="type2" <%= auth.equals("ROLE_GUEST") ? "checked=\"checked\"" : "" %>> 가족</label>
+        <label><input type="radio" name="user-type" value="type3" <%= auth.equals("ROLE_PARTNER") ? "checked=\"checked\"" : "" %>> 파트너</label>
+        <label><input type="radio" name="user-type" value="type4" <%= auth.equals("ROLE_DOCTOR") ? "checked=\"checked\"" : "" %>> 전문의</label>
       </div>
       <div class="form-group">
         <label for="gender">성별:</label>
         <br>
         <% String g = (String)result.get("GENDER_ID"); %>
-        <label><input type="radio" name="gender" value="male" <%= g.equals("G_01") ? "checked=\"checked\"" : "" %>> 남성</label>
-        <label><input type="radio" name="gender" value="female" <%= g.equals("G_02") ? "checked=\"checked\"" : "" %>> 여성</label>
+        <label><input type="radio" name="gender" value="G_01" <%= g.equals("G_01") ? "checked=\"checked\"" : "" %>> 남성</label>
+        <label><input type="radio" name="gender" value="G_02" <%= g.equals("G_02") ? "checked=\"checked\"" : "" %>> 여성</label>
       </div>
       <div class="form-group">
         <label for="birthdate">생년월일:</label>

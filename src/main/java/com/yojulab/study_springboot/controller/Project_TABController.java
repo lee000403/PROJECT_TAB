@@ -34,6 +34,19 @@ public class Project_TABController {
         return modelAndView;
     }
 
+    @RequestMapping(value = { "/home_after", "/home_after/" }, method = { RequestMethod.GET,
+            RequestMethod.POST })
+    public ModelAndView mainPage_after(@PathVariable(required = false) String currentPage, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.selectSearchWithPagination(currentPage,
+        params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/main_page/main_page_after_login.jsp");
+        return modelAndView;
+    }
+
     @RequestMapping(value = { "/search_page/{currentPage}", "/search_page/" }, method = { RequestMethod.GET,
             RequestMethod.POST })
     public ModelAndView search_page(@PathVariable(required = false) String currentPage, @RequestParam Map params,
@@ -133,9 +146,9 @@ public class Project_TABController {
     }
 
     // self_test (경로 설정)
-    @GetMapping("/self_test_road")
-    public ModelAndView self_test_road(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = project_TABService.self_testInsert(params);
+    @GetMapping("/self_test_road/{username}")
+    public ModelAndView self_test_road(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.self_testInsert(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 

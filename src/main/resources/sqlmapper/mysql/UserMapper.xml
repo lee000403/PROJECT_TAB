@@ -11,7 +11,7 @@
         <insert id="insert" parameterType="Map">
         INSERT INTO MEMBERS (PHOTO, MEMBERTYPE_ID, MEMBERID, MEMBERPW, MEMBERNAME, GENDER_ID, BIRTHDATE, PHONENUMBER, MEMBERADDRESS, EMAIL, INTRODUCTION)
         VALUES
-        ('png', 'M_03', #{USERNAME}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, 'null')
+        ('png', #{auth}, #{USERNAME}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, 'null')
         ;
         </insert>
 
