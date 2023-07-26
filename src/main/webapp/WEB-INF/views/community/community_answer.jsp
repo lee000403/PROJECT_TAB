@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
-
+<sec:authentication property="principal" var="userDetailsBean" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,9 +156,26 @@
                 </div>
 
                 <div class="row mt-4 btn-group">
-                    <button type="submit" class="btn btn-edit">수정</button>
-                    <button type="submit" class="btn btn-delete">삭제</button>
-                    <button type="submit" class="btn btn-list">목록</button>
+                    <sec:authorize access="hasAnyRole('ROLE_DOCTOR')">
+                    <form action="">
+                        <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' class="btn btn-edit">수정</button>
+                        <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' class="btn btn-delete">삭제</button>
+                        <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                    </form>
+                    </sec:authorize>
+                    <% String member =  (String)result.get("MEMBERID"); %>
+                    <% String userId = (String)params.get("userId"); %>
+                    <% if (userId.equals(member)) { %>
+                        <form action="">
+                            <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' class="btn btn-edit">수정</button>
+                            <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' class="btn btn-delete">삭제</button>
+                            <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                        </form>
+                    <% } else { %>
+                        <form action="">
+                            <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                        </form>
+                    <% } %>
                 </div>
             </div>
         </form>

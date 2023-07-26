@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.HashMap, java.util.ArrayList, com.yojulab.study_springboot.utills.Paginations" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.yojulab.study_springboot.utills.Paginations, com.yojulab.study_springboot.utills.CommonUUID" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +155,7 @@
             <form action="/TAB_PAGE/self_test" method="">
               <sec:authorize access="isAnonymous()">
                 <li class="nav-item nav-button">
-                  <a class="nav-link" href="/loginForm">자가진단</a>
+                  <a class="nav-link" href="/TAB_PAGE/self_test_no">자가진단</a>
                 </li>
               </sec:authorize>
               <sec:authorize access="isAuthenticated()">

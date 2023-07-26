@@ -114,20 +114,22 @@
         <div class="row mt-4">
             <div class="col-md-6 offset-md-3">
                 <form>
+                    <% HashMap params=(HashMap)request.getAttribute("params");
+                    HashMap result=(HashMap)request.getAttribute("result"); %>
                     <div class="form-group">
                         <label for="name">작성자명</label>
                         <input type="text" class="form-control" id="name" name="name" maxlength="30" placeholder="작성자" value="${userDetailsBean.memberName}">
                     </div>
                         <div class="form-group">
                         <label for="title">제목</label>
-                        <input type="text" class="form-control" id="title" name="POST_TITLE" maxlength="30" placeholder="제목을 입력해주세요">
+                        <input type="text" class="form-control" id="title" name="POST_TITLE" maxlength="30" placeholder="제목을 입력해주세요" value='<%=result.get("POST_TITLE")%>'>
                     </div>
                     <div class="form-group">
                         <label for="content">내용</label>
-                        <textarea class="form-control" id="content" name="POST_CONTENT" rows="5" placeholder="내용을 입력합니다"></textarea >
+                        <textarea class="form-control" id="content" name="POST_CONTENT" rows="5" placeholder="내용을 입력합니다"><%=result.get("POST_CONTENT")%></textarea >
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_update/params.get("POST_ID")' formmethod="">등록</button>
+                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_updateandSelect/<%=result.get("POST_ID")%>' formmethod="">등록</button>
                     </div>
                 </form>
             </div>

@@ -176,4 +176,45 @@
         (#{POST_TITLE}, now(), #{POST_CONTENT}, #{MEMBERID}, #{POST_ID})
     </insert>
 
+    <update id="community_update" parameterType="Map">
+        update community_post
+        set POST_CONTENT = #{POST_CONTENT}, POST_TITLE = #{POST_TITLE}, POST_DATE=now()
+        where POST_ID = #{POST_ID}
+    </update>
+
+    <delete id="community_delete" parameterType="Map">
+        delete from community_post
+        where POST_ID = #{POST_ID}
+    </delete>
+
+    <select id="selectSearchWithPagination_Community" parameterType="Map" resultType="Map">
+        SELECT *
+        FROM community_post
+        where 1 = 1 
+        <choose>
+            <when test="search == 'POST_TITLE'">
+            and POST_TITLE like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'MEMBERID'">
+            and MEMBERID like CONCAT('%', #{words}, '%')
+            </when>
+        </choose>
+        LIMIT #{pageBegin}, #{pageScale}
+        ;
+	</select>
+
+    <select id="selectTotal_Community" parameterType="Map" resultType="int">
+        SELECT count(*) as cnt
+        FROM community_post
+        where 1 = 1 
+        <choose>
+            <when test="search == 'POST_TITLE'">
+            and POST_TITLE like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'MEMBERID'">
+            and MEMBERID like CONCAT('%', #{words}, '%')
+            </when>
+        </choose>
+	</select>
+
 </mapper>

@@ -27,7 +27,7 @@ public class Project_TABController {
     public ModelAndView mainPage(@PathVariable(required = false) String currentPage, @RequestParam Map params,
             ModelAndView modelAndView) {
         Object result = project_TABService.selectSearchWithPagination(currentPage,
-        params);
+                params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -40,7 +40,7 @@ public class Project_TABController {
     public ModelAndView mainPage_after(@PathVariable(required = false) String currentPage, @RequestParam Map params,
             ModelAndView modelAndView) {
         Object result = project_TABService.selectSearchWithPagination(currentPage,
-        params);
+                params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -61,8 +61,22 @@ public class Project_TABController {
         return modelAndView;
     }
 
+    @RequestMapping(value = { "/search_community/{currentPage}", "/search_community/" }, method = { RequestMethod.GET,
+            RequestMethod.POST })
+    public ModelAndView search_community(@PathVariable(required = false) String currentPage, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.selectSearchWithPagination_Community(currentPage,
+                params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
+        return modelAndView;
+    }
+
     @GetMapping("/hospital_selectDetail/{UNIQUE_ID}/{currentPage}")
-    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID,@PathVariable String currentPage, @RequestParam Map params,
+    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID, @PathVariable String currentPage,
+            @RequestParam Map params,
             ModelAndView modelAndView) {
         Object result = project_TABService.hospital_selectDetail(UNIQUE_ID, currentPage, params);
         modelAndView.addObject("params", params);
@@ -129,7 +143,8 @@ public class Project_TABController {
     }
 
     @GetMapping("/self_test_delete/{username}")
-    public ModelAndView self_test_delete(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView self_test_delete(@PathVariable String username, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = project_TABService.self_test_delete(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -151,7 +166,8 @@ public class Project_TABController {
 
     // self_test (경로 설정)
     @GetMapping("/self_test_road/{username}")
-    public ModelAndView self_test_road(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView self_test_road(@PathVariable String username, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = project_TABService.self_testInsert(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -173,7 +189,7 @@ public class Project_TABController {
         Object result = project_TABService.select_community(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        
+
         modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
         return modelAndView;
     }
@@ -186,7 +202,8 @@ public class Project_TABController {
     }
 
     @GetMapping("/community_answer/{UNIQUE_ID}")
-    public ModelAndView community_answer(@PathVariable String UNIQUE_ID, @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView community_answer(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = project_TABService.community_answer(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -196,13 +213,46 @@ public class Project_TABController {
     }
 
     @GetMapping("/community_end/{username}")
-    public ModelAndView community_end(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView community_end(@PathVariable String username, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = project_TABService.community_end(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
+        modelAndView.setViewName("/WEB-INF/views/community/community_end.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/community_update/{POST_ID}")
+    public ModelAndView community_update(@PathVariable String POST_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.community_answer(POST_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/community/community_update.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/community_updateandSelect/{POST_ID}")
+    public ModelAndView community_updateandSelect(@PathVariable String POST_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.community_updateandSelect(POST_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/community/community_end.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/community_deleteandSelect/{POST_ID}")
+    public ModelAndView community_deleteandSelect(@PathVariable String POST_ID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.community_deleteandSelect(POST_ID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
         return modelAndView;
     }
 
@@ -245,7 +295,8 @@ public class Project_TABController {
     }
 
     @GetMapping("/mypage_update/{username}")
-    public ModelAndView mypage_update(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView mypage_update(@PathVariable String username, @RequestParam Map params,
+            ModelAndView modelAndView) {
         Object result = project_TABService.mypage_updateAndSelectSearch(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
@@ -292,10 +343,11 @@ public class Project_TABController {
     }
 
     // @GetMapping("/login_page")
-    // public ModelAndView login_page(@RequestParam Map params, ModelAndView modelAndView) {
+    // public ModelAndView login_page(@RequestParam Map params, ModelAndView
+    // modelAndView) {
 
-    //     modelAndView.setViewName("/WEB-INF/views/login/login_page.jsp");
-    //     return modelAndView;
+    // modelAndView.setViewName("/WEB-INF/views/login/login_page.jsp");
+    // return modelAndView;
     // }
 
     @GetMapping("/main_page_after_login")

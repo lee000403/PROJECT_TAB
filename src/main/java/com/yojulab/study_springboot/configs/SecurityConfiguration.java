@@ -19,7 +19,7 @@ public class SecurityConfiguration {
         httpSecurity.authorizeHttpRequests() // 로그인
                 // .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
                 // .requestMatchers("/admin*").hasRole("ADMIN")
-                .requestMatchers("/TAB_PAGE/self_test*").hasRole("M_01")
+                // .requestMatchers("/TAB_PAGE/self_test*").hasRole("M_01")
                 .requestMatchers("/TAB_PAGE/mypage").authenticated()
                 .requestMatchers("/TAB_PAGE/community*").authenticated() // 로그인한 대상지
                 .requestMatchers("/TAB_PAGE/home_after").authenticated()
