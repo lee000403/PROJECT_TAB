@@ -158,49 +158,52 @@
   </div>
   </form>
     
-    <div class="row justify-content-center">
-      <div class="col">
-        <a href="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+  <div class="row justify-content-center">
+    <div class="col">
+      <form action="https://www.youtube.com/watch?v=GBbHNUx3kvI" method="get">
+        <button type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
           <div class="image-container round-image">
             <img class="img-fluid" src="/images/img1_video_banner.png" alt="치매 인식 개선 영상">
           </div>
-        </a>
-      </div>
-      <div class="col">
-        <form action="/TAB_PAGE/self_test" method="">
-        <a href="/TAB_PAGE/self_test">
+        </button>
+      </form>
+    </div>
+  
+    <div class="col">
+      <form action="/TAB_PAGE/self_test" method="get">
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img2_self_test.png" alt="치매 자가 진단">
           </div>
-        </a>
-        </form>
-      </div>
-      <div class="col">
-        <form action="/TAB_PAGE/survey_a" method="">
-        <a href="/TAB_PAGE/survey_a">
+        </button>
+      </form>
+    </div>
+  
+    <div class="col">
+      <form action="/TAB_PAGE/survey_a" method="get">
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img3_partner_matching.png" alt="one-click 파트너 연결">
           </div>
-        </a>
-        </form>
-        <div>
-          <form action="/TAB_PAGE/survey_b">
-         </div>
-         </form>
-
-      </div>
-
-      <div class="col">
-        <form action="/TAB_PAGE/community" method="">
-        <a href="/TAB_PAGE/community">
+        </button>
+      </form>
+  
+      <form action="/TAB_PAGE/survey_b" method="get">
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_b">파트너 회원일 경우</button>
+      </form>
+    </div>
+  
+    <div class="col">
+      <form action="/TAB_PAGE/community" method="get">
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/community">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img4_community.png" alt="커뮤니티">
           </div>
-        </a>
-        </form>
-      </div>
-
+        </button>
+      </form>
     </div>
+  </div>
+  
 
   </div>
 

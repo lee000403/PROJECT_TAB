@@ -93,6 +93,16 @@ header {
 .btn-reply{
     background-color: #ff7f95;
 }
+
+  .btn-link {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: black; /* You can set the desired text color here */
+    text-decoration: none;
+    cursor: pointer;
+  }
 </style>
 </head>
 
@@ -119,7 +129,13 @@ header {
                     <tbody>
                         <tr>
                             <th scope="row"><%=i+1%></th>
-                            <td><a href="/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>"><%= record.get("POST_TITLE") %></a></td>
+                            <td>
+                                <form action="/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>" method="get">
+                                    <button style=" color:black; text-decoration: none;" type="submit" class="btn btn-link" formaction="/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>">
+                                        <%= record.get("POST_TITLE") %>
+                                    </button>
+                                </form>
+                            </td>                                                     
                             <td><%= record.get("MEMBERID") %></td>
                             <td><%= record.get("POST_DATE") %></td>
                         </tr>
