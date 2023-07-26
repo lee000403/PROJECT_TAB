@@ -155,10 +155,17 @@
                 <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/search_page/">센터검색</button>
               </li>
             </form>
-            <form action="/TAB_PAGE/self_test" method="get">
+            <form action="/TAB_PAGE/self_test" method="">
+              <sec:authorize access="isAnonymous()">
+                <li class="nav-item nav-button">
+                  <a class="nav-link" href="/loginForm">자가진단</a>
+                </li>
+              </sec:authorize>
+              <sec:authorize access="isAuthenticated()">
               <li class="nav-item nav-button">
                 <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test">자가진단</button>
               </li>
+            </sec:authorize>
             </form>
             <form action="/TAB_PAGE/community" method="get">
               <li class="nav-item nav-button">

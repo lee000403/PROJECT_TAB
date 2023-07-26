@@ -97,7 +97,7 @@ public class  Project_TABService {
             this.self_testUpdateC(dataMap);
         }
 
-        result = this.select_selfTest_sum(dataMap);
+        result = this.select_selfTest_sum(useraname, dataMap);
         return result;
     }
 
@@ -122,8 +122,9 @@ public class  Project_TABService {
         return result;
     }
 
-    public Object select_selfTest_sum(Map dataMap) {
+    public Object select_selfTest_sum(String username, Map dataMap) {
         String sqlMapId = "Project_TAB.select_selfTest_sum";
+        dataMap.put("MEMBERID", username);
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
@@ -159,8 +160,9 @@ public class  Project_TABService {
         return result;
     }
 
-    public Object self_test_delete(Map dataMap) {
+    public Object self_test_delete(String username, Map dataMap) {
         String sqlMapId = "Project_TAB.self_test_delete";
+        dataMap.put("MEMBERID", username);
 
         Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
@@ -177,6 +179,17 @@ public class  Project_TABService {
     public Object community_answer(String POST_ID, Map dataMap) {
         String sqlMapId = "Project_TAB.community_answer";
         dataMap.put("POST_ID", POST_ID);
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object community_end(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.community_end";
+        dataMap.put("MEMBERID", username);
+        String UUID = commonUUID.Commons();
+        dataMap.put("POST_ID", UUID);
+
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;

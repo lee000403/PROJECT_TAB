@@ -19,9 +19,10 @@ public class SecurityConfiguration {
         httpSecurity.authorizeHttpRequests() // 로그인
                 // .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
                 // .requestMatchers("/admin*").hasRole("ADMIN")
+                .requestMatchers("/TAB_PAGE/self_test*").hasRole("M_01")
                 .requestMatchers("/TAB_PAGE/mypage").authenticated()
                 .requestMatchers("/TAB_PAGE/community*").authenticated() // 로그인한 대상지
-                .requestMatchers("/TAB_PAGE/main_page_after_login").authenticated()
+                .requestMatchers("/TAB_PAGE/home_after").authenticated()
                 .anyRequest().permitAll(); // 그 외 전체 대상
         httpSecurity.formLogin(login -> login.loginPage("/loginForm") // 로그인 페이지로 이동 시키는 것
                 .failureUrl("/loginForm?fail=true") // 로그인 실패하고 난 후 보내는 페이지랑 파라미터 설정
