@@ -178,7 +178,6 @@
                         </select>
                         <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                           class="form-control" placeholder="Search..." id="keydownEnter">
-
                         <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_page/'
                           formmethod="get">검색</button>
                       </form>
@@ -197,7 +196,7 @@
                   <th>상세보기</th>
                 </tr>
               </thead>
-
+              <% Paginations paginations=(Paginations)result.get("paginations"); %>
               <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
                 HashMap record=(HashMap)resultList.get(i); %>
                 <tbody>
@@ -216,7 +215,7 @@
                     <td>
                       <form action="">
                         <button type="submit"
-                          formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID") %>'
+                          formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID")%>/<%=paginations.getCurrentPage()%>'
                           formmethod="">상세</button>
                       </form>
                     </td>
@@ -225,26 +224,23 @@
                 </tbody>
                 <% } %>
             </table>
-            <% Paginations paginations=(Paginations)result.get("paginations"); %>
-              <% if (params.get("words")==null) { %>
-                <nav aria-label="Page navigation">
-                  <ul class="pagination">
-                    <li class="page-item"><a class="page-link"
-                        href="/TAB_PAGE/search_page/<%= paginations.getPreviousPage() %>">Previous</a></li>
-
-                    <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+            
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link"
+                      href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a></li>
+                  <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+                    <li class="page-item">
+                      <a class="page-link" href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                        <%= i %>
+                      </a>
+                    </li>
+                    <% } %>
                       <li class="page-item">
-                        <a class="page-link" href="/TAB_PAGE/search_page/<%= i %>">
-                          <%= i %>
-                        </a>
+                        <a class="page-link" href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
                       </li>
-                      <% } %>
-                        <li class="page-item">
-                          <a class="page-link" href="/TAB_PAGE/search_page/<%= paginations.getNextPage() %>">Next</a>
-                        </li>
-                  </ul>
-                </nav>
-                <% } %>
+                </ul>
+              </nav>
                   </div>
         </body>
 

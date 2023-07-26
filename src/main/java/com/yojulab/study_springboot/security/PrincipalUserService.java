@@ -26,7 +26,6 @@ public class PrincipalUserService implements UserDetailsService{
 
         // session 등록
         PrincipalUser principalUser = new PrincipalUser(resultMap);
-        
 
         return principalUser;
     }

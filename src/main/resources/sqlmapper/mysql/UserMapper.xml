@@ -3,16 +3,15 @@
 <mapper namespace="Users">
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
-        FROM members
-        where UNIQUE_ID = #{MEMBERID}
+        FROM MEMBERS
+        where MEMBERID = #{USERNAME}
 	</select>
 
     <!-- 입력 -->
         <insert id="insert" parameterType="Map">
-        INSERT INTO members 
-        (PHOTO, MEMBERTYPE_ID, MEMBERID, MEMBERPW, MEMBERNAME, GENDER_ID, BIRTHDATE, PHONENUMBER, MEMBERADDRESS, EMAIL, INTRODUCTION)
+        INSERT INTO MEMBERS (PHOTO, MEMBERTYPE_ID, MEMBERID, MEMBERPW, MEMBERNAME, GENDER_ID, BIRTHDATE, PHONENUMBER, MEMBERADDRESS, EMAIL, INTRODUCTION)
         VALUES
-        (#{PHOTO}, "M_01", #{MEMBERID}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, #{INTRODUCTION});
+        ('png', 'M_03', #{USERNAME}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, 'null')
         ;
         </insert>
 

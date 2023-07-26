@@ -159,6 +159,7 @@
           <% HashMap params=(HashMap)request.getAttribute("params"); String
             searchStr=(String)params.getOrDefault("search", "" ); HashMap
             result=(HashMap)request.getAttribute("result"); %>
+            <% Paginations paginations=(Paginations)result.get("paginations"); %>
             <div class="container">
               <div>
                 <h2>🏥 치매시설정보</h2>
@@ -216,6 +217,9 @@
                 </tbody>
                 <% } %>
             </table>
+            <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>'>
+              <button>뒤로가기</button>
+            </form>
         </body>
 
         <%@ include file="../mainbar/footer.jsp" %>

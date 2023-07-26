@@ -29,17 +29,19 @@ public class UsersService {
     // 회원 가입
     public Object insert(Map dataMap) {
         // password 암호화
-        String password = (String) dataMap.get("MEMBERPW");
-        dataMap.put("MEMBERPW", bCryptPasswordEncoder.encode(password));
-        dataMap.put("PHOTO", "png");
+        String password = (String) dataMap.get("password");
+        dataMap.put("MEMBERPW",bCryptPasswordEncoder.encode(password));
+
+        dataMap.put("USERNAME", dataMap.get("username"));
 
         String sqlMapId = "Users.insert";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 
-    public Object insertWithAuths(Map dataMap) {
+    public Object insertWithAuths(Map dataMap){
         Object result = this.insert(dataMap);
+        result = authsService.insert(dataMap);
         return result;
     }
 

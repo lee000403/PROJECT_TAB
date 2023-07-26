@@ -90,12 +90,12 @@
     <form>
       <div class="form-group">
         <label for="username">아이디:</label>
-        <input type="text" class="form-control" id="MEMBERID" name="MEMBERID" required>
+        <input type="text" class="form-control" id="username" name="username" required>
       </div>
 
       <div class="form-group">
         <label for="password">비밀번호:</label>
-        <input type="password" class="form-control" id="MEMBERPW" name="MEMBERPW" required>
+        <input type="password" class="form-control" id="password" name="password" required>
       </div>
 
       <div class="form-group">
@@ -131,8 +131,25 @@
         <label for="email">이메일 주소:</label>
         <input type="email" class="form-control" id="EMAIL" name="EMAIL" required>
       </div>
+      <label for="auth" class="sr-only">Auth</label>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="auth" id="SYSTEM_MANAGER" value="ROLE_MANAGER">
+          <label class="form-check-label" for="SYSTEM_MANAGER">파트너</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="auth" id="ROLE_ADMIN" value="ROLE_ADMIN">
+          <label class="form-check-label" for="ADMIN">전문의</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="auth" id="USER" value="ROLE_USER">
+          <label class="form-check-label" for="USER">본인</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="auth" id="FAMILY" value="ROLE_FAMILY">
+          <label class="form-check-label" for="FAMILY">가족</label>
+        </div>
 <div class="float-right">
-      <button type="submit" class="btn btn-danger " formaction="/TAB_PAGE/loginenter" formmethod="post">회원가입</button>
+      <button type="submit" class="btn btn-danger " formaction="/joinProc" formmethod="post">회원가입</button>
     </div>
     </form>
   </div>

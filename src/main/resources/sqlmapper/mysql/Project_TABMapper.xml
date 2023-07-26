@@ -90,7 +90,15 @@
     <select id="selectTotal" parameterType="Map" resultType="int">
         SELECT count(*) as cnt
         FROM centers
-        ;
+        where 1 = 1 
+        <choose>
+            <when test="search == 'CENTER_NAME'">
+            and CENTER_NAME like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'CENTER_ADD'">
+            and CENTER_ADD like CONCAT('%', #{words}, '%')
+            </when>
+        </choose>
 	</select>
 
     <insert id="insert_selfTest" parameterType="Map">
@@ -146,6 +154,19 @@
         update selftest_result
         set ST_RESULT_CODE = 'SR_03'
         where MEMBERID = 'jung96'
+    </update>
+
+    <select id="mypage_detail" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM members
+        where 1 = 1
+        and MEMBERID = #{MEMBERID}
+	</select>
+
+    <update id="mypage_update" parameterType="Map">
+        update members
+        set ST_RESULT_CODE = 'SR_02'
+        where MEMBERID = #{MEMBERID}
     </update>
 
 </mapper>

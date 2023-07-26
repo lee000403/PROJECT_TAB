@@ -122,14 +122,14 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title text-center">회원 로그인</h5>
-        <form action="/TAB_PAGE/main_page_after_login">
+        <form action="/login" method="post">
           <div class="mb-3">
             <label for="username" class="form-label">아이디</label>
-            <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요">
+            <input type="text" class="form-control" id="username" name="username" placeholder="아이디를 입력하세요">
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">패스워드</label>
-            <input type="password" class="form-control" id="password" placeholder="패스워드를 입력하세요">
+            <input type="password" class="form-control" id="password" name="password" placeholder="패스워드를 입력하세요">
           </div>
           <div class="d-grid gap-2">
             <button type="submit" class="btn" style="background-color:  #ff7f95; font-weight: 530;" >Log in</button>

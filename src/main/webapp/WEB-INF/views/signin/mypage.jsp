@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.yojulab.study_springboot.utills.Paginations" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,63 +114,49 @@
 </head>
 <body>
   <%@ include file="../mainbar/header.jsp" %>
+  <% HashMap params=(HashMap)request.getAttribute("params"); String
+  searchStr=(String)params.getOrDefault("search", "" ); HashMap
+  result=(HashMap)request.getAttribute("result"); %>
+  <sec:authentication property="principal" var="userDetailsBean" />
   <div class="container">
     <h1>마이페이지</h1>
     <form>
       <div class="form-group">
-        <label for="profile-image">회원 사진:</label>
-        <br>
-        <input type="file" id="profile-image">
-        <br>
-        <img id="preview-image" src="https://via.placeholder.com/200" alt="프로필 사진 미리보기">
-      </div>
-      <div class="form-group">
-        <label for="user-type">회원 타입:</label>
-        <br>
-        <label><input type="radio" name="user-type" value="type1"> 환자</label>
-        <label><input type="radio" name="user-type" value="type2" checked="checked"> 가족</label>
-        <label><input type="radio" name="user-type" value="type3"> 파트너</label>
-        <label><input type="radio" name="user-type" value="type4"> 전문의</label>
-      </div>
-      <div class="form-group">
         <label for="username">아이디:</label>
-        <input type="text" class="form-control" id="username" value="example_user" readonly>
-      </div>
-      <div class="form-group">
-        <label for="password">비밀번호:</label>
-        <input type="password" class="form-control" id="password" value="123456789@">
+        <input type="text" class="form-control" id="username" value="<%=result.get("MEMBERID") %>" readonly>
       </div>
       <div class="form-group">
         <label for="name">이름:</label>
-        <input type="text" class="form-control" id="name" value="홍길동">
+        <input type="text" class="form-control" id="name" value="<%=result.get("MEMBERNAME") %>">
       </div>
       <div class="form-group">
         <label for="gender">성별:</label>
         <br>
-        <label><input type="radio" name="gender" value="male"> 남성</label>
-        <label><input type="radio" name="gender" value="female" checked="checked"> 여성</label>
+        <% String g = (String)result.get("GENDER_ID"); %>
+        <label><input type="radio" name="gender" value="male" <%= g.equals("G_01") ? "checked=\"checked\"" : "" %>> 남성</label>
+        <label><input type="radio" name="gender" value="female" <%= g.equals("G_02") ? "checked=\"checked\"" : "" %>> 여성</label>
       </div>
       <div class="form-group">
         <label for="birthdate">생년월일:</label>
-        <input type="date" class="form-control" id="birthdate" value="1990-01-01">
+        <input type="date" class="form-control" id="birthdate" name="birthdate" value='<%=result.get("BIRTHDATE") %>'>
       </div>
       <div class="form-group">
         <label for="phone">전화번호:</label>
-        <input type="tel" class="form-control" id="phone" value="010-1234-5678">
+        <input type="tel" class="form-control" id="phone" name="phone" value="<%=result.get("PHONENUMBER") %>">
       </div>
       <div class="form-group">
         <label for="address">주소:</label>
-        <input type="text" class="form-control" id="address" value="서울시 강남구">
+        <input type="text" class="form-control" id="address" name="address" value="<%=result.get("MEMBERADDRESS") %>">
       </div>
       <div class="form-group">
         <label for="email">이메일 주소:</label>
-        <input type="email" class="form-control" id="email" value="example@example.com">
+        <input type="email" class="form-control" id="email" name="email" value="<%=result.get("EMAIL") %>">
       </div>
       <div class="form-group">
         <label for="introduction">자기소개:</label>
-        <textarea class="form-control" id="introduction">안녕하세요! 저는 예시 회원입니다.</textarea>
+        <textarea class="form-control" id="introduction" name="introduction"><%=result.get("INTRODUCTION")%></textarea>
       </div>
-      <button type="submit" class="btn btn-primary btn-block">수정하기</button>
+      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" class="btn btn-primary btn-block">수정하기</button>
     </form>
   </div>
 </body>

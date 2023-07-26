@@ -303,4 +303,23 @@
 </div>
 </body>
 <%@ include file="../mainbar/footer.jsp" %>
+<script>
+  function chkDepressive() {
+    var radios = document.querySelectorAll('input[type="radio"]:checked');
+      if (radios.length !== 15) {
+        alert('모든 항목에 답변을 선택해주세요.');
+        return false; // 폼이 제출되지 않고 화면이 유지됨
+      }
+      // 폼의 formaction 속성을 동적으로 설정하여 결과 페이지로 이동
+      var form = document.querySelector('form[name="frmChkDepressive"]');
+      form.setAttribute('action', '/TAB_PAGE/self_test_road_result');
+      return true; // 폼이 정상적으로 제출됨
+    }
+
+    // 폼에 onsubmit 이벤트 핸들러를 추가하여 폼이 제출될 때 chkDepressive 함수 실행
+    var form = document.querySelector('form[name="frmChkDepressive"]');
+    form.onsubmit = function() {
+      return chkDepressive();
+  }
+</script>
 </html>

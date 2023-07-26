@@ -25,10 +25,10 @@ public class Project_TABController {
             RequestMethod.POST })
     public ModelAndView mainPage(@PathVariable(required = false) String currentPage, @RequestParam Map params,
             ModelAndView modelAndView) {
-        // Object result = project_TABService.selectSearchWithPagination(currentPage,
-        // params);
-        // modelAndView.addObject("params", params);
-        // modelAndView.addObject("result", result);
+        Object result = project_TABService.selectSearchWithPagination(currentPage,
+        params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/main_page/main_page.jsp");
         return modelAndView;
@@ -47,10 +47,10 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/hospital_selectDetail/{UNIQUE_ID}")
-    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID, @RequestParam Map params,
+    @GetMapping("/hospital_selectDetail/{UNIQUE_ID}/{currentPage}")
+    public ModelAndView selectDetail(@PathVariable String UNIQUE_ID,@PathVariable String currentPage, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = project_TABService.hospital_selectDetail(UNIQUE_ID, params);
+        Object result = project_TABService.hospital_selectDetail(UNIQUE_ID, currentPage, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -213,8 +213,21 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/mypage")
-    public ModelAndView mypage(@RequestParam Map params, ModelAndView modelAndView) {
+    @GetMapping("/mypage/{username}")
+    public ModelAndView mypage(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.mypage_detail(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/signin/mypage.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/mypage_update/{username}")
+    public ModelAndView mypage_update(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.mypage_updateAndSelectSearch(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/signin/mypage.jsp");
         return modelAndView;
@@ -257,12 +270,12 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @GetMapping("/login_page")
-    public ModelAndView login_page(@RequestParam Map params, ModelAndView modelAndView) {
+    // @GetMapping("/login_page")
+    // public ModelAndView login_page(@RequestParam Map params, ModelAndView modelAndView) {
 
-        modelAndView.setViewName("/WEB-INF/views/login/login_page.jsp");
-        return modelAndView;
-    }
+    //     modelAndView.setViewName("/WEB-INF/views/login/login_page.jsp");
+    //     return modelAndView;
+    // }
 
     @GetMapping("/main_page_after_login")
     public ModelAndView main_page_after_login(@RequestParam Map params, ModelAndView modelAndView) {

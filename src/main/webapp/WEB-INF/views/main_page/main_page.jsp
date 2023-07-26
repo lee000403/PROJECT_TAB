@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.yojulab.study_springboot.utills.Paginations" %>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -126,7 +127,9 @@
         </div>
       </div>
     </div>
-
+    <% HashMap params=(HashMap)request.getAttribute("params"); String
+    searchStr=(String)params.getOrDefault("search", "" ); HashMap
+    result=(HashMap)request.getAttribute("result"); %>
     <div>
       <form action="" method="post">
         <div class="container mb-2 text-center">
@@ -135,9 +138,17 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="input-group mb-5">
-              <input type="text" class="form-control" placeholder="Search" name="search_text">
-              <button class="btn" style="background-color: #ff7f95;" type="submit" formaction=""
-                formmethod="post">Search</button>
+              <select class="form-select" name="search">
+                <option>Select an option...</option>
+                <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
+                </option>
+                <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
+                  >주소</option>
+              </select>
+              <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
+              class="form-control" placeholder="Search..." id="keydownEnter">
+              <button class="btn" style="background-color: #ff7f95;" type="submit" formaction="/TAB_PAGE/search_page/"
+                formmethod="">Search</button>
             </div>
           </div>
         </div>

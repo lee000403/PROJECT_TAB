@@ -16,13 +16,17 @@ public class PrincipalUser implements UserDetails {
         this.userInfo = userInfo;
     }
 
+    public String getMemberName() {
+        return (String) userInfo.get("MEMBERNAME");
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() { // 권한들에 대한 리스트를 가져온다.
         // 권한들
         Collection<GrantedAuthority> collections = new ArrayList<>();
         List<Map<String, Object>> resultList = (List) userInfo.get("resultList");
         for (Map item : resultList) {
-            collections.add(new SimpleGrantedAuthority((String) item.get("UNIQUE_ID")));
+            collections.add(new SimpleGrantedAuthority((String) item.get("MEMBERID")));
         }
         return collections;
     }
@@ -30,13 +34,13 @@ public class PrincipalUser implements UserDetails {
     @Override
     public String getPassword() {
         // password
-        return (String) userInfo.get("PASSWORD");
+        return (String) userInfo.get("MEMBERPW");
     }
 
     @Override
     public String getUsername() {
         // login ID
-        return (String) userInfo.get("UNIQUE_ID");
+        return (String) userInfo.get("MEMBERID");
     }
 
     @Override
@@ -62,4 +66,5 @@ public class PrincipalUser implements UserDetails {
         // 휴먼 계정 여부
         return true;
     }
+
 }

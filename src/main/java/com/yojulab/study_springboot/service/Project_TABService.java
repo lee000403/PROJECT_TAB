@@ -5,16 +5,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.yojulab.study_springboot.dao.SharedDao;
+import com.yojulab.study_springboot.security.PrincipalUser;
 import com.yojulab.study_springboot.utills.CommonUUID;
 import com.yojulab.study_springboot.utills.Paginations;
 
 @Service
 @Transactional
-public class Project_TABService {
+public class  Project_TABService {
     @Autowired
     SharedDao sharedDao;
 
@@ -28,10 +30,11 @@ public class Project_TABService {
         return result;
     }
 
-    public Object hospital_selectDetail(String CENTER_TYPE_ID, Map dataMap) {
+    public Object hospital_selectDetail(String CENTER_TYPE_ID, String currentPage, Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Project_TAB.selectByInUID";
         dataMap.put("CENTER_TYPE_ID", CENTER_TYPE_ID);
+        dataMap.put("currentPage", currentPage);
 
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
@@ -41,7 +44,7 @@ public class Project_TABService {
     public Object selectSearchWithPagination(String page, Map dataMap) {
         int totalCount = 0;
         totalCount = (int) this.selectTotal(dataMap);
-
+        page = (String) dataMap.get("currentPage");
         int currentPage = 1;
         if (page != null) {
             currentPage = Integer.parseInt((String) page); // from client in param
@@ -53,6 +56,10 @@ public class Project_TABService {
         String sqlMapId = "Project_TAB.selectSearchWithPagination";
         dataMap.put("pageScale", paginations.getPageScale());
         dataMap.put("pageBegin", paginations.getPageBegin());
+
+        if (dataMap.get("words") == null) {
+            dataMap.put("words", "");
+        }
 
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보
         return result;
@@ -171,6 +178,31 @@ public class Project_TABService {
         dataMap.put("POST_ID", POST_ID);
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object mypage_detail(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.mypage_detail";
+        dataMap.put("MEMBERID", username);
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object mypage_update(Map dataMap) {
+        String sqlMapId = "Project_TAB.mypage_update";
+
+        Object result = sharedDao.update(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object mypage_updateAndSelectSearch(String username, Map dataMap) {
+        dataMap.put("MEMBERID", username);
+
+        HashMap result = new HashMap<>();
+        result.put("updateCount", this.update(dataMap));
+
+        result.putAll((Map) this.mypage_detail(username, dataMap));
         return result;
     }
 

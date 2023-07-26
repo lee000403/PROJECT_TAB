@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.yojulab.study_springboot.utills.Paginations" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -83,35 +85,59 @@
 
 
   </head>
-
   <header>
+    <sec:authentication property="principal" var="userDetailsBean" />
     <nav>
       <div style="background-color: rgb(255, 255, 255);">
         <ul class="h-navbar flex-row">
           <li class="h-nav-item">
             치매파트너와의 연결 그리고 동행
           </li>
-          <form action="/TAB_PAGE/signin_select_page" method="">
+          <sec:authorize access="isAnonymous()">
+          <form>
             <li class="nav-item">
-              <a class="nav-link" href="/TAB_PAGE/signin_select_page">회원가입</a>
+              <a class="nav-link" href="/joinForm">회원가입</a>
             </li>
           </form>
-          <form action="/TAB_PAGE/login_page" method="">
+          <form >
             <li class="nav-item">
-              <a class="nav-link" href="/TAB_PAGE/login_page">로그인</a>
+              <a class="nav-link" href="/loginForm">로그인</a>
             </li>
           </form>
+        </sec:authorize>
+        <sec:authorize access="isAuthenticated()">
+          id : ${userDetailsBean.username}
+          <form>
+            <li class="nav-item">
+              <a class="nav-link" href='/TAB_PAGE/mypage/${userDetailsBean.username}'>마이 페이지</a>
+            </li>
+          </form>
+          <form >
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">로그아웃</a>
+            </li>
+          </form>
+        </sec:authorize>
         </ul>
       </div>
     </nav>
 
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
+        <sec:authorize access="isAnonymous()">
         <form action="/TAB_PAGE/home/" method="">
           <a href="/TAB_PAGE/home/">
             <img src="/images/mainlogo.png" alt="Logo">
           </a>
         </form>
+      </sec:authorize>
+      <sec:authorize access="isAuthenticated()">
+        <form>
+          <a href="/TAB_PAGE/main_page_after_login">
+            <img src="/images/mainlogo.png" alt="Logo">
+          </a>
+        </form>
+      </sec:authorize>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <form action="/TAB_PAGE/survey_a" method="">
