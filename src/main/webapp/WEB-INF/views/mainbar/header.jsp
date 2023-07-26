@@ -93,7 +93,6 @@
             치매파트너와의 연결 그리고 동행
           </li>
           <sec:authorize access="isAnonymous()">
-            <sec:authorize access="!isAuthenticated()">
               <form action="/joinForm" method="get">
                 <li class="nav-item">
                   <button type="submit" class="btn btn-link" formaction="/joinForm">회원가입</button>
@@ -121,8 +120,6 @@
                 </li>
               </form>
             </sec:authorize>
-
-          </sec:authorize>
         </ul>
       </div>
     </nav>
@@ -138,7 +135,7 @@
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
           <form>
-            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home_after">
+            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home_after/">
               <img src="/images/mainlogo.png" alt="Logo">
             </button>
           </form>
@@ -163,7 +160,7 @@
               </sec:authorize>
               <sec:authorize access="isAuthenticated()">
               <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test">자가진단</button>
+                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test/${userDetailsBean.username}">자가진단</button>
               </li>
             </sec:authorize>
             </form>

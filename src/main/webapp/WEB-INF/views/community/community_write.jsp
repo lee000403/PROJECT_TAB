@@ -116,7 +116,7 @@
                 <form>
                     <div class="form-group">
                         <label for="name">작성자명</label>
-                        <input type="text" class="form-control" id="name" name="name" maxlength="30" placeholder="작성자" value="${userDetailsBean.name}">
+                        <input type="text" class="form-control" id="name" name="name" maxlength="30" placeholder="작성자" value="${userDetailsBean.memberName}">
                     </div>
                         <div class="form-group">
                         <label for="title">제목</label>

@@ -109,22 +109,24 @@
     </head>
 
     <body>
-        <form action="">
-            <%@ include file="../mainbar/header.jsp" %>
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="popupModalLabel">Thank You!</h5>
+        <%@ include file="../mainbar/header.jsp" %>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="popupModalLabel">Thank You!</h5>
+                        <form action="">
                             <button class="close" formaction="/TAB_PAGE/community" formmethod="">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>게시글이 성공적으로 등록되었습니다.</p>
-                        </div>
-                        <button formaction="/TAB_PAGE/home/" formmethod="">메인화면</button>
+                        </form>
                     </div>
+                    <div class="modal-body">
+                        <p>게시글이 성공적으로 등록되었습니다.</p>
+                    </div>
+                    <form action="">
+                        <button formaction="/TAB_PAGE/home_after/" formmethod="">메인화면</button>
+                    </form>
                 </div>
-                </div>
-        </form>
+            </div>
+            </div>
     </body>
     <%@ include file="../mainbar/footer.jsp" %>
 

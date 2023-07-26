@@ -191,7 +191,7 @@ public class  Project_TABService {
         dataMap.put("POST_ID", UUID);
 
 
-        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 

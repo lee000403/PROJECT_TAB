@@ -189,7 +189,7 @@
       </form>
   
       <form action="/TAB_PAGE/survey_b" method="get">
-        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_b">파트너 회원일 경우</button>
+        <button type="submit" class="btn btn-link" ></button>
       </form>
     </div>
   
