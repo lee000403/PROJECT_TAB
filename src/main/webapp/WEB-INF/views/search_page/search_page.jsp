@@ -225,25 +225,31 @@
                   <% } %>
             </table>
 
-            <nav aria-label="Page navigation">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link"
-                    href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a>
-                </li>
-                <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
                   <li class="page-item">
                     <a class="page-link"
-                      href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                      <%= i %>
+                      href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                      Previous
                     </a>
                   </li>
-                  <% } %>
+                  <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
                     <li class="page-item">
                       <a class="page-link"
-                        href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
+                        href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                        <%= i %>
+                      </a>
                     </li>
-              </ul>
-            </nav>
+                    <% } %>
+                      <li class="page-item">
+                        <a class="page-link"
+                          href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                          Next
+                        </a>
+                      </li>
+                </ul>
+              </nav>
             </div>
         </body>
 
