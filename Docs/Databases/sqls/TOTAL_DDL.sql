@@ -1,3 +1,4 @@
+use project_dementia;
 
 CREATE TABLE CENTER_TYPE
 (
