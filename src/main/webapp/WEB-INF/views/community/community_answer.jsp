@@ -158,22 +158,22 @@
                 <div class="row mt-4 btn-group">
                     <sec:authorize access="hasAnyRole('ROLE_DOCTOR')">
                     <form action="">
-                        <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' class="btn btn-edit">수정</button>
-                        <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' class="btn btn-delete">삭제</button>
-                        <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                        <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-edit">수정</button>
+                        <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-delete">삭제</button>
+                        <button type="submit" formaction="/TAB_PAGE//search_community/" formmethod="post" class="btn btn-list">목록</button>
                     </form>
                     </sec:authorize>
                     <% String member =  (String)result.get("MEMBERID"); %>
                     <% String userId = (String)params.get("userId"); %>
                     <% if (userId.equals(member)) { %>
                         <form action="">
-                            <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' class="btn btn-edit">수정</button>
-                            <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' class="btn btn-delete">삭제</button>
-                            <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                            <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-edit">수정</button>
+                            <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-delete">삭제</button>
+                            <button type="submit" formaction="/TAB_PAGE//search_community/" formmethod="post" class="btn btn-list">목록</button>
                         </form>
                     <% } else { %>
                         <form action="">
-                            <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-list">목록</button>
+                            <button type="submit" formaction="/TAB_PAGE//search_community/" formmethod="post" class="btn btn-list">목록</button>
                         </form>
                     <% } %>
                 </div>
@@ -221,7 +221,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" rows="3" placeholder="Write your comment"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-reply" formaction="community_answer" formmethod="">Submit</button>
+                            <button type="submit" class="btn btn-reply" formaction="/TAB_PAGE/community_answer" formmethod="post">Submit</button>
                         </form>
                     </div>
                 </div>

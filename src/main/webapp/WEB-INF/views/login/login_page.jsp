@@ -135,7 +135,7 @@
             <button type="submit" class="btn" style="background-color:  #ff7f95; font-weight: 530;" >Log in</button>
           </div>
         </form>
-        <form action="/TAB_PAGE/signin_page_a" method="get">
+        <form action="/TAB_PAGE/signin_page_a" method="post">
           <div class="text-center mt-3">
             <p>회원이 아니신가요 ? <button type="submit" class="btn btn-link text-decoration-none" style="color: #ff7f95;">회원가입</button></p>
           </div>

@@ -20,7 +20,7 @@ public class UsersController {
     @Autowired
     UsersService usersService;
 
-    @RequestMapping(value = "/joinForm", method = RequestMethod.GET)
+    @RequestMapping(value = "/joinForm", method = RequestMethod.POST)
     public ModelAndView joinForm(ModelAndView modelAndView){
         String viewName = "/WEB-INF/views/signin/signin_page_a.jsp";
 

@@ -134,8 +134,8 @@
 
     <div class="button-group">
       <form action="">
-        <button class="retest-button" formaction="/TAB_PAGE/self_test_delete/${userDetailsBean.username}" formmethod="">재검사 &gt;</button>
-        <button class="ask-question-button" formaction="/TAB_PAGE/community" formmethod="">궁금한점 물어보기 &gt;</button>
+        <button class="retest-button" formaction="/TAB_PAGE/self_test_delete/${userDetailsBean.username}" formmethod="post">재검사 &gt;</button>
+        <button class="ask-question-button" formaction="/TAB_PAGE/search_community/" formmethod="post">궁금한점 물어보기 &gt;</button>
       </form>
     </div>
   </div>

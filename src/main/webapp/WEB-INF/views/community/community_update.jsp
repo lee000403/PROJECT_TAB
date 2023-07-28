@@ -129,7 +129,7 @@
                         <textarea class="form-control" id="content" name="POST_CONTENT" rows="5" placeholder="내용을 입력합니다"><%=result.get("POST_CONTENT")%></textarea >
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_updateandSelect/<%=result.get("POST_ID")%>' formmethod="">등록</button>
+                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_updateandSelect/<%=result.get("POST_ID")%>' formmethod="post">등록</button>
                     </div>
                 </form>
             </div>

@@ -151,7 +151,7 @@
             <input type="text" name="words" value='<%= params.getOrDefault("words", " ") %>'
             class="form-control" placeholder="Search..." id="keydownEnter">
             <button class="btn" style="background-color: #ff7f95;" type="submit" formaction="/TAB_PAGE/search_page/"
-              formmethod="">Search</button>
+              formmethod="post">Search</button>
           </div>
         </div>
       </div>
@@ -170,8 +170,8 @@
     </div>
   
     <div class="col">
-      <form action="/TAB_PAGE/self_test" method="get">
-        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test">
+      <form>
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test" formmethod="post">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img2_self_test.png" alt="치매 자가 진단">
           </div>
@@ -180,22 +180,22 @@
     </div>
   
     <div class="col">
-      <form action="/TAB_PAGE/survey_a" method="get">
-        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a">
+      <form>
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a" formmethod="post">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img3_partner_matching.png" alt="one-click 파트너 연결">
           </div>
         </button>
       </form>
   
-      <form action="/TAB_PAGE/survey_b" method="get">
+      <form action="/TAB_PAGE/survey_b" method="post">
         <button type="submit" class="btn btn-link" ></button>
       </form>
     </div>
   
     <div class="col">
-      <form action="/TAB_PAGE/community" method="get">
-        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/community">
+      <form>
+        <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/search_community/" formmethod="post">
           <div class="image-container">
             <img class="img-fluid round-image" src="/images/img4_community.png" alt="커뮤니티">
           </div>

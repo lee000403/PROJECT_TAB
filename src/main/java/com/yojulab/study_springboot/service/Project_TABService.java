@@ -101,6 +101,34 @@ public class Project_TABService {
         return result;
     }
 
+    public Object self_test_no_insert(Map dataMap) {
+        String sqlMapId = "Project_TAB.insert_selfTest";
+        String UUID = commonUUID.Commons();
+        dataMap.put("MEMBERID", UUID);
+        ArrayList arr = new ArrayList<>();
+        arr = (ArrayList) this.select_selfTest(dataMap);
+        Object result = null;
+        HashMap record = new HashMap<>();
+        for (int i = 0; i < arr.size(); i++) {
+            record = (HashMap) arr.get(i);
+            dataMap.put("ST_QNA_CODE", record.get("ST_QNA_CODE"));
+            result = sharedDao.insert(sqlMapId, dataMap);
+        }
+
+        int a = (int) result;
+
+        if (a < 7) {
+            this.self_testUpdateA(dataMap);
+        } else if (7 <= a & a <= 9) {
+            this.self_testUpdateB(dataMap);
+        } else {
+            this.self_testUpdateC(dataMap);
+        }
+
+        result = this.select_selfTest_sum(UUID, dataMap);
+        return result;
+    }
+
     public Object self_testUpdateA(Map dataMap) {
         String sqlMapId = "Project_TAB.self_testUpdateA";
 
@@ -290,6 +318,13 @@ public class Project_TABService {
         return result;
     }
 
+    public Object login_button(Map dataMap) {
+        String sqlMapId = "Project_TAB.login_button";
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }
+
     public Object selectAll_Com(String COMMON_CODE_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Project_TAB.selectAll_Com";
@@ -313,7 +348,7 @@ public class Project_TABService {
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.delete(dataMap));
 
-        result.putAll((Map) this.selectSearch(dataMap));
+        result.putAll((Map) this.selectSearch(UNIQUE_ID, UNIQUE_ID));
         return result;
     }
 

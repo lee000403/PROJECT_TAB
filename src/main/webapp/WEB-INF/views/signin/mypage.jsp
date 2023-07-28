@@ -169,7 +169,7 @@
         <label for="introduction">자기소개:</label>
         <textarea class="form-control" id="introduction" name="introduction"><%=result.get("INTRODUCTION")%></textarea>
       </div>
-      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" class="btn btn-primary btn-block">수정하기</button>
+      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" formmethod="post" class="btn btn-primary btn-block">수정하기</button>
     </form>
   </div>
 </body>

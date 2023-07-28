@@ -114,23 +114,23 @@
 
         <body>
             <%@ include file="../mainbar/header.jsp" %>
-            <% HashMap params=(HashMap)request.getAttribute("params"); String
-            searchStr=(String)params.getOrDefault("search", "" ); HashMap
-            result=(HashMap)request.getAttribute("result"); %>
+                <% HashMap params=(HashMap)request.getAttribute("params"); String
+                    searchStr=(String)params.getOrDefault("search", "" ); HashMap
+                    result=(HashMap)request.getAttribute("result"); %>
                     <div class="container mt-4">
                         <h1 class="text-center">선생님, 질문 있어여 !</h1>
                         <form action="">
-                        <select class="form-select" name="search">
-                            <option>Select an option...</option>
-                            <option value="POST_TITLE" <%=(searchStr.equals("POST_TITLE")) ? "selected" : "" %>>제목명
-                            </option>
-                            <option value="MEMBERID" <%=(searchStr.equals("MEMBERID")) ? "selected" : "" %>
-                                >작성자</option>
-                        </select>
-                        <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
-                            class="form-control" placeholder="Search..." id="keydownEnter">
-                        <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_community/'
-                            formmethod="get">검색</button>
+                            <select class="form-select" name="search">
+                                <option>Select an option...</option>
+                                <option value="POST_TITLE" <%=(searchStr.equals("POST_TITLE")) ? "selected" : "" %>>제목명
+                                </option>
+                                <option value="MEMBERID" <%=(searchStr.equals("MEMBERID")) ? "selected" : "" %>
+                                    >작성자</option>
+                            </select>
+                            <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
+                                class="form-control" placeholder="Search..." id="keydownEnter">
+                            <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_community/'
+                                formmethod="post">검색</button>
                         </form>
                         <div class="row mt-4">
                             <div class="col-md-12">
@@ -144,55 +144,64 @@
                                         </tr>
                                     </thead>
                                     <% Paginations paginations=(Paginations)result.get("paginations"); %>
-                                    <% String userId = (String)result.get("userId"); %>
-                                    <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i <
-                                        resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i); %>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <%=i+1%>
-                                                </th>
-                                                <td>
-                                                    <form action='/TAB_PAGE/community_answer/<%=record.get(" POST_ID")%>' method="get">
-                                                        <button style=" color:black; text-decoration: none;"
-                                                            type="submit" class="btn btn-link"
-                                                            formaction='/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>'>
-                                                            <%= record.get("POST_TITLE") %>
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                                <td>
-                                                    <%= record.get("MEMBERID") %>
-                                                </td>
-                                                <td>
-                                                    <%= record.get("POST_DATE") %>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <%}%>
+                                        <% String userId=(String)result.get("userId"); %>
+                                            <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i
+                                                < resultList.size(); i=i+1){ HashMap record=(HashMap)resultList.get(i);
+                                                %>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <%=i+1%>
+                                                        </th>
+                                                        <td>
+                                                            <form
+                                                                action='/TAB_PAGE/community_answer/<%=record.get(" POST_ID")%>'
+                                                                method="post">
+                                                                <button style=" color:black; text-decoration: none;"
+                                                                    type="submit" class="btn btn-link"
+                                                                    formaction='/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>' formmethod="post"> 
+                                                                    <%= record.get("POST_TITLE") %>
+                                                                </button>
+                                                            </form>
+                                                        </td>
+                                                        <td>
+                                                            <%= record.get("MEMBERID") %>
+                                                        </td>
+                                                        <td>
+                                                            <%= record.get("POST_DATE") %>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <%}%>
                                 </table>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
-                                      <li class="page-item"><a class="page-link"
-                                          href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a></li>
-                                      <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
-                                        <li class="page-item">
-                                          <a class="page-link" href='/TAB_PAGE/search_community/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                                            <%= i %>
-                                          </a>
+                                        <li class="page-item"><a class="page-link"
+                                                href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Previous</a>
                                         </li>
-                                        <% } %>
-                                          <li class="page-item">
-                                            <a class="page-link" href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
-                                          </li>
+                                        <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){
+                                            %>
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                    href='/TAB_PAGE/search_community/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
+                                                    <%= i %>
+                                                </a>
+                                            </li>
+                                            <% } %>
+                                                <li class="page-item">
+                                                    <a class="page-link"
+                                                        href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>Next</a>
+                                                </li>
                                     </ul>
-                                  </nav>
+                                </nav>
                             </div>
                         </div>
 
                         <div class="row mt-4">
                             <div class="col-md-12 text-center">
-                                <a class="btn btn-reply" href="/TAB_PAGE/community_write">글쓰기 ></a>
+                                <form action="">
+                                    <button class="btn btn-reply" formaction="/TAB_PAGE/community_write" formmethod="post">글쓰기 ></button>
+                                </form>
                             </div>
                         </div>
                     </div>

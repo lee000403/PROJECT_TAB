@@ -179,7 +179,7 @@
                         <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
                           class="form-control" placeholder="Search..." id="keydownEnter">
                         <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_page/'
-                          formmethod="get">검색</button>
+                          formmethod="post">검색</button>
                       </form>
                     </div>
                   </div>
@@ -216,7 +216,7 @@
                         <form action="">
                           <button type="submit"
                             formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID")%>/<%=paginations.getCurrentPage()%>'
-                            formmethod="">상세</button>
+                            formmethod="post">상세</button>
                         </form>
                       </td>
                       </td>
