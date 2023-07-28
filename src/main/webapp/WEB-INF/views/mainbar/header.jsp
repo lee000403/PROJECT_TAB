@@ -154,7 +154,7 @@
             <form action="/TAB_PAGE/self_test" method="post">
               <sec:authorize access="isAnonymous()">
                 <li class="nav-item nav-button">
-                  <a class="nav-link" href="/loginForm">자가진단</a>
+                  <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="get">자가진단</button>
                 </li>
               </sec:authorize>
               <sec:authorize access="isAuthenticated()">
