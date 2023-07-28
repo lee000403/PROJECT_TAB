@@ -142,9 +142,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <form>
-              <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a" formmethod="post">One-click</button>
-              </li>
+              <sec:authorize access="isAnonymous()">
+                <li class="nav-item nav-button">
+                  <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="get">One-click</button>
+                </li>
+              </sec:authorize>
+              <sec:authorize access="isAuthenticated()">
+                <li class="nav-item nav-button">
+                  <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a" formmethod="post">One-click</button>
+                </li>
+              </sec:authorize>
             </form>
             <form>
               <li class="nav-item nav-button">
