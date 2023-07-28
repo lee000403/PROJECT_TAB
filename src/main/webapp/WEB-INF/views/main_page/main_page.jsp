@@ -139,12 +139,12 @@
                   <div class="input-group mb-5">
                     <select class="form-select" name="search">
                       <option>Select an option...</option>
-                      <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
+                      <option value="CENTER_NAME">시설명
                       </option>
-                      <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
+                      <option value="CENTER_ADD"
                         >주소</option>
                     </select>
-                    <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>' class="form-control"
+                    <input type="text" name="words" class="form-control"
                       placeholder="Search..." id="keydownEnter">
                     <button class="btn" style="background-color: #ff7f95;" type="submit"
                       formaction="/TAB_PAGE/search_page/" formmethod="post">Search</button>
