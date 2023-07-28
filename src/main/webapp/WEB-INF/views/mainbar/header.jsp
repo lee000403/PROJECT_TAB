@@ -85,7 +85,6 @@
         </style>
       </head>
 
-<<<<<<< HEAD
 <body>
   <header>
     <sec:authentication property="principal" var="userDetailsBean" />
@@ -99,33 +98,7 @@
               <form>
                 <li class="nav-item">
                   <button type="submit" class="btn btn-link" formaction="/joinForm" formmethod="post">회원가입</button>
-=======
-      <body>
-        <header>
-          <sec:authentication property="principal" var="userDetailsBean" />
-          <nav>
-            <div style="background-color: rgb(255, 255, 255);">
-              <ul class="h-navbar flex-row">
-                <li class="h-nav-item">
-                  치매파트너와의 연결 그리고 동행
->>>>>>> f9e318f81c7296d4acbea0da140fd4929ed4e10c
                 </li>
-                <sec:authorize access="isAnonymous()">
-                  <form action="/joinForm" method="get">
-                    <li class="nav-item">
-                      <button type="submit" class="btn btn-none" formaction="/joinForm" style="color: black;">회원가입</button>
-                    </li>
-                  </form>
-                
-                  <form action="/loginForm" method="get">
-                    <li class="nav-item">
-                      <button type="submit" class="btn btn-none" formaction="/loginForm" style="background-color: #ff7f95; color: black;">로그인</button>
-                    </li>
-                  </form>
-                </sec:authorize>
-                
-
-              <form>
                 <li class="nav-item">
                   <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="post">로그인</button>
                 </li>

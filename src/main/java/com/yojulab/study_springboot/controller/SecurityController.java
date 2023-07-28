@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SecurityController {
-    @PostMapping({"/loginForm"})     // 로그인 폼 작성
+    @GetMapping({"/loginForm"})     // 로그인 폼 작성
     public ModelAndView loginForm(ModelAndView modelAndView){
         String viewName = "/WEB-INF/views/login/login_page.jsp";
         modelAndView.setViewName(viewName);
