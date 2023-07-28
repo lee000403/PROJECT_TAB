@@ -100,7 +100,7 @@
                   <button type="submit" class="btn btn-link" formaction="/joinForm" formmethod="post">회원가입</button>
                 </li>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="post">로그인</button>
+                  <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="get">로그인</button>
                 </li>
               </form>
             </sec:authorize>

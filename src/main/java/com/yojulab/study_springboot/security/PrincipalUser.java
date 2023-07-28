@@ -26,7 +26,7 @@ public class PrincipalUser implements UserDetails {
         Collection<GrantedAuthority> collections = new ArrayList<>();
         List<Map<String, Object>> resultList = (List) userInfo.get("resultList");
         for (Map item : resultList) {
-            collections.add(new SimpleGrantedAuthority((String) item.get("MEMBERID")));
+            collections.add(new SimpleGrantedAuthority((String) item.get("AUTH_NAME")));
         }
         return collections;
     }

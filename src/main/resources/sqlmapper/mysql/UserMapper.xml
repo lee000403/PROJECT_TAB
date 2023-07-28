@@ -4,7 +4,7 @@
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
         FROM MEMBERS
-        where MEMBERID = #{username}
+        where MEMBERID = #{USERNAME}
 	</select>
 
     <!-- 입력 -->

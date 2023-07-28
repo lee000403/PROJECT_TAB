@@ -8,7 +8,7 @@ VALUES
 ('M_03', '파트너'),
 ('M_04', '전문의');
 
-INSERT INTO auth_names (AUTH_NAME, MEMBERID)
+INSERT INTO auth_names (MEMBERTYPE_ID, AUTH_NAME)
 VALUES
 ('M_04', 'ROLE_DOCTOR'),
 ('M_02', 'ROLE_GUEST'),

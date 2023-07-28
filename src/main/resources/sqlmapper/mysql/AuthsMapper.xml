@@ -2,18 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Auths">
         <select id="selectWithUSERNAME" parameterType="Map" resultType="Map">
-        SELECT auth_names.AUTH_NAME, auth_names.MEMBERID
+        SELECT auth_names.AUTH_NAME, auth_names.MEMBERTYPE_ID
         FROM auths
                 inner JOIN auth_names
-        ON auths.MEMBER_ID_USERS = auth_names.MEMBERID
-        AND auths.MEMBER_ID_USERS = #{username}
+        ON auths.AUTH_NAME = auth_names.AUTH_NAME
+        AND auths.MEMBERID = #{USERNAME}
         ;
         </select>
 
         <!-- 입력 -->
         <insert id="insert" parameterType="Map">
         insert into AUTHS 
-        (MEMBER_ID_USERS,MEMBER_ID_AUTH_NAMES)
+        (MEMBERID,AUTH_NAME)
         values
         <foreach item="auth" collection="authList"
             separator="," nullable="true">
