@@ -24,14 +24,17 @@ public class AuthsService {
     public Object insert(Map dataMap) {
         List authList = new ArrayList<>();
         String auth = (String) dataMap.get("auth");
-        if (auth.equals("ROLE_DOCTOR")) {
+        if (auth.equals("M_04")) {
+            authList.add("ROLE_DOCTOR");
             authList.add("ROLE_GUEST");
+            authList.add("ROLE_USER");
+        } else if (auth.equals("M_02")) {
+            authList.add("ROLE_GUEST");
+        } else if (auth.equals("M_01")) {
+            authList.add("ROLE_USER");
+        } else if (auth.equals("M_03")) {
             authList.add("ROLE_PARTNER");
-            authList.add("ROLE_USER");
-        } else if (auth.equals("ROLE_GUEST")) {
-            authList.add("ROLE_USER");
         }
-        authList.add(dataMap.get("auth"));  // choosed auth
         dataMap.put("authList", authList);
 
         String sqlMapId = "Auths.insert";

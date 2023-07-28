@@ -144,19 +144,19 @@
       </div>
       <label for="auth" class="sr-only">Auth</label>
       <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="PATNER" value="ROLE_PATNER">
+          <input class="form-check-input" type="radio" name="auth" id="PARTNER" value="M_03">
           <label class="form-check-label" for="PATNER">파트너</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="DOCTOR" value="ROLE_DOCTOR">
+          <input class="form-check-input" type="radio" name="auth" id="DOCTOR" value="M_04">
           <label class="form-check-label" for="DOCTOR">전문의</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="USER" value="ROLE_USER">
+          <input class="form-check-input" type="radio" name="auth" id="USER" value="M_01">
           <label class="form-check-label" for="USER">본인</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="auth" id="FAMILY" value="ROLE_FAMILY">
+          <input class="form-check-input" type="radio" name="auth" id="FAMILY" value="M_02">
           <label class="form-check-label" for="FAMILY">가족</label>
         </div>
 <div class="float-right">
