@@ -134,7 +134,7 @@
         <% String auth = (String) result.get("MEMBERTYPE_ID");%>
         <% if (auth.equals("ROLE_DOCTOR")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="전문의">
-        <%} else if (auth.equals("ROLE_DOCTOR")) { %>
+        <%} else if (auth.equals("ROLE_PATNER")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="파트너">
         <% }else if (auth.equals("ROLE_GUEST")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="가족">

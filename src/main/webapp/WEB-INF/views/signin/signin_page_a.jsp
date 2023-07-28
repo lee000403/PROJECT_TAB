@@ -85,7 +85,7 @@
 <body>
   <%@ include file="../mainbar/header.jsp" %>
   <div class="container">
-    <h1 class="mt-5 mb-4 text-center">회원가입(환자/가족/파트너)</h1>
+    <h1 class="mt-5 mb-4 text-center">회원가입</h1>
 
     <form>
       <div class="form-group">
