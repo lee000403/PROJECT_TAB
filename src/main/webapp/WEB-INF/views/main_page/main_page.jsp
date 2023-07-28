@@ -129,9 +129,6 @@
             </div>
           </div>
         </div>
-        <% HashMap params=(HashMap)request.getAttribute("params"); String
-          searchStr=(String)params.getOrDefault("search", "" ); HashMap result=(HashMap)request.getAttribute("result");
-          %>
           <div>
             <form action="" method="post">
               <div class="container mb-2 text-center">
