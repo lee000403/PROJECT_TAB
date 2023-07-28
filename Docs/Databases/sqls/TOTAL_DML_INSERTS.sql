@@ -8,6 +8,13 @@ VALUES
 ('M_03', '파트너'),
 ('M_04', '전문의');
 
+INSERT INTO auth_names (AUTH_NAME, MEMBERID)
+VALUES
+('M_04', 'ROLE_DOCTOR'),
+('M_02', 'ROLE_GUEST'),
+('M_03', 'ROLE_PARTNER'),
+('M_01', 'ROLE_USER');
+
 -- GENDER 성별
 INSERT INTO GENDER (GENDER_ID, GENDER)
 VALUES

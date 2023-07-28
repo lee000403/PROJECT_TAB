@@ -32,7 +32,7 @@ public class UsersService {
         String password = (String) dataMap.get("password");
         dataMap.put("MEMBERPW",bCryptPasswordEncoder.encode(password));
 
-        dataMap.put("USERNAME", dataMap.get("username"));
+        dataMap.put("username", dataMap.get("username"));
 
         String sqlMapId = "Users.insert";
         Object result = sharedDao.insert(sqlMapId, dataMap);

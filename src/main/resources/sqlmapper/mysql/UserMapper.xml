@@ -4,14 +4,14 @@
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
         FROM MEMBERS
-        where MEMBERID = #{USERNAME}
+        where MEMBERID = #{username}
 	</select>
 
     <!-- 입력 -->
         <insert id="insert" parameterType="Map">
         INSERT INTO MEMBERS (PHOTO, MEMBERTYPE_ID, MEMBERID, MEMBERPW, MEMBERNAME, GENDER_ID, BIRTHDATE, PHONENUMBER, MEMBERADDRESS, EMAIL, INTRODUCTION)
         VALUES
-        ('png', #{auth}, #{USERNAME}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, 'null')
+        ('png', #{auth}, #{username}, #{MEMBERPW}, #{MEMBERNAME}, #{GENDER_ID}, #{BIRTHDATE}, #{PHONENUMBER}, #{MEMBERADDRESS}, #{EMAIL}, 'null')
         ;
         </insert>
 

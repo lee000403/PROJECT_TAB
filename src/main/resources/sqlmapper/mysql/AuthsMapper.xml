@@ -6,7 +6,7 @@
         FROM auths
                 inner JOIN auth_names
         ON auths.MEMBER_ID_USERS = auth_names.MEMBERID
-        AND auths.MEMBER_ID_USERS = #{USERNAME}
+        AND auths.MEMBER_ID_USERS = #{username}
         ;
         </select>
 
@@ -17,9 +17,8 @@
         values
         <foreach item="auth" collection="authList"
             separator="," nullable="true">
-        (#{USERNAME},#{auth})
-        </foreach>        
-        ;
+        (#{username},#{auth})
+        </foreach>
     </insert>
 
 </mapper>

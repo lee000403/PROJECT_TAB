@@ -91,21 +91,19 @@
 
     
       <div class="form-group">
-        <form action="/TAB_PAGE/login_button" method="post">
+        <form>
           <label for="username">아이디:</label>
           <% String name = (String)params.get("username");%>
           <%if (result != null) { %>
             <input type="text" class="form-control" id="username" name="username" required>
-            <button type="submit" formnovalidate>중복 확인</button>
+            <button type="submit" action="/TAB_PAGE/login_button" method="post" formnovalidate>중복 확인</button>
             <div>중복입니다. 다시 입력해주세요.</div>
           <%} else {%>
             <input type="text" class="form-control" id="username" name="username" value='<%=name%>' required>
-            <button type="submit" formnovalidate>중복 확인</button>
+            <button type="submit" action="/TAB_PAGE/login_button" method="post" formnovalidate>중복 확인</button>
             <div>ID 사용 가능합니다.</div>
           <%}%>
-        </form>
       </div>
-      <form>
       <div class="form-group">
         <label for="password">비밀번호:</label>
         <input type="password" class="form-control" id="password" name="password" required>
