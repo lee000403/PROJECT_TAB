@@ -128,7 +128,7 @@
         </div>
         <div style="margin-bottom: 8px;">
           유형에 따라 가입 절차 및 항목에 차이가 있을 수 있습니다.</div>
-        <button formaction="/TAB_PAGE/signin_page_a/M-01" formmethod="">
+        <button formaction="/TAB_PAGE/signin_page_a/M-01" formmethod="post">
           <div class="card">
             <img src="https://picsum.photos/250/250" alt="Patient">
             <div class="card-content">
@@ -137,7 +137,7 @@
             </div>
           </div>
         </button>
-        <button formaction="/TAB_PAGE/signin_page_a/M-02" formmethod="">
+        <button formaction="/TAB_PAGE/signin_page_a/M-02" formmethod="post">
           <div class="card">
             <img src="https://picsum.photos/250/250" alt="Family">
 
@@ -147,7 +147,7 @@
             </div>
           </div>
         </button>
-        <button formaction="/TAB_PAGE/signin_page_a/M-03" formmethod="">
+        <button formaction="/TAB_PAGE/signin_page_a/M-03" formmethod="post">
           <div class="card">
             <img src="https://picsum.photos/250/250" alt="Partner">
 
@@ -157,7 +157,7 @@
             </div>
           </div>
         </button>
-        <button formaction="/TAB_PAGE/signin_page_b/M-04" formmethod="">
+        <button formaction="/TAB_PAGE/signin_page_b/M-04" formmethod="post">
           <div class="card">
             <img src="https://picsum.photos/250/250" alt="Doctor">
             <div class="card-content">

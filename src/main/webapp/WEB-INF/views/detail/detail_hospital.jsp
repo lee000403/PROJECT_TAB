@@ -181,7 +181,7 @@
                           class="form-control" placeholder="Search..." id="keydownEnter">
 
                         <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_page/'
-                          formmethod="get">검색</button>
+                          formmethod="post">검색</button>
                       </form>
                     </div>
                   </div>
@@ -217,7 +217,7 @@
                 </tbody>
                 <% } %>
             </table>
-            <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>'>
+            <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>' method="post">
               <button>뒤로가기</button>
             </form>
         </body>

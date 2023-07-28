@@ -84,30 +84,41 @@
 </head>
 <body>
   <%@ include file="../mainbar/header.jsp" %>
+  <% HashMap params=(HashMap)request.getAttribute("params");
+  HashMap result=(HashMap)request.getAttribute("result"); %>
   <div class="container">
     <h1 class="mt-5 mb-4 text-center">회원가입</h1>
 
-    <form>
+    
       <div class="form-group">
-        <label for="username">아이디:</label>
-        <input type="text" class="form-control" id="username" name="username" required>
-        <button type="submit" formaction="/TAB_PAGE/login_button" formmethod="post">중복 확인</button>
+        <form action="/TAB_PAGE/login_button" method="post">
+          <label for="username">아이디:</label>
+          <% String name = (String)params.get("username");%>
+          <%if (result != null) { %>
+            <input type="text" class="form-control" id="username" name="username" required>
+            <button type="submit" formnovalidate>중복 확인</button>
+            <div>중복입니다. 다시 입력해주세요.</div>
+          <%} else {%>
+            <input type="text" class="form-control" id="username" name="username" value='<%=name%>' required>
+            <button type="submit" formnovalidate>중복 확인</button>
+            <div>ID 사용 가능합니다.</div>
+          <%}%>
+        </form>
       </div>
-    </form>
-    <form>
+      <form>
       <div class="form-group">
         <label for="password">비밀번호:</label>
-        <input type="password" class="form-control" id="password" name="password">
+        <input type="password" class="form-control" id="password" name="password" required>
       </div>
 
       <div class="form-group">
         <label for="name">이름:</label>
-        <input type="text" class="form-control" id="MEMBERNAME" name="MEMBERNAME">
+        <input type="text" class="form-control" id="MEMBERNAME" name="MEMBERNAME" required>
       </div>
 
       <div class="form-group">
         <label for="gender">성별:</label>
-        <select class="form-control" id="GENDER_ID" name="GENDER_ID">
+        <select class="form-control" id="GENDER_ID" name="GENDER_ID" required>
           <option value="">성별 선택</option>
           <option value="G_01">남성</option>
           <option value="G_02">여성</option>
@@ -116,22 +127,22 @@
 
       <div class="form-group">
         <label for="birthdate">생년월일:</label>
-        <input type="date" class="form-control" id="BIRTHDATE" name="BIRTHDATE">
+        <input type="date" class="form-control" id="BIRTHDATE" name="BIRTHDATE" required>
       </div>
 
       <div class="form-group">
         <label for="phone">전화번호:</label>
-        <input type="tel" class="form-control" id="PHONENUMBER" name="PHONENUMBER">
+        <input type="tel" class="form-control" id="PHONENUMBER" name="PHONENUMBER" required>
       </div>
 
       <div class="form-group">
         <label for="address">주소:</label>
-        <input type="text" class="form-control" id="MEMBERADDRESS" name="MEMBERADDRESS">
+        <input type="text" class="form-control" id="MEMBERADDRESS" name="MEMBERADDRESS" required>
       </div>
 
       <div class="form-group">
         <label for="email">이메일 주소:</label>
-        <input type="email" class="form-control" id="EMAIL" name="EMAIL">
+        <input type="email" class="form-control" id="EMAIL" name="EMAIL" required>
       </div>
       <label for="auth" class="sr-only">Auth</label>
       <div class="form-check form-check-inline">

@@ -217,4 +217,11 @@
         </choose>
 	</select>
 
+    <select id="login_button" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM members
+        where 1 = 1
+        and MEMBERID = #{username}
+	</select>
+
 </mapper>

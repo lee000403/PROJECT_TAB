@@ -93,30 +93,30 @@
             치매파트너와의 연결 그리고 동행
           </li>
           <sec:authorize access="isAnonymous()">
-              <form action="/joinForm" method="get">
+              <form>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-link" formaction="/joinForm">회원가입</button>
+                  <button type="submit" class="btn btn-link" formaction="/joinForm" formmethod="post">회원가입</button>
                 </li>
               </form>
 
-              <form action="/loginForm" method="get">
+              <form>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-link" formaction="/loginForm">로그인</button>
+                  <button type="submit" class="btn btn-link" formaction="/loginForm" formmethod="post">로그인</button>
                 </li>
               </form>
             </sec:authorize>
 
             <sec:authorize access="isAuthenticated()">
               id : ${userDetailsBean.username}
-              <form action="/TAB_PAGE/mypage/${userDetailsBean.username}" method="get">
+              <form>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/mypage/${userDetailsBean.username}">마이 페이지</button>
+                  <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/mypage/${userDetailsBean.username}" formmethod="post">마이 페이지</button>
                 </li>
               </form>
 
-              <form action="/logout" method="get">
+              <form>
                 <li class="nav-item">
-                  <button type="submit" class="btn btn-link" formaction="/logout">로그아웃</button>
+                  <button type="submit" class="btn btn-link" formaction="/logout" formmethod="post">로그아웃</button>
                 </li>
               </form>
             </sec:authorize>
@@ -127,46 +127,46 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <sec:authorize access="isAnonymous()">
-          <form action="/TAB_PAGE/home/" method="get">
-            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home/">
+          <form>
+            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home/" formmethod="post">
               <img src="/images/mainlogo.png" alt="Logo">
             </button>
           </form>
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
           <form>
-            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home_after/">
+            <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/home_after/" formmethod="post">
               <img src="/images/mainlogo.png" alt="Logo">
             </button>
           </form>
         </sec:authorize>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <form action="/TAB_PAGE/survey_a" method="get">
+            <form>
               <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a">One-click</button>
+                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/survey_a" formmethod="post">One-click</button>
               </li>
             </form>
-            <form action="/TAB_PAGE/search_page" method="get">
+            <form>
               <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/search_page/">센터검색</button>
+                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/search_page/" formmethod="post">센터검색</button>
               </li>
             </form>
-            <form action="/TAB_PAGE/self_test" method="">
+            <form action="/TAB_PAGE/self_test" method="post">
               <sec:authorize access="isAnonymous()">
                 <li class="nav-item nav-button">
-                  <a class="nav-link" href="/TAB_PAGE/self_test_no">자가진단</a>
+                  <a class="nav-link" href="/loginForm">자가진단</a>
                 </li>
               </sec:authorize>
               <sec:authorize access="isAuthenticated()">
               <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test/${userDetailsBean.username}">자가진단</button>
+                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/self_test/${userDetailsBean.username}" formmethod="post">자가진단</button>
               </li>
             </sec:authorize>
             </form>
-            <form action="/TAB_PAGE/community" method="get">
+            <form action="">
               <li class="nav-item nav-button">
-                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/community">커뮤니티</button>
+                <button type="submit" class="btn btn-link" formaction="/TAB_PAGE/search_community/" formmethod="post">커뮤니티</button>
               </li>
             </form>
           </ul>

@@ -297,8 +297,8 @@
 </div>
 <div class="btnboxC">
   <form action="" method="">
-  <button class="btn_red_normal" formaction="/TAB_PAGE/self_test_road/${userDetailsBean.username}" formmethod="" onclick="javascript:chkDepressive();">결과보기</button>
-  <button class="btn_blue_normal" formaction="/TAB_PAGE/self_test" formmethod="" onclick="javascript:document.frmChkDepressive.reset();">다시하기</button>
+  <button class="btn_red_normal" formaction="/TAB_PAGE/self_test_road/${userDetailsBean.username}" formmethod="post" onclick="javascript:chkDepressive();">결과보기</button>
+  <button class="btn_blue_normal" formaction="/TAB_PAGE/self_test" formmethod="post" onclick="javascript:document.frmChkDepressive.reset();">다시하기</button>
   </form>
 </div>
 </form>

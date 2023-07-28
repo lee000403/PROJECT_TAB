@@ -149,7 +149,7 @@
                     <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>' class="form-control"
                       placeholder="Search..." id="keydownEnter">
                     <button class="btn" style="background-color: #ff7f95;" type="submit"
-                      formaction="/TAB_PAGE/search_page/" formmethod="">Search</button>
+                      formaction="/TAB_PAGE/search_page/" formmethod="post">Search</button>
                   </div>
                 </div>
               </div>
@@ -169,8 +169,8 @@
             </div>
 
             <div class="col">
-              <form action="/TAB_PAGE/self_test" method="get">
-                <button type="submit" formaction="/TAB_PAGE/self_test" class="btn btn-link">
+              <form>
+                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img2_self_test.png" alt="치매 자가 진단">
                   </div>
@@ -179,8 +179,8 @@
             </div>
 
             <div class="col">
-              <form action="/TAB_PAGE/login_page" method="get">
-                <button type="submit" formaction="/TAB_PAGE/login_page" class="btn btn-link">
+              <form>
+                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img3_partner_matching.png" alt="one-click 파트너 연결">
                   </div>
@@ -188,8 +188,8 @@
               </form>
             </div>
             <div class="col">
-              <form action="/TAB_PAGE/community" method="get">
-                <button type="submit" formaction="/TAB_PAGE/community" class="btn btn-link">
+              <form>
+                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img4_community.png" alt="커뮤니티">
                   </div>

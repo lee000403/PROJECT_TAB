@@ -115,14 +115,14 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="popupModalLabel">Thank You!</h5>
                         <form action="">
-                            <button class="close" formaction="/TAB_PAGE/community" formmethod="">&times;</button>
+                            <button class="close" formaction="/TAB_PAGE/community" formmethod="post">&times;</button>
                         </form>
                     </div>
                     <div class="modal-body">
                         <p>게시글이 성공적으로 등록되었습니다.</p>
                     </div>
                     <form action="">
-                        <button formaction="/TAB_PAGE/home_after/" formmethod="">메인화면</button>
+                        <button formaction="/TAB_PAGE/home_after/" formmethod="post">메인화면</button>
                     </form>
                 </div>
             </div>
