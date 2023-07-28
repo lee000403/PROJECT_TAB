@@ -4,11 +4,7 @@
     <html lang="en">
 
     <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>치매 One-click System</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+      
       <style>
         body {
           background-color: #fef0ea;
@@ -201,8 +197,7 @@
 
           <%@ include file="../mainbar/footer.jsp" %>
 
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+         
     </body>
 
     </html>
