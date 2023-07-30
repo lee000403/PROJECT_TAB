@@ -56,9 +56,6 @@
           <div class="form-group">
             <label for="age">선호하는 파트너의 연령이 있나요?</label>
             <select class="form-control" id="age">
-              <option>초등학생 이상</option>
-              <option>중학생 이상</option>
-              <option>고등학생 이상</option>
               <option>20대</option>
               <option>30대</option>
               <option>40대</option>
