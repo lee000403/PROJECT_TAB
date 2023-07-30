@@ -5,12 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.yojulab.study_springboot.dao.SharedDao;
-import com.yojulab.study_springboot.security.PrincipalUser;
 import com.yojulab.study_springboot.utills.CommonUUID;
 import com.yojulab.study_springboot.utills.Paginations;
 
@@ -79,15 +77,15 @@ public class Project_TABService {
         dataMap.put("MEMBERID", useraname);
         ArrayList arr = new ArrayList<>();
         arr = (ArrayList) this.select_selfTest(dataMap);
-        Object result = null;
+         HashMap result = new HashMap<>();
         HashMap record = new HashMap<>();
         for (int i = 0; i < arr.size(); i++) {
             record = (HashMap) arr.get(i);
             dataMap.put("ST_QNA_CODE", record.get("ST_QNA_CODE"));
-            result = sharedDao.insert(sqlMapId, dataMap);
+            result.put("insertCount", sharedDao.insert(sqlMapId, dataMap));
         }
 
-        int a = (int) result;
+        int a = (int) result.get("insertCount");
 
         if (a < 7) {
             this.self_testUpdateA(dataMap);
@@ -97,7 +95,7 @@ public class Project_TABService {
             this.self_testUpdateC(dataMap);
         }
 
-        result = this.select_selfTest_sum(useraname, dataMap);
+        result.putAll((Map) this.select_selfTest_sum(useraname, dataMap));
         return result;
     }
 

@@ -114,8 +114,8 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div>
-                          <%= record.get("CENTER_NAME") %>
+                        <div class="font-weight-bold">
+                            <%= record.get("CENTER_NAME") %>
                         </div>
                         <div>
                           <%= record.get("CENTER_ADD") %>

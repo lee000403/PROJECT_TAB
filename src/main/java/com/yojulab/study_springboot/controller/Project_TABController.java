@@ -191,10 +191,10 @@ public class Project_TABController {
         modelAndView.addObject("result", result);
 
         Map map = (Map) result;
-        Double a = (Double) map.get("sum");
-        if (a < 7.0) {
+        int a = Integer.parseInt(String.valueOf(((Map) result).get("sum")));
+        if (a < 7) {
             modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_a.jsp");
-        } else if (7.0 <= a & a <= 9.0) {
+        } else if (7 <= a & a <= 9) {
             modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_b.jsp");
         } else {
             modelAndView.setViewName("/WEB-INF/views/self_test/self_test_result_c.jsp");
