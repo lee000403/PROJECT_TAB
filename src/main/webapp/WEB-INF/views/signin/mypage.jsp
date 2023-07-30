@@ -13,15 +13,7 @@
       background-color: #fef0ea;
       padding-top: 130px
     }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      margin-top: 50px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+
     h1 {
       text-align: center;
       margin-bottom: 30px;
@@ -45,70 +37,6 @@
     .btn-primary {
       background-color: #ff92b3;
       border-color: #ff92b3;
-    }
-    .navbar {
-      justify-content: flex-end;
-    }
-
-    .navbar-nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-nav .nav-item {
-      margin-right: 10px;
-    }
-
-    .h-navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-    }
-
-    .h-navbar .h-nav-item:first-child {
-      margin-right: auto;
-      font-size: 16px;
-      line-height: 8px;
-      list-style: none;
-    }
-
-
-    .navbar .nav-link {
-      padding: 0;
-      margin: 0;
-      font-size: 16px;
-      line-height: 8px;
-      color: #000000ab;
-    }
-
-    .navbar .nav-link:hover {
-      background-color: transparent;
-      font-size: 16px;
-      line-height: 8px;
-    }
-
-    .navbar-brand img {
-      height: 80px;
-    }
-
-    .nav-button {
-      display: inline-block;
-      padding: 20px 20px;
-      background-color: transparent;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #00000098;
-    }
-    header {
-      position: fixed;
-      background-color: #fef0ea;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
     }
   </style>
 </head>
@@ -169,7 +97,7 @@
         <label for="introduction">자기소개:</label>
         <textarea class="form-control" id="introduction" name="introduction"><%=result.get("INTRODUCTION")%></textarea>
       </div>
-      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" formmethod="post" class="btn btn-primary btn-block">수정하기</button>
+      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" formmethod="post" class="btn" style="background-color: #ff7f95;">수정하기</button>
     </form>
   </div>
 </body>
