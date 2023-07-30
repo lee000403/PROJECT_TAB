@@ -142,16 +142,16 @@
         <div class="col-md-6">
           <div class="input-group mb-5">
             <select class="form-select" name="search">
-              <option>Select an option...</option>
+              <option>선택</option>
               <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
               </option>
               <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
                 >주소</option>
             </select>
             <input type="text" name="words" value='<%= params.getOrDefault("words", " ") %>'
-            class="form-control" placeholder="Search..." id="keydownEnter">
+            class="form-control" placeholder="검색..." id="keydownEnter">
             <button class="btn" style="background-color: #ff7f95;" type="submit" formaction="/TAB_PAGE/search_page/"
-              formmethod="post">Search</button>
+              formmethod="post">검색</button>
           </div>
         </div>
       </div>
