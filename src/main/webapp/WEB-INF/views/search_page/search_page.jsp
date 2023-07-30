@@ -6,189 +6,101 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Search</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-
+      <title>Search</title>
 
       <style>
         body {
-          background-color: #fff;
-          padding-top: 160px;
+          font-family: Arial, sans-serif;
+          text-align: center;
         }
 
-        .navbar {
-          justify-content: flex-end;
+        .input-group {
+          margin-bottom: 20px;
         }
 
-        .navbar-nav {
-          display: flex;
-          align-items: center;
+        .form-control {
+          width: 60%;
         }
 
-        .navbar-nav .nav-item {
-          margin-right: 10px;
+        .btn-search {
+          background-color: rgba(221, 43, 43, 0.897);
+          color: #fff;
         }
 
-        .h-navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          list-style: none;
-        }
-
-        .h-navbar .h-nav-item:first-child {
-          margin-right: auto;
-          font-size: 16px;
-          line-height: 8px;
-          list-style: none;
-        }
-
-
-        .navbar .nav-link {
-          padding: 0;
-          margin: 0;
-          font-size: 16px;
-          line-height: 8px;
-          color: #000000ab;
-        }
-
-        .navbar .nav-link:hover {
-          background-color: transparent;
-          font-size: 16px;
-          line-height: 8px;
-        }
-
-        .navbar-brand img {
-          height: 80px;
-        }
-
-        .nav-button {
-          display: inline-block;
-          padding: 20px 20px;
-          background-color: transparent;
-          color: #000;
-          border-radius: 5px;
-          text-decoration: none;
-          font-weight: bold;
-          border: 1px solid #00000098;
-        }
-
-        header {
-          position: fixed;
-          background-color: #fef0ea;
-          top: 0;
-          left: 0;
+        table {
           width: 100%;
-          z-index: 100;
+          border-collapse: collapse;
+        }
+
+        th,
+        td {
+          padding: 10px;
+          border: 1px solid #ccc;
+        }
+
+        th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        tr:hover {
+          background-color: #ebebeb;
+        }
+
+        .textname {
+          font-weight: bold;
+          font-size: large;
+          text-align: left;
+        }
+
+        .textnayong {
+          text-align: left;
         }
       </style>
 
     </head>
 
-    <%@ include file="../mainbar/header.jsp" %>
-
-      <body>
-
-        <!DOCTYPE html>
-        <html>
-
-        <head>
-          <title>치매시설정보</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              text-align: center;
-            }
-
-            .container {
-              margin-top: 40px;
-            }
-
-            .input-group {
-              margin-bottom: 20px;
-            }
-
-            .form-control {
-              width: 60%;
-            }
-
-            .btn-search {
-              background-color: rgba(221, 43, 43, 0.897);
-              color: #fff;
-            }
-
-            table {
-              width: 100%;
-              border-collapse: collapse;
-            }
-
-            th,
-            td {
-              padding: 10px;
-              border: 1px solid #ccc;
-            }
-
-            th {
-              background-color: #f2f2f2;
-              font-weight: bold;
-            }
-
-            tr:nth-child(even) {
-              background-color: #f9f9f9;
-            }
-
-            tr:hover {
-              background-color: #ebebeb;
-            }
-
-            .textname {
-              font-weight: bold;
-              font-size: large;
-              text-align: left;
-
-            }
-
-            .textnayong {
-              text-align: left;
-
-            }
-          </style>
-        </head>
-
-        <body>
-          <% HashMap params=(HashMap)request.getAttribute("params"); String
-            searchStr=(String)params.getOrDefault("search", "" ); HashMap
-            result=(HashMap)request.getAttribute("result"); %>
+    <body>
+      <%@ include file="../mainbar/header.jsp" %>
+        <% HashMap params=(HashMap)request.getAttribute("params"); String
+          searchStr=(String)params.getOrDefault("search", "" ); HashMap result=(HashMap)request.getAttribute("result");
+          %>
+          <div class="container">
+            <br>
+            <div>
+              <h2>🏥 치매시설정보</h2>
+            </div>
+            <br>
             <div class="container">
-              <div>
-                <h2>🏥 치매시설정보</h2>
-              </div>
-              <br>
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-8 col-md-6 col-lg-4">
-                    <div class="input-group-append">
-                      <form action="">
-                        <select class="form-select" name="search">
-                          <option>Select an option...</option>
-                          <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
-                          </option>
-                          <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
-                            >주소</option>
-                        </select>
-                        <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
-                          class="form-control" placeholder="Search..." id="keydownEnter">
-                        <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_page/'
-                          formmethod="post">검색</button>
-                      </form>
+              <div class="row justify-content-center">
+                <div class="col-8 col-md-6 col-lg-4">
+                  <form action="">
+                    <div class="input-group">
+                      <select class="form-select" name="search">
+                        <option>선택</option>
+                        <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
+                        </option>
+                        <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
+                          >주소</option>
+                      </select>
+                      <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
+                        class="form-control" placeholder="검색어를 입력하세요" id="keydownEnter" style="width : 200px;">
+                      <button class="btn" type="submit" formaction='/TAB_PAGE/search_page/' formmethod="post"
+                        style="background-color:#ff7f95;">검색</button>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
 
-            <br>
-            <table>
+          <div class="container mt-4 mb-4">
+            <table class="table">
               <thead>
                 <tr>
                   <th>시설명/주소</th>
@@ -214,9 +126,9 @@
                       </td>
                       <td>
                         <form action="">
-                          <button type="submit"
+                          <button class="btn" type="submit"
                             formaction='/TAB_PAGE/hospital_selectDetail/<%= record.get("CENTER_TYPE_ID")%>/<%=paginations.getCurrentPage()%>'
-                            formmethod="post">상세</button>
+                            formmethod="post" style="background-color:#ff7f95;">상세</button>
                         </form>
                       </td>
                       </td>
@@ -224,42 +136,42 @@
                   </tbody>
                   <% } %>
             </table>
+          </div>
 
-            <div style="display: flex; justify-content: center; margin-top: 20px;">
-              <nav aria-label="Page navigation">
-                <ul class="pagination">
+          <div style="display: flex; justify-content: center; margin-top: 40px;">
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link"
+                    href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'
+                    style="color: #ff7f95;">
+                    Previous
+                  </a>
+                </li>
+                <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
                   <li class="page-item">
                     <a class="page-link"
-                      href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                      Previous
+                      href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'
+                      style="color: #ff7f95;">
+                      <%= i %>
                     </a>
                   </li>
-                  <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
+                  <% } %>
                     <li class="page-item">
                       <a class="page-link"
-                        href='/TAB_PAGE/search_page/?currentPage=<%=i%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                        <%= i %>
+                        href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'
+                        style="color: #ff7f95;">
+                        Next
                       </a>
                     </li>
-                    <% } %>
-                      <li class="page-item">
-                        <a class="page-link"
-                          href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'>
-                          Next
-                        </a>
-                      </li>
-                </ul>
-              </nav>
-            </div>
-        </body>
+              </ul>
+            </nav>
+          </div>
 
-        <%@ include file="../mainbar/footer.jsp" %>
-
-        </html>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      </body>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    <%@ include file="../mainbar/footer.jsp" %>
 
     </html>
 
