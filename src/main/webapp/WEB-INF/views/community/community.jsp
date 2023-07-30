@@ -22,77 +22,11 @@
                     height: 100vh;
                 }
 
-                .navbar {
-                    justify-content: flex-end;
-                }
-
-                .navbar-nav {
-                    display: flex;
-                    align-items: center;
-                }
-
-                .navbar-nav .nav-item {
-                    margin-right: 10px;
-                }
-
-                .h-navbar {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    list-style: none;
-                }
-
-                .h-navbar .h-nav-item:first-child {
-                    margin-right: auto;
-                    font-size: 16px;
-                    line-height: 8px;
-                    list-style: none;
-                }
-
-
-                .navbar .nav-link {
-                    padding: 0;
-                    margin: 0;
-                    font-size: 16px;
-                    line-height: 8px;
-                    color: #000000ab;
-                }
-
-                .navbar .nav-link:hover {
-                    background-color: transparent;
-                    font-size: 16px;
-                    line-height: 8px;
-                }
-
-                .navbar-brand img {
-                    height: 80px;
-                }
-
-                .nav-button {
-                    display: inline-block;
-                    padding: 20px 20px;
-                    background-color: transparent;
-                    color: #000;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    border: 1px solid #00000098;
-                }
-
                 .post-title {
                     font-weight: bold;
                     font-size: 22px;
                     border-bottom: 1px solid #0000004d;
                     margin-bottom: 10px;
-                }
-
-                header {
-                    position: fixed;
-                    background-color: #fef0ea;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    z-index: 100;
                 }
 
                 .btn-reply {
@@ -118,7 +52,7 @@
                     searchStr=(String)params.getOrDefault("search", "" ); HashMap
                     result=(HashMap)request.getAttribute("result"); %>
                     <div class="container mt-4">
-                        <h1 class="text-center">선생님, 질문 있어여 !</h1>
+                        <h1 class="text-center">선생님, 질문있습니다!</h1>
                         <form action="">
                             <select class="form-select" name="search">
                                 <option>Select an option...</option>
@@ -200,7 +134,7 @@
                         <div class="row mt-4">
                             <div class="col-md-12 text-center">
                                 <form action="">
-                                    <button class="btn btn-reply" formaction="/TAB_PAGE/community_write" formmethod="post">글쓰기 ></button>
+                                    <button class="btn btn-reply" formaction="/TAB_PAGE/community_write" formmethod="post">글쓰기</button>
                                 </form>
                             </div>
                         </div>

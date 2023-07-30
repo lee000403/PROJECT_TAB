@@ -9,109 +9,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
   <title>Login</title>
   <style>
-  body {
-      background-color: #fff;
-      padding: 16rem;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
 
-    .navbar {
-      justify-content: flex-end;
-    }
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .navbar-nav {
-      display: flex;
-      align-items: center;
-    }
+  .card {
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: auto; /* Add margin:auto to center horizontally */
+  }
 
-    .navbar-nav .nav-item {
-      margin-right: 10px;
-    }
-
-    .h-navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-    }
-
-    .h-navbar .h-nav-item:first-child {
-      margin-right: auto;
-      font-size: 16px;
-      line-height: 8px;
-      list-style: none;
-    }
-
-
-    .navbar .nav-link {
-      padding: 0;
-      margin: 0;
-      font-size: 16px;
-      line-height: 8px;
-      color: #000000ab;
-    }
-
-    .navbar .nav-link:hover {
-      background-color: transparent;
-      font-size: 16px;
-      line-height: 8px;
-    }
-
-    .navbar-brand img {
-      height: 80px;
-    }
-
-    .nav-button {
-      display: inline-block;
-      padding: 20px 20px;
-      background-color: transparent;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #00000098;
-    }
-    header {
-      position: fixed;
-      background-color: #fef0ea;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-    }
-
-    .footer {
-      background-color: #fef0ea;
-      padding: 10px;
-      color: #000;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .container {
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card {
-      width: 500px;
-      /* Increased width to 500px */
-      max-width: 90%;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      /* Increased padding */
-    }
-
-    .text-center {
-      text-align: center;
-    }
+  .text-center {
+    text-align: center;
+  }
   </style>
 </head>
 
@@ -143,7 +65,6 @@
       </div>
     </div>
   </div>
-  <%@ include file="../mainbar/footer.jsp" %>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
