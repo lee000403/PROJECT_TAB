@@ -323,6 +323,15 @@ public class Project_TABService {
         return result;
     }
 
+    public Object survey_result_a(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_result_a";
+        dataMap.put("username", username);
+        dataMap.putAll((Map) this.mypage_detail(username, dataMap));
+
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+    }    
+
     public Object selectAll_Com(String COMMON_CODE_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "Project_TAB.selectAll_Com";

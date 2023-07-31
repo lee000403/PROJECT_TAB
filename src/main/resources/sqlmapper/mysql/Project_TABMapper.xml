@@ -224,4 +224,11 @@
         and MEMBERID = #{username}
 	</select>
 
+    <insert id="survey_result_a" parameterType="Map">
+        insert into member_s_f
+        (MEMBERID, MEMBERTYPE_ID, STAGE_ID, PATIENTGENDER_ID)
+        values
+        (#{username}, #{MEMBERTYPE_ID}, #{STAGE_ID}, #{GENDER_ID})
+    </insert>
+
 </mapper>

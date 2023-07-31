@@ -57,7 +57,7 @@
     <ul>
       <li onclick="window.location.href='detail_patients.html'" class="lis">
         <div>
-          <button formaction="/TAB_PAGE/detail_patients" formmethod=""><img class="partner-image" src="/images/patient_1.JPG" alt="patient_1"></button>
+          <button formaction="/TAB_PAGE/detail_patients" formmethod="post"><img class="partner-image" src="/images/patient_1.JPG" alt="patient_1"></button>
           <div></div>
           사진은 비공개 예정 (위와 같이 성별만 알 수 있는 일러스트로 표시)
         </div>
@@ -83,7 +83,7 @@
       </li>
       <li onclick="window.location.href='detail_patients.html'" class="lis">
         <div>
-          <button formaction="/TAB_PAGE/detail_patients" formmethod=""><img class="partner-image" src="/images/patient_2.JPG" alt="patient_2"></button>
+          <button formaction="/TAB_PAGE/detail_patients" formmethod="post"><img class="partner-image" src="/images/patient_2.JPG" alt="patient_2"></button>
         </div>
         <div>
           <div class="partner-info">

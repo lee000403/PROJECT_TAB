@@ -127,7 +127,7 @@
                         <textarea class="form-control" id="content" name="POST_CONTENT" rows="5" placeholder="내용을 입력합니다"></textarea >
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_update/params.get("POST_ID")' formmethod="post">등록</button>
+                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_end/${userDetailsBean.username}' formmethod="post">등록</button>
                     </div>
                 </form>
             </div>

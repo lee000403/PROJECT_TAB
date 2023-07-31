@@ -282,7 +282,10 @@ public class Project_TABController {
     }
 
     @PostMapping("/survey_result_a")
-    public ModelAndView survey_result_a(@RequestParam Map params, ModelAndView modelAndView) {
+    public ModelAndView survey_result_a(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.survey_result_a(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/survey/survey_result_a.jsp");
         return modelAndView;

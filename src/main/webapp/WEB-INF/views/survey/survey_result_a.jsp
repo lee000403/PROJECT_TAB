@@ -57,7 +57,7 @@
         <ul>
           <li class="lis">
             <div>
-              <button class="partner-button" formaction="/detail/detail_partners.jsp">
+              <button class="partner-button" formaction="/TAB_PAGE/home/" formmethod="post">
                 <img class="partner-image" src="/images/partner_1.JPG" alt="partner 1">
               </button>
             </div>
@@ -79,7 +79,7 @@
           </li>
           <li class="lis">
             <div>
-              <button class="partner-button" formaction="/detail/detail_partners.jsp">
+              <button class="partner-button" formaction="/TAB_PAGE/home/" formmethod="post">
                 <img class="partner-image" src="/images/partner_2.JPG" alt="partner 2">
               </button>
             </div>
@@ -101,7 +101,7 @@
           </li>
           <li class="lis">
             <div>
-              <button class="partner-button" formaction="/detail/detail_partners.jsp">
+              <button class="partner-button" formaction="/TAB_PAGE/home/" formmethod="post">
                 <img class="partner-image" src="/images/partner_3.JPG" alt="partner 3">
               </button>
             </div>
