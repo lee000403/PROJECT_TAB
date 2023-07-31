@@ -168,7 +168,7 @@
 
             <div class="col">
               <form>
-                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
+                <button type="submit" formaction="/loginForm" formmethod="get" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img2_self_test.png" alt="치매 자가 진단">
                   </div>
@@ -178,7 +178,7 @@
 
             <div class="col">
               <form>
-                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
+                <button type="submit" formaction="/loginForm" formmethod="get" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img3_partner_matching.png" alt="one-click 파트너 연결">
                   </div>
