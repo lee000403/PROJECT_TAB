@@ -274,17 +274,6 @@ public class Project_TABController {
         return modelAndView;
     }
 
-    @PostMapping("/community_delete/{POST_ID}")
-    public ModelAndView community_delete(@PathVariable String POST_ID, @RequestParam Map params,
-            ModelAndView modelAndView) {
-        Object result = project_TABService.community_delete(POST_ID, params);
-        modelAndView.addObject("params", params);
-        modelAndView.addObject("result", result);
-
-        modelAndView.setViewName("/WEB-INF/views/community/community_update.jsp");
-        return modelAndView;
-    }
-
     @PostMapping("/survey_a")
     public ModelAndView survey_a(@RequestParam Map params, ModelAndView modelAndView) {
 
