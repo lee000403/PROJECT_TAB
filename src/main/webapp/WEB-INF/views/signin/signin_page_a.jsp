@@ -27,7 +27,7 @@
           <div class="form-group">
             <label for="username">아이디:</label>
             <input type="text" class="form-control" id="username" name="username" required>
-            <button class="btn" type="submit" formaction='/TAB_PAGE/login_button/' formmethod="post"
+            <button class="btn" type="submit" formaction='/TAB_PAGE/login_button' formmethod="post"
             style="background-color:#ff7f95;">중복 확인</button>
           </div>
         </form>
