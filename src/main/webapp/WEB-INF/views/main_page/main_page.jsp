@@ -187,7 +187,7 @@
             </div>
             <div class="col">
               <form>
-                <button type="submit" formaction="/loginForm" formmethod="post" class="btn btn-link">
+                <button type="submit" formaction="/TAB_PAGE/search_page/" formmethod="post" class="btn btn-link">
                   <div class="image-container">
                     <img class="img-fluid round-image" src="/images/img4_community.png" alt="커뮤니티">
                   </div>
