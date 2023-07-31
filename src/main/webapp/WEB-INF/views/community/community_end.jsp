@@ -115,7 +115,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="popupModalLabel">Thank You!</h5>
                         <form action="">
-                            <button class="close" formaction="/TAB_PAGE/community" formmethod="post">&times;</button>
+                            <button class="close" formaction="/TAB_PAGE/search_community/" formmethod="post">&times;</button>
                         </form>
                     </div>
                     <div class="modal-body">
