@@ -219,7 +219,7 @@
                 <% } %>
             </table>
             <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>' method="post">
-              <button>뒤로가기</button>
+              <button class="btn" type="submit" style="background-color:#ff7f95;">뒤로가기</button>
             </form>
         </body>
 

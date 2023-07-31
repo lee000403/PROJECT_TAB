@@ -145,7 +145,7 @@
                   <a class="page-link"
                     href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'
                     style="color: #ff7f95;">
-                    Previous
+                    이전
                   </a>
                 </li>
                 <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
@@ -161,7 +161,7 @@
                       <a class="page-link"
                         href='/TAB_PAGE/search_page/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'
                         style="color: #ff7f95;">
-                        Next
+                        다음
                       </a>
                     </li>
               </ul>
