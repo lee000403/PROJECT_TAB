@@ -96,11 +96,13 @@
           <% String name = (String)params.get("username");%>
           <%if (result != null) { %>
             <input type="text" class="form-control" id="username" name="username" required>
-            <button type="submit" action="/TAB_PAGE/login_button" method="post" formnovalidate>중복 확인</button>
+            <button class="btn" type="submit" formaction='/TAB_PAGE/login_button' formmethod="post"
+            style="background-color:#ff7f95;">중복 확인</button>
             <div>중복입니다. 다시 입력해주세요.</div>
           <%} else {%>
             <input type="text" class="form-control" id="username" name="username" value='<%=name%>' required>
-            <button type="submit" action="/TAB_PAGE/login_button" method="post" formnovalidate>중복 확인</button>
+            <button class="btn" type="submit" formaction='/TAB_PAGE/login_button' formmethod="post"
+            style="background-color:#ff7f95;">중복 확인</button>
             <div>ID 사용 가능합니다.</div>
           <%}%>
       </div>
