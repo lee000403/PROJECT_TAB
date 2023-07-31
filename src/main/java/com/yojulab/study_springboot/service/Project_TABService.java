@@ -241,11 +241,11 @@ public class Project_TABService {
 
     public Object community_deleteandSelect(String POST_ID, Map dataMap) {
         dataMap.put("POST_ID", POST_ID);
-
+        String page = null;
         HashMap result = new HashMap<>();
         result.put("deleteCount", this.community_delete(POST_ID, dataMap));
 
-        result.putAll((Map) this.select_community(dataMap));
+        result.putAll((Map) this.selectSearchWithPagination_Community(page, dataMap));
         return result;
     }
 
