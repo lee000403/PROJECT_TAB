@@ -28,7 +28,7 @@
 
 ## RUN
 
-💻 [YOUTUBE](https://youtu.be/BiVopxFw5jI)
+💻 [YOUTUBE](https://www.youtube.com/watch?v=JuikXN1-NT4)
 
 ## 프로젝트 소감 
-- 🙌 협업의 중요성을 깨우쳐주었고, 덕분에 고민하면서 servlet을 깨우쳐준 프로젝트 
+- 이동환 : PM이였지만 코드 짜는 것에 너무 집중을 해서 PM 역할을 못해서 팀원들한테 죄송하고 PM의 역할이 얼마나 힘든지 프로젝트를 하면서 느끼게 되었습니다. 
