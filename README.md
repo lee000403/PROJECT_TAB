@@ -22,8 +22,8 @@
 * [자바 스프링](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)
 
 ## Refer
-- 🔓 [Naming Rule](https://docs.google.com/spreadsheets/d/1ZW_DoEZ-y3zaUmFzGOCXE5zouRHSAs82sLc7_sYTNB4/edit?usp=sharing)
-- 🎲 [ERD](https://github.com/lee000403/toy_servlet/blob/main/src/main/resources/static/pollsERD.png)
+- 🔓 [Naming Rule](https://docs.google.com/spreadsheets/d/1_G0fnScj4lSqw9ThLMKuQ8byJUeYFYzNGx42o5CeTqw/edit#gid=0)
+- 🎲 [ERD](https://github.com/lee000403/study_springboots_gradle/blob/main/Docs/Databases/total_erd.vuerd)
 
 
 ## RUN
