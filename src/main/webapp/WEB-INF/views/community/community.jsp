@@ -124,7 +124,7 @@
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
                                 <li class="page-item"><a class="page-link"
-                                        href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'style="color: #ff7f95;">Previous</a>
+                                        href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getPreviousPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'style="color: #ff7f95;">이전</a>
                                 </li>
                                 <% for(int i=paginations.getBlockStart();i <=paginations.getBlockEnd(); i=i+1){ %>
                                     <li class="page-item">
@@ -136,7 +136,7 @@
                                     <% } %>
                                         <li class="page-item">
                                             <a class="page-link"
-                                                href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'style="color: #ff7f95;">Next</a>
+                                                href='/TAB_PAGE/search_community/?currentPage=<%=paginations.getNextPage()%>&search=<%=params.getOrDefault("search", "" )%>&words=<%=params.getOrDefault("words", "" )%>'style="color: #ff7f95;">다음</a>
                                         </li>
                             </ul>
                         </nav>
