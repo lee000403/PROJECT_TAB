@@ -173,7 +173,7 @@
                         </form>
                     <% } else { %>
                         <form action="">
-                            <button type="submit" formaction="/TAB_PAGE/search_community/" formmethod="post" class="btn btn-list">목록</button>
+                            <button type="submit" formaction="/TAB_PAGE/search_community/" formmethod="post" class="btn btn-list" style="background-color: #ff7f95;">목록으로 돌아가기</button>
                         </form>
                     <% } %>
                 </div>
@@ -192,9 +192,9 @@
 
                                     <div>
                                         <button class="btn btn-sm btn-reply"
-                                            onclick="showReplyForm('comment1')">Reply</button>
-                                        <button class="btn btn-sm btn-edit">Edit</button>
-                                        <button class="btn btn-sm btn-delete">Delete</button>
+                                            onclick="showReplyForm('comment1')">답글</button>
+                                        <button class="btn btn-sm btn-edit">수정</button>
+                                        <button class="btn btn-sm btn-delete">삭제</button>
                                     </div>
                                 </div>
                                 <p class="mb-0">It's too hard to be tired. Get some more rest!</p>
@@ -207,9 +207,9 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">↳ Jane Smith</h5>
                                     <div>
-                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">Reply</button>
-                                        <button class="btn btn-sm btn-edit">Edit</button>
-                                        <button class="btn btn-sm btn-delete">Delete</button>
+                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">답글</button>
+                                        <button class="btn btn-sm btn-edit">수정</button>
+                                        <button class="btn btn-sm btn-delete">삭제</button>
                                     </div>
                                 </div>
                                 <p class="mb-0">Cheer up a little. Cheer up with positive thoughts!</p>
@@ -221,7 +221,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" rows="3" placeholder="Write your comment"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-reply" formaction="/TAB_PAGE/community_answer" formmethod="post">Submit</button>
+                            <button type="submit" class="btn btn-reply" formaction="/TAB_PAGE/community_answer" formmethod="post">제출</button>
                         </form>
                     </div>
                 </div>
@@ -232,14 +232,14 @@
 
         <div class="row mt-4">
             <div class="col-md-12">
-                <h2>Write a Comment</h2>
+                <h2>댓글 작성하기</h2>
                 <form>
                     <div class="form-group">
-                        <label for="comment-text">Comment:</label>
+                        <label for="comment-text">내용:</label>
                         <textarea class="form-control" id="comment-text" rows="3"></textarea>
                     </div>
                     <div class="text-right">
-                        <button type="submit" class="btn btn-reply">Submit</button>
+                        <button type="submit" class="btn btn-reply" style="background-color: #ff7f95;">제출</button>
                     </div>
                 </form>
             </div>

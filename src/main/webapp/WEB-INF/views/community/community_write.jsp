@@ -31,74 +31,10 @@
             height: 100vh;
         }
 
-        .navbar {
-            justify-content: flex-end;
-        }
-
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-nav .nav-item {
-            margin-right: 10px;
-        }
-
-        .h-navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-        }
-
-        .h-navbar .h-nav-item:first-child {
-            margin-right: auto;
-            font-size: 16px;
-            line-height: 8px;
-            list-style: none;
-        }
-
-
-        .navbar .nav-link {
-            padding: 0;
-            margin: 0;
-            font-size: 16px;
-            line-height: 8px;
-            color: #000000ab;
-        }
-
-        .navbar .nav-link:hover {
-            background-color: transparent;
-            font-size: 16px;
-            line-height: 8px;
-        }
-
-        .navbar-brand img {
-            height: 80px;
-        }
-
-        .nav-button {
-            display: inline-block;
-            padding: 20px 20px;
-            background-color: transparent;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #00000098;
-        }
-
         .post-title {
             font-weight: bold; font-size: 22px; border-bottom: 1px solid #0000004d;margin-bottom:10px;
         }
-        header {
-            position: fixed;
-            background-color: #fef0ea;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-        }
+        
         .btn-reply{
             background-color: #ff7f95;
         }
@@ -108,7 +44,7 @@
 <body>
     <%@ include file="../mainbar/header.jsp" %>
     <sec:authentication property="principal" var="userDetailsBean" />
-    <div class="container mt-4">
+    <div class="container mt-5">
         <h1 class="text-center"></h1>
 
         <div class="row mt-4">
@@ -127,7 +63,7 @@
                         <textarea class="form-control" id="content" name="POST_CONTENT" rows="5" placeholder="내용을 입력합니다"></textarea >
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_end/${userDetailsBean.username}' formmethod="post">등록</button>
+                        <button type="submit" class="btn btn-reply" formaction='/TAB_PAGE/community_end/${userDetailsBean.username}' formmethod="post" style="background-color: #ff7f95;">등록</button>
                     </div>
                 </form>
             </div>
@@ -136,5 +72,4 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-<%@ include file="../mainbar/footer.jsp" %>
 </html>
