@@ -170,18 +170,19 @@
                   <div class="col-8 col-md-6 col-lg-4">
                     <div class="input-group-append">
                       <form action="">
-                        <select class="form-select" name="search">
-                          <option>Select an option...</option>
-                          <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
-                          </option>
-                          <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
-                            >주소</option>
-                        </select>
-                        <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
-                          class="form-control" placeholder="Search..." id="keydownEnter">
-
-                        <button class="btn btn-primary" type="submit" formaction='/TAB_PAGE/search_page/'
-                          formmethod="post">검색</button>
+                        <div class="input-group">
+                          <select class="form-select" name="search">
+                            <option>선택</option>
+                            <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
+                            </option>
+                            <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
+                              >주소</option>
+                          </select>
+                          <input type="text" name="words" value='<%= params.getOrDefault("words", "") %>'
+                            class="form-control" placeholder="검색어를 입력하세요" id="keydownEnter" style="width : 200px;">
+                          <button class="btn" type="submit" formaction='/TAB_PAGE/search_page/' formmethod="post"
+                            style="background-color:#ff7f95;">검색</button>
+                        </div>
                       </form>
                     </div>
                   </div>
