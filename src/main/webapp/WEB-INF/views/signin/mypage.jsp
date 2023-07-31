@@ -60,13 +60,13 @@
       <div class="form-group">
         <label for="auth">회원 타입:</label>
         <% String auth = (String) result.get("MEMBERTYPE_ID");%>
-        <% if (auth.equals("ROLE_DOCTOR")) { %>
+        <% if (auth.equals("M_04")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="전문의">
-        <%} else if (auth.equals("ROLE_PATNER")) { %>
+        <%} else if (auth.equals("M_03")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="파트너">
-        <% }else if (auth.equals("ROLE_GUEST")) { %>
+        <% }else if (auth.equals("M_02")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="가족">
-        <% }else if (auth.equals("ROLE_USER")) { %>
+        <% }else if (auth.equals("M_01")) { %>
           <input type="text" class="form-control" id="auth" name="auth" value="본인">
         <% } %>
       </div>
