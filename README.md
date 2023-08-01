@@ -10,18 +10,18 @@
 ## 개발 환경
 <details>
 <summary>🔧 백엔드 개발 </summary>
-- JAVA 17
-- SPRING BOOT
-- MYBATIS
-- MYSQL
++JAVA 17
++SPRING BOOT
++MYBATIS
++MYSQL
 </details>
 
 <details>
 <summary>🔧 프론트 개발 </summary>
-- HTML
-- CSS
-- JAVASCRIPT
-- BOOTSTRAP
++HTML
++CSS
++JAVASCRIPT
++BOOTSTRAP
 </details>
 
 ## 주요 기능
