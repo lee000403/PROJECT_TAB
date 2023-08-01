@@ -32,7 +32,8 @@
 
 😃 [로그인 기능](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/java/com/yojulab/study_springboot/security/PrincipalUserService.java)
 😍 설문 및 통계 작성 코드 
-        ```
+        ``````
+        자바 코드
         public Object self_testInsert(String useraname, Map dataMap) {
             String sqlMapId = "Project_TAB.insert_selfTest";
             dataMap.put("MEMBERID", useraname);
@@ -59,9 +60,10 @@
             result.putAll((Map) this.select_selfTest_sum(useraname, dataMap));
             return result;
         }
-        ```
+        ``````
 😊 검색 기능 코드
-        ```
+        ``````
+        자바 코드
         public Object selectSearchWithPagination(String page, Map dataMap) {
             int totalCount = 0;
             totalCount = (int) this.selectTotal(dataMap);
@@ -93,7 +95,7 @@
             Object result = sharedDao.getOne(sqlMapId, dataMap);
             return result;
         }
-        ```
+        ``````
 
 ## 멤버 구성 및 역할
 
