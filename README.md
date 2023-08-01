@@ -61,11 +61,12 @@
             result.putAll((Map) this.select_selfTest_sum(useraname, dataMap));
             return result;
         }
-        </code>
-        </pre>
+</code>
+</pre>
+
 😊 검색 기능 코드
-        <pre>
-        <code>
+    <pre>
+    <code>
         자바 코드
         public Object selectSearchWithPagination(String page, Map dataMap) {
             int totalCount = 0;
@@ -98,8 +99,8 @@
             Object result = sharedDao.getOne(sqlMapId, dataMap);
             return result;
         }
-        </code>
-        </pre>
+</code>
+</pre>
 
 ## 멤버 구성 및 역할
 
