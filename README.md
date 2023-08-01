@@ -34,7 +34,6 @@
 😍 설문 및 통계 작성 코드 
         <pre>
         <code>
-        자바 코드
         public Object self_testInsert(String useraname, Map dataMap) {
             String sqlMapId = "Project_TAB.insert_selfTest";
             dataMap.put("MEMBERID", useraname);
@@ -67,7 +66,6 @@
 😊 검색 기능 코드
     <pre>
     <code>
-        자바 코드
         public Object selectSearchWithPagination(String page, Map dataMap) {
             int totalCount = 0;
             totalCount = (int) this.selectTotal(dataMap);
