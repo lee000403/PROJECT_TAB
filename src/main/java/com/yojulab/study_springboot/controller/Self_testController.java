@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.yojulab.study_springboot.service.Project_TABService;
+import com.yojulab.study_springboot.service.Self_testService;
 
 @Controller
 @RequestMapping("/TAB_PAGE")
@@ -18,10 +19,13 @@ public class Self_testController {
     @Autowired
     Project_TABService project_TABService;
 
+    @Autowired
+    Self_testService self_testService;
+
     @PostMapping("/self_test_delete/{username}")
     public ModelAndView self_test_delete(@PathVariable String username, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = project_TABService.self_test_delete(username, params);
+        Object result = self_testService.self_test_delete(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -31,7 +35,7 @@ public class Self_testController {
 
     @PostMapping("/self_test/{username}")
     public ModelAndView self_test(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
-        Object result = project_TABService.self_test_delete(username, params);
+        Object result = self_testService.self_test_delete(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -41,7 +45,7 @@ public class Self_testController {
 
     @PostMapping("/self_test_no_insert")
     public ModelAndView self_test_no_insert(@RequestParam Map params, ModelAndView modelAndView) {
-        Object result = project_TABService.self_test_no_insert(params);
+        Object result = self_testService.self_test_no_insert(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
@@ -60,7 +64,7 @@ public class Self_testController {
     @PostMapping("/self_test_road/{username}")
     public ModelAndView self_test_road(@PathVariable String username, @RequestParam Map params,
             ModelAndView modelAndView) {
-        Object result = project_TABService.self_testInsert(username, params);
+        Object result = self_testService.self_testInsert(username, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
 
