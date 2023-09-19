@@ -117,6 +117,11 @@
       border: 1px solid #00000098;
     }
 
+    .video_button{
+      border: none;
+      background-color: white;
+    }
+
   </style>
 </head>
   <%@ include file="../mainbar/header.jsp" %>
@@ -161,7 +166,7 @@
   <div class="row justify-content-center">
     <div class="col">
       <form action="https://www.youtube.com/watch?v=GBbHNUx3kvI" method="get">
-        <button type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+        <button class="video_button" type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
           <div class="image-container round-image">
             <img class="img-fluid" src="/images/img1_video_banner.png" alt="치매 인식 개선 영상">
           </div>
