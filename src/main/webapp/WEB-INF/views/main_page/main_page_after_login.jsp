@@ -117,14 +117,29 @@
       border: 1px solid #00000098;
     }
 
+    .video_button{
+      border: none;
+      background-color: white;
+    }
+
+    .main_phrase {
+    max-height: "700em";
+    max-width: 500px;
+    min-width: 800px;
+    }
+    
+    *{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
   </style>
 </head>
   <%@ include file="../mainbar/header.jsp" %>
   <div class="container-fluid">
     <div class="mb-4">
       <div class="image-container">
-        <img src="/images/img5_main_cover.jpg" alt="치매 one-click 메인 커버" height="700em" width="100%">
-        <div class="text-center main-title image-text">치매 One-click Matching</div>
+        <img class="main_img" src="/images/img5_main_cover.jpg" alt="치매 one-click 메인 커버">
+        <div class="text-center main-title image-text main_phrase">치매 One-click Matching</div>
         <p class="text-center image-text-second">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
       </div>
     </div>
@@ -161,7 +176,7 @@
   <div class="row justify-content-center">
     <div class="col">
       <form action="https://www.youtube.com/watch?v=GBbHNUx3kvI" method="get">
-        <button type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
+        <button class="video_button" type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank">
           <div class="image-container round-image">
             <img class="img-fluid" src="/images/img1_video_banner.png" alt="치매 인식 개선 영상">
           </div>
