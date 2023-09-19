@@ -122,14 +122,24 @@
       background-color: white;
     }
 
+    .main_phrase {
+    max-height: "700em";
+    max-width: 500px;
+    min-width: 800px;
+    }
+    
+    *{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
   </style>
 </head>
   <%@ include file="../mainbar/header.jsp" %>
   <div class="container-fluid">
     <div class="mb-4">
       <div class="image-container">
-        <img src="/images/img5_main_cover.jpg" alt="치매 one-click 메인 커버" height="700em" width="100%">
-        <div class="text-center main-title image-text">치매 One-click Matching</div>
+        <img class="main_img" src="/images/img5_main_cover.jpg" alt="치매 one-click 메인 커버">
+        <div class="text-center main-title image-text main_phrase">치매 One-click Matching</div>
         <p class="text-center image-text-second">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
       </div>
     </div>
