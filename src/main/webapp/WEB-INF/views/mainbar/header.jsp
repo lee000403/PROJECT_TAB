@@ -42,7 +42,7 @@
                   <form>
                     <li class="nav-item">
                       <button type="submit" class="btn btn-none"
-                        formaction="/TAB_PAGE/mypage/${userDetailsBean.username}" formmethod="post">마이 페이지</button>
+                        formaction="/TAB_PAGE/mypage/${userDetailsBean.username}" formmethod="post">마이페이지</button>
                     </li>
                   </form>
 
@@ -56,12 +56,12 @@
             </div>
           </nav>
 
-          <nav class="navbar navbar-expand-lg">
+          <nav class="navbar navbar-expand-lg items">
             <div class="container">
               <sec:authorize access="isAnonymous()">
                 <form>
                   <div class="logo_btn">
-                  <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/home/" formmethod="post">
+                  <button type="submit" class="btn btn-none justify-content-center" formaction="/TAB_PAGE/home/" formmethod="post">
                     <img src="/images/mainlogo.png" alt="Logo" class="logo-image">
                   </button>
                 </div>

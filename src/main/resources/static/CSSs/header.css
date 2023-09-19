@@ -1,15 +1,10 @@
-@font-face {
-  font-family: 'NanumBarunGothic';
-  src: url('/fonts/NanumGothic.ttf');
-}
-
-* {
-  font-family: 'NanumBarunGothic', 'serif';
-}
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 body {
   background-color: #fff;
   padding-top: 160px;
+  font-family: 'Nanum Barun Gothic';
+  font-weight: bold;
 }
 
 .navbar {
@@ -67,6 +62,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   border: 3px solid grey;
+  background-color: white;
 }
 
 .nav-button:hover {
@@ -98,4 +94,8 @@ header {
 .btn {
   color: grey;
   font-weight: bolder;
+}
+
+.items {
+  bottom: 9px;
 }

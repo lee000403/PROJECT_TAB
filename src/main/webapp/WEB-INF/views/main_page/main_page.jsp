@@ -28,7 +28,7 @@
             <div class="container mb-2 text-center search_text">
               🏥 치매 전문 센터 및 병원 찾기
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-4">
               <div class="col-md-6">
                 <div class="input-group mb-5">
                   <select class="form-select" name="search">
