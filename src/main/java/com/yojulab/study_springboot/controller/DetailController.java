@@ -31,3 +31,7 @@ public class DetailController {
         return modelAndView;
     }
 }
+
+
+// 동환아 이겨내ㅏ! ㅠ
+// 감사합니다!
