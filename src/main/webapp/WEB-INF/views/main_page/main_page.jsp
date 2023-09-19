@@ -9,152 +9,45 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>치매 One-click System</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-      
-      <style>
-        body {
-          background-color: #fef0ea;
-        }
+      <link rel="stylesheet" href="/CSSs/main_page.css">
+      <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
 
-        .navbar {
-          justify-content: flex-end;
-        }
-
-        .navbar-nav {
-          display: flex;
-          align-items: center;
-        }
-
-        .navbar-nav .nav-item {
-          margin-right: 10px;
-        }
-
-        .h-navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          list-style: none;
-        }
-
-        .h-navbar .h-nav-item:first-child {
-          margin-right: auto;
-          font-size: 16px;
-          line-height: 8px;
-          list-style: none;
-        }
-
-        .image-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-        }
-
-        .image-container img {
-          max-height: 80%;
-          /* Set the maximum height of the image */
-        }
-
-        .main-title {
-          font-size: 30px;
-          font-weight: bold;
-        }
-
-        .image-text {
-          position: absolute;
-          top: 22%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: #2e1a27;
-          padding: 10px;
-          text-align: center;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .image-text-second {
-          position: absolute;
-          top: calc(22% + 15px);
-          /* Adjust the top value to control the spacing */
-          left: 50%;
-          transform: translateX(-50%);
-          color: #555742;
-          padding: 10px;
-          text-align: center;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .round-image {
-          border-radius: 10%;
-        }
-
-        .navbar .nav-link {
-          padding: 0;
-          margin: 0;
-          font-size: 16px;
-          line-height: 8px;
-          color: #000000ab;
-        }
-
-        .navbar .nav-link:hover {
-          background-color: transparent;
-          font-size: 16px;
-          line-height: 8px;
-        }
-
-        .navbar-brand img {
-          height: 80px;
-        }
-
-
-        .nav-button {
-          display: inline-block;
-          padding: 20px 20px;
-          background-color: transparent;
-          color: #000;
-          border-radius: 5px;
-          text-decoration: none;
-          font-weight: bold;
-          border: 1px solid #00000098;
-        }
-      </style>
     </head>
 
     <body>
       <%@ include file="../mainbar/header.jsp" %>
-        <div class="container-fluid">
-          <div class="mb-4">
-            <div class="image-container">
-              <img src="/images/img5_main_cover.jpg" alt="치매 one-click 메인 커버" height="700em" width="100%">
-              <div class="text-center main-title image-text">치매 One-click Matching</div>
-              <p class="text-center image-text-second">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p>
-            </div>
+        <div class="main_image_box">
+          <div class="mt-5 mb-5 text-center">
+            <img class="main_img" src="/images/one_click_matching.jpg" alt="치매 one-click 메인 커버">
+            <!-- <div class="text-center main-title image-text">치매 One-click Matching</div>
+              <p class="text-center image-text-second">치매환자와 가족과 동행하는 치매파트너 연결 서비스</p> -->
           </div>
         </div>
-          <div>
-            <form action="" method="post">
-              <div class="container mb-2 text-center">
-                🏥 치매 전문 센터 및 병원 찾기
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-md-6">
-                  <div class="input-group mb-5">
-                    <select class="form-select" name="search">
-                      <option>선택</option>
-                      <option value="CENTER_NAME">시설명
-                      </option>
-                      <option value="CENTER_ADD"
-                        >주소</option>
-                    </select>
-                    <input type="text" name="words" class="form-control"
-                      placeholder="검색..." id="keydownEnter">
-                    <button class="btn" style="background-color: #ff7f95;" type="submit"
-                      formaction="/TAB_PAGE/search_page/" formmethod="post">검색</button>
-                  </div>
+        <div>
+          <form action="" method="post">
+            <div class="container mb-2 text-center search_text">
+              🏥 치매 전문 센터 및 병원 찾기
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="input-group mb-5">
+                  <select class="form-select" name="search">
+                    <option>선택</option>
+                    <option value="CENTER_NAME">시설명
+                    </option>
+                    <option value="CENTER_ADD">주소</option>
+                  </select>
+                  <input type="text" name="words" class="form-control" placeholder="검색..." id="keydownEnter">
+                  <button class="btn" style="background-color: #ff7f95;" type="submit"
+                    formaction="/TAB_PAGE/search_page/" formmethod="post">검색</button>
                 </div>
               </div>
-          </div>
-          </form>
+            </div>
+        </div>
+        </form>
 
-          <div class="row justify-content-center">
+        <div class="btns">
+          <div class="row justify-content-center video_button text-center">
             <div class="col">
               <form action="https://www.youtube.com/watch?v=GBbHNUx3kvI" method="get">
                 <button type="submit" formaction="https://www.youtube.com/watch?v=GBbHNUx3kvI" target="_blank"
@@ -195,13 +88,13 @@
               </form>
             </div>
           </div>
-          </div>
+        </div>
+        </div>
+        <%@ include file="../mainbar/footer.jsp" %>
 
-          <%@ include file="../mainbar/footer.jsp" %>
 
-         
     </body>
-    
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 

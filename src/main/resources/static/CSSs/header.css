@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('/fonts/NanumGothic.ttf');
+}
+
+* {
+  font-family: 'NanumBarunGothic', 'serif';
+}
+
+body {
+  background-color: #fff;
+  padding-top: 160px;
+}
+
+.navbar {
+  justify-content: flex-end;
+  height: 100px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.h-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.h-navbar .h-nav-item:first-child {
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 8px;
+  list-style: none;
+}
+
+.navbar .nav-link {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 8px;
+  color: #000000ab;
+}
+
+.navbar .nav-link:hover {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 8px;
+}
+
+.navbar-brand img {
+  height: 80px;
+}
+
+.nav-button {
+
+  padding: 10px 15px;
+  /* Adjust the values as needed */
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 3px solid grey;
+}
+
+.nav-button:hover {
+  background-color: #F8C7CC;
+  color: whitesmoke;
+}
+
+header {
+  position: fixed;
+  background-color: #fef0ea;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo-image {
+  max-width: 200%;
+  height: auto;
+  max-height: 80px;
+}
+
+.logo_btn {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn {
+  color: grey;
+  font-weight: bolder;
+}

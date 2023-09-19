@@ -12,85 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>치매 One-click System</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-        <style>
-          body {
-            background-color: #fff;
-            padding-top: 160px;
-          }
-
-          .navbar {
-            justify-content: flex-end;
-            height: 100px;
-          }
-
-          .navbar-nav {
-            display: flex;
-            align-items: center;
-          }
-
-          .navbar-nav .nav-item {
-            margin-right: 10px;
-          }
-
-          .h-navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-          }
-
-          .h-navbar .h-nav-item:first-child {
-            margin-right: auto;
-            font-size: 16px;
-            line-height: 8px;
-            list-style: none;
-          }
-
-          .navbar .nav-link {
-            padding: 0;
-            margin: 0;
-            font-size: 16px;
-            line-height: 8px;
-            color: #000000ab;
-          }
-
-          .navbar .nav-link:hover {
-            background-color: transparent;
-            font-size: 16px;
-            line-height: 8px;
-          }
-
-          .navbar-brand img {
-            height: 80px;
-          }
-
-          .nav-button {
-            display: inline-block;
-            padding: 10px 15px;
-            /* Adjust the values as needed */
-            background-color: transparent;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #00000098;
-          }
-
-          header {
-            position: fixed;
-            background-color: #fef0ea;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-          }
-
-          .logo-image {
-            max-width: 200%;
-            height: auto;
-            max-height: 80px;
-          }
-        </style>
+        <link rel="stylesheet" href="/CSSs/header.css">
       </head>
 
       <body>
@@ -138,9 +60,11 @@
             <div class="container">
               <sec:authorize access="isAnonymous()">
                 <form>
+                  <div class="logo_btn">
                   <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/home/" formmethod="post">
                     <img src="/images/mainlogo.png" alt="Logo" class="logo-image">
                   </button>
+                </div>
                 </form>
               </sec:authorize>
               <sec:authorize access="isAuthenticated()">
