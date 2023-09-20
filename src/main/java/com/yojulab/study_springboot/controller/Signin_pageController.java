@@ -18,6 +18,27 @@ public class Signin_pageController {
     @Autowired
     Project_TABService project_TABService;
 
+    @PostMapping("/mypage/{username}")
+    public ModelAndView mypage(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.mypage_detail(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/signin/mypage.jsp");
+        return modelAndView;
+    }
+
+    @PostMapping("/mypage_update/{username}")
+    public ModelAndView mypage_update(@PathVariable String username, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.mypage_updateAndSelectSearch(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/signin/mypage.jsp");
+        return modelAndView;
+    }
+
     @PostMapping("/signin_page_a/{MEMBER_ID}")
     public ModelAndView signin_page_a(@PathVariable String member_id, @RequestParam Map params,
             ModelAndView modelAndView) {
