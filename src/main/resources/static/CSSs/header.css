@@ -97,5 +97,9 @@ header {
 }
 
 .items {
-  bottom: 9px;
+  bottom: 2px;
+}
+
+header {
+  height: 170px;
 }

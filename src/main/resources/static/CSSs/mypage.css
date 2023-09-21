@@ -1,0 +1,35 @@
+body {
+    background-color: #fef0ea;
+    padding-top: 130px;
+}
+
+.headline {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.btn-primary {
+    background-color: #ff92b3;
+    border-color: #ff92b3;
+}

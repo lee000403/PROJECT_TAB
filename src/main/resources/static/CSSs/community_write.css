@@ -1,0 +1,38 @@
+ 
+ /* Additional CSS for popup */
+ .modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+    height: 500px;
+    /* 원하는 높이 값으로 조정 */
+    max-height: 80vh;
+    /* 원하는 최대 높이 값으로 조정 */
+}
+.comment-reply {
+    margin-left: 50px;
+}
+
+body {
+    padding-top: 10rem;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.post-title {
+    font-weight: bold; font-size: 22px; border-bottom: 1px solid #0000004d;margin-bottom:10px;
+}
+
+.btn-reply{
+    background-color: #ff7f95;
+}
+
+.write_form {
+    max-width: 500px;
+    min-height: 300px;
+}
+
+.form-control .content_control {
+    min-height: 500px !important;
+}

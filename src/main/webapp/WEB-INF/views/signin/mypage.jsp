@@ -8,37 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원 마이페이지</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #fef0ea;
-      padding-top: 130px
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-group label {
-      font-weight: bold;
-    }
-    .profile-picture {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .profile-picture img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .btn-primary {
-      background-color: #ff92b3;
-      border-color: #ff92b3;
-    }
-  </style>
+  <link rel="stylesheet" href="/CSSs/mypage.css">
 </head>
 <body>
   <%@ include file="../mainbar/header.jsp" %>
@@ -47,7 +17,7 @@
   result=(HashMap)request.getAttribute("result"); %>
   <sec:authentication property="principal" var="userDetailsBean" />
   <div class="container">
-    <h1>마이페이지</h1>
+    <h1 class="headline">마이페이지</h1>
     <form>
       <div class="form-group">
         <label for="username">아이디:</label>
