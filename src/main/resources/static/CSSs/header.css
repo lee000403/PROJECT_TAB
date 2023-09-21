@@ -103,3 +103,7 @@ header {
 header {
   height: 170px;
 }
+
+.headline{
+  align-items: center;
+}
