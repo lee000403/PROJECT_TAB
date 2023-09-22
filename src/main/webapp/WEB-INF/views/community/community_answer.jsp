@@ -9,134 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Post Detail</title>
-    <style>
-        .comment-reply {
-            margin-left: 50px;
-        }
-
-        body {
-            padding-top: 10rem;
-            background-color: #fff;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .navbar {
-            justify-content: flex-end;
-        }
-
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-nav .nav-item {
-            margin-right: 10px;
-        }
-
-        .h-navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-        }
-
-        .h-navbar .h-nav-item:first-child {
-            margin-right: auto;
-            font-size: 16px;
-            line-height: 8px;
-            list-style: none;
-        }
-
-        .navbar .nav-link {
-            padding: 0;
-            margin: 0;
-            font-size: 16px;
-            line-height: 8px;
-            color: #000000ab;
-        }
-
-        .navbar .nav-link:hover {
-            background-color: transparent;
-            font-size: 16px;
-            line-height: 8px;
-        }
-
-        .navbar-brand img {
-            height: 80px;
-        }
-
-        .nav-button {
-            display: inline-block;
-            padding: 20px 20px;
-            background-color: transparent;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #00000098;
-        }
-
-        .post-title {
-            font-weight: bold;
-            font-size: 22px;
-            border-bottom: 1px solid #0000004d;
-            padding-bottom: 10px;
-
-        }
-
-        .post-subtitle {
-            font-size: 12px;
-            border-bottom: 1px solid #0000004d;
-            margin-bottom: 10px;
-        }
-
-        header {
-            position: fixed;
-            background-color: #fef0ea;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-        }
-
-        .btn-reply {
-            background-color: #ff7f95;
-        }
-
-        .btn-group {
-            float: right;
-            margin-right: auto;
-
-        }
-
-        .btn-group .text-right {
-            text-align: right;
-        }
-
-
-        .btn-edit {
-            background-color: yellow;
-            margin-right: 10px;
-        }
-
-        .btn-delete {
-            background-color: yellow;
-            margin-right: 10px;
-        }
-
-        .btn-list {
-            background-color: yellow;
-            margin-right: 10px;
-        }
-
-        /* Adjust comment section height */
-        .comment-section {
-            height: 250px;
-            overflow-y: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="/CSSs/community_answer.css">
+    <script src="/js/community_comment.js"></script>
 </head>
 <%@ include file="../mainbar/header.jsp" %>
 <body>
@@ -180,10 +54,22 @@
             </div>
         </form>
 
-        <div class="row mt-4">
+        <div class="container">
+            <label for="newComment">Add your comment below-</label>
+            <textarea id="newComment"></textarea>
+            <button id="addComments">Add Comment</button>
+            <div id="allComments"></div>
+        </div>
+
+
+
+
+
+
+        <!-- <div class="row mt-4">
             <div class="col-md-12">
                 <h4>전체 댓글</h4>
-                <div class="card comment-section"> <!-- Added comment-section class -->
+                <div class="card comment-section">
                     <div class="card-body">
                         <div class="media">
                             <div class="media-body">
@@ -203,7 +89,7 @@
                         </div>
 
                         <div class="media mt-3 comment-reply">
-                            <div class="media-body">
+                             <div class="media-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h5 class="mt-0">↳ Jane Smith</h5>
                                     <div>
@@ -214,7 +100,7 @@
                                 </div>
                                 <p class="mb-0">Cheer up a little. Cheer up with positive thoughts!</p>
                                 <small class="text-muted">2023-07-07</small>
-                            </div>
+                            </div> 
                         </div>
 
                         <form class="mt-3" id="commentForm" style="display: none;">
@@ -225,8 +111,6 @@
                         </form>
                     </div>
                 </div>
-
-                <!-- Add more comment threads as needed -->
             </div>
         </div>
 
@@ -244,7 +128,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 <%@ include file="../mainbar/footer.jsp" %>
 </html>
