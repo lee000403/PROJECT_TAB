@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.annotation.ModelAndViewResolver;
 
 @Controller
 @RequestMapping("/TAB_PAGE")
-public class Statistics {
+public class StatisticsController {
     
     @RequestMapping("/statistics")
    public String statistics(){

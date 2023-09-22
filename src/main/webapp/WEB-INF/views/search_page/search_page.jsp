@@ -7,62 +7,8 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/CSSs/search_page.css">
       <title>Search</title>
-
-      <style>
-        body {
-          font-family: Arial, sans-serif;
-          text-align: center;
-        }
-
-        .input-group {
-          margin-bottom: 20px;
-        }
-
-        .form-control {
-          width: 60%;
-        }
-
-        .btn-search {
-          background-color: rgba(221, 43, 43, 0.897);
-          color: #fff;
-        }
-
-        table {
-          width: 100%;
-          border-collapse: collapse;
-        }
-
-        th,
-        td {
-          padding: 10px;
-          border: 1px solid #ccc;
-        }
-
-        th {
-          background-color: #f2f2f2;
-          font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-          background-color: #f9f9f9;
-        }
-
-        tr:hover {
-          background-color: #ebebeb;
-        }
-
-        .textname {
-          font-weight: bold;
-          font-size: large;
-          text-align: left;
-        }
-
-        .textnayong {
-          text-align: left;
-        }
-      </style>
-
     </head>
 
     <body>
