@@ -49,7 +49,7 @@
       </div>
       <div class="form-group">
         <label for="birthdate">생년월일:</label>
-        <input type="date" class="form-control" id="birthdate" name="birthdate" value='<%=result.get("BIRTHDATE") %>'>
+        <input type="date" class="form-control" id="birthdate" name="birthdate" value='<%= result.get("BIRTHDATE") %>'>
       </div>
       <div class="form-group">
         <label for="phone">전화번호:</label>
@@ -67,7 +67,10 @@
         <label for="introduction">자기소개:</label>
         <textarea class="form-control" id="introduction" name="introduction"><%=result.get("INTRODUCTION")%></textarea>
       </div>
-      <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" formmethod="post" class="btn" style="background-color: #ff7f95;">수정하기</button>
+      <div>
+        <button type="submit" formaction="/TAB_PAGE/mypage_update/${userDetailsBean.username}" formmethod="post" class="btn" style="background-color: #ff7f95;">수정하기</button>
+        <button type="submit" formaction="/TAB_PAGE/mypage_ID_del/<%=result.get("MEMBERID") %>" formmethod="post" class="btn" style="background-color: #ff7f95;">회원탈퇴</button>
+      </div>
     </form>
   </div>
 </body>

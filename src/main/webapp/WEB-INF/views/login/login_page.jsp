@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,12 +40,18 @@
 
 <body>
   <%@ include file="../mainbar/header.jsp" %>
+  <%  HashMap result=(HashMap)request.getAttribute("result");
+      HashMap params=(HashMap)request.getAttribute("params"); 
+  %>
 
   <div class="container">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title text-center">회원 로그인</h5>
         <form action="/login" method="post">
+          <%
+            String username = request.getParameter("username");
+          %>
           <div class="mb-3">
             <label for="username" class="form-label">아이디</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="아이디를 입력하세요">
@@ -55,6 +62,17 @@
           </div>
           <div class="d-grid gap-2">
             <button type="submit" class="btn" style="background-color:  #ff7f95; font-weight: 530;" >Log in</button>
+            <%  
+            Object resultList = result.get("resultList");
+            if (resultList instanceof ArrayList) {
+                ArrayList resultListList = (ArrayList) resultList;
+                if (resultListList.size() != 0) {
+            %>
+                <h5>탈퇴 회원입니다.</h5>
+            <%
+                }
+            }
+            %>
           </div>
         </form>
         <form action="/joinForm" method="post">

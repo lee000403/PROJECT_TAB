@@ -107,6 +107,14 @@ public class Project_TABService {
         return result;
     }
 
+    public Object mypage_ID_del(String MEMBERID, Map dataMap) {
+        String sqlMapId = "Project_TAB.mypage_ID_del";
+        dataMap.put("MEMBERID", MEMBERID);
+
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+
     public Object login_button(Map dataMap) {
         String sqlMapId = "Project_TAB.login_button";
 
@@ -137,6 +145,14 @@ public class Project_TABService {
         String sqlMapId = "Project_TAB.delete";
 
         Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object selectID(Map dataMap) {
+        String sqlMapId = "Project_TAB.mypage_detail";
+
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 

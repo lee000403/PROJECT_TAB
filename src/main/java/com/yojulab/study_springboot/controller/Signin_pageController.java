@@ -39,6 +39,17 @@ public class Signin_pageController {
         return modelAndView;
     }
 
+    @PostMapping("/mypage_ID_del/{MEMBERID}")
+    public ModelAndView mypage_delete(@PathVariable String MEMBERID, @RequestParam Map params,
+            ModelAndView modelAndView) {
+        Object result = project_TABService.mypage_ID_del(MEMBERID, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/main_page/main_page.jsp");
+        return modelAndView;
+    }
+
     @PostMapping("/signin_page_a/{MEMBER_ID}")
     public ModelAndView signin_page_a(@PathVariable String member_id, @RequestParam Map params,
             ModelAndView modelAndView) {
