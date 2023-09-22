@@ -119,7 +119,7 @@ body {
 .main_img {
     justify-content: center;
     text-align: center;
-
+    width: 100%;
 }
 
 
@@ -137,6 +137,6 @@ body {
 }
 
 .search_text{
-    font-size: 2vh;
+    font-size: 3vh;
     font-weight: bold;
 }

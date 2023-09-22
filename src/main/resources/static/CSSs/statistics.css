@@ -1,0 +1,66 @@
+.container {
+    margin-top: 50px;
+    display: grid;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    grid-template-areas:
+    "carousel carousel"
+    "stat_a stat_b"
+}
+
+.carousel {grid-area:carousel;}
+.stat_a {grid-area:stat_a;}
+.stat_b {grid-area:stat_b;}
+.stat_c {grid-area:stat_c;}
+
+.carousel {
+    text-align: center;
+}
+
+
+.img {
+    width: 700px;
+    height: 400px;
+}
+
+
+.btns {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    appearance: none;
+    text-align: center;
+
+}
+
+
+.imgs {
+    margin: 0 auto;
+    width: 700px;
+    height: 400px;
+}
+
+.controls {
+    top: 450px;
+    left: 100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+}
+
+.headline {
+    margin-bottom: 45px;
+}
+
+.cbtn {
+    border: none;
+    font-weight: bolder;
+    color:palevioletred;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+}

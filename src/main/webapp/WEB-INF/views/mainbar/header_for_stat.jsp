@@ -57,7 +57,7 @@
           </nav>
 
           <nav class="navbar navbar-expand-lg items">
-            <div class="container">
+            <div class="container headline">
               <sec:authorize access="isAnonymous()">
                 <form>
                   <div class="logo_btn">
