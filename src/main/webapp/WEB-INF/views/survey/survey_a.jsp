@@ -86,34 +86,28 @@
 
 
           <div class="form-group">
-            <label for="requestAddress">서비스를 받고 싶은 지역을 선택해주세요</label>
-            <select data-v-4604670f="" name="requestAddress" class="select custom-select margin-bottom disabled"
-              data-testid="request-address" aria-invalid="false" id="requestAddressProvince">
-              <option disabled="disabled" value="">시/도</option>
-              <option name="region" value="서울">서울</option>
-              <option name="region" value="세종">세종</option>
-              <option name="region" value="강원">강원</option>
-              <option name="region" value="인천">인천</option>
-              <option name="region" value="경기">경기</option>
-              <option name="region" value="충북">충북</option>
-              <option name="region" value="충남">충남</option>
-              <option name="region" value="경북">경북</option>
-              <option name="region" value="대전">대전</option>
-              <option name="region" value="대구">대구</option>
-              <option name="region" value="전북">전북</option>
-              <option name="region" value="경남">경남</option>
-              <option name="region" value="울산">울산</option>
-              <option name="region" value="광주">광주</option>
-              <option name="region" value="부산">부산</option>
-              <option name="region" value="전남">전남</option>
-              <option name="region" value="제주">제주</option>
+            <div>선호하는 지역을 선택해주세요</div>
+            <label for="addressFirst">(1순위)</label>
+            <select data-v-4604670f="" name="area" class="select custom-select disabled" data-testid="address-first" aria-invalid="false" id="requestAddressProvince">
+                <option disabled="disabled" value="">시/도</option>
+                <option value="SURA-0089">서울</option>
+                <option value="SURA-0090">세종</option>
+                <option value="SURA-0091">강원</option>
+                <option value="SURA-0092">인천</option>
+                <option value="SURA-0093">경기</option>
+                <option value="SURA-0094">충북</option>
+                <option value="SURA-0095">충남</option>
+                <option value="SURA-0096">경북</option>
+                <option value="SURA-0097">대전</option>
+                <option value="SURA-0098">대구</option>
+                <option value="SURA-0099">전북</option>
+                <option value="SURA-0100">경남</option>
+                <option value="SURA-0101">울산</option>
+                <option value="SURA-0102">광주</option>
+                <option value="SURA-0103">부산</option>
+                <option value="SURA-0104">전남</option>
+                <option value="SURA-0105">제주</option>
             </select>
-
-            <select data-v-4604670f="" name="requestAddress" disabled="disabled" class="select custom-select disabled"
-              data-testid="request-address" aria-invalid="false" id="requestAddressCity">
-              <option disabled="disabled" value="">시/군/구</option>
-            </select>
-          </div>
 
           <div class="form-group">
             <label for="vehicle-ownership">차량 또는 면허가 필요할까요?</label>
