@@ -62,15 +62,13 @@
           </div>
           <div class="d-grid gap-2">
             <button type="submit" class="btn" style="background-color:  #ff7f95; font-weight: 530;" >Log in</button>
-            <%  
-            Object resultList = result.get("resultList");
-            if (resultList instanceof ArrayList) {
-                ArrayList resultListList = (ArrayList) resultList;
-                if (resultListList.size() != 0) {
-            %>
-                <h5>탈퇴 회원입니다.</h5>
             <%
-                }
+            if (params.size() != 0) {
+              String str_fail = (String)params.get("fail");
+              if (str_fail.equals("true")) { %>
+                <div style="font-size: 15px; text-align: center;" class="text-danger">아이디, 비밀번호를 확인해 주세요.</div>
+            <%
+              }
             }
             %>
           </div>

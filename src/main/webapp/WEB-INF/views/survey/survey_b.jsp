@@ -115,94 +115,85 @@
             <div class="form-group">
                 <label for="gender">선호하는 환자의 성별이 있나요?</label>
                 <select class="form-control" id="gender">
-                    <option name="gender" value="SURA-0001">무관</option>
-                    <option name="gender" value="SURA-0002">남</option>
-                    <option name="gender" value="SURA-0003">여</option>
+                    <option name="gender" value="SURA-0041">무관</option>
+                    <option name="gender" value="SURA-0042">남</option>
+                    <option name="gender" value="SURA-0043">여</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for=" work-type">어떤 근무 형태를 원하시나요?</label>
                 <select class="form-control" id="work-type">
-                    <option name="work-type" value="SURA-0013">출퇴근형 (오전만)</option>
-                    <option name="work-type" value="SURA-0014">출퇴근형 (오후만)</option>
-                    <option name="work-type" value="SURA-0015">출퇴근형 (종일)</option>
-                    <option name="work-type" value="SURA-0016">입주형</option>
-                    <option name="work-type" value="SURA-0017">파트너와 상담 후 결정할게요.</option>
+                    <option name="work-type" value="SURA-0044">출퇴근형 (오전만)</option>
+                    <option name="work-type" value="SURA-0045">출퇴근형 (오후만)</option>
+                    <option name="work-type" value="SURA-0046">출퇴근형 (종일)</option>
+                    <option name="work-type" value="SURA-0047">입주형</option>
+                    <option name="work-type" value="SURA-0048">파트너와 상담 후 결정할게요.</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="partner-type">원하시는 고용형태는요?</label>
                 <select class="form-control" id="partner-type">
-                    <option name="partner-type" value="SURA-0018">장기 요양보호사</option>
-                    <option name="partner-type" value="SURA-0019">단기 케어</option>
-                    <option name="partner-type" value="SURA-0020">자원봉사자</option>
+                    <option name="partner-type" value="SURA-0049">장기 요양보호사</option>
+                    <option name="partner-type" value="SURA-0050">단기 케어</option>
+                    <option name="partner-type" value="SURA-0051">자원봉사자</option>
                 </select>
             </div>
         
             <div class="form-group">
                 <label for="patient-level">동행 가능한 환자의 치매 단계는 어떻게 될까요?</label>
                 <select class="form-control" id="patient-level">
-                    <option name="STAGE_ID" value="DS_01">경증 치매</option>
-                    <option name="STAGE_ID" value="DS_02">중등도 치매</option>
-                    <option name="STAGE_ID" value="DS_03">중증 치매</option>
+                    <option name="STAGE_ID" value="SURA-0052">경증 치매</option>
+                    <option name="STAGE_ID" value="SURA-0053">중등도 치매</option>
+                    <option name="STAGE_ID" value="SURA-0054">중증 치매</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <div>선호하는 지역을 선택해주세요</div>
                 <label for="addressFirst">(1순위)</label>
-                <select data-v-4604670f="" name="addressFirst" class="select custom-select disabled" data-testid="address-first" aria-invalid="false" id="requestAddressProvince">
+                <select data-v-4604670f="" name="area" class="select custom-select disabled" data-testid="address-first" aria-invalid="false" id="requestAddressProvince">
                     <option disabled="disabled" value="">시/도</option>
-                    <option value="서울">서울</option>
-                    <option value="세종">세종</option>
-                    <option value="강원">강원</option>
-                    <option value="인천">인천</option>
-                    <option value="경기">경기</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="경북">경북</option>
-                    <option value="대전">대전</option>
-                    <option value="대구">대구</option>
-                    <option value="전북">전북</option>
-                    <option value="경남">경남</option>
-                    <option value="울산">울산</option>
-                    <option value="광주">광주</option>
-                    <option value="부산">부산</option>
-                    <option value="전남">전남</option>
-                    <option value="제주">제주</option>
+                    <option value="SURA-0089">서울</option>
+                    <option value="SURA-0090">세종</option>
+                    <option value="SURA-0091">강원</option>
+                    <option value="SURA-0092">인천</option>
+                    <option value="SURA-0093">경기</option>
+                    <option value="SURA-0094">충북</option>
+                    <option value="SURA-0095">충남</option>
+                    <option value="SURA-0096">경북</option>
+                    <option value="SURA-0097">대전</option>
+                    <option value="SURA-0098">대구</option>
+                    <option value="SURA-0099">전북</option>
+                    <option value="SURA-0100">경남</option>
+                    <option value="SURA-0101">울산</option>
+                    <option value="SURA-0102">광주</option>
+                    <option value="SURA-0103">부산</option>
+                    <option value="SURA-0104">전남</option>
+                    <option value="SURA-0105">제주</option>
                 </select>
-                
-
-
-            <label for="addressSecond">(2순위)</label>
-            <select data-v-4604670f="" name="addressSecond" class="select custom-select margin-bottom disabled" data-testid="address-second" aria-invalid="false" id="AddressProvinceSecond"><option disabled="disabled" value="">시/도</option><option value="서울">서울</option><option value="세종">세종</option><option value="강원">강원</option><option value="인천">인천</option><option value="경기">경기</option><option value="충북">충북</option><option value="충남">충남</option><option value="경북">경북</option><option value="대전">대전</option><option value="대구">대구</option><option value="전북">전북</option><option value="경남">경남</option><option value="울산">울산</option><option value="광주">광주</option><option value="부산">부산</option><option value="전남">전남</option><option value="제주">제주</option></select>  
         </div>
-
-
 
             <div class="form-group">
                 <label for="vehicle-ownership">차량 또는 면허가 있나요?</label>
                 <select class="form-control" id="vehicle-ownership">
-                    <option name="car" value="SURA-0035">차량 필요</option>
-                    <option name="car" value="SURA-0036">운전 필요</option>
-                    <option name="car" value="SURA-0037">무관</option>
+                    <option name="car" value="SURA-0083">차량 있음</option>
+                    <option name="car" value="SURA-0084">운전 가능</option>
+                    <option name="car" value="SURA-0085">운전 불가</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="license">자격증이 있나요?</label>
                 <select class="form-control" id="license">
-                    <option>요양 보호사 자격증</option>
-                    <option>치매 파트너 교육 이수</option>
-                    <option>없음</option>
+                    <option name="patner" value="SURA-0086">요양 보호사 자격증</option>
+                    <option name="patner" value="SURA-0087">치매 파트너 교육 이수</option>
+                    <option name="patner" value="SURA-0088">없음</option>
                 </select>
             </div>
 
-
             <div class="centered-button mt-5">
-
                 <button type="submit" class="btn btn-style" formaction="/TAB_PAGE/survey_result_b" formmethod="post"> <span style="color:whitesmoke;">파트너 찾기</span> </button>
             </div>
         </form>
