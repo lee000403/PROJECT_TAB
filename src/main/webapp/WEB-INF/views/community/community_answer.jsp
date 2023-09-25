@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Post Detail</title>
     <link rel="stylesheet" href="/CSSs/community_answer.css">
-    <script src="/js/community_comment.js"></script>
+    
 </head>
 <%@ include file="../mainbar/header.jsp" %>
 <body>
@@ -54,13 +54,13 @@
             </div>
         </form>
 
-        <div class="container">
-            <label for="newComment">Add your comment below-</label>
-            <textarea id="newComment"></textarea>
-            <button id="addComments">Add Comment</button>
-            <div id="allComments"></div>
-        </div>
+<form action = "./" id="newComment">
+<input type="text" name="comment" placeholder="답글">
+<button>답글 남기기</button>
+</form>
 
+<h2>답글</h2>
+<ul id="comments"></ul>
 
 
 
@@ -130,5 +130,6 @@
         </div>
     </div> -->
 </body>
+<script src="/js/community_comment.js"></script>
 <%@ include file="../mainbar/footer.jsp" %>
 </html>

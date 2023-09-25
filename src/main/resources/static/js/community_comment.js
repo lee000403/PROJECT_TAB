@@ -1,23 +1,17 @@
-const commentContainer = document.getElementById('allComments');
-document.getElementById('addComments').addEventListener('click', function (ev) {
-    addComment(ev);
+const form = document.querySelector("#newComment");
+const commentsContainer = document.querySelector("#comments");
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const commentInput = form.elements.comment.value;
+    addComment(commentInput);
+    commentInput.value = "";
 })
 
-function addComment(ev) {
-    let commentText, wrapDiv;
-    const textBox = document.createElement('div');
-    const replyButton = document.createElement('button');
-    replyButton.innerHTML = '답글';
-    replyButton.className = 'reply';
-    const deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '삭제';
-    deleteButton.className = 'deleteComment'
-
-    wrapDiv = document.createElement('div');
-    wrapDiv.className = 'wrapper';
-    wrapDiv.style.marginLeft = 0;
-    commentText = document.getElementById('newComment').value;
-    textBox.innerHTML = commentText;
-    wrapDiv.append(textBox, replyButton, deleteButton);
-    commentContainer.appendChild(wrapDiv);
-}
+const addComment = (comment) => {
+    const newComment = document.createElement("li");
+    const bTag = document.createElement("b");
+    newComment.append(bTag);
+    newComment.append(`${comment}`);
+    console.log(newComment);
+    commentsContainer.append(newComment);
+};
