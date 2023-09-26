@@ -25,7 +25,7 @@
                   치매파트너와의 연결 그리고 동행
                 </li>
                 <sec:authorize access="isAnonymous()">
-                  <form>
+                  <form class="nav-dropdown">
                     <li class="nav-item">
                       <button type="submit" class="btn btn-none" formaction="/joinForm" formmethod="post">회원가입</button>
                     </li>

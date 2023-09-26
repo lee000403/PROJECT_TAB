@@ -1,11 +1,11 @@
-@import url(http://www.openhiun.com/hangul/nanumbarungothic.css);
-* {
-    font-family: 'Nanum Barun Gothic', sans-serif;
+@font-face {
+    font-family: '210 SaweolGothic';
+    src: url(/fonts/210사월고딕010.ttf);
 }
 
 body {
     background-color: #fef0ea;
-    font-family: 'Nanum Barun Gothic';
+    font-family: '210 SaweolGothic';
 }
 
 .navbar {
@@ -139,4 +139,10 @@ body {
 .search_text{
     font-size: 3vh;
     font-weight: bold;
+}
+
+@media (max-width: 758px){
+    .nav-item {
+        display: none;
+    }
 }

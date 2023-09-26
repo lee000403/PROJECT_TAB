@@ -19,7 +19,7 @@
           <div class="container">
             <br>
             <div>
-              <h2>🏥 치매시설정보</h2>
+              <h2 class="mt-5">🏥 치매시설정보</h2>
             </div>
             <br>
             <div class="container">

@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
       <link rel="stylesheet" href="/CSSs/main_page.css">
       <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
-
+      <script src="/js/header.js"></script>
     </head>
 
     <body>
