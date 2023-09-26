@@ -119,6 +119,11 @@ public class Project_TABService {
         String sqlMapId = "Project_TAB.login_button";
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
+        if (result == null) {
+            HashMap<String, Character> null_code = new HashMap<String, Character>();
+            null_code.put("username", ' ');
+            result = null_code;
+        }
         return result;
     }
 

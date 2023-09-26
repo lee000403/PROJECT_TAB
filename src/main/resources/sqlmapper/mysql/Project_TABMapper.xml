@@ -231,13 +231,22 @@
 	</select>
 
     <insert id="survey_result_a" parameterType="Map">
-        insert into member_s_f
-        (MEMBERID, MEMBERTYPE_ID, STAGE_ID, PATIENTGENDER_ID)
+        insert into survey_result
+        (MEMBERID, SURVEY_ANS_ID, SURVEY_RESULT_ID)
         values
         (#{username}, #{MEMBERTYPE_ID}, #{STAGE_ID}, #{GENDER_ID})
     </insert>
 
     <select id="selectID" parameterType="Map" resultType="Map">    
+        SELECT * 
+        FROM MEMBERS
+        where 1 = 1
+        and MEMBERID = #{username};
+	</select>
+
+
+
+    <select id="survey_match" parameterType="Map" resultType="Map">    
         SELECT * 
         FROM MEMBERS
         where 1 = 1

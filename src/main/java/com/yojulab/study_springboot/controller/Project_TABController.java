@@ -4,10 +4,12 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -81,13 +83,10 @@ public class Project_TABController {
     }
 
     @PostMapping("/login_button")
-    public ModelAndView login_button(@RequestParam Map params, ModelAndView modelAndView) {
+    public ResponseEntity login_button(@RequestBody Map params, ModelAndView modelAndView) {
         Object result = project_TABService.login_button(params);
-        modelAndView.addObject("params", params);
-        modelAndView.addObject("result", result);
 
-        modelAndView.setViewName("/WEB-INF/views/signin/login_button.jsp");
-        return modelAndView;
+        return ResponseEntity.ok().body(result);
     }
 }
 

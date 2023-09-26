@@ -60,9 +60,10 @@
             <label for="password" class="form-label">패스워드</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="패스워드를 입력하세요">
           </div>
-          <div class="d-grid gap-2">
+          <div class="d-grid gap-2" id="">
             <button type="submit" class="btn" style="background-color:  #ff7f95; font-weight: 530;" >Log in</button>
             <%
+            if (params != null) {
             if (params.size() != 0) {
               String str_fail = (String)params.get("fail");
               if (str_fail.equals("true")) { %>
@@ -70,6 +71,7 @@
             <%
               }
             }
+          }
             %>
           </div>
         </form>

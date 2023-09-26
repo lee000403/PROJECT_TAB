@@ -16,10 +16,13 @@
         @import width: 35rem;
       }
     </style>
+    
   </head>
 
   <body>
     <%@ include file="../mainbar/header.jsp" %>
+    <% HashMap params=(HashMap)request.getAttribute("params");
+    HashMap result=(HashMap)request.getAttribute("result"); %>
       <div class="container">
         <h1 class="mt-5 mb-4 text-center">회원가입</h1>
 
@@ -27,8 +30,8 @@
           <div class="form-group">
             <label for="username">아이디:</label>
             <input type="text" class="form-control" id="username" name="username" required>
-            <button class="btn" type="submit" formaction='/TAB_PAGE/login_button' formmethod="post"
-            style="background-color:#ff7f95;">중복 확인</button>
+            <button onclick="fetchloginbutton()" style="background-color:#ff7f95;">중복 확인</button>
+            <div id="updateDiv"></div>
           </div>
         </form>
         <form>
@@ -98,6 +101,7 @@
         </form>
       </div>
 
+      <script src="/js/login_button.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 
