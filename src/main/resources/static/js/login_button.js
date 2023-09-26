@@ -1,6 +1,6 @@
 function fetchloginbutton(){
     event.preventDefault();
-    let url = 'http://192.168.0.23:8080/TAB_PAGE/login_button';
+    let url = 'http://localhost:8080/TAB_PAGE/login_button';
     let id = document.getElementById("username").value;
     fetch(url, 
         {
