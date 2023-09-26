@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CommunityMapper">
+
+<insert id="insertComment" parameterType="Map">
+
+INSERT INTO community_comment(COMMENT, COMMENT_DATE, POST_ID, COMMENT_ID) 
+VALUES (#{comment}, #{comment_date}, #{post_id}, #{comment_id});
+
+</insert>
+</mapper>

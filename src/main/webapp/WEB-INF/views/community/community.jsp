@@ -7,7 +7,9 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
             <title>Dementia Bulletin Board</title>
+            <script src="/js/community_post_id.js"></script>
 
             <style>
                 .comment-reply {
@@ -101,9 +103,10 @@
                                                         action='/TAB_PAGE/community_answer/<%=record.get(" POST_ID")%>'
                                                         method="post">
                                                         <button style=" color:black; text-decoration: none;"
-                                                            type="submit" class="btn btn-link"
+                                                            type="submit" class="title_button btn btn-link"
                                                             formaction='/TAB_PAGE/community_answer/<%=record.get("POST_ID")%>'
-                                                            formmethod="post">
+                                                            formmethod="post"
+                                                            >
                                                             <%= record.get("POST_TITLE") %>
                                                         </button>
                                                     </form>

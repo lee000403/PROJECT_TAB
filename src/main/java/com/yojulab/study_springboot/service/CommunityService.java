@@ -126,4 +126,10 @@ public class CommunityService {
         return result;
     }
 
+    public Object insertComment(Map dataMap){
+        String sqlMapId = "CommunityMapper.insertComment";
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
 }
