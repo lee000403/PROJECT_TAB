@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Post Detail</title>
     <link rel="stylesheet" href="/CSSs/community_answer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     
 </head>
 <%@ include file="../mainbar/header.jsp" %>
@@ -26,7 +27,7 @@
                         <div class="post-title"><%= result.get("POST_TITLE") %></div>
                         <div class="post-subtitle">작성자 : <%=result.get("MEMBERID")%> 작성일 : <%=result.get("POST_DATE")%></div>
                         <p><%= result.get("POST_CONTENT") %></p>
-                    </article>
+                    </article>  
                 </div>
 
                 <div class="row mt-4 btn-group">
