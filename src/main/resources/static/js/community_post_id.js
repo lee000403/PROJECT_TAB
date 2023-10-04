@@ -4,3 +4,4 @@ document.getElementById('title_button').addEventListener('click', function() {
     let post_id = parts[parts.length - 1];
     fetchUpdate(post_id);
 })
+

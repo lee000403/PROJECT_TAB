@@ -128,8 +128,20 @@ public class CommunityService {
 
     public Object insertComment(Map dataMap){
         String sqlMapId = "CommunityMapper.insertComment";
+        
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 
+    public Object selectReply(String post_id) {
+        String sqlMapId = "CommunityMapper.showComment";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("POST_ID", post_id);
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+
 }
+
+

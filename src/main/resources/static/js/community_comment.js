@@ -1,13 +1,14 @@
-const currentDate = new Date();
-
+const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
-form.addEventListener("submit", function(e) {
+
+form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const commentInput = form.elements.comment.value;
+    let commentInput = document.getElementById("comment").value;
     addComment(commentInput);
-    fetchUpdate(commentInput);
-    commentInput.value = "";
+    showReply(commentInput);
+    fetchUpdate();
+    commentInput.value = " ";
 })
 
 const addComment = (comment) => {
@@ -20,30 +21,62 @@ const addComment = (comment) => {
 
 };
 
-function fetchUpdate(post_id, commentInput, currentDate){
+function showReply(data) {
+    console.log("successfully working")
 
-    let url = 'http://127.0.0.1:8080/insertComment';
+    let replyList = data;
+
+    let outHTML = '';
+
+    for (let reply of replyList) {
+        outHTML = `${reply.COMMENT} <tr><td> ${reply.COMMENT_DATE} </td></tr>`
+    }
+    outHtml += ``;
+    console.log(outHTML);
+    const tableBody = document.querySelector("#datashow");
+    tableBody.innerHTML = outHTML;
+}
+
+function fetchUpdate() {
+
+    commentInput = form.elements.comment.value;
+
+    function selectReply(post_id) {
+        let url = `/community_answer/${post_id}`;
+        let request = fetch(url)
+            .then(response => {
+                return result.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch((data) => {
+                console.log(param);
+            })
+    }
+
+    let url = 'http://localhost:8080/insertComment';
     let option = {
-        method : "PUT",
-        headers : {
-            "Content-Type" : "application/json"
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
         },
-        body : JSON.stringify({
+        body: JSON.stringify({
             "comment": commentInput,
-            "comment_date": currentDate,
             "post_id": post_id,
-            "comment_id": "HELP"
+            "comment_id": "COMMENT"
         })
     }
 
     let request = fetch(url, option)
-    .then((result) => {
-        return result.json();
-    })
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((errorMeg) => {
-        console.log(errorMeg);
-    })
+        .then((result) => {
+            return result.json();
+        })
+        .then((data) => {
+            console.log(data);
+            showReply(data);
+        })
+        .catch((errorMeg) => {
+            console.log(errorMeg);
+        })
 }

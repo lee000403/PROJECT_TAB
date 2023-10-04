@@ -26,7 +26,7 @@
                     <article style="border: 1px solid #ccc; padding: 20px;">
                         <div class="post-title"><%= result.get("POST_TITLE") %></div>
                         <div class="post-subtitle">작성자 : <%=result.get("MEMBERID")%> 작성일 : <%=result.get("POST_DATE")%></div>
-                        <p><%= result.get("POST_CONTENT") %></p>
+                        <p class="post-content"><%= result.get("POST_CONTENT") %></p>
                     </article>  
                 </div>
 
@@ -42,6 +42,7 @@
                     <% String userId = (String)params.get("userId"); %>
                     <% if (userId.equals(member)) { %>
                         <form action="">
+                            <input type="hidden" value='<%=result.get("POST_ID")%>' id="post_id" name="post_id">
                             <button type="submit" formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-edit">수정</button>
                             <button type="submit" formaction='/TAB_PAGE/community_deleteandSelect/<%=result.get("POST_ID")%>' formmethod="post" class="btn btn-delete">삭제</button>
                             <button type="submit" formaction="/TAB_PAGE/search_community/" formmethod="post" class="btn btn-list">목록</button>
@@ -55,81 +56,28 @@
             </div>
         </form>
 
-<form action = "./" id="newComment">
-<input type="text" name="comment" placeholder="답글">
-<button>답글 남기기</button>
+<form id="newComment">
+<input type="text" name="comment" placeholder="답글" id="comment">
+
+<button onclick="fetchUpdate()">답글 남기기</button>
 </form>
 
 <h2>답글</h2>
+
+<table>
+<thead>
+    <tr>
+        <th>답글</th>
+        <th>날짜</th>
+    </tr>
+</thead>
+<tbody id="datashow"></tbody>
+</table>
+</tbody>
+
 <ul id="comments"></ul>
 
 
-
-
-
-        <!-- <div class="row mt-4">
-            <div class="col-md-12">
-                <h4>전체 댓글</h4>
-                <div class="card comment-section">
-                    <div class="card-body">
-                        <div class="media">
-                            <div class="media-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h5 class="mt-0">John Doe</h5>
-
-                                    <div>
-                                        <button class="btn btn-sm btn-reply"
-                                            onclick="showReplyForm('comment1')">답글</button>
-                                        <button class="btn btn-sm btn-edit">수정</button>
-                                        <button class="btn btn-sm btn-delete">삭제</button>
-                                    </div>
-                                </div>
-                                <p class="mb-0">It's too hard to be tired. Get some more rest!</p>
-                                <small class="text-muted">2023-07-06</small>
-                            </div>
-                        </div>
-
-                        <div class="media mt-3 comment-reply">
-                             <div class="media-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h5 class="mt-0">↳ Jane Smith</h5>
-                                    <div>
-                                        <button class="btn btn-sm btn-reply" onclick="showReplyForm('comment2')">답글</button>
-                                        <button class="btn btn-sm btn-edit">수정</button>
-                                        <button class="btn btn-sm btn-delete">삭제</button>
-                                    </div>
-                                </div>
-                                <p class="mb-0">Cheer up a little. Cheer up with positive thoughts!</p>
-                                <small class="text-muted">2023-07-07</small>
-                            </div> 
-                        </div>
-
-                        <form class="mt-3" id="commentForm" style="display: none;">
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Write your comment"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-reply" formaction="/TAB_PAGE/community_answer" formmethod="post">제출</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h2>댓글 작성하기</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="comment-text">내용:</label>
-                        <textarea class="form-control" id="comment-text" rows="3"></textarea>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-reply" style="background-color: #ff7f95;">제출</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
 </body>
 <script src="/js/community_comment.js"></script>
 <%@ include file="../mainbar/footer.jsp" %>

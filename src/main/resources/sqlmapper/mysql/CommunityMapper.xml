@@ -5,7 +5,15 @@
 <insert id="insertComment" parameterType="Map">
 
 INSERT INTO community_comment(COMMENT, COMMENT_DATE, POST_ID, COMMENT_ID) 
-VALUES (#{comment}, #{comment_date}, #{post_id}, #{comment_id});
+VALUES (#{comment}, now(), #{post_id}, #{comment_id});
 
 </insert>
+
+
+<select id="showComment" parameterType="Map" resultType="Map">
+
+SELECT * FROM community_comment
+WHERE POST_ID = #{POST_ID};
+
+</select>
 </mapper>

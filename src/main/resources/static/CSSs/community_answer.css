@@ -3,124 +3,38 @@
 }
 
 body {
-    padding-top: 10rem;
-    background-color: #fff;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.navbar {
-    justify-content: flex-end;
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-nav .nav-item {
-    margin-right: 10px;
-}
-
-.h-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-.h-navbar .h-nav-item:first-child {
-    margin-right: auto;
-    font-size: 16px;
-    line-height: 8px;
-    list-style: none;
-}
-
-.navbar .nav-link {
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    line-height: 8px;
-    color: #000000ab;
-}
-
-.navbar .nav-link:hover {
-    background-color: transparent;
-    font-size: 16px;
-    line-height: 8px;
-}
-
-.navbar-brand img {
-    height: 80px;
-}
-
-.nav-button {
-    display: inline-block;
-    padding: 20px 20px;
-    background-color: transparent;
-    color: #000;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #00000098;
 }
 
 .post-title {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 3vh;
     border-bottom: 1px solid #0000004d;
-    padding-bottom: 10px;
+    padding: 10px;
 
 }
 
 .post-subtitle {
-    font-size: 12px;
+    font-size: 1.5vh;
     border-bottom: 1px solid #0000004d;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
-header {
-    position: fixed;
-    background-color: #fef0ea;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.btn-reply {
-    background-color: #ff7f95;
+.post-content{
+    padding: 10px;
 }
 
 .btn-group {
-    float: right;
     margin-right: auto;
-
+    text-align: center;
+    width: 100%;
+    display: inline-block;
 }
 
-.btn-group .text-right {
-    text-align: right;
-}
 
-
-.btn-edit {
-    background-color: yellow;
-    margin-right: 10px;
-}
-
-.btn-delete {
-    background-color: yellow;
-    margin-right: 10px;
-}
-
-.btn-list {
-    background-color: yellow;
-    margin-right: 10px;
-}
-
-/* Adjust comment section height */
-.comment-section {
-    height: 250px;
-    overflow-y: auto;
+#newComment {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
