@@ -8,7 +8,7 @@ body {
 }
 
 .postbox {
-margin-top: 100px;
+    margin-top: 100px;
 }
 
 .post-title {
@@ -26,12 +26,12 @@ margin-top: 100px;
     padding: 10px;
 }
 
-.post-content{
+.post-content {
     padding: 10px;
     font-size: 2vh;
 }
 
-.comment_table{
+.comment_table {
     font-size: 1.5vh;
     width: 100%;
     margin-top: 30px;
@@ -44,7 +44,8 @@ margin-top: 100px;
     font-size: 2vh;
 }
 
-th, td {
+th,
+td {
     border-bottom: 1px solid black;
     padding: 10px;
 }
@@ -65,4 +66,22 @@ th, td {
     background-color: rosybrown;
     color: white;
     border: none;
+    float: right;
+}
+
+.comment_btn:hover {
+    background-color: grey;
+    transform: scale(1.1);
+}
+
+.textbox {
+    width: 100%;
+    margin: 1em auto;
+    padding: 2em;
+    position: relative;
+    padding: 1.5em !important;
+    z-index: 0;
+    background-color: #efede9;
+    border: 3px dashed rosybrown;
+    border-radius: 13px;
 }

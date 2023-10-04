@@ -102,7 +102,7 @@
                                                     </td>
                                                 </tr>
                                                 <% } %>
-                                                    <tr id="reply_template">
+                                                    <tr class="mb-3" id="reply_template">
                                                         <td>
                                                         
                                                         </td>
@@ -117,7 +117,7 @@
 
                                 </div>
                                 <form id="newComment">
-                                    <input type="text" name="comment" placeholder="답글" id="comment">
+                                    <input class="textbox" type="text" name="comment" placeholder="글을 입력해 주세요" id="comment">
 
                                     <button class="comment_btn" onclick="fetchUpdate()">답글 남기기</button>
                                 </form>
