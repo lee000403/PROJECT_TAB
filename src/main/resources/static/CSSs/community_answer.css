@@ -34,6 +34,7 @@ margin-top: 100px;
 .comment_table{
     font-size: 1.5vh;
     width: 100%;
+    margin-top: 30px;
 }
 
 .table-head {
@@ -52,11 +53,12 @@ th, td {
     text-align: right;
 }
 
-.newcomments {
+.newcomment {
     list-style: none;
     font-size: 1.5vh;
     color: gray;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .comment_btn {

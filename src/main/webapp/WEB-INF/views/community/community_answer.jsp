@@ -86,7 +86,8 @@
                                                 <th>답글</th>
                                                 <th>날짜</th>
                                             </tr>
-
+                                        </thead>
+                                        <tbody id="datashow">
                                             <% ArrayList resultList_comment=(ArrayList)
                                                 request.getAttribute("result_comment"); for(int i=0; i <
                                                 resultList_comment.size(); i ++) { HashMap record=(HashMap)
@@ -101,12 +102,18 @@
                                                     </td>
                                                 </tr>
                                                 <% } %>
-                                        </thead>
-                                        <tbody id="datashow"></tbody>
-                                    </table>
-                                    </tbody>
+                                                    <tr id="reply_template">
+                                                        <td>
+                                                        
+                                                        </td>
+                                                        <td style="text-align: right;">
 
-                                    <ul class="newcomments" id="comments"></ul>
+                                                        </td>
+                                                    </tr>
+
+                                        </tbody>
+                                    </table>
+
 
                                 </div>
                                 <form id="newComment">
