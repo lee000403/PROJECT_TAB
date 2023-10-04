@@ -7,12 +7,16 @@ body {
     align-items: center;
 }
 
+.postbox {
+margin-top: 100px;
+}
+
 .post-title {
     font-weight: bold;
     font-size: 3vh;
-    border-bottom: 1px solid #0000004d;
     padding: 10px;
-
+    background-color: rosybrown;
+    color: white;
 }
 
 .post-subtitle {
@@ -24,17 +28,39 @@ body {
 
 .post-content{
     padding: 10px;
+    font-size: 2vh;
 }
 
-.btn-group {
-    margin-right: auto;
-    text-align: center;
+.comment_table{
+    font-size: 1.5vh;
     width: 100%;
-    display: inline-block;
 }
 
+.table-head {
+    text-align: center;
+    background-color: rosybrown;
+    color: white;
+    font-size: 2vh;
+}
 
-#newComment {
-    margin-top: 20px;
-    margin-bottom: 20px;
+th, td {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.date_box {
+    text-align: right;
+}
+
+.newcomments {
+    list-style: none;
+    font-size: 1.5vh;
+    color: gray;
+    padding-top: 10px;
+}
+
+.comment_btn {
+    background-color: rosybrown;
+    color: white;
+    border: none;
 }

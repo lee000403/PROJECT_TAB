@@ -133,10 +133,9 @@ public class CommunityService {
         return result;
     }
 
-    public Object selectReply(String post_id) {
+    public Object selectReply(String UNIQUE_ID, Map dataMap) {
         String sqlMapId = "CommunityMapper.showComment";
-        HashMap dataMap = new HashMap<>();
-        dataMap.put("POST_ID", post_id);
+        dataMap.put("UNIQUE_ID", UNIQUE_ID);
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }

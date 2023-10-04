@@ -10,10 +10,10 @@ VALUES (#{comment}, now(), #{post_id}, #{comment_id});
 </insert>
 
 
-<select id="showComment" parameterType="Map" resultType="Map">
+<select id="showComment" parameterType="String" resultType="Map">
 
 SELECT * FROM community_comment
-WHERE POST_ID = #{POST_ID};
+WHERE POST_ID = #{UNIQUE_ID};
 
 </select>
 </mapper>
