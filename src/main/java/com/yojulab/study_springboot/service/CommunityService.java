@@ -128,7 +128,8 @@ public class CommunityService {
 
     public Object insertComment(Map dataMap){
         String sqlMapId = "CommunityMapper.insertComment";
-        
+        String UUID = commonUUID.Commons();
+        dataMap.put("COMMENT_ID", UUID);
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
@@ -137,6 +138,13 @@ public class CommunityService {
         String sqlMapId = "CommunityMapper.showComment";
         dataMap.put("UNIQUE_ID", UNIQUE_ID);
         Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object deleteComment(Map dataMap) {
+        String sqlMapId = "CommunityMapper.deleteComment";
+        String comment_Id = (String) dataMap.get("COMMENT_ID");
+        Object result = sharedDao.delete(sqlMapId, comment_Id);
         return result;
     }
 

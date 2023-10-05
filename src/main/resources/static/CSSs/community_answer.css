@@ -44,10 +44,19 @@ body {
     font-size: 2vh;
 }
 
-th,
-td {
+th {
     border-bottom: 1px solid black;
     padding: 10px;
+}
+
+.table_comment {
+    padding: 10px;
+}
+
+.added_comment {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
 }
 
 .date_box {
@@ -67,6 +76,7 @@ td {
     color: white;
     border: none;
     float: right;
+    padding: 5px;
 }
 
 .comment_btn:hover {
@@ -84,4 +94,10 @@ td {
     background-color: #efede9;
     border: 3px dashed rosybrown;
     border-radius: 13px;
+}
+
+.comment_delete {
+    border: none;
+    background-color: white;
+    text-align: center;
 }

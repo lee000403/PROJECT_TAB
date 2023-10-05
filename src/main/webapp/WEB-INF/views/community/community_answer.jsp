@@ -15,7 +15,6 @@
 
             </head>
             <%@ include file="../mainbar/header.jsp" %>
-
                 <body>
                     <%@ include file="../mainbar/header.jsp" %>
                         <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
@@ -85,6 +84,7 @@
                                             <tr class="table-head">
                                                 <th>답글</th>
                                                 <th>날짜</th>
+                                                <th style="width: 70px;"></th>
                                             </tr>
                                         </thead>
                                         <tbody id="datashow">
@@ -93,20 +93,31 @@
                                                 resultList_comment.size(); i ++) { HashMap record=(HashMap)
                                                 resultList_comment.get(i); %>
 
-                                                <tr>
-                                                    <td>
+                                                <tr class="table_comment selected_comment">
+                                                    <td class="table_comment">
                                                         <%= record.get("COMMENT") %>
                                                     </td>
-                                                    <td class="date_box">
+                                                    <td class="table_comment date_box">
                                                         <%= record.get("COMMENT_DATE") %>
+                                                    </td>
+                                                    <td style="text-align: center;">
+                                                        <% if (userId.equals(member)) { %>
+                                                            <form action="">
+                                                                <button class="comment_delete" onclick="fetchDelete()"
+                                                                    value="<%= record.get("COMMENT_ID") %>">
+                                                                    ❌
+                                                                </button>
+
+                                                            </form>
+                                                            <% } %>
                                                     </td>
                                                 </tr>
                                                 <% } %>
                                                     <tr class="mb-3" id="reply_template">
-                                                        <td>
-                                                        
+                                                        <td class="added_comment">
+
                                                         </td>
-                                                        <td style="text-align: right;">
+                                                        <td class="added_comment" style="text-align: right;">
 
                                                         </td>
                                                     </tr>
@@ -117,7 +128,8 @@
 
                                 </div>
                                 <form id="newComment">
-                                    <input class="textbox" type="text" name="comment" placeholder="글을 입력해 주세요" id="comment">
+                                    <input class="textbox" type="text" name="comment" placeholder="글을 입력해 주세요"
+                                        id="comment">
 
                                     <button class="comment_btn" onclick="fetchUpdate()">답글 남기기</button>
                                 </form>
