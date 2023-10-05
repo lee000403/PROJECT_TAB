@@ -15,6 +15,7 @@
 
             </head>
             <%@ include file="../mainbar/header.jsp" %>
+
                 <body>
                     <%@ include file="../mainbar/header.jsp" %>
                         <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
@@ -102,12 +103,11 @@
                                                     </td>
                                                     <td style="text-align: center;">
                                                         <% if (userId.equals(member)) { %>
-                                                            <form action="">
-                                                                <button class="comment_delete" onclick="fetchDelete()"
-                                                                    value="<%= record.get("COMMENT_ID") %>">
-                                                                    ❌
-                                                                </button>
-
+                                                            <form style="padding-top: 10px;" action="">
+                                                                <label style="cursor:pointer" for="delete_Button"> 삭제
+                                                                    <input id="delete_Button" type="button"
+                                                                        onclick="fetchDelete(this.value)" value="<%= record.get("COMMENT_ID") %>" hidden>
+                                                                </label>
                                                             </form>
                                                             <% } %>
                                                     </td>
