@@ -1,7 +1,11 @@
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
+let deleteButton = document.querySelector("#delete_Button");
 
+deleteButton.addEventListener("click", function() {
+    fetchDelete(this.value);
+})
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -9,6 +13,7 @@ form.addEventListener("submit", function (e) {
     addComment(commentInput);
     commentInput.value = " ";
 })
+
 
 const addComment = (comment) => {
     const currentDate = new Date();
@@ -22,7 +27,7 @@ const addComment = (comment) => {
     templateRow.querySelector("td:first-child").textContent = comment;
     templateRow.querySelector("td:last-child").textContent = formattedDate;
     tableBody.appendChild(templateRow);
-
+    commentInput.value = " ";
 };
 
 function fetchUpdate() {
@@ -40,6 +45,8 @@ function fetchUpdate() {
             "post_id": post_id,
         })
     }
+
+
 
     let request = fetch(url, option)
         .then((result) => {

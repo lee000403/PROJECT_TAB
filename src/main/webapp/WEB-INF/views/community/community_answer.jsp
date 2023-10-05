@@ -104,10 +104,12 @@
                                                     <td style="text-align: center;">
                                                         <% if (userId.equals(member)) { %>
                                                             <form style="padding-top: 10px;" action="">
-                                                                <label style="cursor:pointer" for="delete_Button"> 삭제
-                                                                    <input id="delete_Button" type="button"
-                                                                        onclick="fetchDelete(this.value)" value="<%= record.get("COMMENT_ID") %>" hidden>
-                                                                </label>
+                                                                <button
+                                                                    style="border: none; background-color: white; padding-bottom: 10px;"
+                                                                    id="delete_Button" value="<%= record.get(" COMMENT_ID") %>">
+                                                                    삭제
+                                                                </button>
+
                                                             </form>
                                                             <% } %>
                                                     </td>
