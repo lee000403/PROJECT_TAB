@@ -101,29 +101,31 @@
                                                     <td class="table_comment date_box">
                                                         <%= record.get("COMMENT_DATE") %>
                                                     </td>
-                                                    <td style="text-align: center;">
+                                                    <td style="text-align: center;" class="table_comment">
                                                         <% if (userId.equals(member)) { %>
                                                             
                                                                 <button
                                                                     style="border: none; background-color: white; padding-bottom: 10px;"
-                                                                    class="delete_button" onclick="fetchDelete(this.value)"
+                                                                    class="delete_Button"
                                                                     value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
                                                                 </button>
+                                                                
 
                                                            
                                                             <% } %>
                                                     </td>
                                                 </tr>
                                                 <% } %>
+                                                
                                                     <tr class="mb-3" id="reply_template">
-                                                        <td class="added_comment">
+                                                        <td class="added_comment table_comment">
 
                                                         </td>
-                                                        <td class="added_comment" style="text-align: right;">
+                                                        <td class="added_comment table_comment" style="text-align: right;">
 
                                                         </td>
-                                                        <td>
+                                                        <td class="table_comment">
 
                                                         </td>
                                                     </tr>

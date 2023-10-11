@@ -1,12 +1,22 @@
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
+const delete_Buttons = document.getElementsByClassName("delete_Button");
 let comment_Id;
 let commentInput;
 
 function add_Comment() {
     commentInput = document.getElementById("comment").value;
     addComment(commentInput);
+}
+
+for (const delete_Button of delete_Buttons) {
+    delete_Button.addEventListener("click", (ln) => {
+        comment_Id = event.currentTarget.getAttribute("value");
+        fetchDelete(comment_Id);
+        const del = event.currentTarget.parentNode.parentNode;
+        del.parentNode.removeChild(del);
+    })
 }
 
 const addComment = commentInput => {
@@ -75,13 +85,13 @@ function fetchDelete(comment_Id) {
     };
 
     let request = fetch(url, option)
-    .then((result) => {
-        return result.json();
-    })
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((errorMeg) => {
-        console.log(errorMeg);
-    });
+        .then((result) => {
+            return result.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((errorMeg) => {
+            console.log(errorMeg);
+        });
 }
