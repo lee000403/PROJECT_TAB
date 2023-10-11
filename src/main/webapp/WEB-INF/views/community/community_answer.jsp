@@ -103,14 +103,15 @@
                                                     </td>
                                                     <td style="text-align: center;">
                                                         <% if (userId.equals(member)) { %>
-                                                            <form style="padding-top: 10px;" action="">
+                                                            
                                                                 <button
                                                                     style="border: none; background-color: white; padding-bottom: 10px;"
-                                                                    id="delete_Button" value="<%= record.get(" COMMENT_ID") %>">
+                                                                    id="delete_Button" name="delete_Button" onclick="fetchDelete(this.value)"
+                                                                     value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
                                                                 </button>
 
-                                                            </form>
+                                                           
                                                             <% } %>
                                                     </td>
                                                 </tr>
@@ -122,6 +123,9 @@
                                                         <td class="added_comment" style="text-align: right;">
 
                                                         </td>
+                                                        <td>
+
+                                                        </td>
                                                     </tr>
 
                                         </tbody>
@@ -129,12 +133,10 @@
 
 
                                 </div>
-                                <form id="newComment">
                                     <input class="textbox" type="text" name="comment" placeholder="글을 입력해 주세요"
                                         id="comment">
 
-                                    <button class="comment_btn" onclick="fetchUpdate()">답글 남기기</button>
-                                </form>
+                                    <button class="comment_btn" id="newComment" name="newComment" onclick="add_Comment()">답글 남기기</button>
 
                             </div>
                 </body>

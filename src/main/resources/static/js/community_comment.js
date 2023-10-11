@@ -1,21 +1,18 @@
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
+let comment_Id;
+let commentInput;
 let deleteButton = document.querySelector("#delete_Button");
 
-deleteButton.addEventListener("click", function() {
-    fetchDelete(this.value);
-})
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let commentInput = document.getElementById("comment").value;
+function add_Comment() {
+    commentInput = document.getElementById("comment").value;
     addComment(commentInput);
-    commentInput.value = " ";
-})
+}
 
 
-const addComment = (comment) => {
+
+const addComment = comment => {
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
@@ -23,18 +20,26 @@ const addComment = (comment) => {
     const formattedDate = `${year}-${month}-${day}`;
 
     const tableBody = document.querySelector("#datashow");
-    const templateRow = document.querySelector("#reply_template").cloneNode(true);
-    templateRow.querySelector("td:first-child").textContent = comment;
-    templateRow.querySelector("td:last-child").textContent = formattedDate;
+    const templateRow = document.querySelector("#reply_template");
+    // templateRow.querySelector("td")[0].textContent = comment.value;
+    // templateRow.querySelector("td")[1].textContent = formattedDate;
+
+    
+    const tds = templateRow.querySelectorAll("td");
+    tds[0].textContent = comment;
+    tds[1].textContent = formattedDate;
+
     tableBody.appendChild(templateRow);
+    fetchUpdate(comment_Id)
     commentInput.value = " ";
+
 };
 
-function fetchUpdate() {
+function fetchUpdate(comment_Id) {
+    console.log("comment_Id:", comment_Id);
+    commentInput = comment.value;
 
-    commentInput = form.elements.comment.value;
-
-    let url = 'http://localhost:8080/insertComment';
+    let url = '/insertComment';
     let option = {
         method: "POST",
         headers: {
@@ -45,8 +50,6 @@ function fetchUpdate() {
             "post_id": post_id,
         })
     }
-
-
 
     let request = fetch(url, option)
         .then((result) => {

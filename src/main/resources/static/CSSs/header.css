@@ -96,6 +96,12 @@ header {
   font-weight: bolder;
 }
 
+.btn.btn-none:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .items {
   bottom: 2px;
 }
