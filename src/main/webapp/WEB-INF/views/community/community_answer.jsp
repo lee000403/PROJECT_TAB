@@ -94,18 +94,18 @@
                                                 resultList_comment.size(); i ++) { HashMap record=(HashMap)
                                                 resultList_comment.get(i); %>
 
-                                                <tr class="table_comment selected_comment">
+                                                <tr class="selected_comment">
                                                     <td class="table_comment">
                                                         <%= record.get("COMMENT") %>
                                                     </td>
-                                                    <td class="table_comment date_box">
+                                                    <td class="date_box table_comment">
                                                         <%= record.get("COMMENT_DATE") %>
                                                     </td>
-                                                    <td style="text-align: center;" class="table_comment">
+                                                    <td style="text-align: center; cursor: pointer;" class="table_comment">
                                                         <% if (userId.equals(member)) { %>
                                                             
                                                                 <button
-                                                                    style="border: none; background-color: white; padding-bottom: 10px;"
+                                                                    style="border: none; background-color: white;"
                                                                     class="delete_Button"
                                                                     value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
@@ -118,11 +118,11 @@
                                                 </tr>
                                                 <% } %>
                                                 
-                                                    <tr class="mb-3" id="reply_template">
-                                                        <td class="added_comment table_comment">
+                                                    <tr class="" id="reply_template">
+                                                        <td class="table_comment">
 
                                                         </td>
-                                                        <td class="added_comment table_comment" style="text-align: right;">
+                                                        <td class="table_comment date_box">
 
                                                         </td>
                                                         <td class="table_comment">
