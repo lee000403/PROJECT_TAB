@@ -3,16 +3,13 @@ const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
 let comment_Id;
 let commentInput;
-let deleteButton = document.querySelector("#delete_Button");
 
 function add_Comment() {
     commentInput = document.getElementById("comment").value;
     addComment(commentInput);
 }
 
-
-
-const addComment = comment => {
+const addComment = commentInput => {
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
@@ -21,15 +18,16 @@ const addComment = comment => {
 
     const tableBody = document.querySelector("#datashow");
     const templateRow = document.querySelector("#reply_template");
-    // templateRow.querySelector("td")[0].textContent = comment.value;
-    // templateRow.querySelector("td")[1].textContent = formattedDate;
 
-    
-    const tds = templateRow.querySelectorAll("td");
+    const comment = commentInput
+
+    const newRow = templateRow.cloneNode(true);
+
+    const tds = newRow.querySelectorAll("td");
     tds[0].textContent = comment;
     tds[1].textContent = formattedDate;
 
-    tableBody.appendChild(templateRow);
+    tableBody.appendChild(newRow);
     fetchUpdate(comment_Id)
     commentInput.value = " ";
 

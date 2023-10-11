@@ -106,8 +106,8 @@
                                                             
                                                                 <button
                                                                     style="border: none; background-color: white; padding-bottom: 10px;"
-                                                                    id="delete_Button" name="delete_Button" onclick="fetchDelete(this.value)"
-                                                                     value="<%= record.get("COMMENT_ID") %>">
+                                                                    class="delete_button" onclick="fetchDelete(this.value)"
+                                                                    value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
                                                                 </button>
 
