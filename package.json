@@ -1,0 +1,15 @@
+{
+  "name": "project_tab",
+  "version": "1.0.0",
+  "description": "- 📒 치매 환자를 위한 매칭 시스템\r - 📓 병원 검색 및 커뮤니티",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
+}
