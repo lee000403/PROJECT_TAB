@@ -16,13 +16,23 @@ submit_Button.addEventListener("click", (reply) => {
 })
 
 for (const delete_Button of delete_Buttons) {
-    delete_Button.addEventListener("click", () => {
-
+    delete_Button.addEventListener("click", (ln) => {
         comment_Id = event.currentTarget.getAttribute("value");
-        fetchDelete(comment_Id);
         const del = event.currentTarget.parentNode.parentNode;
-        del.parentNode.removeChild(del);
-        swal("삭제 완료!", "댓글을 삭제하였습니다", "success");
+        swal("삭제하시겠습니까?", {
+            dangerMode: true,
+            buttons: true,
+            icon: "warning"
+        })
+        .then((willDelete) => {
+            if(willDelete) {
+                fetchDelete(comment_Id);
+                del.parentNode.removeChild(del);
+                swal("삭제 완료!", "댓글을 삭제하였습니다", "success");
+            } else {}
+        })
+
+        
 
     })
 }
