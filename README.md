@@ -125,6 +125,11 @@
 
 ❤️ 김동현(PM) : Java, JS 코드 작성(커뮤니티 댓글 구현), 웹사이트 디자인 리뉴얼
 
+|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
+|---|---|---|---|---|---|
+|[COMMUNITY_ANSWER](/src/main/webapp/WEB-INF/views/community/community_answer.jsp)|[COMMUNITY_ANSWER](/src/main/resources/static/CSSs/community_answer.css)|[COMMUNITY_MAPPER](/src/main/resources/sqlmapper/mysql/CommunityMapper.xml)|[COMMUNITY_CONTROLLER: answer 추가](/src/main/java/com/yojulab/study_springboot/controller/CommunityController.java)|[COMMUNITY_SERVICE: answer 추가] (/src/main/java/com/yojulab/study_springboot/)|[COMMUNITY_COMMENT](/src/main/resources/static/js/community_comment.js)|
+|---|---|---|[COMMUNITY_RESTCONTROLLER](/src/main/java/com/yojulab/study_springboot/restapis/Community_write_RestController.java)|---|---|
+
 
 💚 이동환 : Java 코드 작성(매칭 기능 구현)
 

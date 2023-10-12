@@ -54,6 +54,7 @@ public class CommunityController {
         return modelAndView;
     }
 
+    //  동현: community answer 수정 및 추가
     @PostMapping("/community_answer/{UNIQUE_ID}")
     public ModelAndView community_answer(@PathVariable String UNIQUE_ID, @RequestParam Map params,
             ModelAndView modelAndView) {
