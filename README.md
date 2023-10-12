@@ -127,8 +127,7 @@
 
 |JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
 |---|---|---|---|---|---|
-|[COMMUNITY_ANSWER](/src/main/webapp/WEB-INF/views/community/community_answer.jsp)|[COMMUNITY_ANSWER](/src/main/resources/static/CSSs/community_answer.css)|[COMMUNITY_MAPPER](/src/main/resources/sqlmapper/mysql/CommunityMapper.xml)|[COMMUNITY_CONTROLLER: answer 추가](/src/main/java/com/yojulab/study_springboot/controller/CommunityController.java)|[COMMUNITY_SERVICE: answer 추가](/src/main/java/com/yojulab/study_springboot/service/CommunityService.java)|[COMMUNITY_COMMENT](/src/main/resources/static/js/community_comment.js)|
-|---|---|---|[COMMUNITY_RESTCONTROLLER](/src/main/java/com/yojulab/study_springboot/restapis/Community_write_RestController.java)|---|---|
+|[COMMUNITY_ANSWER](/src/main/webapp/WEB-INF/views/community/community_answer.jsp)|[COMMUNITY_ANSWER](/src/main/resources/static/CSSs/community_answer.css)|[COMMUNITY_MAPPER](/src/main/resources/sqlmapper/mysql/CommunityMapper.xml)|[COMMUNITY_RESTCONTROLLER](/src/main/java/com/yojulab/study_springboot/restapis/Community_write_RestController.java)|[COMMUNITY_SERVICE: answer 추가](/src/main/java/com/yojulab/study_springboot/service/CommunityService.java)|[COMMUNITY_COMMENT](/src/main/resources/static/js/community_comment.js)|
 
 
 💚 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
