@@ -125,8 +125,8 @@
                                                         <td class="table_comment date_box">
 
                                                         </td>
-                                                        <td class="table_comment">
-
+                                                        <td class="table_comment" style="text-align: center;">
+                                                            
                                                         </td>
                                                     </tr>
 
@@ -135,10 +135,10 @@
 
 
                                 </div>
-                                    <input class="textbox" type="text" name="comment" placeholder="글을 입력해 주세요"
+                                    <input class="textbox" type="text" placeholder="글을 입력해 주세요"
                                         id="comment">
 
-                                    <button class="comment_btn" id="newComment" name="newComment" onclick="add_Comment()">답글 남기기</button>
+                                    <button class="comment_btn" id="newComment" name="newComment">답글 남기기</button>
 
                             </div>
                 </body>

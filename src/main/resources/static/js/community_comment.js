@@ -2,19 +2,23 @@ const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
 const delete_Buttons = document.getElementsByClassName("delete_Button");
+const comment = document.getElementById("comment");
+const submit_Button = document.getElementById("newComment");
 let comment_Id;
 let commentInput;
 
-function add_Comment() {
-    commentInput = document.getElementById("comment").value;
+submit_Button.addEventListener("click", (reply) => {
+    commentInput = comment.value;
     addComment(commentInput);
-}
+    alert("댓글이 등록되었습니다")
+    comment.value = "";
+})
 
 for (const delete_Button of delete_Buttons) {
     delete_Button.addEventListener("click", (ln) => {
-        comment_Id = event.currentTarget.getAttribute("value");
+        comment_Id = ln.currentTarget.getAttribute("value");
         fetchDelete(comment_Id);
-        const del = event.currentTarget.parentNode.parentNode;
+        const del = ln.currentTarget.parentNode.parentNode;
         del.parentNode.removeChild(del);
     })
 }
@@ -36,6 +40,7 @@ const addComment = commentInput => {
     const tds = newRow.querySelectorAll("td");
     tds[0].textContent = comment;
     tds[1].textContent = formattedDate;
+    tds[2].textContent = "삭제";
 
     tableBody.appendChild(newRow);
     fetchUpdate(comment_Id)
@@ -62,6 +67,7 @@ function fetchUpdate(comment_Id) {
     let request = fetch(url, option)
         .then((result) => {
             return result.json();
+            
         })
         .then((data) => {
             console.log(data);
