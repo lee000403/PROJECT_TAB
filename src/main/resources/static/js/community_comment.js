@@ -1,11 +1,10 @@
-import swal from 'sweetalert';
-
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
 const delete_Buttons = document.getElementsByClassName("delete_Button");
 const comment = document.getElementById("comment");
 const submit_Button = document.getElementById("newComment");
+let ln;
 let comment_Id;
 let commentInput;
 
@@ -13,14 +12,18 @@ submit_Button.addEventListener("click", (reply) => {
     commentInput = comment.value;
     addComment(commentInput);
     comment.value = " ";
+    swal("등록 완료!", "댓글을 등록하였습니다", "success");
 })
 
 for (const delete_Button of delete_Buttons) {
-    delete_Button.addEventListener("click", (ln) => {
-        comment_Id = ln.currentTarget.getAttribute("value");
+    delete_Button.addEventListener("click", () => {
+
+        comment_Id = event.currentTarget.getAttribute("value");
         fetchDelete(comment_Id);
-        const del = ln.currentTarget.parentNode.parentNode;
+        const del = event.currentTarget.parentNode.parentNode;
         del.parentNode.removeChild(del);
+        swal("삭제 완료!", "댓글을 삭제하였습니다", "success");
+
     })
 }
 
@@ -44,9 +47,7 @@ const addComment = commentInput => {
     tds[2].textContent = "삭제";
 
     tableBody.appendChild(newRow);
-    fetchUpdate(comment_Id)
-    commentInput.value = " ";
-
+    fetchUpdate(comment_Id);
 };
 
 function fetchUpdate(comment_Id) {
@@ -68,7 +69,7 @@ function fetchUpdate(comment_Id) {
     let request = fetch(url, option)
         .then((result) => {
             return result.json();
-            
+
         })
         .then((data) => {
             console.log(data);
