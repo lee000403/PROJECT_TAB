@@ -118,16 +118,16 @@
 ## 2차 프로젝트
 
 💛 성진아: 데이터 수집, 데이터 레포트 작성
-* [프로그램 리스트](https://docs.google.com/spreadsheets/d/1xxuT0KH9dNd7kJxffIC4Bcai3GewpnPB1UQJuZOD4wk/edit#gid=0)
+
 
 💙 최정문: DB 유지 관리, 구름 서버 관리, 빅데이터 처리
-* [DB DDL](https://github.com/lee000403/study_springboots_gradle/blob/main/Docs/Databases/sqls/TOTAL_DDL.sql)
+
 
 ❤️ 김동현(PM) : Java, JS 코드 작성(커뮤니티 댓글 구현), 웹사이트 디자인 리뉴얼
-* [메인 페이지](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/webapp/WEB-INF/views/main_page/main_page.jsp)
+
 
 💚 이동환 : Java 코드 작성(매칭 기능 구현)
-* [자바 스프링](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)
+
 
 ## Refer
 
