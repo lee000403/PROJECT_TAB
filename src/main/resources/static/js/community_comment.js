@@ -1,3 +1,5 @@
+import swal from 'sweetalert';
+
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
@@ -10,8 +12,7 @@ let commentInput;
 submit_Button.addEventListener("click", (reply) => {
     commentInput = comment.value;
     addComment(commentInput);
-    alert("댓글이 등록되었습니다")
-    comment.value = "";
+    comment.value = " ";
 })
 
 for (const delete_Button of delete_Buttons) {

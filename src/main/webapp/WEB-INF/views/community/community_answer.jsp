@@ -142,7 +142,8 @@
 
                             </div>
                 </body>
-                <script src="/js/community_comment.js"></script>
+                <script type="module" src="/js/community_comment.js"></script>
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                 <%@ include file="../mainbar/footer.jsp" %>
 
             </html>
