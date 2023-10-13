@@ -1,4 +1,8 @@
 let data = [];
+const province = [];
+const snptNmfcl = [];
+const hmwlfHespsNmfcl = [];
+const hmwlfVsbhsNmfcl = [];
 
 function get_network_header_list() {
     let headers_user_agent = [];
@@ -23,18 +27,19 @@ axios.get(url, {
 .then(response => {
     if(response.status === 200) {
         const string = response.data;
+        const list = response.data.items;
 
-        const province = [];
-        const snptNmfcl = [];
-        const hmwlfHespsNmfcl = [];
-        const hmwlfVsbhsNmfcl = [];
 
-        const length = string.length;
-
-        for (let i = 0; i < length; i++) {
-            province.push(string.items[i].dvsd);
+        for (let i = 0; i < list.length; i++) {
+            province.push(list[i].dvsd);
+            snptNmfcl.push(list[i].snptNmfcl);
+            hmwlfHespsNmfcl.push(list[i].hmwlfHespsNmfcl);
+            hmwlfVsbhsNmfcl.push(list[i].hmwlfVsbhsNmfcl);
         }
         console.log(province);
+        console.log(snptNmfcl);
+        console.log(hmwlfHespsNmfcl);
+        console.log(hmwlfVsbhsNmfcl);
         console.log(string);
     }
 })
