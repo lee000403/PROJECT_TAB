@@ -5,8 +5,8 @@
     text-align: center;
     overflow: hidden;
     grid-template-areas:
-    "carousel carousel"
-    "stat_a stat_b"
+    "carousel stat_a"
+    "stat_b stat_c"
 }
 
 .carousel {grid-area:carousel;}
@@ -16,6 +16,8 @@
 
 .carousel {
     text-align: center;
+    max-width: 700px;
+    min-width: 600px;
 }
 
 
@@ -63,4 +65,8 @@
     background: transparent;
     cursor: pointer;
     padding: 10px;
+}
+
+.stat_a {
+    min-width: 200px;
 }

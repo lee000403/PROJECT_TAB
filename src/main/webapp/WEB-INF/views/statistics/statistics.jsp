@@ -10,30 +10,28 @@
       <title>치매 One-click System</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
       <link rel="stylesheet" href="/CSSs/statistics.css">
-      <script src="/js/statistics.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      
       <%@ include file="../mainbar/header_for_stat.jsp" %>
 
     <body>
 
-      <div class="fs-3">
-        <div class="container">
-          <div id="controlsid" class="carousel slide" data-bs-ride="carousel">
+      <div class="container">
+          <div id="controlsid" style="margin: 0 auto" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button class="active cbtn" data-bs-slide-to="0" data-bs-target="#controlsid">
-                1
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="1" data-bs-target="#controlsid">
-                2
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="2" data-bs-target="#controlsid">
-                3
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="3" data-bs-target="#controlsid">
-                4
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="4" data-bs-target="#controlsid">
-                5
+                ◻
               </button>
             </div>
             <div class="carousel-inner">
@@ -54,20 +52,18 @@
               </div>
             </div>
           </div>
+
+        <div class="stat stat_a">
+          <canvas id="myChart"></canvas>
         </div>
-      </div>
+        <div class="stat stat_b">
+          <table id="dataTable">
 
-
-
-
-      <div class="stat_a">
-        statistics a
-      </div>
-      <div class="stat_b">
-        statistics b
-      </div>
-      <div class="stat_c">
-        statistics c
+          </table>
+        </div>
+        <div class="stat stat_c">
+          statistics c
+        </div>
       </div>
 
     </body>
@@ -85,9 +81,11 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="/js/statistics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 
     </html>

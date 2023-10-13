@@ -31,9 +31,6 @@ for (const delete_Button of delete_Buttons) {
                 swal("삭제 완료!", "댓글을 삭제하였습니다", "success");
             } else {}
         })
-
-        
-
     })
 }
 
