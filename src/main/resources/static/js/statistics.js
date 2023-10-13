@@ -1,8 +1,12 @@
 let data = [];
+//  지역
 const province = [];
-const snptNmfcl = [];
-const hmwlfHespsNmfcl = [];
-const hmwlfVsbhsNmfcl = [];
+//  전문보호기관
+const spe_f = [];
+//  재가노인지원기관
+const asi_f = [];
+//  재가방문목욕서비스
+const was_f = [];
 
 function get_network_header_list() {
     let headers_user_agent = [];
@@ -13,37 +17,54 @@ function get_network_header_list() {
     headers_user_agent.push("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36")
 
     const rand_num = Math.floor(Math.random() * headers_user_agent.length);
-
     return headers_user_agent[rand_num];
 }
-
-const chartContainer = document.getElementById("chartContainer");
-const dataTable = document.getElementById("dataTable");
 
 const url = "https://cors-anywhere.herokuapp.com/http://apis.data.go.kr/1352000/ODMS_STAT_27/callStat27Api?serviceKey=ab5XSHW0eOiAmWhlVe1Qtqzmut13uzseiVqXmu35AT0zQwCwjBhHELGx3F1%2BZGkhBwcyAKzKYzLcLtjKt%2B6xLA%3D%3D&year=2015&apiType=JSON";
 
 axios.get(url, {
 })
-.then(response => {
-    if(response.status === 200) {
-        const string = response.data;
-        const list = response.data.items;
+    .then(response => {
+        if (response.status === 200) {
+            const string = response.data;
+            const list = response.data.items;
 
+            for (let i = 0; i < list.length; i++) {
+                province.push(list[i].dvsd);
+                spe_f.push(list[i].snptNmfcl);
+                asi_f.push(list[i].hmwlfHespsNmfcl);
+                was_f.push(list[i].hmwlfVsbhsNmfcl);
+            }
+            initializeChart("myChart", "노인전문보호기관 현황", spe_f);
+            initializeChart("myNextChart", "재가노인지원기관 현황", asi_f);
+            initializeChart("myLastChart", "재가방문목욕서비스 현황", was_f);
 
-        for (let i = 0; i < list.length; i++) {
-            province.push(list[i].dvsd);
-            snptNmfcl.push(list[i].snptNmfcl);
-            hmwlfHespsNmfcl.push(list[i].hmwlfHespsNmfcl);
-            hmwlfVsbhsNmfcl.push(list[i].hmwlfVsbhsNmfcl);
         }
-        console.log(province);
-        console.log(snptNmfcl);
-        console.log(hmwlfHespsNmfcl);
-        console.log(hmwlfVsbhsNmfcl);
-        console.log(string);
-    }
-})
+    })
 
-data.forEach(item => {
-
-})
+function initializeChart(chartId, label, data) {
+    new Chart(document.getElementById(chartId), {
+        type: 'bar',
+        data: {
+            labels: province,
+            datasets: [{
+                label: label,
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Customize the color
+                borderColor: 'rgba(75, 192, 192, 1)', // Customize the color
+                borderWidth: 1
+            }]
+        },
+        options: {
+            animation: {
+                tension: {
+                    duration: 2000, // The duration of the animation
+                    easing: 'linear', // The easing function
+                    from: 1, // The starting tension
+                    to: 0, // The ending tension
+                    loop: true, // Loop the animation
+                }
+            }
+        }
+    });
+}

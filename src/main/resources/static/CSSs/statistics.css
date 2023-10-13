@@ -1,6 +1,7 @@
 .container {
     margin-top: 50px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -9,10 +10,18 @@
     "stat_b stat_c"
 }
 
-.carousel {grid-area:carousel;}
+.stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+}
+
+/* .carousel {grid-area:carousel;}
 .stat_a {grid-area:stat_a;}
 .stat_b {grid-area:stat_b;}
-.stat_c {grid-area:stat_c;}
+.stat_c {grid-area:stat_c;} */
 
 .carousel {
     text-align: center;

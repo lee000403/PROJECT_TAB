@@ -57,12 +57,10 @@
           <canvas id="myChart"></canvas>
         </div>
         <div class="stat stat_b">
-          <table id="dataTable">
-
-          </table>
+          <canvas id="myNextChart"></canvas>
         </div>
         <div class="stat stat_c">
-          statistics c
+          <canvas id="myLastChart"></canvas>
         </div>
       </div>
 
