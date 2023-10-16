@@ -278,18 +278,9 @@
 	</select>
 
     <select id="survey_match_search_a" parameterType="Map" resultType="Map">    
-
-        <foreach collection="survey_list" item="item" index="index" separator=",">
-            <choose>
-                <when test = "#{item.area_num} = #{SURQ05} || #{item.work_num} = #{SURQ03} || #{item.gender_num} = #{SURQ01}">
-                SELECT DISTINCT sr.MEMBERID, mem.MEMBERNAME, mem.MEMBERTYPE_ID, mem.GENDER_ID, mem.PHONENUMBER, mem.MEMBERADDRESS, mem.EMAIL, mem.INTRODUCTION
-                FROM survey_result as sr
-                join members as mem
-                on sr.MEMBERID = mem.MEMBERID
-                where SURVEY_Q_ID = #{item.area_num} or SURVEY_Q_ID = #{item.work_num} or SURVEY_Q_ID = #{item.gender_num};
-                </when>
-            </choose>
-        </foreach>
+        SELECT DISTINCT sr.MEMBERID, mem.MEMBERNAME, mem.MEMBERTYPE_ID, mem.GENDER_ID, mem.PHONENUMBER, mem.MEMBERADDRESS, mem.EMAIL, mem.INTRODUCTION
+        FROM survey_result as sr
+        join members as mem
+        on sr.MEMBERID = mem.MEMBERID
     </select>
-
 </mapper>
