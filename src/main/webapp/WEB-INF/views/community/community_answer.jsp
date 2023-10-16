@@ -23,6 +23,8 @@
                     <%@ include file="../mainbar/header.jsp" %>
                         <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
                             result=(HashMap)request.getAttribute("result"); %>
+                            <input type="hidden" value='<%=result.get("POST_ID")%>'
+                            id="post_id" name="post_id">
                             <div class="container mt-4">
                                 <form class="" action="">
                                     <div class="row mt-4">
@@ -58,8 +60,6 @@
                                                 <% String userId=(String)params.get("userId"); %>
                                                     <% if (userId.equals(member)) { %>
                                                         <form action="">
-                                                            <input type="hidden" value='<%=result.get("POST_ID")%>'
-                                                                id="post_id" name="post_id">
                                                             <button type="submit"
                                                                 formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>'
                                                                 formmethod="post" class="btn btn-edit">수정</button>
