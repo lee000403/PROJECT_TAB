@@ -111,17 +111,12 @@
                                                     </td>
                                                     <td style="text-align: center; cursor: pointer;" class="table_comment">
                                                         <% if (userId.equals(member)) { %>
-                                                           
                                                                 <button
                                                                     style="border: none; background-color: white;"
                                                                     class="delete_Button"
                                                                     value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
                                                                 </button>
-                                                               
-
-
-                                                           
                                                             <% } %>
                                                     </td>
                                                 </tr>
