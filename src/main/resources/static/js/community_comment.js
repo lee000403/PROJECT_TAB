@@ -8,12 +8,14 @@ let ln;
 let comment_Id;
 let commentInput;
 
+
 submit_Button.addEventListener("click", (reply) => {
     commentInput = comment.value;
     addComment(commentInput);
     comment.value = " ";
     swal("등록 완료!", "댓글을 등록하였습니다", "success");
 })
+
 
 for (const delete_Button of delete_Buttons) {
     delete_Button.addEventListener("click", (ln) => {
@@ -34,6 +36,7 @@ for (const delete_Button of delete_Buttons) {
     })
 }
 
+
 const addComment = commentInput => {
     const currentDate = new Date();
     const year = currentDate.getFullYear();
@@ -41,25 +44,32 @@ const addComment = commentInput => {
     const day = String(currentDate.getDate()).padStart(2, '0');
     const formattedDate = `${year}-${month}-${day}`;
 
+
     const tableBody = document.querySelector("#datashow");
     const templateRow = document.querySelector("#reply_template");
 
+
     const comment = commentInput
 
+
     const newRow = templateRow.cloneNode(true);
+
 
     const tds = newRow.querySelectorAll("td");
     tds[0].textContent = comment;
     tds[1].textContent = formattedDate;
     tds[2].textContent = "삭제";
 
+
     tableBody.appendChild(newRow);
     fetchUpdate(comment_Id);
 };
 
+
 function fetchUpdate(comment_Id) {
     console.log("comment_Id:", comment_Id);
     commentInput = comment.value;
+
 
     let url = '/insertComment';
     let option = {
@@ -73,9 +83,11 @@ function fetchUpdate(comment_Id) {
         })
     }
 
+
     let request = fetch(url, option)
         .then((result) => {
             return result.json();
+
 
         })
         .then((data) => {
@@ -86,7 +98,9 @@ function fetchUpdate(comment_Id) {
         })
 }
 
+
 function fetchDelete(comment_Id) {
+
 
     let url = '/deleteComment';
     let option = {
@@ -98,6 +112,7 @@ function fetchDelete(comment_Id) {
             "COMMENT_ID": comment_Id
         })
     };
+
 
     let request = fetch(url, option)
         .then((result) => {
