@@ -218,7 +218,7 @@ public class Project_TABService {
                 a.put("area_num", survey.get("SURVEY_ANS_ID"));
                 survey_list.add(i, a);
                 i++;
-                a = new HashMap<>();
+                
             }
         }
         dataMap.put("survey_list", survey_list);
