@@ -110,27 +110,6 @@
           2016년 국내 치매 관련 시설 현황
         </strong>
       </div>
-      <div class="stat_c">
-        statistics c
-      </div>
-
-      <div class="container mt-4">
-        <div class="row">
-            <!-- Bar Chart -->
-            <div class="col" id="barChart"></div>
-
-        </div>
-        <div class="row">
-            <!-- Pie Chart and Line Chart -->
-            <div class="col-sm-6" id="pieChart"></div>
-            <div class="col-sm-6" id="lineChart"></div>
-        </div>
-
-        <!-- Google Maps Container -->
-        <div class="row">
-            <div class="col" id="map"></div>
-        </div>
-    </div>
 
     <footer class="footer py-3 mt-5" style="background-color: rgb(235, 225, 235);">
       <div class="row">
@@ -142,10 +121,7 @@
         </div>
       </div>
     </footer>
-    <script type='text/javascript'>
-      // Load the Visualization API and the corechart package
-      google.charts.load('current', { 'packages': ['corechart'] });
-    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/statistics.js"></script>
