@@ -128,7 +128,7 @@
 |Function|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
 |---|---|---|---|---|---|---|
 |Comment|[JSP](/src/main/webapp/WEB-INF/views/community/community_answer.jsp)|[CSS](/src/main/resources/static/CSSs/community_answer.css)|[MAPPER](/src/main/resources/sqlmapper/mysql/CommunityMapper.xml)|[RESTCONTROLLER](/src/main/java/com/yojulab/study_springboot/restapis/Community_write_RestController.java)|[SERVICE: answer 추가](/src/main/java/com/yojulab/study_springboot/service/CommunityService.java)|[JS](/src/main/resources/static/js/community_comment.js)|
-|Intro|[JSP](/src/main/webapp/WEB-INF/views/statistics/statistics.jsp)|[CSS](/src/main/resources/static/CSSs/statistics.css)|||[Controller](/src/main/java/com/yojulab/study_springboot/controller/StatisticsController.java)|[JS](/src/main/resources/static/js/statistics.js)|
+|Intro|[JSP](/src/main/webapp/WEB-INF/views/statistics/statistics.jsp)|[CSS](/src/main/resources/static/CSSs/statistics.css)||[Controller](/src/main/java/com/yojulab/study_springboot/controller/StatisticsController.java)|[JS](/src/main/resources/static/js/statistics.js)|
 
 
 💚 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
