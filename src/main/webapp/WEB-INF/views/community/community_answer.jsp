@@ -37,6 +37,8 @@
                                                 <p class="post-content">
                                                     <%= result.get("POST_CONTENT") %>
                                                 </p>
+                                                <input type="hidden" value='<%=result.get("POST_ID")%>'
+                                                id="post_id" name="post_id">
                                             </article>
                                         </div>
 
@@ -58,8 +60,7 @@
                                                 <% String userId=(String)params.get("userId"); %>
                                                     <% if (userId.equals(member)) { %>
                                                         <form action="">
-                                                            <input type="hidden" value='<%=result.get("POST_ID")%>'
-                                                                id="post_id" name="post_id">
+                                                           
                                                             <button type="submit"
                                                                 formaction='/TAB_PAGE/community_update/<%=result.get("POST_ID")%>'
                                                                 formmethod="post" class="btn btn-edit">수정</button>
