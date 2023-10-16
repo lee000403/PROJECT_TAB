@@ -126,10 +126,32 @@ public class CommunityService {
         return result;
     }
 
+    // 동현: comment 추가
     public Object insertComment(Map dataMap){
         String sqlMapId = "CommunityMapper.insertComment";
+        String UUID = commonUUID.Commons();
+        dataMap.put("COMMENT_ID", UUID);
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 
+    // 동현: comment 뷰포트 송출
+    public Object selectReply(String UNIQUE_ID, Map dataMap) {
+        String sqlMapId = "CommunityMapper.showComment";
+        dataMap.put("UNIQUE_ID", UNIQUE_ID);
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    // 동현: comment 삭제
+    public Object deleteComment(Map dataMap) {
+        String sqlMapId = "CommunityMapper.deleteComment";
+        String comment_Id = (String) dataMap.get("COMMENT_ID");
+        Object result = sharedDao.delete(sqlMapId, comment_Id);
+        return result;
+    }
+
+
 }
+
+

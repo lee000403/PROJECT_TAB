@@ -54,13 +54,15 @@ public class CommunityController {
         return modelAndView;
     }
 
+    //  동현: community answer 수정 및 추가
     @PostMapping("/community_answer/{UNIQUE_ID}")
     public ModelAndView community_answer(@PathVariable String UNIQUE_ID, @RequestParam Map params,
             ModelAndView modelAndView) {
         Object result = communityService.community_answer(UNIQUE_ID, params);
+        Object result_comment = communityService.selectReply(UNIQUE_ID, params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-
+        modelAndView.addObject("result_comment", result_comment);
         modelAndView.setViewName("/WEB-INF/views/community/community_answer.jsp");
         return modelAndView;
     }
@@ -108,4 +110,5 @@ public class CommunityController {
         modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
         return modelAndView;
     }
+
 }

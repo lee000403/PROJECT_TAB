@@ -10,9 +10,13 @@
       <title>치매 One-click System</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
       <link rel="stylesheet" href="/CSSs/statistics.css">
+<<<<<<< HEAD
       <script src="/js/statistics.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+=======
+
+>>>>>>> 2285b42dde6d4e5e82b39405501c58870f6b4fbb
       <%@ include file="../mainbar/header_for_stat.jsp" %>
       <style>
         #map {
@@ -23,55 +27,88 @@
 
     <body>
 
-      <div class="fs-3">
-        <div class="container">
-          <div id="controlsid" class="carousel slide" data-bs-ride="carousel">
+      <div class="container">
+        <div class="carousel_box">
+          <div id="controlsid" style="margin: 0 auto" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button class="active cbtn" data-bs-slide-to="0" data-bs-target="#controlsid">
-                1
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="1" data-bs-target="#controlsid">
-                2
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="2" data-bs-target="#controlsid">
-                3
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="3" data-bs-target="#controlsid">
-                4
+                ◻
               </button>
               <button class="cbtn" data-bs-slide-to="4" data-bs-target="#controlsid">
-                5
+                ◻
               </button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="img" src="/images/newlogo.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/one_click_matching.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/guide.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/flower_img.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/newlogo.jpg" alt="">
+            <div class="first_line">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="img" src="/images/newlogo.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/one_click_matching.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <a href="http://contents2.kocw.or.kr/KOCW/data/document/2020/edu1/gicu/kimkisik1111/14-1.pdf">
+                    <img class="img" src="/images/guide.jpg" alt="">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/flower_img.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/newlogo.jpg" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="intro_box">
+          <div class="title">
+            <strong>
+              환영합니다!
+            </strong> <br>
+          </div>
+          <div class="text_box">
+            우리 웹사이트는 치매를 앓고 있는 환자 <br>
+            및 보호자들이 공동체와 연결될 수 있도록 <br>
+            만들어졌습니다
+          </div>
+          <div class="small_text_box">
+            치매 환자들이 지역사회에서 일상을 누리며 행복하게 살아가기 위해서는
+            <strong>지역사회의 노력과 연대</strong>
+            가 필요합니다
+          </div>
+          <div class="small_text_box">
+            치매, 동행과 함께 우리 공동체 곳곳에 자리잡은 전문가들과 소통해 보세요
+          </div>
+        </div>
       </div>
 
-
-
-
-      <div class="stat_a">
-        statistics a
+      <div class="container">
+        <div class="stat_box">
+          <div class="stat stat_a">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="stat stat_b">
+            <canvas id="myNextChart"></canvas>
+          </div>
+          <div class="stat stat_c">
+            <canvas id="myLastChart"></canvas>
+          </div>
+        </div>
       </div>
-      <div class="stat_b">
-        statistics b
+      <div class="text_box" style="text-align: center;">
+        <strong>
+          2016년 국내 치매 관련 시설 현황
+        </strong>
       </div>
       <div class="stat_c">
         statistics c
@@ -108,105 +145,11 @@
     <script type='text/javascript'>
       // Load the Visualization API and the corechart package
       google.charts.load('current', { 'packages': ['corechart'] });
-
-      // Set a callback to run when the Google Visualization API is loaded
-      google.charts.setOnLoadCallback(drawCharts);
-
-      // Function to draw the charts
-      function drawCharts() {
-          // Data for Bar Chart
-          let barData = google.visualization.arrayToDataTable([
-              ['Category', 'Value'],
-              ['Category A', 10],
-              ['Category B', 20],
-              ['Category C', 15]
-          ]);
-
-          // Options for Bar Chart
-          let barOptions = {
-              title: 'Bar Chart'
-          };
-
-          // Data for Pie Chart
-          let pieData = google.visualization.arrayToDataTable([
-              ['Fruit', 'Quantity'],
-              ['Apple', 30],
-              ['Banana', 20],
-              ['Orange', 50]
-          ]);
-
-          // Options for Pie Chart
-          let pieOptions = {
-              title: 'Pie Chart'
-          };
-
-          // Data for Line Chart
-          let lineData = new google.visualization.DataTable();
-          lineData.addColumn('number', 'X');
-          lineData.addColumn('number', 'Line1');
-          lineData.addColumn('number', 'Line2');
-
-          lineData.addRows([
-              [1, 5, 7],
-              [2, 9, 3],
-              [3, 2, 6]
-          ]);
-
-          let lineOptions = {
-              title: 'Line Chart',
-              curveType: 'function',
-              legend: { position: 'bottom' }
-          };
-
-          let barChart = new google.visualization.BarChart(document.querySelector('#barChart'));
-          barChart.draw(barData, barOptions);
-
-          let pieChart = new google.visualization.PieChart(document.querySelector('#pieChart'));
-          pieChart.draw(pieData, pieOptions);
-
-          let lineChart = new google.visualization.LineChart(document.querySelector('#lineChart'));
-          lineChart.draw(lineData, lineOptions);
-      }
-
-      // Coordinates and Location Names
-      let locations = [
-          { lat: 37.5666791, lng: 126.9782914, name: '서울' },
-          { lat: 37.566535, lng: 126.9779692, name: '광화문' },
-          { lat: 37.5586867, lng: 126.9782364, name: '명동' },
-          { lat: 37.5551483, lng: 126.9707136, name: '남대문 시장' },
-          { lat: 37.5617981, lng: 127.0071515, name: '강남역' },
-          { lat: 37.5701391, lng: 127.0079479, name: '삼성동' },
-          { lat: 37.5296212, lng: 127.0325739, name: '잠실' }
-      ];
-
-      // Initialize and Display the Map
-      function initMap() {
-          let map = new google.maps.Map(document.querySelector('#map'), {
-              zoom: 12,
-              center: { lat: 37.5666791, lng: 126.9782914 } // Seoul Coordinates
-          });
-
-          // Add Markers and Info Windows
-          for (let i = 0; i < locations.length; i++) {
-              let marker = new google.maps.Marker({
-                  position: locations[i],
-                  map: map,
-                  title: locations[i].name
-              });
-
-              let infowindow = new google.maps.InfoWindow({
-                  content: locations[i].name
-              });
-
-              marker.addListener('click', function () {
-                  infowindow.open(map, this);
-              });
-          }
-      }
-  </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="/js/statistics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 
     </html>

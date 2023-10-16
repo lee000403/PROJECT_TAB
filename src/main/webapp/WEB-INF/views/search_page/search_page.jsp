@@ -28,7 +28,7 @@
                   <form action="">
                     <div class="input-group">
                       <select class="form-select" name="search">
-                        <option>선택</option>
+                        <option class="select_button">선택</option>
                         <option value="CENTER_NAME" <%=(searchStr.equals("CENTER_NAME")) ? "selected" : "" %>>시설명
                         </option>
                         <option value="CENTER_ADD" <%=(searchStr.equals("CENTER_ADD")) ? "selected" : "" %>
@@ -60,12 +60,9 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div class="font-weight-bold">
                             <%= record.get("CENTER_NAME") %>
-                        </div>
-                        <div>
+                        <br>
                           <%= record.get("CENTER_ADD") %>
-                        </div>
                       </td>
                       <td>
                         <%= record.get("CENTER_NUM") %>
@@ -116,6 +113,7 @@
 
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          <!-- <script src="../../../../resources/static/js/retrieve_mongo.js"></script> -->
     </body>
     <%@ include file="../mainbar/footer.jsp" %>
 

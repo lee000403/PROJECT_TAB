@@ -5,7 +5,22 @@
 <insert id="insertComment" parameterType="Map">
 
 INSERT INTO community_comment(COMMENT, COMMENT_DATE, POST_ID, COMMENT_ID) 
-VALUES (#{comment}, #{comment_date}, #{post_id}, #{comment_id});
+VALUES (#{comment}, now(), #{post_id}, #{COMMENT_ID});
 
 </insert>
+
+
+<select id="showComment" parameterType="String" resultType="Map">
+
+SELECT * FROM community_comment
+WHERE POST_ID = #{UNIQUE_ID};
+
+</select>
+
+<delete id="deleteComment" parameterType="Map">
+
+DELETE from community_comment WHERE COMMENT_ID = #{COMMENT_ID};
+
+</delete>
+
 </mapper>
