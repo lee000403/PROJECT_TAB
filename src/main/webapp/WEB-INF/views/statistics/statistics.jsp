@@ -93,6 +93,11 @@
           </div>
         </div>
       </div>
+      <div class="text_box" style="text-align: center;">
+        <strong>
+          2016년 국내 치매 관련 시설 현황
+        </strong>
+      </div>
     </body>
 
 
