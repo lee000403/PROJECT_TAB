@@ -18,6 +18,17 @@ public class SurveyController {
     @Autowired
     Project_TABService project_TABService;
 
+    @PostMapping("/survey_a_ID/{username}")
+    public ModelAndView survey_ID(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+        Object result = project_TABService.survey_a_ID(username, params);
+
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+
+        modelAndView.setViewName("/WEB-INF/views/survey/survey_result_a.jsp");
+        return modelAndView;
+    }
+
     @PostMapping("/survey_a")
     public ModelAndView survey_a(@RequestParam Map params, ModelAndView modelAndView) {
 
@@ -25,7 +36,7 @@ public class SurveyController {
         return modelAndView;
     }
 
-    @PostMapping("/survey_result_a")
+    @PostMapping("/survey_result_a/{username}")
     public ModelAndView survey_result_a(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
         Object result = project_TABService.survey_result_a(username, params);
         modelAndView.addObject("params", params);
@@ -37,6 +48,17 @@ public class SurveyController {
 
     @PostMapping("/survey_b")
     public ModelAndView survey_b(@RequestParam Map params, ModelAndView modelAndView) {
+
+        modelAndView.setViewName("/WEB-INF/views/survey/survey_b.jsp");
+        return modelAndView;
+    }
+
+    @PostMapping("/survey_b_ID/{username}")
+    public ModelAndView survey_b(@PathVariable String username, @RequestParam Map params, ModelAndView modelAndView) {
+
+        Object result = project_TABService.survey_b_ID(username, params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
 
         modelAndView.setViewName("/WEB-INF/views/survey/survey_b.jsp");
         return modelAndView;

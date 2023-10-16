@@ -1,40 +1,77 @@
 const post_id = document.getElementById("post_id").value;
 const form = document.querySelector("#newComment");
 const commentsContainer = document.querySelector("#comments");
-let deleteButton = document.querySelector("#delete_Button");
+const delete_Buttons = document.getElementsByClassName("delete_Button");
+const comment = document.getElementById("comment");
+const submit_Button = document.getElementById("newComment");
+let ln;
+let comment_Id;
+let commentInput;
 
-deleteButton.addEventListener("click", function() {
-    fetchDelete(this.value);
-})
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let commentInput = document.getElementById("comment").value;
+submit_Button.addEventListener("click", (reply) => {
+    commentInput = comment.value;
     addComment(commentInput);
-    commentInput.value = " ";
+    comment.value = " ";
+    swal("등록 완료!", "댓글을 등록하였습니다", "success");
 })
 
 
-const addComment = (comment) => {
+for (const delete_Button of delete_Buttons) {
+    delete_Button.addEventListener("click", (ln) => {
+        comment_Id = event.currentTarget.getAttribute("value");
+        const del = event.currentTarget.parentNode.parentNode;
+        swal("삭제하시겠습니까?", {
+            dangerMode: true,
+            buttons: true,
+            icon: "warning"
+        })
+        .then((willDelete) => {
+            if(willDelete) {
+                fetchDelete(comment_Id);
+                del.parentNode.removeChild(del);
+                swal("삭제 완료!", "댓글을 삭제하였습니다", "success");
+            } else {}
+        })
+    })
+}
+
+
+const addComment = commentInput => {
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');
     const formattedDate = `${year}-${month}-${day}`;
 
+
     const tableBody = document.querySelector("#datashow");
-    const templateRow = document.querySelector("#reply_template").cloneNode(true);
-    templateRow.querySelector("td:first-child").textContent = comment;
-    templateRow.querySelector("td:last-child").textContent = formattedDate;
-    tableBody.appendChild(templateRow);
-    commentInput.value = " ";
+    const templateRow = document.querySelector("#reply_template");
+
+
+    const comment = commentInput
+
+
+    const newRow = templateRow.cloneNode(true);
+
+
+    const tds = newRow.querySelectorAll("td");
+    tds[0].textContent = comment;
+    tds[1].textContent = formattedDate;
+    tds[2].textContent = "삭제";
+
+
+    tableBody.appendChild(newRow);
+    fetchUpdate(comment_Id);
 };
 
-function fetchUpdate() {
 
-    commentInput = form.elements.comment.value;
+function fetchUpdate(comment_Id) {
+    console.log("comment_Id:", comment_Id);
+    commentInput = comment.value;
 
-    let url = 'http://localhost:8080/insertComment';
+
+    let url = '/insertComment';
     let option = {
         method: "POST",
         headers: {
@@ -47,10 +84,11 @@ function fetchUpdate() {
     }
 
 
-
     let request = fetch(url, option)
         .then((result) => {
             return result.json();
+
+
         })
         .then((data) => {
             console.log(data);
@@ -60,7 +98,9 @@ function fetchUpdate() {
         })
 }
 
+
 function fetchDelete(comment_Id) {
+
 
     let url = '/deleteComment';
     let option = {
@@ -73,14 +113,15 @@ function fetchDelete(comment_Id) {
         })
     };
 
+
     let request = fetch(url, option)
-    .then((result) => {
-        return result.json();
-    })
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((errorMeg) => {
-        console.log(errorMeg);
-    });
+        .then((result) => {
+            return result.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((errorMeg) => {
+            console.log(errorMeg);
+        });
 }

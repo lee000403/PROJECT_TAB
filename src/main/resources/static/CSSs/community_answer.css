@@ -50,13 +50,9 @@ th {
 }
 
 .table_comment {
-    padding: 10px;
-}
-
-.added_comment {
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 3px;
+    padding-top: 10px;
 }
 
 .date_box {

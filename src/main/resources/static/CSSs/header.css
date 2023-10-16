@@ -95,6 +95,22 @@ header {
   font-weight: bolder;
 }
 
+.btn.btn-none{
+  border: none;
+}
+
+.btn.btn-none:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn.btn-none:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .items {
   bottom: 2px;
 }

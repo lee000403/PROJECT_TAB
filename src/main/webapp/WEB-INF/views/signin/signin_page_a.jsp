@@ -33,8 +33,6 @@
             <button onclick="fetchloginbutton()" style="background-color:#ff7f95;">중복 확인</button>
             <div id="updateDiv"></div>
           </div>
-        </form>
-        <form>
           <div class="form-group">
             <label for="password">비밀번호:</label>
             <input type="password" class="form-control" id="password" name="password">

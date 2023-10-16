@@ -8,167 +8,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Search</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-
-
-      <style>
-        body {
-          background-color: #fff;
-          padding-top: 160px;
-        }
-
-        .navbar {
-          justify-content: flex-end;
-        }
-
-        .navbar-nav {
-          display: flex;
-          align-items: center;
-        }
-
-        .navbar-nav .nav-item {
-          margin-right: 10px;
-        }
-
-        .h-navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          list-style: none;
-        }
-
-        .h-navbar .h-nav-item:first-child {
-          margin-right: auto;
-          font-size: 16px;
-          line-height: 8px;
-          list-style: none;
-        }
-
-
-        .navbar .nav-link {
-          padding: 0;
-          margin: 0;
-          font-size: 16px;
-          line-height: 8px;
-          color: #000000ab;
-        }
-
-        .navbar .nav-link:hover {
-          background-color: transparent;
-          font-size: 16px;
-          line-height: 8px;
-        }
-
-        .navbar-brand img {
-          height: 80px;
-        }
-
-        .nav-button {
-          display: inline-block;
-          padding: 20px 20px;
-          background-color: transparent;
-          color: #000;
-          border-radius: 5px;
-          text-decoration: none;
-          font-weight: bold;
-          border: 1px solid #00000098;
-        }
-
-        header {
-          position: fixed;
-          background-color: #fef0ea;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 100;
-        }
-      </style>
-
+      <link rel="stylesheet" href="/CSSs/detail_hospital.css">
     </head>
 
     <%@ include file="../mainbar/header.jsp" %>
 
+
       <body>
-
-        <!DOCTYPE html>
-        <html>
-
-        <head>
-          <title>치매시설정보</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              text-align: center;
-            }
-
-            .container {
-              margin-top: 40px;
-            }
-
-            .input-group {
-              margin-bottom: 20px;
-            }
-
-            .form-control {
-              width: 60%;
-            }
-
-            .btn-search {
-              background-color: rgba(221, 43, 43, 0.897);
-              color: #fff;
-            }
-
-            table {
-              width: 100%;
-              border-collapse: collapse;
-            }
-
-            th,
-            td {
-              padding: 10px;
-              border: 1px solid #ccc;
-            }
-
-            th {
-              background-color: #f2f2f2;
-              font-weight: bold;
-            }
-
-            tr:nth-child(even) {
-              background-color: #f9f9f9;
-            }
-
-            tr:hover {
-              background-color: #ebebeb;
-            }
-
-            .textname {
-              font-weight: bold;
-              font-size: large;
-              text-align: left;
-
-            }
-
-            .textnayong {
-              text-align: left;
-
-            }
-          </style>
-        </head>
-
-        <body>
-          <% HashMap params=(HashMap)request.getAttribute("params"); String
-            searchStr=(String)params.getOrDefault("search", "" ); HashMap
-            result=(HashMap)request.getAttribute("result"); %>
-            <% Paginations paginations=(Paginations)result.get("paginations"); %>
+        <% HashMap params=(HashMap)request.getAttribute("params"); String
+          searchStr=(String)params.getOrDefault("search", "" ); HashMap result=(HashMap)request.getAttribute("result");
+          %>
+          <% Paginations paginations=(Paginations)result.get("paginations"); %>
             <div class="container">
-              <div>
-                <h2>🏥 치매시설정보</h2>
-              </div>
-              <br>
-              <div class="container">
+              <h2 class="mt-5">🏥 치매시설정보</h2>
+              <div class="container m-4">
                 <div class="row justify-content-center">
-                  <div class="col-8 col-md-6 col-lg-4">
-                    <div class="input-group-append">
+                  <div class="">
+                    <div class="input-group-append input_group">
                       <form action="">
                         <div class="input-group">
                           <select class="form-select" name="search">
@@ -188,49 +44,40 @@
                   </div>
                 </div>
               </div>
-            </div>
 
-            <br>
-            <table>
-              <thead>
-                <tr>
-                  <th>시설명/주소</th>
-                  <th>전화번호</th>
-                </tr>
-              </thead>
-
-              <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
-                HashMap record=(HashMap)resultList.get(i); %>
-                <tbody>
+              <table class="main_table">
+                <thead>
                   <tr>
-                    <td>
-                      <div>
-                        <%= record.get("CENTER_NAME") %>
-                      </div>
-                      <div>
-                        <%= record.get("CENTER_ADD") %>
-                      </div>
-                    </td>
-                    <td>
-                      <%= record.get("CENTER_NUM") %>
-                    </td>
+                    <th>시설명/주소</th>
+                    <th>전화번호</th>
                   </tr>
-                </tbody>
-                <% } %>
-            </table>
-            <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>' method="post">
-              <button class="btn" type="submit" style="background-color:#ff7f95;">뒤로가기</button>
-            </form>
-        </body>
+                </thead>
 
-        <%@ include file="../mainbar/footer.jsp" %>
+                <% ArrayList resultList=(ArrayList)result.get("resultList"); for(int i=0; i < resultList.size(); i=i+1){
+                  HashMap record=(HashMap)resultList.get(i); %>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <%= record.get("CENTER_NAME") %>
+                          <br>
+                          <%= record.get("CENTER_ADD") %>
 
-        </html>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                      </td>
+                      <td>
+                        <%= record.get("CENTER_NUM") %>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <% } %>
+              </table>
+              <form action='/TAB_PAGE/search_page/<%=params.getOrDefault("currentPage","")%>' method="post">
+                <button class="btn" type="submit" style="background-color:#ff7f95; text-align: center;">뒤로가기</button>
+              </form>
+            </div>
       </body>
 
-    </html>
+      <%@ include file="../mainbar/footer.jsp" %>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- https://www.nid.or.kr/info/facility_list.aspx# -->
+    </html>

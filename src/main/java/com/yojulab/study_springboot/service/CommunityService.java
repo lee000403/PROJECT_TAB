@@ -126,6 +126,7 @@ public class CommunityService {
         return result;
     }
 
+    // 동현: comment 추가
     public Object insertComment(Map dataMap){
         String sqlMapId = "CommunityMapper.insertComment";
         String UUID = commonUUID.Commons();
@@ -134,6 +135,7 @@ public class CommunityService {
         return result;
     }
 
+    // 동현: comment 뷰포트 송출
     public Object selectReply(String UNIQUE_ID, Map dataMap) {
         String sqlMapId = "CommunityMapper.showComment";
         dataMap.put("UNIQUE_ID", UNIQUE_ID);
@@ -141,6 +143,7 @@ public class CommunityService {
         return result;
     }
 
+    // 동현: comment 삭제
     public Object deleteComment(Map dataMap) {
         String sqlMapId = "CommunityMapper.deleteComment";
         String comment_Id = (String) dataMap.get("COMMENT_ID");
