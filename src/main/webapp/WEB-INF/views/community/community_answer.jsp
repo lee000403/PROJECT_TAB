@@ -5,6 +5,7 @@
             <html lang="en">
             <sec:authentication property="principal" var="userDetailsBean" />
 
+
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,10 @@
                 <link rel="stylesheet" href="/CSSs/community_answer.css">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
 
+
             </head>
             <%@ include file="../mainbar/header.jsp" %>
+
 
                 <body>
                     <%@ include file="../mainbar/header.jsp" %>
@@ -36,6 +39,7 @@
                                                 </p>
                                             </article>
                                         </div>
+
 
                                         <div class="row mt-4 btn-group">
                                             <sec:authorize access="hasAnyRole('ROLE_DOCTOR')">
@@ -79,6 +83,7 @@
                                     </div>
                                 </form>
 
+
                                 <div>
                                     <table class="comment_table">
                                         <thead>
@@ -91,9 +96,10 @@
                                         <tbody id="datashow">
                                             <% ArrayList resultList_comment=(ArrayList)
                                                 request.getAttribute("result_comment");
-                                                for(int i=0; i < resultList_comment.size(); i ++) { 
+                                                for(int i=0; i < resultList_comment.size(); i ++) {
                                                     HashMap record=(HashMap)
                                                 resultList_comment.get(i); %>
+
 
                                                 <tr class="selected_comment">
                                                     <td class="table_comment">
@@ -104,48 +110,58 @@
                                                     </td>
                                                     <td style="text-align: center; cursor: pointer;" class="table_comment">
                                                         <% if (userId.equals(member)) { %>
-                                                            
+                                                           
                                                                 <button
                                                                     style="border: none; background-color: white;"
                                                                     class="delete_Button"
                                                                     value="<%= record.get("COMMENT_ID") %>">
                                                                     삭제
                                                                 </button>
-                                                                
+                                                               
+
 
                                                            
                                                             <% } %>
                                                     </td>
                                                 </tr>
                                                 <% } %>
-                                                
+                                               
                                                     <tr class="" id="reply_template">
                                                         <td class="table_comment">
+
 
                                                         </td>
                                                         <td class="table_comment date_box">
 
+
                                                         </td>
                                                         <td class="table_comment" style="text-align: center;">
-                                                            
+                                                           
                                                         </td>
                                                     </tr>
 
+
                                         </tbody>
                                     </table>
+
+
 
 
                                 </div>
                                     <input class="textbox" type="text" placeholder="글을 입력해 주세요"
                                         id="comment">
 
+
                                     <button class="comment_btn" id="newComment" name="newComment">답글 남기기</button>
+
 
                             </div>
                 </body>
 
+
                 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                 <script type="module" src="/js/community_comment.js"></script>
                 <%@ include file="../mainbar/footer.jsp" %>
+
 
             </html>
