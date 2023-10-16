@@ -23,6 +23,8 @@
                     <%@ include file="../mainbar/header.jsp" %>
                         <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
                             result=(HashMap)request.getAttribute("result"); %>
+                            <input type="hidden" value='<%=result.get("POST_ID")%>'
+                            id="post_id" name="post_id">
                             <div class="container mt-4">
                                 <form class="" action="">
                                     <div class="row mt-4">
@@ -37,8 +39,6 @@
                                                 <p class="post-content">
                                                     <%= result.get("POST_CONTENT") %>
                                                 </p>
-                                                <input type="hidden" value='<%=result.get("POST_ID")%>'
-                                                id="post_id" name="post_id">
                                             </article>
                                         </div>
 
