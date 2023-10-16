@@ -53,17 +53,15 @@ function initializeChart(chartId, label, data) {
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(255, 218, 185, 0.7)'
+                hoverBackgroundColor: 'rgba(255, 218, 185, 0.7)',
+                hoverBorderColor: 'rgba(255, 218, 185, 0.7)'
             }]
         },
         options: {
             animation: {
                 tension: {
                     duration: 2000,
-                    easing: 'linear',
-                    from: 1,
-                    to: 0,
-                    loop: true,
+                    easing: 'ease-in-out',
                 }
             }
         }

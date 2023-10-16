@@ -112,7 +112,7 @@
 ❤️ 한희수 : JS 관리 및 에러사항 수정, main 페이지 코드 작성
 * [메인 페이지](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/webapp/WEB-INF/views/main_page/main_page.jsp)
 
-💚 이동환 : 스프링 SAMPLE CODE 작성, 로그인 코드 작성, PM
+💚 이동환(PM) : 스프링 SAMPLE CODE 작성, 로그인 코드 작성
 * [자바 스프링](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)
 
 ## 2차 프로젝트
