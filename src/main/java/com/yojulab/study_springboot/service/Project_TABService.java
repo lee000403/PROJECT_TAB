@@ -2,6 +2,7 @@ package com.yojulab.study_springboot.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -158,6 +159,86 @@ public class Project_TABService {
 
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+
+    public Object survey_a_ID(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_result_a";
+
+        dataMap.put("id", this.mypage_detail(username, dataMap));
+        dataMap.put("username", username);
+        ArrayList result_list = (ArrayList)this.survey_id(dataMap);
+        dataMap.put("result_list", result_list);
+        ArrayList value_list = new ArrayList<>();
+        for (int i = 1; i <= result_list.size(); i++) {
+            String key = (String) "SURQ0" + i;
+            Object value = dataMap.get(key);
+            value_list.add(value);
+        }
+        dataMap.put("index_value", "SURQ0");
+        dataMap.put("Value_list", value_list);
+        Object result_insert = sharedDao.insert(sqlMapId, dataMap);
+
+        HashMap result = new HashMap<>();
+        result.put("survey_member", this.survey_match_search_a(username, dataMap));
+        result.put("survey_partner", this.survey_partner_all(username, dataMap));
+
+        return result;
+    }
+
+    public Object survey_member_pa(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_member_pa";
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object survey_partner_all(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_partner_all";
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object survey_match_search_a(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_match_search_a";
+
+        ArrayList<Map<String, String>> survey_result = new ArrayList<>();
+        survey_result = (ArrayList<Map<String, String>>) this.survey_member_pa(username, dataMap);
+        ArrayList<Map<String, String>> survey_list = new ArrayList<>();
+        HashMap a = new HashMap<>();
+        int i = 0;
+        for (Map<String, String> survey : survey_result) {
+            if (survey.get("SURVEY_Q_ID").equals("SURQ08")) {
+
+                a.put("gender_num", survey.get("SURVEY_ANS_ID"));
+            } else if (survey.get("SURVEY_Q_ID").equals("SURQ09")) {
+                a.put("work_num", survey.get("SURVEY_ANS_ID"));
+            } else if (survey.get("SURVEY_Q_ID").equals("SURQ12")) {
+                a.put("area_num", survey.get("SURVEY_ANS_ID"));
+                survey_list.add(i, a);
+                i++;
+                a = new HashMap<>();
+            }
+        }
+        dataMap.put("survey_list", survey_list);
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object survey_b_ID(String username, Map dataMap) {
+        String sqlMapId = "Project_TAB.survey_result_b";
+
+        dataMap.put("id", this.mypage_detail(username, dataMap));
+        dataMap.put("username", username);
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object survey_id(Map dataMap) {
+        String sqlMapId = "Project_TAB.select_Q_ID";
+
+        Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
 

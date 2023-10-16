@@ -1,4 +1,6 @@
+<%@ page import="java.util.HashMap, java.util.Map, java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
   <!DOCTYPE html>
   <html>
   <head>
@@ -51,32 +53,74 @@
   </head>
     <body>
       <%@ include file="../mainbar/header.jsp" %>
+      <% HashMap params=(HashMap)request.getAttribute("params");
+      HashMap result=(HashMap)request.getAttribute("result");
+      %>
       <div class="container">
         <div class="main-title">작성하신 요청 사항에 가장 가까운 파트너를 찾았어요</div>
         <div class="mx-3 my-2" style="text-align: end;"> 검색 결과 : 3 </div>
         <ul>
+          <% ArrayList<HashMap<String, Object>> result_arr = (ArrayList<HashMap<String, Object>>) result.get("survey_member");
+            for (HashMap<String, Object> arr_map : result_arr) {
+            String arr_result = (String)arr_map.get("MEMBERTYPE_ID");
+            if ("M_01".equals(arr_result)) {
+                continue;
+            }
+        %>
           <li class="lis">
             <div>
               <button class="partner-button" formaction="/TAB_PAGE/home/" formmethod="post">
-                <img class="partner-image" src="/images/partner_1.JPG" alt="partner 1">
+                <%String gender = (String) arr_map.get("GENDER_ID");
+                      if (gender.equals("G_01")) { %>
+                        <img class="partner-image" src="/images/partner_1.JPG" alt="partner 1">
+                      <%} else { %>
+                        <img class="partner-image" src="/images/partner_2.JPG" alt="partner 2">
+                      <% } %>
+                
               </button>
             </div>
             <div class="partner-info">
-              <div class="partner-name">김 버논</div>
+              <div class="partner-name"><%= arr_map.get("MEMBERNAME") %></div>
               <div>
-                <div>성별: 남성</div>
-                <div>주소: 서울 강남구</div>
+                <div><%
+                      if (gender.equals("G_01")) { %>
+                        남성
+                      <%} else { %>
+                        여성
+                      <% } %></div>
+                <div>주소: <%= arr_map.get("MEMBERADDRESS") %></div>
               </div>
             </div>
             <div class="partner-info">
-              <div>근무 유형: 출퇴근 (아침만)</div>
-              <div>고용 형태: 장기 간병인</div>
-              <div>동반자 환자의 치매 단계: 경도 치매</div>
-              <div>선호 지역: 1순위 서울, 2순위 경기</div>
-              <div>차량 또는 면허: 면허 보유</div>
-              <div>자격증: 간병인 자격증</div>
+              <% String member_id = (String) arr_map.get("MEMBERID"); %>
+              <% ArrayList<HashMap<String, Object>> partner_arr = (ArrayList<HashMap<String, Object>>) result.get("survey_partner");
+              for (HashMap<String, Object> partner_map : partner_arr) {
+                
+                if (partner_map.get("MEMBERID").equals(member_id)) {
+                  if (partner_map.get("SURVEY_Q_ID").equals("SURQ08")) { %>
+                    <div>원하는 성별: 
+                    <%= partner_map.get("SURVEY_ANS") %>
+                    </div>
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ09")) { %>
+                    <div>근무 유형: <%= partner_map.get("SURVEY_ANS") %></div> 
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ10")) { %>
+                    <div>고용 형태: <%= partner_map.get("SURVEY_ANS") %></div>
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ11")) { %>
+                    <div>동행 가능한 환자의 치매 단계: <%= partner_map.get("SURVEY_ANS") %></div>
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ12")) { %>
+                    <div>선호하는 지역: <%= partner_map.get("SURVEY_ANS") %></div>
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ14")) { %>
+                    <div>차량 또는 면허: <%= partner_map.get("SURVEY_ANS") %></div>
+                  <% } else if (partner_map.get("SURVEY_Q_ID").equals("SURQ15")) { %>
+                    <div>자격증: <%= partner_map.get("SURVEY_ANS") %></div>
+                  <%
+                  }
+                }
+              }
+              %>
             </div>
           </li>
+          <% } %>
           <li class="lis">
             <div>
               <button class="partner-button" formaction="/TAB_PAGE/home/" formmethod="post">

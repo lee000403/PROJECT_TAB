@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2400,
     "height": 2400,
-    "scrollTop": -507,
-    "scrollLeft": -1358,
-    "zoomLevel": 0.8,
+    "scrollTop": -552,
+    "scrollLeft": -1,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -283,7 +283,7 @@
           "active": false,
           "left": 1615,
           "top": 50,
-          "zIndex": 30,
+          "zIndex": 20,
           "widthName": 70.3642578125,
           "widthComment": 70.61181640625
         },
@@ -345,7 +345,7 @@
           "active": false,
           "left": 50,
           "top": 226,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 148.1484375,
           "widthComment": 60
         },
@@ -407,7 +407,7 @@
           "active": false,
           "left": 1965.2734375,
           "top": 1040.3521,
-          "zIndex": 16,
+          "zIndex": 13,
           "widthName": 92.77783203125,
           "widthComment": 60
         },
@@ -469,7 +469,7 @@
           "active": false,
           "left": 50,
           "top": 402,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 146.4853515625,
           "widthComment": 113.2236328125
         },
@@ -531,7 +531,7 @@
           "active": false,
           "left": 577,
           "top": 402,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 112.525390625,
           "widthComment": 113.2236328125
         },
@@ -593,7 +593,7 @@
           "active": false,
           "left": 1126,
           "top": 402,
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 170.07958984375,
           "widthComment": 113.2236328125
         },
@@ -655,7 +655,7 @@
           "active": false,
           "left": 1673,
           "top": 402,
-          "zIndex": 24,
+          "zIndex": 18,
           "widthName": 96.40869140625,
           "widthComment": 82.17724609375
         },
@@ -740,7 +740,7 @@
           "active": false,
           "left": 50,
           "top": 578,
-          "zIndex": 9,
+          "zIndex": 8,
           "widthName": 75.67724609375,
           "widthComment": 60
         },
@@ -825,7 +825,7 @@
           "active": false,
           "left": 676,
           "top": 569,
-          "zIndex": 36,
+          "zIndex": 24,
           "widthName": 103.13720703125,
           "widthComment": 113.2236328125
         },
@@ -910,7 +910,7 @@
           "active": false,
           "left": 1191.4075,
           "top": 598.3703,
-          "zIndex": 13,
+          "zIndex": 10,
           "widthName": 125.29052734375,
           "widthComment": 83.61181640625
         },
@@ -995,7 +995,7 @@
           "active": false,
           "left": 1731,
           "top": 578,
-          "zIndex": 11,
+          "zIndex": 9,
           "widthName": 90.6259765625,
           "widthComment": 60
         },
@@ -1080,7 +1080,7 @@
           "active": false,
           "left": 50,
           "top": 774.5,
-          "zIndex": 21,
+          "zIndex": 25,
           "widthName": 139.0205078125,
           "widthComment": 60
         },
@@ -1159,13 +1159,36 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
+          },
+          {
+            "name": "SURVEY_Q_ID",
+            "comment": "질문아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 92.796875,
+              "widthComment": 67,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "7a4a1742-5ef8-403c-ac65-1385f420c68a"
           }
         ],
         "ui": {
           "active": false,
           "left": 625.6667,
           "top": 772.8333,
-          "zIndex": 35,
+          "zIndex": 26,
           "widthName": 112.779296875,
           "widthComment": 60
         },
@@ -1273,7 +1296,7 @@
           "active": false,
           "left": 1206.8889,
           "top": 802.2778,
-          "zIndex": 32,
+          "zIndex": 21,
           "widthName": 64.1181640625,
           "widthComment": 80
         },
@@ -1381,7 +1404,7 @@
           "active": false,
           "left": 1742.8338,
           "top": 810.264,
-          "zIndex": 33,
+          "zIndex": 22,
           "widthName": 90.130859375,
           "widthComment": 74.2236328125
         },
@@ -1512,7 +1535,7 @@
           "active": false,
           "left": 50,
           "top": 991.5,
-          "zIndex": 19,
+          "zIndex": 15,
           "widthName": 124.5478515625,
           "widthComment": 117.20361328125
         },
@@ -1643,7 +1666,7 @@
           "active": false,
           "left": 627,
           "top": 991.5,
-          "zIndex": 20,
+          "zIndex": 16,
           "widthName": 124.78271484375,
           "widthComment": 60
         },
@@ -1912,7 +1935,7 @@
           "active": false,
           "left": 1174,
           "top": 991.5,
-          "zIndex": 14,
+          "zIndex": 11,
           "widthName": 67.72998046875,
           "widthComment": 60
         },
@@ -2227,7 +2250,7 @@
           "active": false,
           "left": 50,
           "top": 1352,
-          "zIndex": 25,
+          "zIndex": 19,
           "widthName": 116.1181640625,
           "widthComment": 60
         },
@@ -2289,7 +2312,7 @@
           "active": false,
           "left": 1763.246,
           "top": 1178.741,
-          "zIndex": 15,
+          "zIndex": 12,
           "widthName": 90.84814453125,
           "widthComment": 60
         },
@@ -2351,7 +2374,7 @@
           "active": false,
           "left": 1766.4868,
           "top": 1341.3333,
-          "zIndex": 18,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2532,7 +2555,7 @@
             "0f749082-113e-47c0-9973-7964ce2f113b"
           ],
           "x": 1093.39472734375,
-          "y": 881.5833,
+          "y": 898.6666333333335,
           "direction": "right"
         },
         "end": {
@@ -2896,7 +2919,7 @@
             "d2752684-16fa-44d5-bfa2-3d898553ffdf"
           ],
           "x": 508.58740234375,
-          "y": 872.375,
+          "y": 883.25,
           "direction": "right"
         },
         "end": {
@@ -2931,7 +2954,7 @@
             "5a6a4922-9b09-468a-8ea4-91f0b706e189"
           ],
           "x": 508.58740234375,
-          "y": 807.125,
+          "y": 839.75,
           "direction": "right"
         },
         "constraintName": "",
@@ -2957,7 +2980,7 @@
             "fe2268b2-8869-4407-a002-b6574ba190d5"
           ],
           "x": 1093.39472734375,
-          "y": 794.5833,
+          "y": 797.9999666666668,
           "direction": "right"
         },
         "constraintName": "",
@@ -2983,7 +3006,7 @@
             "643aeed3-e032-4ef1-9217-5ebe9caab283"
           ],
           "x": 1093.39472734375,
-          "y": 838.0833,
+          "y": 848.3333000000001,
           "direction": "right"
         },
         "constraintName": "",
@@ -3067,6 +3090,32 @@
         "constraintName": "fk__to_",
         "visible": true,
         "id": "8d60f795-309b-42db-8356-0cf1f471a0ef"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "4843530d-14b3-4a68-8651-bd1bc8ec5f08",
+          "columnIds": [
+            "d2752684-16fa-44d5-bfa2-3d898553ffdf"
+          ],
+          "x": 508.58740234375,
+          "y": 796.25,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "8713eef7-c029-4e8c-8d3e-40758fa27618",
+          "columnIds": [
+            "7a4a1742-5ef8-403c-ac65-1385f420c68a"
+          ],
+          "x": 625.6667,
+          "y": 848.3333,
+          "direction": "left"
+        },
+        "constraintName": "fk_survey_questions_to_survey_result",
+        "visible": true,
+        "id": "78934b3e-c52a-4d1e-b43d-326397d97a55"
       }
     ]
   }

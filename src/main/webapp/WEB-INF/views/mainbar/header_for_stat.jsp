@@ -85,13 +85,13 @@
                     </sec:authorize>
                     <sec:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_GEUST')">
                       <li class="nav-item nav-button">
-                        <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/survey_a"
+                        <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/survey_a/${userDetailsBean.username}"
                           formmethod="post">One-click</button>
                       </li>
                     </sec:authorize>
                     <sec:authorize access="hasRole('ROLE_PARTNER')">
                       <li class="nav-item nav-button">
-                        <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/survey_b"
+                        <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/survey_b/${userDetailsBean.username}"
                           formmethod="post">One-click</button>
                       </li>
                     </sec:authorize>

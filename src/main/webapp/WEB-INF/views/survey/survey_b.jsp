@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,46 +115,46 @@
         <form class="container-fluid form-style">
             <div class="form-group">
                 <label for="gender">선호하는 환자의 성별이 있나요?</label>
-                <select class="form-control" id="gender">
-                    <option name="gender" value="SURA-0041">무관</option>
-                    <option name="gender" value="SURA-0042">남</option>
-                    <option name="gender" value="SURA-0043">여</option>
+                <select class="form-control" id="gender" name="SURQ08">
+                    <option value="SURA-0001">무관</option>
+                    <option value="SURA-0002">남</option>
+                    <option value="SURA-0003">여</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for=" work-type">어떤 근무 형태를 원하시나요?</label>
-                <select class="form-control" id="work-type">
-                    <option name="work-type" value="SURA-0044">출퇴근형 (오전만)</option>
-                    <option name="work-type" value="SURA-0045">출퇴근형 (오후만)</option>
-                    <option name="work-type" value="SURA-0046">출퇴근형 (종일)</option>
-                    <option name="work-type" value="SURA-0047">입주형</option>
-                    <option name="work-type" value="SURA-0048">파트너와 상담 후 결정할게요.</option>
+                <select class="form-control" id="work-type" name="SURQ09">
+                    <option value="SURA-0013">출퇴근형 (오전만)</option>
+                    <option value="SURA-0014">출퇴근형 (오후만)</option>
+                    <option value="SURA-0015">출퇴근형 (종일)</option>
+                    <option value="SURA-0016">입주형</option>
+                    <option value="SURA-0017">파트너와 상담 후 결정할게요.</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="partner-type">원하시는 고용형태는요?</label>
-                <select class="form-control" id="partner-type">
-                    <option name="partner-type" value="SURA-0049">장기 요양보호사</option>
-                    <option name="partner-type" value="SURA-0050">단기 케어</option>
-                    <option name="partner-type" value="SURA-0051">자원봉사자</option>
+                <select class="form-control" id="partner-type" name="SURQ10">
+                    <option value="SURA-0049">장기 요양보호사</option>
+                    <option value="SURA-0050">단기 케어</option>
+                    <option value="SURA-0051">자원봉사자</option>
                 </select>
             </div>
         
             <div class="form-group">
                 <label for="patient-level">동행 가능한 환자의 치매 단계는 어떻게 될까요?</label>
-                <select class="form-control" id="patient-level">
-                    <option name="STAGE_ID" value="SURA-0052">경증 치매</option>
-                    <option name="STAGE_ID" value="SURA-0053">중등도 치매</option>
-                    <option name="STAGE_ID" value="SURA-0054">중증 치매</option>
+                <select class="form-control" id="patient-level" name="SURQ11">
+                    <option value="SURA-0052">경증 치매</option>
+                    <option value="SURA-0053">중등도 치매</option>
+                    <option value="SURA-0054">중증 치매</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <div>선호하는 지역을 선택해주세요</div>
-                <label for="addressFirst">(1순위)</label>
-                <select data-v-4604670f="" name="area" class="select custom-select disabled" data-testid="address-first" aria-invalid="false" id="requestAddressProvince">
+                <label for="addressFirst"></label>
+                <select data-v-4604670f="" name="SURQ12" class="select custom-select disabled" data-testid="address-first" aria-invalid="false" id="requestAddressProvince">
                     <option disabled="disabled" value="">시/도</option>
                     <option value="SURA-0089">서울</option>
                     <option value="SURA-0090">세종</option>
@@ -177,24 +178,24 @@
 
             <div class="form-group">
                 <label for="vehicle-ownership">차량 또는 면허가 있나요?</label>
-                <select class="form-control" id="vehicle-ownership">
-                    <option name="car" value="SURA-0083">차량 있음</option>
-                    <option name="car" value="SURA-0084">운전 가능</option>
-                    <option name="car" value="SURA-0085">운전 불가</option>
+                <select class="form-control" id="vehicle-ownership" name="SURQ14">
+                    <option value="SURA-0083">차량 있음</option>
+                    <option value="SURA-0084">운전 가능</option>
+                    <option value="SURA-0085">운전 불가</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="license">자격증이 있나요?</label>
-                <select class="form-control" id="license">
-                    <option name="patner" value="SURA-0086">요양 보호사 자격증</option>
-                    <option name="patner" value="SURA-0087">치매 파트너 교육 이수</option>
-                    <option name="patner" value="SURA-0088">없음</option>
+                <select class="form-control" id="license" name="SURQ15">
+                    <option value="SURA-0086">요양 보호사 자격증</option>
+                    <option value="SURA-0087">치매 파트너 교육 이수</option>
+                    <option value="SURA-0088">없음</option>
                 </select>
             </div>
 
             <div class="centered-button mt-5">
-                <button type="submit" class="btn btn-style" formaction="/TAB_PAGE/survey_result_b" formmethod="post"> <span style="color:whitesmoke;">파트너 찾기</span> </button>
+                <button type="submit" class="btn btn-style" formaction="/TAB_PAGE/survey_b_ID/${userDetailsBean.username}" formmethod="post"> <span style="color:whitesmoke;">파트너 찾기</span> </button>
             </div>
         </form>
     </div>
