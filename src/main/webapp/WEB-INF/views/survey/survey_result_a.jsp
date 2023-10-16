@@ -61,6 +61,9 @@
         <ul>
           <% ArrayList<HashMap<String, Object>> result_arr = (ArrayList<HashMap<String, Object>>) result.get("survey_member");
             for (HashMap<String, Object> arr_map : result_arr) {
+            if (arr_map.get("MEMBERNAME").equals("dh")) {
+              continue;
+            }
             String arr_result = (String)arr_map.get("MEMBERTYPE_ID");
             if ("M_01".equals(arr_result)) {
                 continue;
@@ -94,7 +97,7 @@
               <% String member_id = (String) arr_map.get("MEMBERID"); %>
               <% ArrayList<HashMap<String, Object>> partner_arr = (ArrayList<HashMap<String, Object>>) result.get("survey_partner");
               for (HashMap<String, Object> partner_map : partner_arr) {
-                
+
                 if (partner_map.get("MEMBERID").equals(member_id)) {
                   if (partner_map.get("SURVEY_Q_ID").equals("SURQ08")) { %>
                     <div>원하는 성별: 
@@ -114,12 +117,14 @@
                     <div>자격증: <%= partner_map.get("SURVEY_ANS") %></div>
                   <%
                   }
-                }
               }
+              }
+            
               %>
             </div>
           </li>
-          <% } %>
+          <% 
+        } %>
         </ul>
         
       </div>
