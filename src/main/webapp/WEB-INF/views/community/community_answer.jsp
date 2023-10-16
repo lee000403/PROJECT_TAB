@@ -25,6 +25,7 @@
                             result=(HashMap)request.getAttribute("result"); %>
                             <input type="hidden" value='<%=result.get("POST_ID")%>'
                             id="post_id" name="post_id">
+                            <input type="hidden" value='<%=result.get("MEMBERID")%>' id="member_id">
                             <div class="container mt-4">
                                 <form class="" action="">
                                     <div class="row mt-4">
