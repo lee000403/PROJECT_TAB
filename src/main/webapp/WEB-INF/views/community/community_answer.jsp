@@ -90,8 +90,9 @@
                                         </thead>
                                         <tbody id="datashow">
                                             <% ArrayList resultList_comment=(ArrayList)
-                                                request.getAttribute("result_comment"); for(int i=0; i <
-                                                resultList_comment.size(); i ++) { HashMap record=(HashMap)
+                                                request.getAttribute("result_comment");
+                                                for(int i=0; i < resultList_comment.size(); i ++) { 
+                                                    HashMap record=(HashMap)
                                                 resultList_comment.get(i); %>
 
                                                 <tr class="selected_comment">

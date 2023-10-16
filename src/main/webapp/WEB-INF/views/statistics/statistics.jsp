@@ -10,12 +10,13 @@
       <title>치매 One-click System</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
       <link rel="stylesheet" href="/CSSs/statistics.css">
-      
+
       <%@ include file="../mainbar/header_for_stat.jsp" %>
 
     <body>
 
       <div class="container">
+        <div class="carousel_box">
           <div id="controlsid" style="margin: 0 auto" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button class="active cbtn" data-bs-slide-to="0" data-bs-target="#controlsid">
@@ -34,36 +35,64 @@
                 ◻
               </button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="img" src="/images/newlogo.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/one_click_matching.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/guide.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/flower_img.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img class="img" src="/images/newlogo.jpg" alt="">
+            <div class="first_line">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="img" src="/images/newlogo.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/one_click_matching.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <a href="http://contents2.kocw.or.kr/KOCW/data/document/2020/edu1/gicu/kimkisik1111/14-1.pdf">
+                    <img class="img" src="/images/guide.jpg" alt="">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/flower_img.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="img" src="/images/newlogo.jpg" alt="">
+                </div>
               </div>
             </div>
           </div>
-
-        <div class="stat stat_a">
-          <canvas id="myChart"></canvas>
         </div>
-        <div class="stat stat_b">
-          <canvas id="myNextChart"></canvas>
-        </div>
-        <div class="stat stat_c">
-          <canvas id="myLastChart"></canvas>
+        <div class="intro_box">
+          <div class="title">
+            <strong>
+              환영합니다!
+            </strong> <br>
+          </div>
+          <div class="text_box">
+            우리 웹사이트는 치매를 앓고 있는 환자 <br>
+            및 보호자들이 공동체와 연결될 수 있도록 <br>
+            만들어졌습니다
+          </div>
+          <div class="small_text_box">
+            치매 환자들이 지역사회에서 일상을 누리며 행복하게 살아가기 위해서는
+            <strong>지역사회의 노력과 연대</strong>
+            가 필요합니다
+          </div>
+          <div class="small_text_box">
+            치매, 동행과 함께 우리 공동체 곳곳에 자리잡은 전문가들과 소통해 보세요
+          </div>
         </div>
       </div>
 
+      <div class="container">
+        <div class="stat_box">
+          <div class="stat stat_a">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="stat stat_b">
+            <canvas id="myNextChart"></canvas>
+          </div>
+          <div class="stat stat_c">
+            <canvas id="myLastChart"></canvas>
+          </div>
+        </div>
+      </div>
     </body>
 
 
@@ -79,7 +108,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/statistics.js"></script>

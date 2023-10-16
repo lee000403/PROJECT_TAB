@@ -99,7 +99,7 @@
                   <form>
                     <li class="nav-item nav-button">
                       <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/statistics"
-                        formmethod="post">통계보기</button>
+                        formmethod="post">사이트소개</button>
                     </li>
                     <li class="nav-item nav-button">
                       <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/search_page/"

@@ -1,37 +1,77 @@
 .container {
     margin-top: 50px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     width: 100%;
+    max-width: 1000px;
+    min-width: 960px;
     text-align: center;
     overflow: hidden;
-    grid-template-areas:
-    "carousel stat_a"
-    "stat_b stat_c"
 }
 
+
+.stat_box{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
 .stat {
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 500px;
+    width: 40%;
+    min-width: 300px;
+    min-height: 300px;
 }
 
-/* .carousel {grid-area:carousel;}
-.stat_a {grid-area:stat_a;}
-.stat_b {grid-area:stat_b;}
-.stat_c {grid-area:stat_c;} */
+.carousel_box {
+    width: 60%;
+}
+
+.title {
+    font-size: 5vh;
+}
+
+.intro_box {
+    margin-left: 10px;
+    padding-top: 20px;
+    font-size: 2.5vh;
+    width: 40%;
+    width: 440px;
+    height: 400px;
+    text-align: left;
+}
+
+.text_box {
+    margin-top: 20px;
+}
+
+.small_text_box {
+    font-size: 1.8vh;
+    margin-top: 15px;
+}
+
+strong {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    background-color: rgb(178, 222, 241);
+}
 
 .carousel {
     text-align: center;
-    max-width: 700px;
-    min-width: 600px;
+    max-width: 600px;
+    min-width: 400px;
 }
 
-
 .img {
-    width: 700px;
+    width: 600px;
     height: 400px;
 }
 
@@ -46,7 +86,6 @@
     text-align: center;
 
 }
-
 
 .imgs {
     margin: 0 auto;

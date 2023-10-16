@@ -20,7 +20,7 @@ function get_network_header_list() {
     return headers_user_agent[rand_num];
 }
 
-const url = "https://cors-anywhere.herokuapp.com/http://apis.data.go.kr/1352000/ODMS_STAT_27/callStat27Api?serviceKey=ab5XSHW0eOiAmWhlVe1Qtqzmut13uzseiVqXmu35AT0zQwCwjBhHELGx3F1%2BZGkhBwcyAKzKYzLcLtjKt%2B6xLA%3D%3D&year=2015&apiType=JSON";
+const url = "http://apis.data.go.kr/1352000/ODMS_STAT_27/callStat27Api?serviceKey=ab5XSHW0eOiAmWhlVe1Qtqzmut13uzseiVqXmu35AT0zQwCwjBhHELGx3F1%2BZGkhBwcyAKzKYzLcLtjKt%2B6xLA%3D%3D&year=2015&apiType=JSON";
 
 axios.get(url, {
 })
@@ -50,19 +50,19 @@ function initializeChart(chartId, label, data) {
             datasets: [{
                 label: label,
                 data: data,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Customize the color
-                borderColor: 'rgba(75, 192, 192, 1)', // Customize the color
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]
         },
         options: {
             animation: {
                 tension: {
-                    duration: 2000, // The duration of the animation
-                    easing: 'linear', // The easing function
-                    from: 1, // The starting tension
-                    to: 0, // The ending tension
-                    loop: true, // Loop the animation
+                    duration: 2000,
+                    easing: 'linear',
+                    from: 1,
+                    to: 0,
+                    loop: true,
                 }
             }
         }
