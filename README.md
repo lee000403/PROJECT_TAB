@@ -117,13 +117,13 @@
 
 ## 2차 프로젝트
 
-💛 성진아: 데이터 수집, 데이터 레포트 작성
+🙋‍♀️ 성진아: 데이터 수집, 데이터 레포트 작성
 
 
-💙 최정문: DB 유지 관리, 구름 서버 관리, 빅데이터 처리
+🙆 최정문: DB 유지 관리, 구름 서버 관리, 빅데이터 처리
 
 
-❤️ 김동현(PM) : Java, JS 코드 작성(사이트 소개, 커뮤니티 댓글 구현), 웹사이트 디자인 리뉴얼, CONTROLLER/SERVICE 개편
+💁‍♂️ 김동현(PM) : Java, JS 코드 작성(사이트 소개, 커뮤니티 댓글 구현), 웹사이트 디자인 리뉴얼, CONTROLLER/SERVICE 개편
 
 |Function|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
 |---|---|---|---|---|---|---|
@@ -131,7 +131,7 @@
 |Intro|[JSP](/src/main/webapp/WEB-INF/views/statistics/statistics.jsp)|[CSS](/src/main/resources/static/CSSs/statistics.css)||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/StatisticsController.java)||[JS](/src/main/resources/static/js/statistics.js)|
 
 
-💚 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
+🙆‍♂️ 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
 
 
 ## Refer
