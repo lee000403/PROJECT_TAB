@@ -56,14 +56,6 @@ function initializeChart(chartId, label, data) {
                 hoverBackgroundColor: 'rgba(255, 218, 185, 0.7)',
                 hoverBorderColor: 'rgba(255, 218, 185, 0.7)'
             }]
-        },
-        options: {
-            animation: {
-                tension: {
-                    duration: 2000,
-                    easing: 'ease-in-out',
-                }
-            }
         }
     });
 }
