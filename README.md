@@ -136,7 +136,7 @@
 |Function|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
 |---|---|---|---|---|---|---|
 |Login 중복 확인|[JSP](/src/main/webapp/WEB-INF/views/login/login_page.jsp)||[MAPPER](/src/main/resources/sqlmapper/mysql/Project_TABMapper.xml)|[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)|[JS](/src/main/resources/static/js/login_button.js)|
-|matching|[JSP](/src/main/webapp/WEB-INF/views/survey/survey_reasult_a.jsp)|||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/SurveyController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)||
+|matching|[JSP](/src/main/webapp/WEB-INF/views/survey/survey_reasult_a.jsp)|[MAPPER](/src/main/resources/sqlmapper/mysql/Project_TABMapper.xml)||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/SurveyController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)||
 
 ## Refer
 
