@@ -61,7 +61,7 @@
               <sec:authorize access="isAnonymous()">
                 <form>
                   <div class="logo_btn">
-                  <button type="submit" class="btn btn-none justify-content-center" formaction="/TAB_PAGE/home/" formmethod="post">
+                  <button type="submit" class="btn btn-none" formaction="/TAB_PAGE/home/" formmethod="post">
                     <img src="/images/mainlogo.png" alt="Logo" class="logo-image">
                   </button>
                 </div>
