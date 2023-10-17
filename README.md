@@ -131,8 +131,12 @@
 |Intro|[JSP](/src/main/webapp/WEB-INF/views/statistics/statistics.jsp)|[CSS](/src/main/resources/static/CSSs/statistics.css)||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/StatisticsController.java)||[JS](/src/main/resources/static/js/statistics.js)|
 
 
-🙆‍♂️ 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
+🙆‍♂️ 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편, FETCH를 활용한 로그인 중복 처리, 회원 탈퇴 기능 구현
 
+|Function|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
+|---|---|---|---|---|---|---|
+|Login 중복 확인|[JSP](/src/main/webapp/WEB-INF/views/login/login_page.jsp)||[MAPPER](/src/main/resources/sqlmapper/mysql/Project_TABMapper.xml)|[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)|[JS](/src/main/resources/static/js/login_button.js)|
+|matching|[JSP](/src/main/webapp/WEB-INF/views/survey/survey_reasult_a.jsp)|||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/SurveyController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)||
 
 ## Refer
 
