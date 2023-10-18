@@ -120,7 +120,7 @@
 🙋‍♀️ 성진아: 데이터 수집, 데이터 레포트 작성
 
 
-🙆 최정문: DB 유지 관리, 구름 서버 관리, 빅데이터 처리
+🙆 최정문: DB 유지 관리, 구름 서버 관리, 빅데이터 분석(이용자 댓글분석, 이용자 유형분석)
 
 
 💁‍♂️ 김동현(PM) : Java, JS 코드 작성(사이트 소개, 커뮤니티 댓글 구현), 웹사이트 디자인 리뉴얼, CONTROLLER/SERVICE 개편
@@ -131,8 +131,12 @@
 |Intro|[JSP](/src/main/webapp/WEB-INF/views/statistics/statistics.jsp)|[CSS](/src/main/resources/static/CSSs/statistics.css)||[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/StatisticsController.java)||[JS](/src/main/resources/static/js/statistics.js)|
 
 
-🙆‍♂️ 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편
+🙆‍♂️ 이동환 : Java 코드 작성(매칭 기능 구현), CONTROLLER/SERVICE 개편, FETCH를 활용한 로그인 중복 처리, 회원 탈퇴 기능 구현
 
+|Function|JSP|CSS|MAPPER|CONTROLLER|SERVICE|JS|
+|---|---|---|---|---|---|---|
+|Login 중복 확인|[JSP](/src/main/webapp/WEB-INF/views/login/login_page.jsp)||[MAPPER](/src/main/resources/sqlmapper/mysql/Project_TABMapper.xml)|[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/Project_TABController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)|[JS](/src/main/resources/static/js/login_button.js)|
+|matching|[JSP](/src/main/webapp/WEB-INF/views/survey/survey_reasult_a.jsp)||[MAPPER](/src/main/resources/sqlmapper/mysql/Project_TABMapper.xml)|[CONTROLLER](/src/main/java/com/yojulab/study_springboot/controller/SurveyController.java)|[SERVICE](/src/main/java/com/yojulab/study_springboot/service/Project_TABService.java)||
 
 ## Refer
 
@@ -142,7 +146,7 @@
 
 ## RUN
 
-💻 [YOUTUBE](https://www.youtube.com/watch?v=JuikXN1-NT4)
+💻 [YOUTUBE]((https://www.youtube.com/watch?v=dwGLi3gAqFw))
 
 ## 웹페이지 주소
 
@@ -156,3 +160,10 @@
 - 이동환 : 이번 프로젝트를 통해 스프링에 대해 조금이나마 자세히 배울 수 있게 되었고, 첫 프로젝트인데 팀원들과 협력을 통한 좋은 결과물을 함께 만들 수 있는 좋은 시간이었던 것 같습니다.
 
 ## 2차 프로젝트 소감 
+
+- 김동현 : 지난 프로젝트보다 자바스크립트를 더 많이 경험해 볼 수 있어서 좋았습니다. 또한 Axios, Swal, Chart JS와 같은 모듈들을 사용하면서 확장성에 놀람. 다음 번에는 더 다양한 모듈들을 활용하면서 더욱 깊이 있게 사용법을 배우고 싶다는 생각을 하였습니다.
+마지막으로 PM의 일정관리 중요성을 다시 느꼈고, 좋은 동료들과 함께 작업할 수 있어서 즐거웠음
+- 최정문 : 버전 충돌로 프로그램 설치가 안되는 문제나 실행 오류들을 해결하는데 시간을 많이 써야했고, 사용하고 싶은데 오류로 인해 쓰지 못 한 툴들이 있어 아쉬웠다. 처음부터 conda 환경을 구성했었더라면 시간이 많이 단축됐을듯. \n
+분석 자체보다는 어떤 데이터를 분석하여 어떤 고찰을 얻을 것인가와, 만들어진 분석 플로우를 활용하여 서비스에 어떤 도움이 될 지 상상하는 것이 재밌었다. 기대와 다르게 유의미한 데이터를 얻는 것은 어려웠지만. 특히 간병인 앱 리뷰의 경우 selenium으로 크롤링하려고 한다면 다른 앱들에도 리뷰들이 많이 존재함에도 불구하고 ‘케어네이션’만 보이는 현상이 있어서 아쉬웠다.  
+- 이동환 : 첫 프로젝트를 마치게 되면서 서로의 의사소통이 가장 중요하다는 것을 깨닫게 되었습니다 의뢰와 수주를 통한 경험을 간단하게 할 수 있어서 좋은 시간이 되었습니다. 회원 탈퇴 기능에 대해 db의 delete를 적용시켜 기능을 구현하려고 했지만 PK 문제를 해결 할 수 없어 다른 방식을 생각하다가 비밀번호의 값을 update 하는 방식을 적용 시켰습니다. 이런 다른 방식의 접근하는 방법을 깨닫게 되는 프로젝트의 시간입니다.
+또한 FETCH를 통한 웹 구현의 경험으로 JAVASCRIPT에 대해 간단한 공부를 할 수 있게 되었습니다. 
