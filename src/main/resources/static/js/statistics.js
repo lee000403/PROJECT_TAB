@@ -35,6 +35,9 @@ axios.get(url, {
                 asi_f.push(list[i].hmwlfHespsNmfcl);
                 was_f.push(list[i].hmwlfVsbhsNmfcl);
             }
+
+            console.log(string);
+
             initializeChart("myChart", "노인전문보호기관 현황", spe_f);
             initializeChart("myNextChart", "재가노인지원기관 현황", asi_f);
             initializeChart("myLastChart", "재가방문목욕서비스 현황", was_f);

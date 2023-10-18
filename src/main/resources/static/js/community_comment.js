@@ -4,10 +4,13 @@ const commentsContainer = document.querySelector("#comments");
 const delete_Buttons = document.getElementsByClassName("delete_Button");
 const comment = document.getElementById("comment");
 const submit_Button = document.getElementById("newComment");
+const member_id = document.getElementById("member_id").value;
+const lastDiv = document.getElementById("new_deleteButtonBox");
+
+
 let ln;
 let comment_Id;
 let commentInput;
-
 
 submit_Button.addEventListener("click", (reply) => {
     commentInput = comment.value;
@@ -80,6 +83,7 @@ function fetchUpdate(comment_Id) {
         body: JSON.stringify({
             "comment": commentInput,
             "post_id": post_id,
+            "member_id": member_id
         })
     }
 

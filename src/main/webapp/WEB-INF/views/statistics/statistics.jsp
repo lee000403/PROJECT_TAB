@@ -10,13 +10,6 @@
       <title>치매 One-click System</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
       <link rel="stylesheet" href="/CSSs/statistics.css">
-<<<<<<< HEAD
-      <script src="/js/statistics.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-=======
-
->>>>>>> 2285b42dde6d4e5e82b39405501c58870f6b4fbb
       <%@ include file="../mainbar/header_for_stat.jsp" %>
       <style>
         #map {

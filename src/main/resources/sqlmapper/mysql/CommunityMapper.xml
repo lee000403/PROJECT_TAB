@@ -4,8 +4,8 @@
 
 <insert id="insertComment" parameterType="Map">
 
-INSERT INTO community_comment(COMMENT, COMMENT_DATE, POST_ID, COMMENT_ID) 
-VALUES (#{comment}, now(), #{post_id}, #{COMMENT_ID});
+INSERT INTO community_comment(COMMENT, COMMENT_DATE, POST_ID, COMMENT_ID, MEMBERID) 
+VALUES (#{comment}, now(), #{post_id}, #{COMMENT_ID}, #{member_id});
 
 </insert>
 
