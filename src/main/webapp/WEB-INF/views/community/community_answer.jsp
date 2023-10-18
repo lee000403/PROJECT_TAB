@@ -18,14 +18,11 @@
 
                 <body>
                     <%@ include file="../mainbar/header.jsp" %>
-                        <% HashMap params=(HashMap)request.getAttribute("params"); HashMap
-                            result=(HashMap)request.getAttribute("result"); %>
+                        <% HashMap params=(HashMap)request.getAttribute("params"); HashMap result=(HashMap)request.getAttribute("result"); %>
                             <input type="hidden" value='<%=result.get("POST_ID")%>'
                             id="post_id" name="post_id">
-
-                            <!-- 현재 로그인한 사람의 userid를 param member_id로 넘겨야 함 -->
-                            
-                            <input type="hidden" value='<%= "userId" %>' id="member_id">
+                            <!-- 현재 로그인한 사람의 userid를 param member_id로 넘겨야 함 -->           
+                            <!-- <input type="hidden" value='<%= params.get("userId") %>' id="member_id"> -->
                             <div class="container mt-4">
                                 <form class="" action="">
                                     <div class="row mt-4">
@@ -107,7 +104,7 @@
                                                         <%= record.get("COMMENT_DATE") %>
                                                     </td>
                                                     <td style="text-align: center; cursor: pointer;" class="table_comment">
-                                                        <% if (userId.equals(record.get("MEMBERID"))) { %>
+                                                        <% if (userId.equals(member)) { %>
                                                                 <button
                                                                     style="border: none; background-color: white;"
                                                                     class="delete_Button"
