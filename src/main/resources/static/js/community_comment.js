@@ -59,9 +59,10 @@ const addComment = commentInput => {
 
 
     const tds = newRow.querySelectorAll("td");
-    tds[0].textContent = comment;
-    tds[1].textContent = formattedDate;
-    tds[2].textContent = "삭제";
+    tds[0].textContent = member_id;
+    tds[1].textContent = comment;
+    tds[2].textContent = formattedDate;
+    tds[3].textContent = "삭제";
 
 
     tableBody.appendChild(newRow);

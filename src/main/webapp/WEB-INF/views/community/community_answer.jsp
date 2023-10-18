@@ -22,7 +22,7 @@
                             <input type="hidden" value='<%=result.get("POST_ID")%>'
                             id="post_id" name="post_id">
                             <!-- 현재 로그인한 사람의 userid를 param member_id로 넘겨야 함 -->           
-                            <!-- <input type="hidden" value='<%= params.get("userId") %>' id="member_id"> -->
+                            <input type="hidden" value='<%= params.get("userId") %>' id="member_id">
                             <div class="container mt-4">
                                 <form class="" action="">
                                     <div class="row mt-4">
@@ -53,6 +53,7 @@
                                                 </form>
                                             </sec:authorize>
                                             <% String member=(String)result.get("MEMBERID"); %>
+
                                                 <% String userId=(String)params.get("userId"); %>
                                                     <% if (userId.equals(member)) { %>
                                                         <form action="">
@@ -83,9 +84,9 @@
                                     <table class="comment_table">
                                         <thead>
                                             <tr class="table-head">
-                                                <th>답글</th>
-                                                <th>날짜</th>
-                                                <th></th>
+                                                <th style="text-align: left;">글쓴이</th>
+                                                <th style="text-align: left;">답글</th>
+                                                <th style="text-align: right;">날짜</th>
                                                 <th style="width: 70px;"></th>
                                             </tr>
                                         </thead>
@@ -93,10 +94,14 @@
                                             <% ArrayList resultList_comment=(ArrayList)
                                                 request.getAttribute("result_comment");
                                                 for(int i=0; i < resultList_comment.size(); i ++) {
-                                                    HashMap record=(HashMap)
-                                                resultList_comment.get(i); %>
+                                                HashMap record=(HashMap) resultList_comment.get(i); 
+                                                String comment_member_id = (String) record.get("MEMBERID"); %>
+                                                
 
                                                 <tr class="selected_comment">
+                                                    <td class="table_comment">
+                                                        <%= comment_member_id %>
+                                                    </td>
                                                     <td class="table_comment">
                                                         <%= record.get("COMMENT") %>
                                                     </td>
@@ -104,7 +109,7 @@
                                                         <%= record.get("COMMENT_DATE") %>
                                                     </td>
                                                     <td style="text-align: center; cursor: pointer;" class="table_comment">
-                                                        <% if (userId.equals(member)) { %>
+                                                        <% if (userId.equals(comment_member_id)) { %>
                                                                 <button
                                                                     style="border: none; background-color: white;"
                                                                     class="delete_Button"
@@ -113,20 +118,18 @@
                                                                 </button>
                                                             <% } %>
                                                     </td>
-                                                    <td>
-                                                        <div class="new_deleteButtonBox">
-
-                                                        </div>
-                                                    </td>
                                                 </tr>
                                                 <% } %>
                                                
                                                     <tr class="" id="reply_template">
-                                                        <td class="table_comment">
+                                                        <td class="added_comment">
                                                         </td>
-                                                        <td class="table_comment date_box">
+                                                        <td class="added_comment ">
                                                         </td>
-                                                        <td class="table_comment" style="text-align: center;">
+                                                        <td class="added_comment date_box">
+                                                        </td>
+                                                        <td class="added_comment" style="text-align: center;">
+
                                                         </td>
                                                     </tr>
                                         </tbody>

@@ -55,6 +55,12 @@ th {
     padding-top: 10px;
 }
 
+.added_comment {
+    padding-right: 10px;
+    padding-left: 9.5px;
+    padding-top: 5px;
+}
+
 .date_box {
     text-align: right;
 }
