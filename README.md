@@ -150,11 +150,11 @@
 
 ## RUN
 
-💻 [YOUTUBE]((https://www.youtube.com/watch?v=dwGLi3gAqFw))
+💻 [YOUTUBE](https://www.youtube.com/watch?v=EpT4BaxHor4)
 
-## 웹페이지 주소
+<!-- ## 웹페이지 주소
 
-🐳 [TAB의 페이지](https://project-tab-pcddi.run.goorm.site/)
+🐳 [TAB의 페이지](https://project-tab-pcddi.run.goorm.site/) -->
 
 ## 1차 프로젝트 소감 
 
