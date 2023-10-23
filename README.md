@@ -28,6 +28,10 @@
 
 </details>
 
+## 발표 자료
+
+<a href="https://github.com/lee000403/PROJECT_TAB/blob/main/PROJECT_TAB.pdf">Presenting Our PROJECT_TAB!</a>
+
 ## 주요 기능
 
 😃 [로그인 기능](https://github.com/lee000403/study_springboots_gradle/blob/main/src/main/java/com/yojulab/study_springboot/security/PrincipalUserService.java)
